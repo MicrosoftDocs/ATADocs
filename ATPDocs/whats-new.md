@@ -29,6 +29,10 @@ For more information, see also:
 For updates about versions and features released six months ago or earlier, see the [What's new archive for Microsoft Defender for Identity](whats-new-archive.md).
 ## January 2024
 
+### Defender for Identity release 2.226
+
+This version includes improvements and bug fixes for cloud services and the Defender for Identity sensor.
+
 ### Defender for Identity release 2.225
 
 This version includes improvements and bug fixes for cloud services and the Defender for Identity sensor.
