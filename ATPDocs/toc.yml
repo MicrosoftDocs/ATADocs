@@ -209,6 +209,8 @@ items:
     href: technical-faq.yml
   - name: SIEM log reference
     href: cef-format-sa.md
+  - name: PowerShell
+    href: /powershell/defenderforidentity/overview-defenderforidentity
   - name: Support
     href: support.md
   - name: Defender for Identity data security and privacy
