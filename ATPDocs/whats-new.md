@@ -32,7 +32,9 @@ For updates about versions and features released six months ago or earlier, see 
 
 ### Manage Defender for Identity sensor settings via PowerShell
 
-Defender for Identity now supports the new *DefenderForIdentity* PowerShell module, which helps you automate configurations for domains, domain controllers, and other sensor servers. Define Defender for Identity sensor settings using the  PowerShell commands to avoid misconfigurations and save time and avoiding unnecessary load on your system.
+Defender for Identity now supports the new *DefenderForIdentity* PowerShell module, which is designed to help you configure and validate your environment for working with Microsoft Defender for Identity.
+
+Using the PowerShell commands to avoid misconfigurations and save time and avoiding unnecessary load on your system.
 
 We've added the following procedures to the Defender for Identity documentation to help you use the new PowerShell commands:
 
@@ -40,7 +42,7 @@ We've added the following procedures to the Defender for Identity documentation 
 - [Configure, get, and test audit policies using PowerShell](configure-windows-event-collection.md#configure-get-and-test-audit-policies-using-powershell)
 - [Generate a report with current configurations via PowerShell](configure-windows-event-collection.md#generate-a-report-with-current-configurations-via-powershell)
 - [Test your DSA permissions and delegations via PowerShell](directory-service-accounts.md#test-your-dsa-permissions-and-delegations-via-powershell)
-- [Test server connectivity using PowerShell](deploy/test-connectivity.md#test-server-connectivity-using-powershell)
+- [Test service connectivity using PowerShell](deploy/test-connectivity.md#test-service-connectivity-using-powershell)
 
 For more information, see:
 
@@ -165,7 +167,6 @@ For more information, see:
 - [Configure endpoint proxy and Internet connectivity settings for your Microsoft Defender for Identity sensor](configure-proxy.md)
 - [Configure Windows Event collection](configure-windows-event-collection.md)
 - [Microsoft Defender for Identity Directory Service account recommendations](directory-service-accounts.md)
-- <XREF TO A TROUBLEShOOTING PAGE?>
 - [Defender for Identity PowerShell reference documentation](/powershell/module/azureinformationprotection)
 
 ### Defender for Identity release 2.217

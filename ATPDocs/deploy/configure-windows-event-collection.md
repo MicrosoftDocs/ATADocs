@@ -22,7 +22,7 @@ For more information, see [What is Windows event collection for Defender for Ide
 Before you start creating new event and audit polices, we recommend that you run the following PowerShell command to generate a report of your current domain configurations:
 
 ```powershell
-New-MDIConfigurationReport [-Path] <String> [-OpenHtmlReport]
+New-MDIConfigurationReport [-Path] [-Mode ] [-OpenHtmlReport]
 ```
 
 Where: 
@@ -113,7 +113,7 @@ Where:
 
 - **Mode** specifies whether you want to use *Domain* or *LocalMachine* mode. In *Domain* mode, the settings are collected from the Group Policy objects. In *LocalMachine* mode, the settings are collected from the local machine.
 
-- **Configuration** specifies which configuration to set. Use ***** to set all configurations. 
+- **Configuration** specifies which configuration to set. Use `All` to set all configurations. 
 
 - **CreateGpoDisabled** specifies if the GPOs are created and kept as disabled.
 
@@ -131,7 +131,7 @@ Where:
 
 - **Mode** specifies whether you want to use *Domain* or *LocalMachine* mode. In *Domain* mode, the settings are collected from the Group Policy objects. In *LocalMachine* mode, the settings are collected from the local machine.
 
-- **Configuration** specifies which configuration to get. Use ***** to get all configurations.
+- **Configuration** specifies which configuration to get. Use `All` to get all configurations.
 
 
 ```powershell
@@ -142,7 +142,7 @@ Where:
 
 - **Mode** specifies whether you want to use *Domain* or *LocalMachine* mode. In *Domain* mode, the settings are collected from the Group Policy objects. In *LocalMachine* mode, the settings are collected from the local machine.
 
-- **Configuration** specifies which configuration to test. Use ***** to test all configurations.
+- **Configuration** specifies which configuration to test. Use `All` to test all configurations.
 
 For more information, see the relevant DefenderForIdentity PowerShell reference:
 

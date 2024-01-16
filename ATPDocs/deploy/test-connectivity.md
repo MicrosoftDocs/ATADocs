@@ -34,7 +34,7 @@ For more information, see [Required ports](../prerequisites.md#ports).
 
     :::image type="content" source="../media/configure-proxy/certificate.png" alt-text="Screenshot of a certificate path.":::
     
-### Test server connectivity using PowerShell
+### Test service connectivity using PowerShell
 
 **Prerequisites**: Before running Defender for Identity PowerShell commands, make sure that you've downloaded the [Defender for Identity PowerShell module](https://www.powershellgallery.com/packages/DefenderForIdentity/).
 
