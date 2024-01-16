@@ -1,7 +1,7 @@
 ---
 title: What's new | Microsoft Defender for Identity
 description: This article is updated frequently to let you know what's new in the latest release of Microsoft Defender for Identity.
-ms.date: 12/27/2023
+ms.date: 01/16/2024
 ms.topic: overview
 #CustomerIntent: As a Defender for Identity customer, I want to know what's new in the latest release of Defender for Identity, so that I can take advantage of new features and functionality. 
 ---
@@ -27,7 +27,27 @@ For more information, see also:
 - [What's new in Microsoft Defender for Cloud Apps](/cloud-app-security/release-notes)
 
 For updates about versions and features released six months ago or earlier, see the [What's new archive for Microsoft Defender for Identity](whats-new-archive.md).
+
 ## January 2024
+
+### Manage Defender for Identity sensor settings via PowerShell
+
+Defender for Identity now supports the new *DefenderForIdentity* PowerShell module, which is designed to help you configure and validate your environment for working with Microsoft Defender for Identity.
+
+Using the PowerShell commands to avoid misconfigurations and save time and avoiding unnecessary load on your system.
+
+We added the following procedures to the Defender for Identity documentation to help you use the new PowerShell commands:
+
+- [Change proxy configuration using PowerShell](configure-proxy.md#change-proxy-configuration-using-powershell)
+- [Configure, get, and test audit policies using PowerShell](configure-windows-event-collection.md#configure-get-and-test-audit-policies-using-powershell)
+- [Generate a report with current configurations via PowerShell](configure-windows-event-collection.md#generate-a-report-with-current-configurations-via-powershell)
+- [Test your DSA permissions and delegations via PowerShell](directory-service-accounts.md#test-your-dsa-permissions-and-delegations-via-powershell)
+- [Test service connectivity using PowerShell](deploy/test-connectivity.md#test-service-connectivity-using-powershell)
+
+For more information, see:
+
+- [DefenderForIdentity PowerShell module (PowerShell Gallery)](https://www.powershellgallery.com/packages/DefenderForIdentity/)
+- [DefenderForIdentity PowerShell reference documentation](/powershell/defenderforidentity/overview-defenderforidentity)
 
 ### Defender for Identity release 2.225
 
@@ -44,15 +64,15 @@ Defender for Identity customers now have a new **Identities** area in Microsoft 
 
 In Microsoft 365 Defender, select **Identities** to see any of the following new pages:
 
-- **Dashboard**:  Shows graphs and widgets to help you monitor identity threat detection and response activities.  For example:
+- **Dashboard**: This page shows graphs and widgets to help you monitor identity threat detection and response activities.  For example:
 
    :::image type="content" source="media/dashboard/dashboard.gif" alt-text="An animated GIF showing a sample ITDR Dashboard page.":::
 
    For more information, see [Work with Defender for Identity's ITDR dashboard](dashboard.md).
 
-- **Health issues**: Now moved from the **Settings > Identities** area, and lists any current health issues for your general Defender for Identity deployment and specific sensors. For more information, see [Microsoft Defender for Identity sensor health issues](health-alerts.md).
+- **Health issues**: This page is moved from the **Settings > Identities** area, and lists any current health issues for your general Defender for Identity deployment and specific sensors. For more information, see [Microsoft Defender for Identity sensor health issues](health-alerts.md).
 
-- **Tools**: Links to helpful information and resources when working with Defender for Identity, including links to documentation, specifically on the [capacity planning tool](capacity-planning.md), and the [*Test-MdiReadiness.ps1*](https://github.com/microsoft/Microsoft-Defender-for-Identity/tree/main/Test-MdiReadiness) script.
+- **Tools**: This page contains links to helpful information and resources when working with Defender for Identity. On this page, find links to documentation, specifically on the [capacity planning tool](capacity-planning.md), and the [*Test-MdiReadiness.ps1*](https://github.com/microsoft/Microsoft-Defender-for-Identity/tree/main/Test-MdiReadiness) script.
 
 ### Defender for Identity release 2.224
 
@@ -135,7 +155,7 @@ This version includes improvements and bug fixes for cloud services and the Defe
 
 This version includes the following improvements:
 
-- **Summary report**: The summary report has been updated to include two new columns in the *Health issues* tab:
+- **Summary report**: The summary report is updated to include two new columns in the *Health issues* tab:
 
     -	Details: Additional information on the issue, such as a list of impacted objects or specific sensors on which the issue occurs.
     -	Recommendations: A list of recommended actions that can be taken to resolve the issue, or how to investigate the issue further.
@@ -154,7 +174,7 @@ This version includes improvements and bug fixes for cloud services and the Defe
 
 ### Decreased number of alerts for Remote Code Execution Attempts
 
-To better align Defender for Identity and Microsoft Defender for Endpoint alerts, we've updated the detection logic for the Defender for Identity [Remote code execution attempt](other-alerts.md#remote-code-execution-attempt-external-id-2019) detections. 
+To better align Defender for Identity and Microsoft Defender for Endpoint alerts, we updated the detection logic for the Defender for Identity [Remote code execution attempt](other-alerts.md#remote-code-execution-attempt-external-id-2019) detections. 
 
 While this change results in a decreased number of *Remote code execution attempt* alerts, Defender for Identity continues to record the remote code execution activities. Customers can continue to build their own [advanced hunting queries](/microsoft-365/security/defender/advanced-hunting-overview) and create [custom detection policies](/microsoft-365/security/defender/custom-detection-rules). 
 
@@ -166,7 +186,7 @@ Defender for Identity now provides the following enhancements for the learning p
 
 - Administrators can now use the **Remove learning period** setting to configure the sensitivity used for specific alerts. Define the sensitivity as *Normal* to configure the **Remove learning period** setting as *Off* for the selected type of alert. 
 
-- After deploying a new sensor in a new Defender for Identity workspace, the **Remove learning period** setting is automatically turned *On* for 30 days. When 30 days are complete, the **Remove learning period** setting is automatically turned *Off,* and alert sensitivity levels are returned to their default functionality.
+- After you deploy a new sensor in a new Defender for Identity workspace, the **Remove learning period** setting is automatically turned *On* for 30 days. When 30 days are complete, the **Remove learning period** setting is automatically turned *Off,* and alert sensitivity levels are returned to their default functionality.
 
    To have Defender for Identity use standard learning period functionality, where alerts aren't generated until the learning period is done, configure the **Remove learning periods** setting to *Off*.
 
@@ -192,7 +212,7 @@ For more information, see [Download and schedule Defender for Identity reports i
 
 ### Go hunt button for groups in Microsoft Defender XDR
 
-Defender for Identity has added the **Go hunt** button for groups in Microsoft Defender XDR. Users can use the **Go hunt** button to query for group-related activities and alerts during an investigation.
+Defender for Identity added the **Go hunt** button for groups in Microsoft Defender XDR. Users can use the **Go hunt** button to query for group-related activities and alerts during an investigation.
 
 For example:
 
@@ -206,7 +226,7 @@ This version includes improvements and bug fixes for cloud services and the Defe
 
 ### Performance enhancements
 
-Defender for Identity has made internal improvements for latency, stability, and performance when transferring real-time events from Defender for Identity services to Microsoft Defender XDR. Customers should expect no delays in Defender for Identity data appearing in Microsoft Defender XDR, such as alerts or activities for advanced hunting.
+Defender for Identity made internal improvements for latency, stability, and performance when transferring real-time events from Defender for Identity services to Microsoft Defender XDR. Customers should expect no delays in Defender for Identity data appearing in Microsoft Defender XDR, such as alerts or activities for advanced hunting.
 
 
 For more information, see:
@@ -284,7 +304,7 @@ The following new security posture assessments are now available in Microsoft Se
 - [Do not expire passwords](security-assessment-do-not-expire-passwords.md)
 - [Remove access rights on suspicious accounts with the Admin SDHolder permission](security-assessment-remove-suspicious-access-rights.md)
 - [Manage accounts with passwords more than 180 days old](security-assessment-old-passwords.md)
-- [Remove non-admin accounts with DCSync permissions](security-assessment-non-admin-accounts-dcsync.md)
+- [Remove nonadmin accounts with DCSync permissions](security-assessment-non-admin-accounts-dcsync.md)
 - [Remove local admins on identity assets](security-assessment-remove-local-admins.md)
 - [Start your Defender for Identity deployment](security-assessment-deploy-defender-for-identity.md)
 
@@ -292,7 +312,7 @@ For more information, see [Microsoft Defender for Identity's security posture as
 
 ### Automatic redirection for the classic Defender for Identity portal
 
-The Microsoft Defender for Identity portal experience and functionality have been converged into Microsoft’s extended detection and response (XDR) platform, Microsoft Defender XDR. As of July 6, 2023, customers using the classic Defender for Identity portal are automatically redirected to Microsoft Defender XDR, with no option to revert back to the classic portal.
+The Microsoft Defender for Identity portal experience and functionality are converged into Microsoft’s extended detection and response (XDR) platform, Microsoft Defender XDR. As of July 6, 2023, customers using the classic Defender for Identity portal are automatically redirected to Microsoft Defender XDR, with no option to revert back to the classic portal.
 
 For more information, see our [blog post](https://techcommunity.microsoft.com/t5/microsoft-365-defender-blog/leveraging-the-convergence-of-microsoft-defender-for-identity-in/ba-p/3856321) and [Microsoft Defender for Identity in Microsoft Defender XDR](/microsoft-365/security/defender/microsoft-365-security-center-mdi).
 
