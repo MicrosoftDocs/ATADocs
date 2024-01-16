@@ -65,7 +65,7 @@ This example sets the proxy configuration for the Defender for Identity sensor t
 Clear-MDISensorProxyConfiguration
 ```
 
-For more information, see the [DefenderForIdentity PowerShell references](/powershell/defenderforidentity/overview-defenderforidentity):
+For more information, see the following [DefenderForIdentity PowerShell references](/powershell/defenderforidentity/overview-defenderforidentity):
 
 - [Get-MDISensorProxyConfiguration](/powershell/module/defenderforidentity/get-mdisensorproxyconfiguration)
 - [Set-MDISensorProxyConfiguration](/powershell/module/defenderforidentity/set-mdisensorproxyconfiguration)

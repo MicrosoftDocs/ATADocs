@@ -144,7 +144,7 @@ Where:
 
 - **Configuration** specifies which configuration to test. Use `All` to test all configurations.
 
-For more information, see the relevant DefenderForIdentity PowerShell reference:
+For more information, see the following [DefenderForIdentity PowerShell references](/powershell/defenderforidentity/overview-defenderforidentity):
 
 - [Set-MDIConfiguration](/powershell/module/defenderforidentity/set-mdiconfiguration)
 - [Get-MDIConfiguration](/powershell/module/defenderforidentity/get-mdiconfiguration)
