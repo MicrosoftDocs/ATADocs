@@ -7,7 +7,7 @@ ms.topic: conceptual
 
 # Microsoft Defender for Identity role groups
 
-Microsoft Defender for Identity offers role-based security to safeguard data according your organization's specific security and compliance needs. We recommend that you use role groups to manage access to Defender for Identity, segregating responsibilities across your security team and granting only the amount of access that users need to do their jobs.
+Microsoft Defender for Identity offers role-based security to safeguard data according to your organization's specific security and compliance needs. We recommend that you use role groups to manage access to Defender for Identity, segregating responsibilities across your security team and granting only the amount of access that users need to do their jobs.
 
 ## Unified role-based access control (RBAC)
 
