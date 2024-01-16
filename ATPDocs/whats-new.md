@@ -30,7 +30,7 @@ For updates about versions and features released six months ago or earlier, see 
 
 ## January 2024
 
-### Timeline tab added for group identities
+### Timeline tab added for group entities
 
 Now you can view entity activities and alerts for groups in Microsoft Defender XDR. On a group identity page, select the **Timeline** tab to view recent activity for the selected group.
 <!--tbd For example:-->
