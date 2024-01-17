@@ -1,7 +1,7 @@
 ---
 title: Verify connectivity to the Defender for Identity service | Microsoft Defender for Identity
 description: Learn how to set up your firewall or proxy to allow communication between the Microsoft Defender for Identity cloud service and Microsoft Defender for Identity sensors.
-ms.date: 12/11/2023
+ms.date: 12/17/2023
 ms.topic: how-to
 ---
 
@@ -38,6 +38,39 @@ Instead of manually enabling access to specific endpoints, download the [Azure I
 
 For more information, see [Virtual network service tags](/azure/virtual-network/service-tags-overview). For US Government offerings, see [Get started with US Government offerings](../us-govt-gcc-high.md).
 
+## Change proxy configuration using PowerShell
+
+**Prerequisites**: Before running Defender for Identity PowerShell commands, make sure that you've downloaded the [Defender for Identity PowerShell module](https://www.powershellgallery.com/packages/DefenderForIdentity/).
+
+You can view and change the proxy configuration for your sensor using PowerShell. To do so, sign into your sensor server and run commands as shown in the following examples:
+
+**To view the current sensor's proxy configuration**:
+
+```powershell
+Get-MDISensorProxyConfiguration
+```
+
+**To change the current sensor's proxy configuration**:
+
+```powershell
+Set-MDISensorProxyConfiguration -ProxyUrl 'http://proxy.contoso.com:8080'
+```
+
+This example sets the proxy configuration for the Defender for Identity sensor to use the specified proxy server without any credentials.
+
+
+**To remove the current sensor's proxy configuration entirely**:
+
+```powershell
+Clear-MDISensorProxyConfiguration
+```
+
+For more information, see the following [DefenderForIdentity PowerShell references](/powershell/defenderforidentity/overview-defenderforidentity):
+
+- [Get-MDISensorProxyConfiguration](/powershell/module/defenderforidentity/get-mdisensorproxyconfiguration)
+- [Set-MDISensorProxyConfiguration](/powershell/module/defenderforidentity/set-mdisensorproxyconfiguration)
+- [Clear-MDISensorProxyConfiguration](/powershell/module/defenderforidentity/clear-mdisensorproxyconfiguration)
+
 ## Test connectivity
 
 The Defender for Identity sensor requires network connectivity to the Defender for Identity service running in Azure. Most organizations control access to the internet via firewall or proxies.  
@@ -71,9 +104,12 @@ For some older workspaces, the message returned could be *Error 503 The service 
 
 ## Related content
 
-For more information, see [Run a silent installation with a proxy configuration](install-sensor.md#run-a-silent-installation-with-a-proxy-configuration).
+For more information, see:
+
+- [Run a silent installation with a proxy configuration](install-sensor.md#run-a-silent-installation-with-a-proxy-configuration)
+- [Test Microsoft Defender for Identity connectivity](test-connectivity.md)
 
 ## Next step
 
 > [!div class="step-by-step"]
-> [Download the Microsoft Defender for Identity sensor »](download-sensor.md)
+> [Test Microsoft Defender for Identity connectivity »](test-connectivity.md)
