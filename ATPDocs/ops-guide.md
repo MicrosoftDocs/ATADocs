@@ -114,7 +114,7 @@ For more information, see:
 
 Microsoft Defender XDR allows you to *tune* alerts, helping you reduce the number of false positives you need to triage. Tuning alerts hides or resolves alerts automatically based on your configurations and rule conditions.
 
-We recommend reviewing your tuning configurations regularly to make sure that they're still relevant and effective. Create new rules as needed as your network grows.
+We recommend reviewing your tuning configurations regularly to make sure that they're still relevant and effective. 
 
 For more information, see [Investigate Defender for Identity security alerts in Microsoft Defender XDR](manage-security-alerts.md).
 
@@ -146,6 +146,18 @@ Inspect events in your network to locate threat indicators and entities, includi
 We recommend that beginners use guided advanced hunting, which provides a query builder. If you're comfortable using Kusto Query Language (KQL), build queries from scratch as needed for your investigations.
 
 For more information, see [Proactively hunt for threats with advanced hunting in Microsoft Defender XDR](/microsoft-365/security/defender/advanced-hunting-overview).
+
+## Configure tuning rules for false positive alerts
+
+**Where**: In Microsoft Defender XDR, select **Hunting > Advanced hunting**
+
+**Persona**:
+
+Microsoft Defender XDR allows you to *tune* alerts, helping you reduce the number of false positives you need to triage. Tuning alerts hides or resolves alerts automatically based on your configurations and rule conditions.
+
+We recommend creating new rules as needed as your network grows to make sure that your alert tuning remains relevant and effective.
+
+For more information, see [Investigate Defender for Identity security alerts in Microsoft Defender XDR](manage-security-alerts.md).
 
 ## Related information
 
