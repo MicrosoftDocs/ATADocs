@@ -1,8 +1,8 @@
 ---
 title: Investigate assets
 description: This article explains how to investigate suspicious users, computers, and devices with Microsoft Defender for Identity.
-ms.date: 11/07/2023
-ms.topic: conceptual
+ms.date: 01/17/2024
+ms.topic: how-to
 ---
 
 # Investigate assets
@@ -63,6 +63,35 @@ When you investigate a specific identity, you'll see the following details on an
 |[Remediation actions](/microsoft-365/security/defender/investigate-users#remediation-actions)      |     Respond to compromised users by disabling their accounts or resetting their password. After taking action on users, you can check on the activity details in the Microsoft Defender XDR **Action center.|
 
 For more information, see [Investigate users](/microsoft-365/security/defender/investigate-users) in the Microsoft Defender XDR documentation.
+
+## Investigation steps for suspicious groups
+
+If an alert or incident indicates that an entire group may be suspicious or compromised, check and investigate the group entity for the following details and activities:
+
+1. **Group identity**
+    1. Is the user a [sensitive group](entity-tags.md), such as an admin or on a specific watchlist?
+    1. What is their role within the organization?
+
+1. **Investigate suspicious activities, such as:**
+    1. Does the group have other opened alerts in Defender for Identity, or in other security tools such as Microsoft Defender for Endpoint, Microsoft Defender for Cloud and/or Microsoft Defender for Cloud Apps?
+    1. What users were recently added to the group?
+    1. Was the group recently queried, and by whom?
+    1. Is there a [lateral movement path](/defender-for-identity/understand-lateral-movement-paths) (LMP) between the group and sensitive resources?
+
+Use the answers to these questions to determine if the group appears compromised or if the suspicious activities imply malicious actions.
+
+From a group entity details page, select **Go hunt** or **Open timeline** to investigate. You can also find group information in the following Microsoft Defender XDR areas:
+
+- The **Alerts** page
+- Individual alert or incident details page
+- Device details pages
+- Activity logs
+- Advanced hunting queries
+- The **Action center** page
+
+For example, the following image shows the **Server Operators** activity timeline, including related alerts and activity:
+
+:::image type="content" source="media/investigate-assets/group-timeline.png" alt-text="Screenshot of the group Timeline tab." lightbox="media/investigate-assets/group-timeline.png":::
 
 ## Investigation steps for suspicious devices
 
