@@ -1,7 +1,7 @@
 ---
 title: Configure audit policies for Windows event logs | Microsoft Defender for Identity
-description: Describes how to configure audit policies for Windows event logs as part of deploying a Microsoft Defender for Identity standalone sensor.
-ms.date: 08/27/2023
+description: Describes how to configure audit policies for Windows event logs as part of deploying a Microsoft Defender for Identity sensor.
+ms.date: 01/16/2024
 ms.topic: how-to
 ---
 
@@ -15,9 +15,37 @@ This article describes how to configure your Advanced Audit Policy settings as n
 
 For more information, see [What is Windows event collection for Defender for Identity](event-collection-overview.md) and [Advanced security audit policies](/windows/security/threat-protection/auditing/advanced-security-auditing) in the Windows documentation.
 
+## Generate a report with current configurations via PowerShell
+
+**Prerequisites**: Before running Defender for Identity PowerShell commands, make sure that you downloaded the [Defender for Identity PowerShell module](https://www.powershellgallery.com/packages/DefenderForIdentity/).
+
+Before you start creating new event and audit policies, we recommend that you run the following PowerShell command to generate a report of your current domain configurations:
+
+```powershell
+New-MDIConfigurationReport [-Path] <String> [-Mode] <String> [-OpenHtmlReport]
+```
+
+Where: 
+
+- **Path** specifies the path to save the reports to
+- **Mode** specifies whether you want to use *Domain* or *LocalMachine* mode. In *Domain* mode, the settings are collected from the Group Policy objects. In *LocalMachine* mode, the settings are collected from the local machine.
+- **OpenHtmlReport** opens the HTML report after the report is generated
+
+For example, to generate a report and open it in your default browser, run the following command:
+
+```powershell
+New-MDIConfigurationReport -Path "C:\Reports" -Mode Domain -OpenHtmlReport
+```
+
+For more information, see the [DefenderforIdentity PowerShell reference](/powershell/module/defenderforidentity/new-mdiconfigurationreport).
+
+> [!TIP]
+> The `Domain` mode report includes only configurations set as group policies on the domain. If you have settings defined locally on your Domain Controllers, we recommend that you also run the [Test-MdiReadiness.ps1](https://github.com/microsoft/Microsoft-Defender-for-Identity/tree/main/Test-MdiReadiness) script.
+>
+
 ## Configure auditing for domain controllers
 
-When working with a domain controller, you'll need to update your Advanced Audit Policy settings and extra configurations for specific events and event types, such as users, groups, computers, and more. Audit configurations for domain controllers include:
+When working with a domain controller, you need to update your Advanced Audit Policy settings and extra configurations for specific events and event types, such as users, groups, computers, and more. Audit configurations for domain controllers include:
 
 - [Advanced Audit Policy settings](#configure-advanced-audit-policy-settings)
 - [NTLM auditing](#configure-ntlm-auditing)
@@ -61,13 +89,67 @@ This procedure describes how to modify your domain controller's Advanced Audit P
 
 1. From an elevated command prompt, type `gpupdate`.
 
-1. After applying the policy via GPO, the new events are visible in the Event Viewer, under **Windows Logs** -> **Security**.
+1. After you apply the policy via GPO, the new events are visible in the Event Viewer, under **Windows Logs** -> **Security**.
 
-   Alternatively, verify your audit policy via the command line. Run:
+### Test audit policies from the command line
 
-   ```cmd
-   auditpol.exe /get /category:*
-   ```
+To test your audit policies from the command line, run the following command:
+
+```cmd
+auditpol.exe /get /category:*
+```
+
+For more information, see [auditpol reference documentation](/windows-server/administration/windows-commands/auditpol).
+
+
+### Configure, get, and test audit policies using PowerShell
+
+To configure audit policies using PowerShell, run the following command:
+
+```powershell
+Set-MDIConfiguration [-Mode] <String> [-Configuration] <String[]> [-CreateGpoDisabled] [-SkipGpoLink] [-Force]
+```
+
+Where:
+
+- **Mode** specifies whether you want to use *Domain* or *LocalMachine* mode. In *Domain* mode, the settings are collected from the Group Policy objects. In *LocalMachine* mode, the settings are collected from the local machine.
+
+- **Configuration** specifies which configuration to set. Use `All` to set all configurations. 
+
+- **CreateGpoDisabled** specifies if the GPOs are created and kept as disabled.
+
+- **SkipGpoLink** specifies that GPO links aren't created.
+
+- **Force** specifies that the configuration is set or GPOs are created without validating the current state.
+
+To view or test your audit policies using PowerShell, run the following commands as needed. Use the **Get-MDIConfiguration** command to show the current values. Use the **Test-MDIConfiguration** command to get a `true` or `false` response as to whether the values are configured correctly.
+
+```powershell
+Get-MDIConfiguration [-Mode] <String> [-Configuration] <String[]>
+```
+
+Where:
+
+- **Mode** specifies whether you want to use *Domain* or *LocalMachine* mode. In *Domain* mode, the settings are collected from the Group Policy objects. In *LocalMachine* mode, the settings are collected from the local machine.
+
+- **Configuration** specifies which configuration to get. Use `All` to get all configurations.
+
+
+```powershell
+Test-MDIConfiguration [-Mode] <String> [-Configuration] <String[]>
+```
+
+Where:
+
+- **Mode** specifies whether you want to use *Domain* or *LocalMachine* mode. In *Domain* mode, the settings are collected from the Group Policy objects. In *LocalMachine* mode, the settings are collected from the local machine.
+
+- **Configuration** specifies which configuration to test. Use `All` to test all configurations.
+
+For more information, see the following [DefenderForIdentity PowerShell references](/powershell/defenderforidentity/overview-defenderforidentity):
+
+- [Set-MDIConfiguration](/powershell/module/defenderforidentity/set-mdiconfiguration)
+- [Get-MDIConfiguration](/powershell/module/defenderforidentity/get-mdiconfiguration)
+- [Test-MDIConfiguration](/powershell/module/defenderforidentity/test-mdiconfiguration)
 
 ### Configure NTLM auditing
 
@@ -122,7 +204,7 @@ To collect events for object changes, such as event 4662, you must also configur
 
     ![Screenshot of the Select everyone settings.](../media/select-everyone.png)
 
-1. You'll then return to **Auditing Entry**. Make the following selections:
+1. You then return to **Auditing Entry**. Make the following selections:
 
     1. For **Type** select **Success**.
     1. For **Applies to** select **Descendant User objects.**
@@ -145,7 +227,7 @@ To collect events for object changes, such as event 4662, you must also configur
    - **Descendant msDS-ManagedServiceAccount Objects**
 
 > [!NOTE]
-> Assigning the auditing permissions on the **All descendant objects** would work as well, but we only require the object types as detailed above.
+> Assigning the auditing permissions on the **All descendant objects** would work as well, but we only require the object types as detailed in the last step.
 >
 
 ## Configure auditing on an Active Directory Federation Services (AD FS)
@@ -160,7 +242,7 @@ To collect events for object changes, such as event 4662, you must also configur
 1. Go to the **Security** tab and select **Advanced** > **Advanced Security Settings** > **Auditing** tab > **Add** > **Select a principal**.
 1. Under **Enter the object name to select**, enter **Everyone**. 
 1. Select **Check Names** > **OK**.
-1. You'll then return to **Auditing Entry**. Make the following selections:
+1. You then return to **Auditing Entry**. Make the following selections:
 
     - For **Type** select **All**.
     - For **Applies to** select **This object and all descendant objects**.
@@ -230,7 +312,7 @@ If you're working with a dedicated server with Active Directory Certificate Serv
 
 1. Under **Enter the object name to select**, enter **Everyone** and select **Check Names** > **OK**.
 
-1. You'll then return to **Auditing Entry**. Make the following selections:
+1. You then return to **Auditing Entry**. Make the following selections:
 
     - For **Type** select **All**.
     - For **Applies to** select **This object and all descendant objects**.
