@@ -147,7 +147,7 @@ We recommend that beginners use guided advanced hunting, which provides a query 
 
 For more information, see [Proactively hunt for threats with advanced hunting in Microsoft Defender XDR](/microsoft-365/security/defender/advanced-hunting-overview).
 
-## Configure tuning rules for false positive alerts
+### Configure tuning rules for false positive alerts
 
 **Where**: In Microsoft Defender XDR, select **Hunting > Advanced hunting**
 
