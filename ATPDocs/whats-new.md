@@ -30,6 +30,7 @@ For updates about versions and features released six months ago or earlier, see 
 
 ## January 2024
 
+
 ### Configure and validate your Defender for Identity environment via PowerShell
 
 Defender for Identity now supports the new *DefenderForIdentity* PowerShell module, which is designed to help you configure and validate your environment for working with Microsoft Defender for Identity.
@@ -48,6 +49,10 @@ For more information, see:
 
 - [DefenderForIdentity PowerShell module (PowerShell Gallery)](https://www.powershellgallery.com/packages/DefenderForIdentity/)
 - [DefenderForIdentity PowerShell reference documentation](/powershell/defenderforidentity/overview-defenderforidentity)
+
+### Defender for Identity release 2.226
+
+This version includes improvements and bug fixes for cloud services and the Defender for Identity sensor.
 
 ### Defender for Identity release 2.225
 
