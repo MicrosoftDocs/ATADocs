@@ -35,7 +35,6 @@ For updates about versions and features released six months ago or earlier, see 
 Now you can view entity activities and alerts for groups in Microsoft Defender XDR. On a group identity page, select the **Timeline** tab to view recent activity for the selected group.
 <!--tbd For example:-->
 
-For more information, see [Microsoft Defender for Identity in Microsoft Defender XDR](/microsoft-365/security/defender/microsoft-365-security-center-mdi) and [Investigate users in Microsoft Defender XDR](/microsoft-365/security/defender/investigate-users#timeline).
 
 ### Configure and validate your Defender for Identity environment via PowerShell
 
