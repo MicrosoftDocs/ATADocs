@@ -81,7 +81,7 @@ GO
 **To grant the sensor access to the AD FS database using PowerShell**:
 
 ```powershell
-$ConnectionString = 'server=\\.\pipe\MICROSOFT##WID\tsql\querydatabase=AdfsConfigurationV4;trusted_connection=true;'
+$ConnectionString = 'server=\\.\pipe\MICROSOFT##WID\tsql\query;database=AdfsConfigurationV4;trusted_connection=true;'
 $SQLConnection= New-Object System.Data.SQLClient.SQLConnection($ConnectionString)
 $SQLConnection.Open()
 $SQLCommand = $SQLConnection.CreateCommand()
