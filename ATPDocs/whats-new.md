@@ -30,6 +30,19 @@ For updates about versions and features released six months ago or earlier, see 
 
 ## January 2024
 
+### Timeline tab added for group entities
+
+Now you can view Active Directory group entity-related activities and alerts from the last 180 days in Microsoft Defender XDR, such as group membership changes, LDAP queries and so on.
+
+To access the group timeline page, select **Open timeline** on the group details pane.
+
+
+
+For example:
+
+:::image type="content" source="media/whats-new/group-timeline.png" alt-text="Screenshot of the Open timeline button on a group entity details pane." lightbox="media/whats-new/group-timeline.png":::
+
+For more information, see [Investigation steps for suspicious groups](investigate-assets.md#investigation-steps-for-suspicious-groups).
 
 ### Configure and validate your Defender for Identity environment via PowerShell
 
