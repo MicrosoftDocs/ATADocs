@@ -66,7 +66,7 @@ For more information, see [Investigate users](/microsoft-365/security/defender/i
 
 ## Investigation steps for suspicious groups
 
-If an alert or incident indicates that an entire group may be suspicious or compromised, check and investigate the group entity for the following details and activities:
+If an alert or incident investigation is related to an Active Directory group, check the group entity for the following details and activities:
 
 1. **Group identity**
     1. Is the user a [sensitive group](entity-tags.md), such as an admin or on a specific watchlist?
