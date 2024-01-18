@@ -57,7 +57,7 @@ For example, the commands listed below might be helpful if you're using the Wind
 
 In these sample codes:
 
-- **[DOMAIN1\mdiSvc01]** is the directory services user of the workspace
+- **[DOMAIN1\mdiSvc01]** is the directory services user of the workspace (if you are working with a gMSA, use **[DOMAIN1\mdiSvc01$]** instead)
 - **AdfsConfigurationV4** is an example of an AD FS database name, and may vary
 - **server=\.\pipe\MICROSOFT##WID\tsql\query** - is the connection string to the database if you are using WID
 
