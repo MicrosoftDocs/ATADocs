@@ -49,7 +49,7 @@ Sign into your server and run one of the following commands:
 - To test settings that you're planning on using, but aren't currently configured on the server, run the command using the following syntax:
 
     ```powershell
-    Test-MDISensorApiConnection -BypassConfiguration -SensorApiUrl 'https://<Workscontososensorapi.atp.azure.com' -ProxyUrl 'https://myproxy.contoso.com:8080' -ProxyCredential $credential
+    Test-MDISensorApiConnection -BypassConfiguration -SensorApiUrl 'https://contososensorapi.atp.azure.com' -ProxyUrl 'https://myproxy.contoso.com:8080' -ProxyCredential $credential
     ```
 
     Where:
