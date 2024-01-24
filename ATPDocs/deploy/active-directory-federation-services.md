@@ -57,7 +57,7 @@ For example, the commands listed below might be helpful if you're using the Wind
 
 In these sample codes:
 
-- **[DOMAIN1\mdiSvc01]** is the directory services user of the workspace
+- **[DOMAIN1\mdiSvc01]** is the directory services user of the workspace. If you're working with a gMSA, append a **$** to the end of the username. For example: **[DOMAIN1\mdiSvc01$]**
 - **AdfsConfigurationV4** is an example of an AD FS database name, and may vary
 - **server=\.\pipe\MICROSOFT##WID\tsql\query** - is the connection string to the database if you are using WID
 
@@ -81,7 +81,7 @@ GO
 **To grant the sensor access to the AD FS database using PowerShell**:
 
 ```powershell
-$ConnectionString = 'server=\\.\pipe\MICROSOFT##WID\tsql\querydatabase=AdfsConfigurationV4;trusted_connection=true;'
+$ConnectionString = 'server=\\.\pipe\MICROSOFT##WID\tsql\query;database=AdfsConfigurationV4;trusted_connection=true;'
 $SQLConnection= New-Object System.Data.SQLClient.SQLConnection($ConnectionString)
 $SQLConnection.Open()
 $SQLCommand = $SQLConnection.CreateCommand()
