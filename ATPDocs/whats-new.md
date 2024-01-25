@@ -30,6 +30,24 @@ For updates about versions and features released six months ago or earlier, see 
 
 ## January 2024
 
+### Defender for Identity release 2.227
+
+This version includes improvements and bug fixes for cloud services and the Defender for Identity sensor.
+
+### Timeline tab added for group entities
+
+Now you can view Active Directory group entity-related activities and alerts from the last 180 days in Microsoft Defender XDR, such as group membership changes, LDAP queries and so on.
+
+To access the group timeline page, select **Open timeline** on the group details pane.
+
+
+
+For example:
+
+:::image type="content" source="media/whats-new/group-timeline.png" alt-text="Screenshot of the Open timeline button on a group entity details pane." lightbox="media/whats-new/group-timeline.png":::
+
+For more information, see [Investigation steps for suspicious groups](investigate-assets.md#investigation-steps-for-suspicious-groups).
+
 ### Configure and validate your Defender for Identity environment via PowerShell
 
 Defender for Identity now supports the new *DefenderForIdentity* PowerShell module, which is designed to help you configure and validate your environment for working with Microsoft Defender for Identity.
@@ -48,6 +66,10 @@ For more information, see:
 
 - [DefenderForIdentity PowerShell module (PowerShell Gallery)](https://www.powershellgallery.com/packages/DefenderForIdentity/)
 - [DefenderForIdentity PowerShell reference documentation](/powershell/defenderforidentity/overview-defenderforidentity)
+
+### Defender for Identity release 2.226
+
+This version includes improvements and bug fixes for cloud services and the Defender for Identity sensor.
 
 ### Defender for Identity release 2.225
 
