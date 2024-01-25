@@ -190,6 +190,29 @@ None
 |MITRE attack technique  | [Account Discovery (T1087)](https://attack.mitre.org/techniques/T1087/)  |
 |MITRE attack sub-technique | [Domain Account (T1087.002)](https://attack.mitre.org/techniques/T1087/002/)  |
 
+## Account Enumeration reconnaissance (LDAP) (external ID 2437)
+
+**Severity**: Medium
+
+**Description**:
+
+In account enumeration reconnaissance, an attacker uses a dictionary with thousands of user names, or tools such as Ldapnomnom in an attempt to guess user names in the domain.  
+
+**LDAP**: Attacker makes LDAP Ping requests (cLDAP) using these names to try to find a valid username in the domain. If a guess successfully determines a username, the attacker may receive a response indicating that the user exists in the domain.  
+
+In this alert detection, Defender for Identity detects where the account enumeration attack came from, the total number of guess attempts, and how many attempts were matched. If there are too many unknown users, Defender for Identity detects it as a suspicious activity. The alert is based on LDAP search activities from sensors running on domain controller servers. 
+**Learning period**:
+
+None
+
+**MITRE**:
+
+|Primary MITRE tactic  |[Discovery (TA0007)](https://attack.mitre.org/tactics/TA0007/)  |
+|---------|---------|
+|MITRE attack technique  | [Account Discovery (T1087)](https://attack.mitre.org/techniques/T1087/)        |
+|MITRE attack sub-technique | [Domain Account (T1087.002)](https://attack.mitre.org/techniques/T1087/002/)        |
+
+
 ## See also
 
 - [Investigate assets](investigate-assets.md)
