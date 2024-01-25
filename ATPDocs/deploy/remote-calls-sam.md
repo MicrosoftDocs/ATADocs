@@ -76,7 +76,9 @@ This procedure describes how to use the [Microsoft Intune admin center](https://
 
 1. Add settings to define an [AccessFromNetwork](/windows/client-management/mdm/policy-csp-UserRights#accessfromnetwork) policy:
 
-    1. In the **Settings picker**, search for **Access From Network**, select to browse by the **User Rights** category, and then select the **Access From Network** setting.
+    1. In the **Settings picker**, search for **Access From Network**.
+    
+     1. Select to browse by the **User Rights** category, and then select the **Access From Network** setting.
 
     1. Select to import settings, and then browse to and select a CSV file that contains a list of users and groups, including SIDs or names. Make sure to include the built-in **Administrators** group (*S-1-5-32-544*), and the Defender for Identity Directory Service account SID.
 
