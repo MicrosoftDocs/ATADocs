@@ -30,6 +30,10 @@ For updates about versions and features released six months ago or earlier, see 
 
 ## January 2024
 
+### Defender for Identity release 2.227
+
+This version includes improvements and bug fixes for cloud services and the Defender for Identity sensor.
+
 ### Timeline tab added for group entities
 
 Now you can view Active Directory group entity-related activities and alerts from the last 180 days in Microsoft Defender XDR, such as group membership changes, LDAP queries and so on.
