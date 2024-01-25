@@ -1,7 +1,7 @@
 ---
 title: Plan capacity for deployment | Microsoft Defender for Identity
 description: Plan your deployment and decide how many Microsoft Defender for Identity servers are needed to support your network.
-ms.date: 08/27/2023
+ms.date: 01/25/2024
 ms.topic: how-to
 ---
 
@@ -87,6 +87,37 @@ In this table:
 When determining sizing, keep in mind the total number of cores and total amount of memory that will be used by the sensor service.
 
 For more information, see [Resource limitations](../architecture.md#resource-limitations).
+
+## Manual sizing estimation for domain controllers
+
+If you're unable to use the [sizing tool](#use-the-sizing-tool), you can manually estimate whether your domain controller servers have enough resources for a Defender for Identity sensor instead.
+
+Manually gather the packet/second counter information from all your domain controllers, over 24 hours with a low collection interval like 5 seconds. For each domain controller, calculate the daily average and the busiest period (15 minutes) average.  
+
+Various tools can help you discover the average packet/second counter for your domain controller. This procedure describes an example of how to use Performance Monitor to gather the relevant information.
+
+1. Open Performance Monitor and expand **Data Collector Sets**.
+1. Right-click **User Defined** and select **New > Data Collector Set**.
+1. Enter a meaningful name for the collector set and select **Create Manually (Advanced)**.
+1. Under **What type of data do you want to include?**, select  **Create data logs, and Performance counter**.
+1. Expand **Network Adapter** and then select **Packets/sec** and the relevant workspace. If you're not sure which workspace to select, select **&lt;All workspaces&gt;**. Select **Add** > **OK** to complete the step.
+
+    Alternately, if you're performing this step from the command line, run `ipconfig /all` to see the adapter name and configuration.
+
+1. Change the **Sample interval** to **five seconds**, and define where you want the data to be saved.
+
+1. Under **Create the data collector set**,  select **Start this data collector set now** > **Finish**.
+
+    You should now see the data collector set you created with a green triangle indicating that it's working.
+
+1. After 24 hours, stop the data collector set. Right-click the data collector set and select **Stop**.
+
+1. In File Explorer, browse to the folder where the **.blg** file was saved. Double-click it to open it in Performance Monitor.
+
+1. Select the **Packets/sec** counter, and record the average and maximum values.
+
+> [!NOTE]
+> By default, Defender for Identity supports up to 350 sensors. If you want to install more sensors, contact Defender for Identity support.
 
 ## Next step
 
