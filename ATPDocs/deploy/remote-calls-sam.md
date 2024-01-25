@@ -66,7 +66,9 @@ This procedure describes how to use the [Microsoft Intune admin center](https://
 
 1. Add settings to define a [NetworkAccess_RestrictClientsAllowedToMakeRemoteCallsToSAM](/windows/client-management/mdm/policy-csp-LocalPoliciesSecurityOptions#networkaccess_restrictclientsallowedtomakeremotecallstosam) policy:
 
-    1. In the **Settings picker**, search for **Network Access Restrict Clients Allowed To Make Remote Calls To SAM**, select to browse by the **Local Policies Security Options** category, and then select the **Network Access Restrict Clients Allowed To Make Remote Calls To SAM** setting.
+    1. In the **Settings picker**, search for **Network Access Restrict Clients Allowed To Make Remote Calls To SAM**. 
+    
+     1. Select to browse by the **Local Policies Security Options** category, and then select the **Network Access Restrict Clients Allowed To Make Remote Calls To SAM** setting.
 
     1. Enter the security descriptor (SDDL): `O:BAG:BAD:(A;;RC;;;BA)(A;;RC;;;%SID%)`, replacing `%SID%` with the Defender for Identity Directory Service account SID.
 
