@@ -45,7 +45,20 @@ This article reviews the Microsoft Defender for Identity activities we recommend
 
 ### Investigate users with a high investigation score
 
-<!--TBD-->
+**Where**: In Microsoft Defender XDR, select **Identities** to view all identities. Sort the grid to view users with high **Investigation priority** scores at the top. Select an identity to view the identity details page, including more details in the **Investigation priority** widget.
+
+The investigation priority widget includes the calculated investigation priority score breakdown and a two-week trend for an identity, including whether the identity score is on the high percentile for that tenant.
+
+Find more identity-related information on:
+
+- Individual alert or incident details pages
+- Device details pages
+- Advanced hunting queries
+- The Action center page
+
+**Persona**: SOC analysts
+
+For more information, see [Investigate users in MIcrosoft Defender XDR](/microsoft-365/security/defender/investigate-users) and [Investigate assets](investigate-assets.md).
 
 ### Review the ITDR dashboard
 
