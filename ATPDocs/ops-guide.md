@@ -76,7 +76,7 @@ For more information, see [Work with Defender for Identity's ITDR dashboard (Pre
 - [Microsoft 365 Service health status](https://status.office365.com/)
 - X: https://twitter.com/MSFT365status
 
-**Persona**: 
+**Persona**: Security and compliance administrators
 
 If you're experiencing issues with a cloud service, we recommend checking service health updates to determine whether it's a known issue, with a resolution in progress, before you call support or spend time troubleshooting.
 
@@ -96,7 +96,7 @@ For more information, see [Microsoft Defender for Identity health issues](health
 
 **Where**: In Microsoft Defender XDR, select **Secure score**.
 
-**Persona**: Security and Compliance administrators, SOC analysts
+**Persona**: Security and compliance administrators, SOC analysts
 
 Microsoft Secure score recommendations are based on the Microsoft security recommendations that are most relevant to your organization. Secure score recommendations for Defender for Identity include monitoring for on-premises identities and identity infrastructure weak points.
 
@@ -106,7 +106,7 @@ To view Secure Score recommendations per product, in Microsoft Defender XDR, sel
 
 **Where**: In Microsoft Defender XDR, select **Hunting > Advanced hunting**
 
-**Persona**:
+**Persona**: Security and compliance administrators, SOC analysts
 
 We recommend that you configure custom detections in Microsoft Defender XDR to monitor and respond to various events and system states, such as suspected breach activity and misconfigured endpoints.
 
@@ -123,11 +123,11 @@ For more information, see:
 
 **Where**: In Microsoft Defender XDR, select **Hunting > Advanced hunting**
 
-**Persona**:
+**Persona**: Security and compliance administrators, SOC analysts
 
 Microsoft Defender XDR allows you to *tune* alerts, helping you reduce the number of false positives you need to triage. Tuning alerts hides or resolves alerts automatically based on your configurations and rule conditions.
 
-We recommend reviewing your tuning configurations regularly to make sure that they're still relevant and effective. 
+We recommend reviewing your tuning configurations regularly to make sure that they're still relevant and effective.
 
 For more information, see [Investigate Defender for Identity security alerts in Microsoft Defender XDR](manage-security-alerts.md).
 
@@ -150,9 +150,9 @@ For more information, see [Investigate Defender for Identity security alerts in 
 
 **Where**: In Microsoft Defender XDR, select **Hunting > Advanced hunting**.
 
-**Persona**:
+**Persona**: SOC analysts
 
-Use Microsoft Defender XDR advanced hunting to proactively explore through the last 30 days of raw data, including Defender for Identity data correlated with data streaming from other Microsoft Defender XDR services. 
+Use Microsoft Defender XDR advanced hunting to proactively explore through the last 30 days of raw data, including Defender for Identity data correlated with data streaming from other Microsoft Defender XDR services.
 
 Inspect events in your network to locate threat indicators and entities, including both known and potential threats.
 
@@ -164,7 +164,7 @@ For more information, see [Proactively hunt for threats with advanced hunting in
 
 **Where**: In Microsoft Defender XDR, select **Hunting > Advanced hunting**
 
-**Persona**:
+**Persona**: Security and compliance administrators, SOC analysts
 
 Microsoft Defender XDR allows you to *tune* alerts, helping you reduce the number of false positives you need to triage. Tuning alerts hides or resolves alerts automatically based on your configurations and rule conditions.
 
