@@ -60,7 +60,7 @@ This procedure describes how to use the [Microsoft Intune admin center](https://
 1. In the Microsoft Intune admin center, create a new Device profile, defining the following values:
 
     - **Platform**: Windows 10 or later
-    - **Profile type** Settings catalog
+    - **Profile type**: Settings catalog
 
     Enter a meaningful name and description for your policy.
 
@@ -71,16 +71,18 @@ This procedure describes how to use the [Microsoft Intune admin center](https://
      1. Select to browse by the **Local Policies Security Options** category, and then select the **Network Access Restrict Clients Allowed To Make Remote Calls To SAM** setting.
 
     1. Enter the security descriptor (SDDL): `O:BAG:BAD:(A;;RC;;;BA)(A;;RC;;;%SID%)`, replacing `%SID%` with the Defender for Identity Directory Service account SID.
-
-    1. Make sure to include the built-in **Administrators** group: `O:BAG:BAD:(A;;RC;;;BA)(A;;RC;;;S-1-5-32-544)`
+    
+        Make sure to include the built-in **Administrators** group: `O:BAG:BAD:(A;;RC;;;BA)(A;;RC;;;S-1-5-32-544)`
 
 1. Add settings to define an [AccessFromNetwork](/windows/client-management/mdm/policy-csp-UserRights#accessfromnetwork) policy:
 
     1. In the **Settings picker**, search for **Access From Network**.
     
-     1. Select to browse by the **User Rights** category, and then select the **Access From Network** setting.
+    1. Select to browse by the **User Rights** category, and then select the **Access From Network** setting.
 
-    1. Select to import settings, and then browse to and select a CSV file that contains a list of users and groups, including SIDs or names. Make sure to include the built-in **Administrators** group (*S-1-5-32-544*), and the Defender for Identity Directory Service account SID.
+    1. Select to import settings, and then browse to and select a CSV file that contains a list of users and groups, including SIDs or names. 
+    
+        Make sure to include the built-in **Administrators** group (*S-1-5-32-544*), and the Defender for Identity Directory Service account SID.
 
 1. Continue the wizard to select the **scope tags** and **assignments**, and select **Create** to create your profile.
 
