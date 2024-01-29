@@ -1,13 +1,13 @@
 ---
 title: Operational guide - Microsoft Defender for Identity
-description: Learn about the Microsoft Defender for Identity activities that we recommend for your team on a daily, weekly, monthly, and ad-hoc basis.
+description: Learn about the Microsoft Defender for Identity activities that we recommend for your team on a daily, weekly, and monthly basis.
 ms.date: 01/29/2024
 ms.topic: how-to
 ---
 
 # Microsoft Defender for Identity operational guide
 
-This article summarizes the Microsoft Defender for Identity activities we recommend for your team on a daily, weekly, monthly, and ad-hoc basis.
+This article summarizes the Microsoft Defender for Identity activities we recommend for your team on a daily, weekly, and monthly basis.
 
 |Cadence  |Tasks  |
 |---------|---------|
@@ -24,4 +24,3 @@ For more information, see the Microsoft Defender XDR [Security operations overvi
 - [Daily operational guide](ops-guide-daily.md)
 - [Weekly operational guide](ops-guide-weekly.md)
 - [Monthly operational guide](ops-guide-monthly.md)
-- [Ad-hoc operational guide](ops-guide-ad-hoc.md)
