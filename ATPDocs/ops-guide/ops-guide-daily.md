@@ -23,7 +23,7 @@ This article reviews the Microsoft Defender for Identity activities we recommend
     |---------|---------|
     |**Status**     |   New, In progress      |
     |**Severity**     |  High, Medium, Low       |
-    |**Service source**     |  Keep all service sources checked. This should list alerts with the most fidelity, with correlation across other Microsoft XDR workloads. Select **Defender for Identity** to view items that come specifically from Defender for Identity.       |
+    |**Service source**     |  Keep all service sources checked. This selection should list alerts with the most fidelity, with correlation across other Microsoft XDR workloads. Select **Defender for Identity** to view items that come specifically from Defender for Identity.       |
 
 1. Select each incident to review all details. Review all tabs in the incident, the activity log, and advanced hunting.
 
@@ -56,7 +56,7 @@ Find more identity-related information on:
 
 **Persona**: SOC analysts
 
-For more information, see [Investigate users in MIcrosoft Defender XDR](/microsoft-365/security/defender/investigate-users) and [Investigate assets](../investigate-assets.md).
+For more information, see [Investigate users in Microsoft Defender XDR](/microsoft-365/security/defender/investigate-users) and [Investigate assets](../investigate-assets.md).
 
 ## Configure tuning rules for benign true positives / false positive alerts
 
@@ -64,7 +64,7 @@ For more information, see [Investigate users in MIcrosoft Defender XDR](/microso
 
 **Persona**: Security and compliance administrators, SOC analysts
 
-If, while reviewing alerts, you find either benign true positives or outright false positives, we recommend that you tune your alerts to reduce the number of alerts you need to triage. Tuning alerts hides or resolves alerts automatically based on your configurations and rule conditions.
+If you find either benign true positives or outright false positives, we recommend that you tune your alerts to reduce the number of alerts you need to triage. Tuning alerts hides or resolves alerts automatically based on your configurations and rule conditions.
 
 We recommend creating new rules as needed as your network grows to make sure that your alert tuning remains relevant and effective.
 
@@ -84,7 +84,7 @@ For more information, see [Work with Defender for Identity's ITDR dashboard (Pre
 
 **Persona**: SOC analysts
 
-You may want to proactively hunt on a daily or weekly basis, depending on your level as a SOC analyst.
+You might want to proactively hunt on a daily or weekly basis, depending on your level as a SOC analyst.
 
 Use Microsoft Defender XDR advanced hunting to proactively explore through the last 30 days of raw data, including Defender for Identity data correlated with data streaming from other Microsoft Defender XDR services.
 
@@ -103,7 +103,9 @@ For more information, see [Proactively hunt for threats with advanced hunting in
 
 We recommend checking the **Health Issues** page regularly to check for any problems in your Defender for Identity deployment, such as connectivity or sensor issues. Make sure to check both the **Global** and **Sensor** tabs to view both types of issues.
 
-For more information, see [Microsoft Defender for Identity health issues](../health-alerts.md).
+We also recommend setting up email notifications for service issues so that you can catch issues as they happen.
+
+For more information, see [Microsoft Defender for Identity health issues](../health-alerts.md) and [Configure email notifications](../notifications.md#configure-email-notifications).
 
 ## Related content
 

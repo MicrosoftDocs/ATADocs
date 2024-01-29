@@ -45,7 +45,7 @@ For more information, see:
 
 **Persona**: SOC analysts
 
-You may want to proactively hunt on a daily or weekly basis, depending on your level as a SOC analyst.
+You might want to proactively hunt on a daily or weekly basis, depending on your level as a SOC analyst.
 
 Use Microsoft Defender XDR advanced hunting to proactively explore through the last 30 days of raw data, including Defender for Identity data correlated with data streaming from other Microsoft Defender XDR services.
 

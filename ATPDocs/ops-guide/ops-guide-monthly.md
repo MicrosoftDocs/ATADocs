@@ -21,9 +21,7 @@ This article reviews the Microsoft Defender for Identity activities we recommend
 
 If you're experiencing issues with a cloud service, we recommend checking service health updates to determine whether it's a known issue, with a resolution in progress, before you call support or spend time troubleshooting.
 
-We also recommend setting up email notifications for service issues so that you can catch issues as they happen.
-
-For more information, see <!--xref needed-->
+For more information, see [Review Defender for Identity health issues](ops-guide-daily.md#review-defender-for-identity-health-issues).
 
 ## Review tuned alerts and adjust tuning if needed
 
