@@ -58,6 +58,18 @@ Find more identity-related information on:
 
 For more information, see [Investigate users in MIcrosoft Defender XDR](/microsoft-365/security/defender/investigate-users) and [Investigate assets](investigate-assets.md).
 
+## Configure tuning rules for benign true positives / false positive alerts
+
+**Where**: In Microsoft Defender XDR, select **Hunting > Advanced hunting**
+
+**Persona**: Security and compliance administrators, SOC analysts
+
+If, while reviewing alerts, you find either benign true positives or outright false positives, we recommend that you tune your alerts to reduce the number of alerts you need to triage. Tuning alerts hides or resolves alerts automatically based on your configurations and rule conditions.
+
+We recommend creating new rules as needed as your network grows to make sure that your alert tuning remains relevant and effective.
+
+For more information, see [Investigate Defender for Identity security alerts in Microsoft Defender XDR](manage-security-alerts.md).
+
 ## Review the ITDR dashboard
 
 **Where**: In Microsoft Defender XDR, under select **Identities** > **Dashboard**.
@@ -66,17 +78,22 @@ For more information, see [Investigate users in MIcrosoft Defender XDR](/microso
 
 For more information, see [Work with Defender for Identity's ITDR dashboard (Preview)](dashboard.md).
 
-## Review Microsoft service health
+## Proactively hunt
 
-**Where**: Check the following locations:
+**Where**: In Microsoft Defender XDR, select **Hunting > Advanced hunting**.
 
-- In the Microsoft 365 admin center, select **Health > Service health**
-- [Microsoft 365 Service health status](https://status.office365.com/)
-- X: https://twitter.com/MSFT365status
+**Persona**: SOC analysts
 
-**Persona**: Security and compliance administrators
+You may want to proactively hunt on a daily or weekly basis, depending on your level as a SOC analyst.
 
-If you're experiencing issues with a cloud service, we recommend checking service health updates to determine whether it's a known issue, with a resolution in progress, before you call support or spend time troubleshooting.
+Use Microsoft Defender XDR advanced hunting to proactively explore through the last 30 days of raw data, including Defender for Identity data correlated with data streaming from other Microsoft Defender XDR services.
+
+Inspect events in your network to locate threat indicators and entities, including both known and potential threats.
+
+We recommend that beginners use guided advanced hunting, which provides a query builder. If you're comfortable using Kusto Query Language (KQL), build queries from scratch as needed for your investigations.
+
+For more information, see [Proactively hunt for threats with advanced hunting in Microsoft Defender XDR](/microsoft-365/security/defender/advanced-hunting-overview).
+
 
 ## Review Defender for Identity health issues
 
@@ -84,7 +101,7 @@ If you're experiencing issues with a cloud service, we recommend checking servic
 
 **Persona**: Security administrators, Active Directory administrators
 
-We recommend checking the **Health Issues** page regularly to check for any problems in your Defender for Identity deployment, such as connectivity or sensor issues.
+We recommend checking the **Health Issues** page regularly to check for any problems in your Defender for Identity deployment, such as connectivity or sensor issues. Make sure to check both the **Global** and **Sensor** tabs to view both types of issues.
 
 For more information, see [Microsoft Defender for Identity health issues](health-alerts.md).
 

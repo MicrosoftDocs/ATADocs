@@ -19,6 +19,11 @@ Microsoft Secure score recommendations are based on the Microsoft security recom
 
 To view Secure Score recommendations per product, in Microsoft Defender XDR, select **Secure score > Recommended actions**, and group the list by **Product**.
 
+For more information, see:
+
+- [Microsoft Defender for Identity's security posture assessments](../security-assessment.md)
+- [Microsoft Secure Score](/microsoft-365/security/defender/microsoft-secure-score)
+
 ## Review and respond to emerging threats
 
 **Where**: In Microsoft Defender XDR, select **Hunting > Advanced hunting**
@@ -33,6 +38,28 @@ For more information, see:
 
 - [Custom detections overview](/microsoft-365/security/defender/custom-detections-overview)
 - [Create and manage custom detections rules](/microsoft-365/security/defender/custom-detection-rules)
+
+## Proactively hunt
+
+**Where**: In Microsoft Defender XDR, select **Hunting > Advanced hunting**.
+
+**Persona**: SOC analysts
+
+You may want to proactively hunt on a daily or weekly basis, depending on your level as a SOC analyst.
+
+Use Microsoft Defender XDR advanced hunting to proactively explore through the last 30 days of raw data, including Defender for Identity data correlated with data streaming from other Microsoft Defender XDR services.
+
+Inspect events in your network to locate threat indicators and entities, including both known and potential threats.
+
+We recommend that beginners use guided advanced hunting, which provides a query builder. If you're comfortable using Kusto Query Language (KQL), build queries from scratch as needed for your investigations.
+
+For more information, see [Proactively hunt for threats with advanced hunting in Microsoft Defender XDR](/microsoft-365/security/defender/advanced-hunting-overview).
+
+## Review environment for new domain controllers and deploy sensors
+
+Check your organization's environment for any new domain controllers that don't have sensors installed. If you find any, install the sensors on those domain controllers.
+
+For more information, see [Deploy Microsoft Defender for Identity with Microsoft Defender XDR](../deploy/deploy-defender-identity.md).
 
 ## Related content
 
