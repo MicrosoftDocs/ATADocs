@@ -1,7 +1,7 @@
 ---
 title: Configure SAM-R to enable lateral movement path detection | Microsoft Defender for Identity 
-description: Learn how to configure Microsoft Defender for Identity to make remote calls to SAM
-ms.date: 06/12/2023
+description: Learn how to configure Microsoft Defender for Identity to make remote calls to SAM-R.
+ms.date: 01/25/2024
 ms.topic: how-to
 ---
 
@@ -53,6 +53,40 @@ For more information, see [Network access: Restrict clients allowed to make remo
 >
 > The [Microsoft Security Compliance Toolkit](https://www.microsoft.com/download/details.aspx?id=55319) recommends replacing the default *Everyone* with *Authenticated Users* to prevent anonymous connections from performing network sign-ins. Review your local policy settings before managing the [Access this computer from the network](/windows/security/threat-protection/security-policy-settings/access-this-computer-from-the-network) setting from a GPO, and consider including *Authenticated Users* in the GPO if needed.
 
+## Configure a Device profile for Microsoft Entra joined devices only
+
+This procedure describes how to use the [Microsoft Intune admin center](https://intune.microsoft.com/) to configure the policies in a Device profile if you're working only with Microsoft Entra joined devices, and no hybrid joined devices.
+
+1. In the Microsoft Intune admin center, create a new Device profile, defining the following values:
+
+    - **Platform**: Windows 10 or later
+    - **Profile type**: Settings catalog
+
+    Enter a meaningful name and description for your policy.
+
+1. Add settings to define a [NetworkAccess_RestrictClientsAllowedToMakeRemoteCallsToSAM](/windows/client-management/mdm/policy-csp-LocalPoliciesSecurityOptions#networkaccess_restrictclientsallowedtomakeremotecallstosam) policy:
+
+    1. In the **Settings picker**, search for **Network Access Restrict Clients Allowed To Make Remote Calls To SAM**. 
+    
+     1. Select to browse by the **Local Policies Security Options** category, and then select the **Network Access Restrict Clients Allowed To Make Remote Calls To SAM** setting.
+
+    1. Enter the security descriptor (SDDL): `O:BAG:BAD:(A;;RC;;;BA)(A;;RC;;;%SID%)`, replacing `%SID%` with the Defender for Identity Directory Service account SID.
+    
+        Make sure to include the built-in **Administrators** group: `O:BAG:BAD:(A;;RC;;;BA)(A;;RC;;;S-1-5-32-544)`
+
+1. Add settings to define an [AccessFromNetwork](/windows/client-management/mdm/policy-csp-UserRights#accessfromnetwork) policy:
+
+    1. In the **Settings picker**, search for **Access From Network**.
+    
+    1. Select to browse by the **User Rights** category, and then select the **Access From Network** setting.
+
+    1. Select to import settings, and then browse to and select a CSV file that contains a list of users and groups, including SIDs or names. 
+    
+        Make sure to include the built-in **Administrators** group (*S-1-5-32-544*), and the Defender for Identity Directory Service account SID.
+
+1. Continue the wizard to select the **scope tags** and **assignments**, and select **Create** to create your profile.
+
+For more information, see [Apply features and settings on your devices using device profiles in Microsoft Intune](/mem/intune/configuration/device-profiles).
 
 ## Next step
 
