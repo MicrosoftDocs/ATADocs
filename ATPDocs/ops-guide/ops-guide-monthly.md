@@ -38,7 +38,7 @@ We recommend reviewing your tuning configurations regularly to make sure that th
 - Check to see if your existing rules have matches as expected
 - If a rule has no matches, consider whether you still need it or if you can remove it
 
-For more information, see [Investigate Defender for Identity security alerts in Microsoft Defender XDR](manage-security-alerts.md).
+For more information, see [Investigate Defender for Identity security alerts in Microsoft Defender XDR](../manage-security-alerts.md).
 
 ## Track new changes in Microsoft Defender XDR and Defender for Identity
 
