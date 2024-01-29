@@ -258,6 +258,26 @@ None
 |MITRE attack technique  |   [Impair Defenses (T1562)](https://attack.mitre.org/techniques/T1562/)  |
 |MITRE attack sub-technique |  [Disable Windows Event Logging (T1562.002)](https://attack.mitre.org/techniques/T1562/002/)      |
 
+## Directory Services Restore Mode Password Change   (external ID 2438)
+
+**Severity**: Medium
+
+**Description**:
+
+Directory Services Restore Mode (DSRM) is a special boot mode in Microsoft Windows Server operating systems that allows an administrator to repair or restore the Active Directory database. This mode is typically used when there are issues with the Active Directory and normal booting is not possible. The DSRM password is set during the promotion of a server to a domain controller. In this detection, an alert is triggered when Defender for Identity detects a DSRM password is changed. 
+We will recommend investigating the source computer and the user who made the request to understand if the DSRM password change was initiated from a legitimate administrative action or if it raises concerns about unauthorized access or potential security threats. 
+
+**Learning period**:
+
+None
+
+**MITRE**:
+
+|Primary MITRE tactic  | [Persistence (TA0003)](https://attack.mitre.org/tactics/TA0003) |
+|---------|---------|
+|MITRE attack technique  |   [Account Manipulation (T1098)](https://attack.mitre.org/techniques/T1098/)  |
+|MITRE attack sub-technique |  N/A       |
+
 ## See also
 
 - [Investigate assets](investigate-assets.md)
