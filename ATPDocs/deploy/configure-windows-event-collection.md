@@ -82,6 +82,10 @@ This procedure describes how to modify your domain controller's Advanced Audit P
         | **DS Access** | Audit Directory Service Changes | 5136  |
         | **System** | Audit Security System Extension | 7045 |
         | **DS Access** | Audit Directory Service Access | 4662 - For this event, you must also [configure domain object auditing](#configure-domain-object-auditing).  |
+        
+        > [!NOTE]
+        >
+        > The subcategory of **Audit Security Group Management** does not currently have Failure events. However, we recommend adding them for auditing purposes in case they are implemented in the future. For more information, see [Audit Security Group Management](/windows/security/threat-protection/auditing/audit-security-group-management)
 
         For example, to configure **Audit Security Group Management**, under **Account Management**, double-click **Audit Security Group Management**, and then select **Configure the following audit events** for both **Success** and **Failure** events:
 
