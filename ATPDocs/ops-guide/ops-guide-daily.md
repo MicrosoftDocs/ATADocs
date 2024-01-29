@@ -1,0 +1,99 @@
+---
+title: Daily operational guide - Microsoft Defender for Identity
+description: Learn about the Microsoft Defender for Identity activities that we recommend for your team on a daily basis.
+ms.date: 01/29/2024
+ms.topic: how-to
+---
+
+# Daily operational guide - Microsoft Defender for Identity
+
+This article reviews the Microsoft Defender for Identity activities we recommend for your team on a daily basis.
+
+## Triage incidents by priority
+
+**Where**: In Microsoft Defender XDR, select **Incidents & alerts**
+
+**Persona**: SOC analysts
+
+**When triaging incidents**:
+
+1. In the incident dashboard, filter for the following items:
+
+    |Filter   |Values  |
+    |---------|---------|
+    |**Status**     |   New, In progress      |
+    |**Severity**     |  High, Medium, Low       |
+    |**Service source**     |  Keep all service sources checked. This should list alerts with the most fidelity, with correlation across other Microsoft XDR workloads. Select **Defender for Identity** to view items that come specifically from Defender for Identity.       |
+
+1. Select each incident to review all details. Review all tabs in the incident, the activity log, and advanced hunting.
+
+1. In the incident's **Evidence and response** tab, select each evidence item. Select the options menu > **Investigate** and then select **Activity log** or **Go hunt** as needed.
+
+1. Triage your incidents. For each incident, select **Manage incident** and then select one of the following options:
+
+    - True positive
+    - False positive
+    - Informational, expected activity
+
+    For true alerts, specify the treat type to help your security team see threat patterns and defend your organization from risk.
+
+1. When you're ready to start your active investigation, assign the incident to a user and update the incident status to **In progress**.
+
+1. When the incident is remediated, resolve it to resolve all linked and related active alerts and set a classification.
+
+## Investigate users with a high investigation score
+
+**Where**: In Microsoft Defender XDR, select **Identities** to view all identities. Sort the grid to view users with high **Investigation priority** scores at the top. Select an identity to view the identity details page, including more details in the **Investigation priority** widget.
+
+The investigation priority widget includes the calculated investigation priority score breakdown and a two-week trend for an identity, including whether the identity score is on the high percentile for that tenant.
+
+Find more identity-related information on:
+
+- Individual alert or incident details pages
+- Device details pages
+- Advanced hunting queries
+- The Action center page
+
+**Persona**: SOC analysts
+
+For more information, see [Investigate users in MIcrosoft Defender XDR](/microsoft-365/security/defender/investigate-users) and [Investigate assets](investigate-assets.md).
+
+## Review the ITDR dashboard
+
+**Where**: In Microsoft Defender XDR, under select **Identities** > **Dashboard**.
+
+**Persona**: SOC analysts, security administrators, identity and access management administrators
+
+For more information, see [Work with Defender for Identity's ITDR dashboard (Preview)](dashboard.md).
+
+## Review Microsoft service health
+
+**Where**: Check the following locations:
+
+- In the Microsoft 365 admin center, select **Health > Service health**
+- [Microsoft 365 Service health status](https://status.office365.com/)
+- X: https://twitter.com/MSFT365status
+
+**Persona**: Security and compliance administrators
+
+If you're experiencing issues with a cloud service, we recommend checking service health updates to determine whether it's a known issue, with a resolution in progress, before you call support or spend time troubleshooting.
+
+## Review Defender for Identity health issues
+
+**Where**: In Microsoft Defender XDR, select **Identities > Health issues**.
+
+**Persona**: Security administrators, Active Directory administrators
+
+We recommend checking the **Health Issues** page regularly to check for any problems in your Defender for Identity deployment, such as connectivity or sensor issues.
+
+For more information, see [Microsoft Defender for Identity health issues](health-alerts.md).
+
+## Related content
+
+For more information, see:
+
+- [Microsoft Defender XDR Security operations overview](/security/operations/overview)
+- [Microsoft Defender for Identity operational guide](ops-guide.md)
+- [Weekly operational guide - Microsoft Defender for Identity](ops-guide-weekly.md)
+- [Monthly operational guide - Microsoft Defender for Identity](ops-guide-monthly.md)
+- [Ad-hoc operational guide - Microsoft Defender for Identity](ops-guide-ad-hoc.md)

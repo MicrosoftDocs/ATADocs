@@ -208,7 +208,18 @@ items:
 - name: Reference
   items:
   - name: Operations guide
-    href: ops-guide.md
+    items:
+    - name: Overview
+      displayName: operations guide
+      href: ops-guide/ops-guide.md
+    - name: Daily activities
+      href: ops-guide/ops-guide-daily.md
+    - name: Weekly activities
+      href: ops-guide/ops-guide-weekly.md
+    - name: Monthly activities
+      href: ops-guide/ops-guide-monthly.md
+    - name: Ad-hoc activities
+      href: ops-guide/ops-guide-ad-hoc.md
   - name: Frequently asked questions
     href: technical-faq.yml
   - name: SIEM log reference
