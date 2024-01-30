@@ -63,3 +63,4 @@ For more information, see:
 - [Microsoft Defender for Identity operational guide](ops-guide.md)
 - [Daily operational guide - Microsoft Defender for Identity](ops-guide-daily.md)
 - [Monthly operational guide - Microsoft Defender for Identity](ops-guide-monthly.md)
+- [Quarterly operational guide - Microsoft Defender for Identity](ops-guide-quarterly.md)

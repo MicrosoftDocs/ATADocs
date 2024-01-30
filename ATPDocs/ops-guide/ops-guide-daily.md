@@ -43,7 +43,13 @@ This article reviews the Microsoft Defender for Identity activities we recommend
 
 ## Investigate users with a high investigation score
 
-**Where**: In Microsoft Defender XDR, select **Identities** to view all identities. Sort the grid to view users with high **Investigation priority** scores at the top. Select an identity to view the identity details page, including more details in the **Investigation priority** widget.
+**Where**: In Microsoft Defender XDR:
+
+1. Check the **Users at risk** widget on the **Home** page or the  **Entra ID users at risk** on the **Identities > Dashboard** page.
+
+    If you have users listed at *High risk*, select **View all users** to open the **Identities** page.
+
+1. On the **Identities** page, sort the grid to view users with high **Investigation priority** scores at the top. Select an identity to view the identity details page, including more details in the **Investigation priority** widget.
 
 The investigation priority widget includes the calculated investigation priority score breakdown and a two-week trend for an identity, including whether the identity score is on the high percentile for that tenant.
 
@@ -56,7 +62,11 @@ Find more identity-related information on:
 
 **Persona**: SOC analysts
 
-For more information, see [Investigate users in Microsoft Defender XDR](/microsoft-365/security/defender/investigate-users) and [Investigate assets](../investigate-assets.md).
+For more information, see:
+
+- [Investigate users in Microsoft Defender XDR](/microsoft-365/security/defender/investigate-users)
+- [Investigate assets](../investigate-assets.md)
+- [Work with Defender for Identity's ITDR dashboard (Preview)](../dashboard.md)
 
 ## Configure tuning rules for benign true positives / false positive alerts
 
@@ -64,7 +74,7 @@ For more information, see [Investigate users in Microsoft Defender XDR](/microso
 
 **Persona**: Security and compliance administrators, SOC analysts
 
-If you find either benign true positives or outright false positives, we recommend that you tune your alerts to reduce the number of alerts you need to triage to match your risk appetite. Tuning alerts hides or resolves alerts automatically based on your configurations and rule conditions.
+If you find either benign true positives or outright false positives, we recommend that you tune your alerts to reduce the number of alerts you need to triage to match your risk appetite. Tuning alerts resolves alerts automatically based on your configurations and rule conditions.
 
 We recommend creating new rules as needed as your network grows to make sure that your alert tuning remains relevant and effective.
 
@@ -115,3 +125,4 @@ For more information, see:
 - [Microsoft Defender for Identity operational guide](ops-guide.md)
 - [Weekly operational guide - Microsoft Defender for Identity](ops-guide-weekly.md)
 - [Monthly operational guide - Microsoft Defender for Identity](ops-guide-monthly.md)
+- [Quarterly operational guide - Microsoft Defender for Identity](ops-guide-quarterly.md)

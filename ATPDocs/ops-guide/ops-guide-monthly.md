@@ -29,7 +29,7 @@ For more information, see [Review Defender for Identity health issues](ops-guide
 
 **Persona**: Security and compliance administrators, SOC analysts
 
-Microsoft Defender XDR allows you to *tune* alerts, helping you reduce the number of false positives you need to triage. Tuning alerts hides or resolves alerts automatically based on your configurations and rule conditions.
+Microsoft Defender XDR allows you to *tune* alerts, helping you reduce the number of alerts you need to triage. Tuning alerts resolves alerts automatically based on your configurations and rule conditions.
 
 We recommend reviewing your tuning configurations regularly to make sure that they're still relevant and effective. For example:
 
@@ -58,3 +58,4 @@ For more information, see:
 - [Microsoft Defender for Identity operational guide](ops-guide.md)
 - [Daily operational guide - Microsoft Defender for Identity](ops-guide-daily.md)
 - [Weekly operational guide - Microsoft Defender for Identity](ops-guide-weekly.md)
+- [Quarterly operational guide - Microsoft Defender for Identity](ops-guide-quarterly.md)

@@ -218,6 +218,8 @@ items:
       href: ops-guide/ops-guide-weekly.md
     - name: Monthly activities
       href: ops-guide/ops-guide-monthly.md
+    - name: Quarterly activities
+      href: ops-guide/ops-guide-quarterly.md
   - name: Frequently asked questions
     href: technical-faq.yml
   - name: SIEM log reference
