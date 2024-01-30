@@ -258,7 +258,7 @@ None
 |MITRE attack technique  |   [Impair Defenses (T1562)](https://attack.mitre.org/techniques/T1562/)  |
 |MITRE attack sub-technique |  [Disable Windows Event Logging (T1562.002)](https://attack.mitre.org/techniques/T1562/002/)      |
 
-## Directory Services Restore Mode Password Change (external ID 2438)
+## Directory Services Restore Mode Password Change (external ID 2438) (Preview)
 
 **Severity**: Medium
 

@@ -34,8 +34,8 @@ For updates about versions and features released six months ago or earlier, see 
 
 This version includes improvements and bug fixes for cloud services and the Defender for Identity sensor, and the following new alerts:
 
-- [Account Enumeration reconnaissance (LDAP) (external ID 2437)](reconnaissance-discovery-alerts.md#account-enumeration-reconnaissance-ldap-external-id-2437)
-- [Directory Services Restore Mode Password Change   (external ID 2438)](other-alerts.md#directory-services-restore-mode-password-change-external-id-2438)
+- [Account Enumeration reconnaissance (LDAP) (external ID 2437)](reconnaissance-discovery-alerts.md#account-enumeration-reconnaissance-ldap-external-id-2437-preview) (Preview)
+- [Directory Services Restore Mode Password Change (external ID 2438)](other-alerts.md#directory-services-restore-mode-password-change-external-id-2438-preview) (Preview)
 
 ### Defender for Identity release 2.227
 

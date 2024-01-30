@@ -52,7 +52,7 @@ None
 
 1. Enforce [Complex and long passwords](/windows/device-security/security-policy-settings/password-policy) in the organization. Complex and long passwords provide the necessary first level of security against brute-force attacks. Brute force attacks are typically the next step in the cyber-attack kill chain following enumeration.
 
-## Account Enumeration reconnaissance (LDAP) (external ID 2437)
+## Account Enumeration reconnaissance (LDAP) (external ID 2437) (Preview)
 
 **Severity**: Medium
 
