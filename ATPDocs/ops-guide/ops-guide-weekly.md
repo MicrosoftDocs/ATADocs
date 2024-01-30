@@ -55,12 +55,6 @@ We recommend that beginners use guided advanced hunting, which provides a query 
 
 For more information, see [Proactively hunt for threats with advanced hunting in Microsoft Defender XDR](/microsoft-365/security/defender/advanced-hunting-overview).
 
-## Review environment for new domain controllers and deploy sensors
-
-Check your organization's environment for any new domain controllers that don't have sensors installed. If you find any, install the sensors on those domain controllers.
-
-For more information, see [Deploy Microsoft Defender for Identity with Microsoft Defender XDR](../deploy/deploy-defender-identity.md).
-
 ## Related content
 
 For more information, see:

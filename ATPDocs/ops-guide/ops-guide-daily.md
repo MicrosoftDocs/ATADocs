@@ -35,7 +35,7 @@ This article reviews the Microsoft Defender for Identity activities we recommend
     - False positive
     - Informational, expected activity
 
-    For true alerts, specify the treat type to help your security team see threat patterns and defend your organization from risk.
+    For true alerts, specify the threat type to help your security team see threat patterns and defend your organization from risk.
 
 1. When you're ready to start your active investigation, assign the incident to a user and update the incident status to **In progress**.
 
@@ -64,7 +64,7 @@ For more information, see [Investigate users in Microsoft Defender XDR](/microso
 
 **Persona**: Security and compliance administrators, SOC analysts
 
-If you find either benign true positives or outright false positives, we recommend that you tune your alerts to reduce the number of alerts you need to triage. Tuning alerts hides or resolves alerts automatically based on your configurations and rule conditions.
+If you find either benign true positives or outright false positives, we recommend that you tune your alerts to reduce the number of alerts you need to triage to match your risk appetite. Tuning alerts hides or resolves alerts automatically based on your configurations and rule conditions.
 
 We recommend creating new rules as needed as your network grows to make sure that your alert tuning remains relevant and effective.
 
