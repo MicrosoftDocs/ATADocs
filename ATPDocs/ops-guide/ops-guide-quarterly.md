@@ -30,7 +30,7 @@ We recommend that you periodically run the **Test-MDIConfiguration** PowerShell 
 For more information, see:
 
 - [Configure audit policies for Windows event logs](../deploy/configure-windows-event-collection.md)
-- [Test-MDIConfiguration](/powershell/module/defenderforidentity/test-mdiconfiguration?view=defenderforidentity-latest) PowerShell documentation
+- [Test-MDIConfiguration](/powershell/module/defenderforidentity/test-mdiconfigurationt) PowerShell documentation
 
 
 ## Related content
