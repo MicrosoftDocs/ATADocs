@@ -149,7 +149,7 @@ None
 |MITRE attack technique  | [Account Discovery (T1087)](https://attack.mitre.org/techniques/T1087/), [Indirect Command Execution (T1202)](https://attack.mitre.org/techniques/T1202/), [Permission Groups Discovery (T1069)](https://attack.mitre.org/techniques/T1069/)        |
 |MITRE attack sub-technique | [Domain Account (T1087.002)](https://attack.mitre.org/techniques/T1087/002/), [Domain Groups (T1069.002)](https://attack.mitre.org/techniques/T1069/002/)        |
 
-## Honeytoken was queried via SAM-R (external ID 2436)
+## Honeytoken was queried via SAM-R (external ID 2439)
 
 **Severity**: Low
 
