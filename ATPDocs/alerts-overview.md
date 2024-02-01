@@ -95,6 +95,7 @@ The following table lists the mapping between alert names, their corresponding u
 | [Suspicious deletion of the certificate database entries](other-alerts.md#suspicious-deletion-of-the-certificate-database-entries--external-id-2433) | 2433                | Medium                                                     | Defense evasion                                            |
 | [Suspicious disable of audit filters of AD CS](other-alerts.md#suspicious-disable-of-audit-filters-of-ad-cs---external-id-2434) | 2434                | Medium                                                     | Defense evasion                                            |
 | [Suspicious modifications to the AD CS security permissions/settings](persistence-privilege-escalation-alerts.md#suspicious-modifications-to-the-ad-cs-security-permissionssettings--external-id-2435) | 2435                | Medium                                                     | Privilege escalation                                            |
+| [Honeytoken was queried via SAM-R](reconnaissance-discovery-alerts.md#honeytoken-was-queried-via-sam-r-external-id-2439) | 2439                | Low                                                     | Discovery                                            |
 
 > [!NOTE]
 > To disable any security alert, contact support.
