@@ -48,7 +48,7 @@ For more information, see [Investigate Defender for Identity security alerts in 
 
 - For details about Defender for Identity updates, see [What's new in Microsoft Defender for Identity](../whats-new.md).
 
-**Persona**: Security administrators
+**Persona**: Security administrators, SOC analysts
 
 ## Related content
 
