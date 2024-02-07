@@ -32,7 +32,7 @@ For updates about versions and features released six months ago or earlier, see 
 
 ### Device details pages now include device descriptions (Preview)
 
-In Microsoft Defender XDR, the **Devices** page now includes device descriptions, which are populated from the device's Active Directory description attribute. For example, on the device details side pane:
+In Microsoft Defender XDR, the **Devices** page and device details pages now include device descriptions, which are populated from the device's Active Directory [Description](/windows/win32/adschema/a-description) attribute. For example, on the device details side pane:
 
 :::image type="content" source="media/whats-new/device-description.png" alt-text="Screenshot of the new Device description field on a device details pane.":::
 
