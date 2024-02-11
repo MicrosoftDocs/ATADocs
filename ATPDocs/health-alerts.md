@@ -1,7 +1,7 @@
 ---
 title: Microsoft Defender for Identity health issues
 description: This article describes all the health issues that can occur for each component, listing the cause and the steps needed to resolve the problem
-ms.date: 12/28/2023
+ms.date: 02/11/2024
 ms.topic: how-to
 ---
 
