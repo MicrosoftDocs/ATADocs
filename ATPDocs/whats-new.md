@@ -34,19 +34,21 @@ For updates about versions and features released six months ago or earlier, see 
 
 The Defender for Identity **Advanced Settings** page is now renamed to **Adjust alert thresholds** and provides a refreshed experience with enhanced flexibility for adjusting alert thresholds.
 
-:::image type="content" source="media/whats-new/adjust-alert-thresholds.png" alt-text="Screenshot of the new Adjust alert thresholds page.":::
+:::image type="content" source="media/whats-new/adjust-alert-thresholds.png" alt-text="Screenshot of the new Adjust alert thresholds page." lightbox="media/whats-new/adjust-alert-thresholds.png":::
 
 Changes include:
 
-- The previous **Remove learning period** option is now renamed as **Recommended test mode**. This option sets all threshold levels to **Low**, increasing the number of alerts.
+- The previous **Remove learning period** option is now renamed as **Recommended test mode**. This option sets all threshold levels to **Low**, increasing the number of alerts, and sets all other threshold levels to read-only.
 
-- The previous **Sensitivity level** column is now renamed as **Threshold level**, with newly defined values. By default, all alerts are set to a **High** threshold, which represents the default behavior and a standard alert configuration. The following table lists the mapping between the previous **Sensitivity level** values and the new **Threshold level** values:
+- The previous **Sensitivity level** column is now renamed as **Threshold level**, with newly defined values. By default, all alerts are set to a **High** threshold, which represents the default behavior and a standard alert configuration.
 
-   |Sensitivity level (previous name) |Threshold level (new name) |
-   |---------|---------|
-   |**Normal**     |  **High**       |
-   |**Medium**      |  **Medium**       |
-   |**High**      |  **Low**       |
+The following table lists the mapping between the previous **Sensitivity level** values and the new **Threshold level** values:
+
+|Sensitivity level (previous name) |Threshold level (new name) |
+|---------|---------|
+|**Normal**     |  **High**       |
+|**Medium**      |  **Medium**       |
+|**High**      |  **Low**       |
 
 If you had specific values defined on the **Advanced Settings** page, we've transferred them to the new **Adjust alert thresholds** page as follows:
 
