@@ -1,7 +1,7 @@
 ---
 title: What's new | Microsoft Defender for Identity
 description: This article is updated frequently to let you know what's new in the latest release of Microsoft Defender for Identity.
-ms.date: 02/06/2024
+ms.date: 02/11/2024
 ms.topic: overview
 #CustomerIntent: As a Defender for Identity customer, I want to know what's new in the latest release of Defender for Identity, so that I can take advantage of new features and functionality. 
 ---
@@ -29,6 +29,34 @@ For more information, see also:
 For updates about versions and features released six months ago or earlier, see the [What's new archive for Microsoft Defender for Identity](whats-new-archive.md).
 
 ## February 2024
+
+### Enhanced user experience for adjusting alert thresholds
+
+The Defender for Identity **Advanced Settings** page is now renamed to **Adjust alert thresholds** and provides a refreshed experience with enhanced flexibility for adjusting alert thresholds.
+
+:::image type="content" source="media/whats-new/adjust-alert-thresholds.png" alt-text="Screenshot of the new Adjust alert thresholds page.":::
+
+Changes include:
+
+- The previous **Remove learning period** option is now renamed as **Recommended test mode**. This option sets all threshold levels to **Low**, increasing the number of alerts.
+
+- The previous **Sensitivity level** column is now renamed as **Threshold level**, with newly defined values. By default, all alerts are set to a **High** threshold, which represents the default behavior and a standard alert configuration. The following table lists the mapping between the previous **Sensitivity level** values and the new **Threshold level** values:
+
+   |Sensitivity level (previous name) |Threshold level (new name) |
+   |---------|---------|
+   |**Normal**     |  **High**       |
+   |**Medium**      |  **Medium**       |
+   |**High**      |  **Low**       |
+
+If you had specific values defined on the **Advanced Settings** page, we've transferred them to the new **Adjust alert thresholds** page as follows:
+
+|Advanced settings page configuration  |New Adjust alert thresholds page configuration  |
+|---------|---------|
+|**Remove learning period** toggled on     |  **Recommended test mode** toggled off. <br><br> Alert threshold configuration settings remain the same.       |
+|**Remove learning period** toggled off      |  **Recommended test mode** toggled off. <br><br> Alert threshold configuration settings are all reset to their default values, with a **High** threshold level.  A health alert is triggered to notify admins about this change.        |
+|New workspaces, with the **Remove learning period** toggled on <br><br>Relevant only for workspaces less than 30 days old    |   **Recommended test mode** toggled off. <br><br> Alert threshold configuration settings are all reset to their default values, with a **High** threshold level.  No health alert is triggered.   |
+
+For more information, see [Adjust alert thresholds](advanced-settings.md).
 
 ### Defender for Identity release 2.228
 
