@@ -223,7 +223,7 @@ This version includes the following improvements:
 
     For more information, see [Download and schedule Defender for Identity reports in Microsoft Defender XDR (Preview)](reports.md).
 
-- **Health issues**: Added the [The 'Remove learning period' toggle was automatically switched off for this tenant](health-alerts.md#the-remove-learning-period-toggle-was-automatically-switched-off-for-this-tenant) issue
+- **Health issues**: Added the [The 'Remove learning period' toggle was automatically switched off for this tenant](health-alerts.md#the-recommended-test-mode-toggle-was-automatically-switched-off-for-this-tenant)issue
 
 This version also includes bug fixes for cloud services and the Defender for Identity sensor.
 

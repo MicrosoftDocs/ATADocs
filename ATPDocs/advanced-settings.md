@@ -1,6 +1,7 @@
 ---
 title: Adjust alert thresholds | Microsoft Defender for Identity
-description: Learn how to configure the number of Microsoft Defender for Identity alerts triggered of specific alert types by adjusting alert thresholds. ms.date: 02/11/2024
+description: Learn how to configure the number of Microsoft Defender for Identity alerts triggered of specific alert types by adjusting alert thresholds.
+ms.date: 02/11/2024
 ms.topic: how-to
 #CustomerIntent: As a Microsoft Defender for Identity customer, I want to reduce the number of false positives by adjusting thresholds for specific alerts.
 ---
