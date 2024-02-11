@@ -9,9 +9,14 @@ ms.topic: how-to
 
 This article describes how to configure the number of false positives by adjusting thresholds for specific Microsoft Defender for Identity alerts.
 
-Some Defender for Identity alerts rely on *learning periods* to build a profile of patterns, and then distinguish between legitimate and suspicious activities. Each alert has specific conditions within the detection logic, such as alert thresholds and filtering for popular activities. Use the **Adjust alert thresholds** page to customize the threshold level for specific alerts to influence their alert volume.
+Some Defender for Identity alerts rely on *learning periods* to build a profile of patterns, and then distinguish between legitimate and suspicious activities. Each alert also has specific conditions within the detection logic to help distinguish between legitimate and suspicious activities, such as alert thresholds and filtering for popular activities. 
+
+Use the **Adjust alert thresholds** page to customize the threshold level for specific alerts to influence their alert volume.
 
 For example, if you're running comprehensive testing, you might want to lower alert thresholds to trigger as many alerts as possible. On the other hand, if you're in a production environment, you might want to increase the threshold to a standard alert configuration to reduce the number of false positives.
+
+> [!NOTE]
+> The **Adjust alert thresholds** page was previously named **Advanced settings**. For details about this transition and how any previous settings were retained, see our [What's New announcement](whats-new.md#enhanced-user-experience-for-adjusting-alert-thresholds).
 
 ## Prerequisites
 
@@ -26,6 +31,8 @@ We recommend changing alert thresholds from the default only after careful consi
 **To define your alert thresholds**:
 
 1. In [Microsoft Defender XDR](https://security.microsoft.com), go to **Settings** > **Identities** > **Adjust alert thresholds**.
+
+    :::image type="content" source="media/whats-new/adjust-alert-thresholds.png" alt-text="Screenshot of the new Adjust alert thresholds page." lightbox="media/whats-new/adjust-alert-thresholds.png":::
 
 1. Locate the alert where you want to adjust the alert threshold, and the threshold level you want to apply.
 
