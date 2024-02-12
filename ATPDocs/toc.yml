@@ -32,6 +32,7 @@ items:
     items:
     - name: Configure connectivity settings
       href: deploy/configure-proxy.md
+      displayName: proxy
     - name: Test connectivity settings
       href: deploy/test-connectivity.md
     - name: Download the Defender for Identity sensor
