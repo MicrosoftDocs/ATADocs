@@ -38,6 +38,22 @@ Instead of manually enabling access to specific endpoints, download the [Azure I
 
 For more information, see [Virtual network service tags](/azure/virtual-network/service-tags-overview). For US Government offerings, see [Get started with US Government offerings](../us-govt-gcc-high.md).
 
+## Change proxy configuration using the CLI
+
+**Prerequisites**: Locate the `Microsoft.Tri.Sensor.Deployment.Deployer.exe` file. This file is located together with the sensor installation. By default, this location is `C:\Program Files\Azure Advanced Threat Protection Sensor\version number\`
+
+**To change the current sensor's proxy configuration**:
+
+```cmd
+Microsoft.Tri.Sensor.Deployment.Deployer.exe ProxyUrl="http://myproxy.contoso.local" ProxyUserName="CONTOSO\myProxyUser" ProxyUserPassword="myPr0xyPa55w0rd"
+```
+
+**To remove the current sensor's proxy configuration entirely**:
+
+```cmd
+Microsoft.Tri.Sensor.Deployment.Deployer.exe ClearProxyConfiguration
+```
+
 ## Change proxy configuration using PowerShell
 
 **Prerequisites**: Before running Defender for Identity PowerShell commands, make sure that you've downloaded the [Defender for Identity PowerShell module](https://www.powershellgallery.com/packages/DefenderForIdentity/).
