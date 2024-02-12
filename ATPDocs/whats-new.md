@@ -30,6 +30,16 @@ For updates about versions and features released six months ago or earlier, see 
 
 ## February 2024
 
+### Device details pages now include device descriptions (Preview)
+
+Microsoft Defender XDR now includes device descriptions on device details panes and device details pages. The descriptions are populated from the device's Active Directory [Description](/windows/win32/adschema/a-description) attribute.
+
+For example, on the device details side pane:
+
+:::image type="content" source="media/whats-new/device-description.png" alt-text="Screenshot of the new Device description field on a device details pane." lightbox="media/whats-new/device-description.png":::
+
+For more information, see [Investigation steps for suspicious devices](investigate-assets.md#investigation-steps-for-suspicious-devices).
+
 ### Defender for Identity release 2.228
 
 This version includes improvements and bug fixes for cloud services and the Defender for Identity sensor, and the following new alerts:
