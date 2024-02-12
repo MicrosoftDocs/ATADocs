@@ -16,6 +16,95 @@ For information about the latest versions and features, see [What's new in Micro
 >
 >For the two months after June 15 2022, the sensor will continue to function. After this two-month period, starting August 15, 2022, the sensor will no longer function on Windows Server 2008 R2 platforms. More details can be found at: <https://aka.ms/mdi/2008r2>
 
+## July 2023
+
+### Defender for Identity release 2.209
+
+This version includes improvements and bug fixes for cloud services and the Defender for Identity sensor.
+
+### Search for Active Directory groups in Microsoft Defender XDR (Preview)
+
+The Microsoft Defender XDR global search now supports searching by Active Directory group name. Any groups found are shown in the results on a separate **Groups** tab. Select an Active Directory group from your search results to see more details, including:
+
+:::row:::
+   :::column span="":::
+      - Type
+      - Scope
+      - Domain
+      - SAM name
+      - SID
+   :::column-end:::
+   :::column span="":::
+      - Group creation time
+      - The first time an activity by the group was observed
+      - Groups that contain the selected group
+      - A list of all group members
+   :::column-end:::
+:::row-end:::
+
+For example:
+
+:::image type="content" source="media/whats-new/group-search.png" alt-text="Screenshot of the Groups tab in the Microsoft Defender XDR global search." lightbox="media/whats-new/group-search.png":::
+
+For more information, see [Microsoft Defender for Identity in Microsoft Defender XDR](/microsoft-365/security/defender/microsoft-365-security-center-mdi?bc=/defender-for-identity/breadcrumb/toc.json&toc=/defender-for-identity/TOC.json).
+
+### New security posture reports
+
+Defender for Identity's identity security posture assessments proactively detect and recommend actions across your on-premises Active Directory configurations.
+
+The following new security posture assessments are now available in Microsoft Secure Score:
+
+- [Do not expire passwords](security-assessment-do-not-expire-passwords.md)
+- [Remove access rights on suspicious accounts with the Admin SDHolder permission](security-assessment-remove-suspicious-access-rights.md)
+- [Manage accounts with passwords more than 180 days old](security-assessment-old-passwords.md)
+- [Remove nonadmin accounts with DCSync permissions](security-assessment-non-admin-accounts-dcsync.md)
+- [Remove local admins on identity assets](security-assessment-remove-local-admins.md)
+- [Start your Defender for Identity deployment](security-assessment-deploy-defender-for-identity.md)
+
+For more information, see [Microsoft Defender for Identity's security posture assessments](security-assessment.md).
+
+### Automatic redirection for the classic Defender for Identity portal
+
+The Microsoft Defender for Identity portal experience and functionality are converged into Microsoft’s extended detection and response (XDR) platform, Microsoft Defender XDR. As of July 6, 2023, customers using the classic Defender for Identity portal are automatically redirected to Microsoft Defender XDR, with no option to revert back to the classic portal.
+
+For more information, see our [blog post](https://techcommunity.microsoft.com/t5/microsoft-365-defender-blog/leveraging-the-convergence-of-microsoft-defender-for-identity-in/ba-p/3856321) and [Microsoft Defender for Identity in Microsoft Defender XDR](/microsoft-365/security/defender/microsoft-365-security-center-mdi).
+
+### Defender for Identity report downloads and scheduling in Microsoft Defender XDR (Preview)
+
+Now you can download and schedule periodic Defender for Identity reports from the Microsoft Defender portal, creating parity in report functionality with the legacy [classic Defender for Identity portal](classic-reports.md).
+
+Download and schedule reports in Microsoft Defender XDR from the **Settings > Identities > Report management** page. For example:
+
+:::image type="content" source="media/whats-new/report-management.png" alt-text="Screenshot of the Report management page." lightbox="media/whats-new/report-management.png":::
+
+For more information, see [Microsoft Defender for Identity reports in Microsoft Defender XDR](reports.md).
+
+### Defender for Identity release 2.208
+
+- This version includes improvements and bug fixes for cloud services and the Defender for Identity sensor.
+
+### Defender for Identity release 2.207
+
+- This version provides the new **AccessKeyFile** installation parameter. Use the **AccessKeyFile** parameter during a silent installation of a Defender for Identity sensor, to set the workspace Access Key from a provided text path. For more information, see [Install the Microsoft Defender for Identity sensor](install-sensor.md#defender-for-identity-sensor-silent-installation).
+
+- This version includes improvements and bug fixes for cloud services and the Defender for Identity sensor.
+
+## June 2023
+
+### Defender for Identity release 2.206
+
+- This version includes improvements and bug fixes for cloud services and the Defender for Identity sensor.
+
+### Advanced hunting with an enhanced IdentityInfo table
+
+- For tenants with Defender for Identity deployed, the Microsoft 365 **IdentityInfo** advanced hunting table now includes more attributes per identity, and identities detected by the Defender for Identity sensor from your on-premises environment.
+
+For more information, see the [Microsoft Defender XDR advanced hunting documentation](/microsoft-365/security/defender/advanced-hunting-identityinfo-table).
+
+### Defender for Identity release 2.205
+
+- This version includes improvements and bug fixes for internal sensor infrastructure.
+
 ## May 2023
 
 ### Enhanced Active Directory account control highlights
