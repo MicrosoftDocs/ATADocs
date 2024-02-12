@@ -191,12 +191,6 @@ Sensor-specific health issues are displayed in the **Sensor health issues** tab 
 |----|----|----|----|----|
 |Radius accounting (VPN integration) data ingestion failures.|The listed Defender for Identity sensors have radius accounting (VPN integration) data ingestion failures.|Validate that the shared secret in the Defender for Identity configuration settings matches your VPN server, according to the guidance described [Configure VPN in Defender for Identity](vpn-integration.md#configure-vpn-in-defender-for-identity) section, in the [Defender for Identity VPN integration](vpn-integration.md) page.|Low|Health issues page|
 
-### The 'Recommended test mode' toggle was automatically switched off for this tenant
-
-|Alert|Description|Resolution|Severity|Displayed in|
-|----|----|----|----|----|
-|The 'Recommended test mode' toggle was automatically switched off for this tenant|The learning period for Defender for Identity has ended, and as a result, the 'Recommended test mode' feature has been automatically disabled. This is just a notification, and no immediate action is required. You can safely close this health issue.|See our [documentation](https://aka.ms/mdi/advanced-settings) for more details about learning periods and recommended test methods. Optionally, adjust the sensitivity of affected alerts from the [Defender for Identity Adjust alert thresholds page](https://security.microsoft.com/settings/identities?tabid=advancedSettings)|Low|Sensors health issues tab|
-
 ## Next steps
 
 - [Defender for Identity prerequisites](deploy/prerequisites.md)

@@ -1,7 +1,7 @@
 ---
 title: What's new | Microsoft Defender for Identity
 description: This article is updated frequently to let you know what's new in the latest release of Microsoft Defender for Identity.
-ms.date: 02/11/2024
+ms.date: 02/12/2024
 ms.topic: overview
 #CustomerIntent: As a Defender for Identity customer, I want to know what's new in the latest release of Defender for Identity, so that I can take advantage of new features and functionality. 
 ---
@@ -30,7 +30,7 @@ For updates about versions and features released six months ago or earlier, see 
 
 ## February 2024
 
-### Enhanced user experience for adjusting alert thresholds
+### Enhanced user experience for adjusting alert thresholds (Preview)
 
 The Defender for Identity **Advanced Settings** page is now renamed to **Adjust alert thresholds** and provides a refreshed experience with enhanced flexibility for adjusting alert thresholds.
 
@@ -38,7 +38,7 @@ The Defender for Identity **Advanced Settings** page is now renamed to **Adjust 
 
 Changes include:
 
-- The previous **Remove learning period** option is now renamed as **Recommended test mode**. This option sets all threshold levels to **Low**, increasing the number of alerts, and sets all other threshold levels to read-only.
+- We've removed the previous **Remove learning period** option, and added a new **Recommended test mode** option. Select **Recommended test mode** to set all threshold levels to **Low**, increasing the number of alerts, and sets all other threshold levels to read-only.
 
 - The previous **Sensitivity level** column is now renamed as **Threshold level**, with newly defined values. By default, all alerts are set to a **High** threshold, which represents the default behavior and a standard alert configuration.
 
@@ -55,10 +55,21 @@ If you had specific values defined on the **Advanced Settings** page, we've tran
 |Advanced settings page configuration  |New Adjust alert thresholds page configuration  |
 |---------|---------|
 |**Remove learning period** toggled on     |  **Recommended test mode** toggled off. <br><br> Alert threshold configuration settings remain the same.       |
-|**Remove learning period** toggled off      |  **Recommended test mode** toggled off. <br><br> Alert threshold configuration settings are all reset to their default values, with a **High** threshold level.  A health alert is triggered to notify admins about this change.        |
-|New workspaces, with the **Remove learning period** toggled on <br><br>Relevant only for workspaces less than 30 days old    |   **Recommended test mode** toggled off. <br><br> Alert threshold configuration settings are all reset to their default values, with a **High** threshold level.  No health alert is triggered.   |
+|**Remove learning period** toggled off      |  **Recommended test mode** toggled off. <br><br> Alert threshold configuration settings are all reset to their default values, with a **High** threshold level.   |
+
+Alerts are always triggered immediately if the **Recommended test mode** option is selected, or if a threshold level is set to **Medium** or **Low**, regardless of whether the alert's learning period has already completed.
 
 For more information, see [Adjust alert thresholds](advanced-settings.md).
+
+### Device details pages now include device descriptions (Preview)
+
+Microsoft Defender XDR now includes device descriptions on device details panes and device details pages. The descriptions are populated from the device's Active Directory [Description](/windows/win32/adschema/a-description) attribute.
+
+For example, on the device details side pane:
+
+:::image type="content" source="media/whats-new/device-description.png" alt-text="Screenshot of the new Device description field on a device details pane." lightbox="media/whats-new/device-description.png":::
+
+For more information, see [Investigation steps for suspicious devices](investigate-assets.md#investigation-steps-for-suspicious-devices).
 
 ### Defender for Identity release 2.228
 
