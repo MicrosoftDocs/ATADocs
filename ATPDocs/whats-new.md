@@ -1,7 +1,7 @@
 ---
 title: What's new | Microsoft Defender for Identity
 description: This article is updated frequently to let you know what's new in the latest release of Microsoft Defender for Identity.
-ms.date: 02/06/2024
+ms.date: 02/12/2024
 ms.topic: overview
 #CustomerIntent: As a Defender for Identity customer, I want to know what's new in the latest release of Defender for Identity, so that I can take advantage of new features and functionality. 
 ---
@@ -29,6 +29,37 @@ For more information, see also:
 For updates about versions and features released six months ago or earlier, see the [What's new archive for Microsoft Defender for Identity](whats-new-archive.md).
 
 ## February 2024
+
+### Enhanced user experience for adjusting alert thresholds (Preview)
+
+The Defender for Identity **Advanced Settings** page is now renamed to **Adjust alert thresholds** and provides a refreshed experience with enhanced flexibility for adjusting alert thresholds.
+
+:::image type="content" source="media/whats-new/adjust-alert-thresholds.png" alt-text="Screenshot of the new Adjust alert thresholds page." lightbox="media/whats-new/adjust-alert-thresholds.png":::
+
+Changes include:
+
+- We've removed the previous **Remove learning period** option, and added a new **Recommended test mode** option. Select **Recommended test mode** to set all threshold levels to **Low**, increasing the number of alerts, and sets all other threshold levels to read-only.
+
+- The previous **Sensitivity level** column is now renamed as **Threshold level**, with newly defined values. By default, all alerts are set to a **High** threshold, which represents the default behavior and a standard alert configuration.
+
+The following table lists the mapping between the previous **Sensitivity level** values and the new **Threshold level** values:
+
+|Sensitivity level (previous name) |Threshold level (new name) |
+|---------|---------|
+|**Normal**     |  **High**       |
+|**Medium**      |  **Medium**       |
+|**High**      |  **Low**       |
+
+If you had specific values defined on the **Advanced Settings** page, we've transferred them to the new **Adjust alert thresholds** page as follows:
+
+|Advanced settings page configuration  |New Adjust alert thresholds page configuration  |
+|---------|---------|
+|**Remove learning period** toggled on     |  **Recommended test mode** toggled off. <br><br> Alert threshold configuration settings remain the same.       |
+|**Remove learning period** toggled off      |  **Recommended test mode** toggled off. <br><br> Alert threshold configuration settings are all reset to their default values, with a **High** threshold level.   |
+
+Alerts are always triggered immediately if the **Recommended test mode** option is selected, or if a threshold level is set to **Medium** or **Low**, regardless of whether the alert's learning period has already completed.
+
+For more information, see [Adjust alert thresholds](advanced-settings.md).
 
 ### Device details pages now include device descriptions (Preview)
 
@@ -203,7 +234,7 @@ This version includes the following improvements:
 
     For more information, see [Download and schedule Defender for Identity reports in Microsoft Defender XDR (Preview)](reports.md).
 
-- **Health issues**: Added the [The 'Remove learning period' toggle was automatically switched off for this tenant](health-alerts.md#the-remove-learning-period-toggle-was-automatically-switched-off-for-this-tenant) issue
+- **Health issues**: Added the *The 'Remove learning period' toggle was automatically switched off for this tenant* health issue
 
 This version also includes bug fixes for cloud services and the Defender for Identity sensor.
 
