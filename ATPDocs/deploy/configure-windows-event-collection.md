@@ -75,17 +75,16 @@ This procedure describes how to modify your domain controller's Advanced Audit P
         | Audit policy | Subcategory | Triggers event IDs |
         | --- |---|---|
         | **Account Logon** | Audit Credential Validation | 4776 |
-        | **Account Management** | Audit Computer Account Management | 4741, 4743 |
+        | **Account Management** | Audit Computer Account Management <sup>[*](#failure)</sup> | 4741, 4743 |
         | **Account Management** | Audit Distribution Group Management | 4753, 4763 |
-        | **Account Management** | Audit Security Group Management | 4728, 4729, 4730, 4732, 4733, 4756, 4757, 4758 |
+        | **Account Management** | Audit Security Group Management <sup>[*](#failure)</sup> | 4728, 4729, 4730, 4732, 4733, 4756, 4757, 4758 |
         | **Account Management** | Audit User Account Management | 4726 |
         | **DS Access** | Audit Directory Service Changes | 5136  |
-        | **System** | Audit Security System Extension | 7045 |
+        | **System** | Audit Security System Extension <sup>[*](#failure)</sup> | 7045 |
         | **DS Access** | Audit Directory Service Access | 4662 - For this event, you must also [configure domain object auditing](#configure-domain-object-auditing).  |
-        
+
         > [!NOTE]
-        >
-        > The subcategory of **Audit Security Group Management** does not currently have Failure events. However, we recommend adding them for auditing purposes in case they are implemented in the future. For more information, see [Audit Security Group Management](/windows/security/threat-protection/auditing/audit-security-group-management)
+        > <a name=failure>*</a> Noted subcategories don't support failure events. However, we recommend adding them for auditing purposes in case they're implemented in the future. For more information, see [Audit Computer Account Management](/windows/security/threat-protection/auditing/audit-computer-account-management), [Audit Security Group Management](/windows/security/threat-protection/auditing/audit-security-group-management), and [Audit Security System Extension](/windows/security/threat-protection/auditing/audit-security-system-extension).
 
         For example, to configure **Audit Security Group Management**, under **Account Management**, double-click **Audit Security Group Management**, and then select **Configure the following audit events** for both **Success** and **Failure** events:
 
