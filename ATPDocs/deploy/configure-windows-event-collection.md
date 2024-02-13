@@ -83,13 +83,12 @@ This procedure describes how to modify your domain controller's Advanced Audit P
         | **System** | Audit Security System Extension <sup>[*](#failure)</sup> | 7045 |
         | **DS Access** | Audit Directory Service Access | 4662 - For this event, you must also [configure domain object auditing](#configure-domain-object-auditing).  |
 
+        > [!NOTE]
+        > <a name=failure>*</a> Noted subcategories don't support failure events. However, we recommend adding them for auditing purposes in case they're implemented in the future. For more information, see [Audit Computer Account Management](/windows/security/threat-protection/auditing/audit-computer-account-management), [Audit Security Group Management](/windows/security/threat-protection/auditing/audit-security-group-management), and [Audit Security System Extension](/windows/security/threat-protection/auditing/audit-security-system-extension).
+
         For example, to configure **Audit Security Group Management**, under **Account Management**, double-click **Audit Security Group Management**, and then select **Configure the following audit events** for both **Success** and **Failure** events:
 
         ![Screenshot of the Audit Security Group Management dialog.](../media/advanced-audit-policy-check-step-4.png)
-
-        <a name=failure>*</a> Noted subcategories don't support failure events. However, we recommend adding them for auditing purposes in case they're implemented in the future. For more information, see [Audit Computer Account Management](/windows/security/threat-protection/auditing/audit-computer-account-management), [Audit Security Group Management
-](/windows/security/threat-protection/auditing/audit-security-group-management), and [Audit Security System Extension
-](/windows/security/threat-protection/auditing/audit-security-system-extension).
 
 1. From an elevated command prompt, type `gpupdate`.
 
