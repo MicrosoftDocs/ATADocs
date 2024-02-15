@@ -32,6 +32,7 @@ items:
     items:
     - name: Configure connectivity settings
       href: deploy/configure-proxy.md
+      displayName: proxy
     - name: Test connectivity settings
       href: deploy/test-connectivity.md
     - name: Download the Defender for Identity sensor
@@ -106,8 +107,9 @@ items:
       href: automated-response-exclusions.md
     - name: Email and syslog notifications
       href: notifications.md
-    - name: Advanced settings
+    - name: Adjust alert thresholds
       href: advanced-settings.md
+      displayName: advanced settings
   - name: Troubleshooting
     items:
     - name: Troubleshooting known issues

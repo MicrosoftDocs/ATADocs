@@ -1,7 +1,7 @@
 ---
 title: What's new | Microsoft Defender for Identity
 description: This article is updated frequently to let you know what's new in the latest release of Microsoft Defender for Identity.
-ms.date: 01/16/2024
+ms.date: 02/12/2024
 ms.topic: overview
 #CustomerIntent: As a Defender for Identity customer, I want to know what's new in the latest release of Defender for Identity, so that I can take advantage of new features and functionality. 
 ---
@@ -27,6 +27,56 @@ For more information, see also:
 - [What's new in Microsoft Defender for Cloud Apps](/cloud-app-security/release-notes)
 
 For updates about versions and features released six months ago or earlier, see the [What's new archive for Microsoft Defender for Identity](whats-new-archive.md).
+
+## February 2024
+
+### Enhanced user experience for adjusting alert thresholds (Preview)
+
+The Defender for Identity **Advanced Settings** page is now renamed to **Adjust alert thresholds** and provides a refreshed experience with enhanced flexibility for adjusting alert thresholds.
+
+:::image type="content" source="media/whats-new/adjust-alert-thresholds.png" alt-text="Screenshot of the new Adjust alert thresholds page." lightbox="media/whats-new/adjust-alert-thresholds.png":::
+
+Changes include:
+
+- We've removed the previous **Remove learning period** option, and added a new **Recommended test mode** option. Select **Recommended test mode** to set all threshold levels to **Low**, increasing the number of alerts, and sets all other threshold levels to read-only.
+
+- The previous **Sensitivity level** column is now renamed as **Threshold level**, with newly defined values. By default, all alerts are set to a **High** threshold, which represents the default behavior and a standard alert configuration.
+
+The following table lists the mapping between the previous **Sensitivity level** values and the new **Threshold level** values:
+
+|Sensitivity level (previous name) |Threshold level (new name) |
+|---------|---------|
+|**Normal**     |  **High**       |
+|**Medium**      |  **Medium**       |
+|**High**      |  **Low**       |
+
+If you had specific values defined on the **Advanced Settings** page, we've transferred them to the new **Adjust alert thresholds** page as follows:
+
+|Advanced settings page configuration  |New Adjust alert thresholds page configuration  |
+|---------|---------|
+|**Remove learning period** toggled on     |  **Recommended test mode** toggled off. <br><br> Alert threshold configuration settings remain the same.       |
+|**Remove learning period** toggled off      |  **Recommended test mode** toggled off. <br><br> Alert threshold configuration settings are all reset to their default values, with a **High** threshold level.   |
+
+Alerts are always triggered immediately if the **Recommended test mode** option is selected, or if a threshold level is set to **Medium** or **Low**, regardless of whether the alert's learning period has already completed.
+
+For more information, see [Adjust alert thresholds](advanced-settings.md).
+
+### Device details pages now include device descriptions (Preview)
+
+Microsoft Defender XDR now includes device descriptions on device details panes and device details pages. The descriptions are populated from the device's Active Directory [Description](/windows/win32/adschema/a-description) attribute.
+
+For example, on the device details side pane:
+
+:::image type="content" source="media/whats-new/device-description.png" alt-text="Screenshot of the new Device description field on a device details pane." lightbox="media/whats-new/device-description.png":::
+
+For more information, see [Investigation steps for suspicious devices](investigate-assets.md#investigation-steps-for-suspicious-devices).
+
+### Defender for Identity release 2.228
+
+This version includes improvements and bug fixes for cloud services and the Defender for Identity sensor, and the following new alerts:
+
+- [Account Enumeration reconnaissance (LDAP) (external ID 2437)](reconnaissance-discovery-alerts.md#account-enumeration-reconnaissance-ldap-external-id-2437-preview) (Preview)
+- [Directory Services Restore Mode Password Change (external ID 2438)](other-alerts.md#directory-services-restore-mode-password-change-external-id-2438-preview) (Preview)
 
 ## January 2024
 
@@ -184,7 +234,7 @@ This version includes the following improvements:
 
     For more information, see [Download and schedule Defender for Identity reports in Microsoft Defender XDR (Preview)](reports.md).
 
-- **Health issues**: Added the [The 'Remove learning period' toggle was automatically switched off for this tenant](health-alerts.md#the-remove-learning-period-toggle-was-automatically-switched-off-for-this-tenant) issue
+- **Health issues**: Added the *The 'Remove learning period' toggle was automatically switched off for this tenant* health issue
 
 This version also includes bug fixes for cloud services and the Defender for Identity sensor.
 
@@ -284,95 +334,6 @@ AD CS is a Windows Server role that issues and manages public key infrastructure
 ### Defender for Identity release 2.210
 
 This version includes improvements and bug fixes for cloud services and the Defender for Identity sensor.
-
-## July 2023
-
-### Defender for Identity release 2.209
-
-This version includes improvements and bug fixes for cloud services and the Defender for Identity sensor.
-
-### Search for Active Directory groups in Microsoft Defender XDR (Preview)
-
-The Microsoft Defender XDR global search now supports searching by Active Directory group name. Any groups found are shown in the results on a separate **Groups** tab. Select an Active Directory group from your search results to see more details, including:
-
-:::row:::
-   :::column span="":::
-      - Type
-      - Scope
-      - Domain
-      - SAM name
-      - SID
-   :::column-end:::
-   :::column span="":::
-      - Group creation time
-      - The first time an activity by the group was observed
-      - Groups that contain the selected group
-      - A list of all group members
-   :::column-end:::
-:::row-end:::
-
-For example:
-
-:::image type="content" source="media/whats-new/group-search.png" alt-text="Screenshot of the Groups tab in the Microsoft Defender XDR global search." lightbox="media/whats-new/group-search.png":::
-
-For more information, see [Microsoft Defender for Identity in Microsoft Defender XDR](/microsoft-365/security/defender/microsoft-365-security-center-mdi?bc=/defender-for-identity/breadcrumb/toc.json&toc=/defender-for-identity/TOC.json).
-
-### New security posture reports
-
-Defender for Identity's identity security posture assessments proactively detect and recommend actions across your on-premises Active Directory configurations.
-
-The following new security posture assessments are now available in Microsoft Secure Score:
-
-- [Do not expire passwords](security-assessment-do-not-expire-passwords.md)
-- [Remove access rights on suspicious accounts with the Admin SDHolder permission](security-assessment-remove-suspicious-access-rights.md)
-- [Manage accounts with passwords more than 180 days old](security-assessment-old-passwords.md)
-- [Remove nonadmin accounts with DCSync permissions](security-assessment-non-admin-accounts-dcsync.md)
-- [Remove local admins on identity assets](security-assessment-remove-local-admins.md)
-- [Start your Defender for Identity deployment](security-assessment-deploy-defender-for-identity.md)
-
-For more information, see [Microsoft Defender for Identity's security posture assessments](security-assessment.md).
-
-### Automatic redirection for the classic Defender for Identity portal
-
-The Microsoft Defender for Identity portal experience and functionality are converged into Microsoft’s extended detection and response (XDR) platform, Microsoft Defender XDR. As of July 6, 2023, customers using the classic Defender for Identity portal are automatically redirected to Microsoft Defender XDR, with no option to revert back to the classic portal.
-
-For more information, see our [blog post](https://techcommunity.microsoft.com/t5/microsoft-365-defender-blog/leveraging-the-convergence-of-microsoft-defender-for-identity-in/ba-p/3856321) and [Microsoft Defender for Identity in Microsoft Defender XDR](/microsoft-365/security/defender/microsoft-365-security-center-mdi).
-
-### Defender for Identity report downloads and scheduling in Microsoft Defender XDR (Preview)
-
-Now you can download and schedule periodic Defender for Identity reports from the Microsoft Defender portal, creating parity in report functionality with the legacy [classic Defender for Identity portal](classic-reports.md).
-
-Download and schedule reports in Microsoft Defender XDR from the **Settings > Identities > Report management** page. For example:
-
-:::image type="content" source="media/whats-new/report-management.png" alt-text="Screenshot of the Report management page." lightbox="media/whats-new/report-management.png":::
-
-For more information, see [Microsoft Defender for Identity reports in Microsoft Defender XDR](reports.md).
-
-### Defender for Identity release 2.208
-
-- This version includes improvements and bug fixes for cloud services and the Defender for Identity sensor.
-
-### Defender for Identity release 2.207
-
-- This version provides the new **AccessKeyFile** installation parameter. Use the **AccessKeyFile** parameter during a silent installation of a Defender for Identity sensor, to set the workspace Access Key from a provided text path. For more information, see [Install the Microsoft Defender for Identity sensor](install-sensor.md#defender-for-identity-sensor-silent-installation).
-
-- This version includes improvements and bug fixes for cloud services and the Defender for Identity sensor.
-
-## June 2023
-
-### Defender for Identity release 2.206
-
-- This version includes improvements and bug fixes for cloud services and the Defender for Identity sensor.
-
-### Advanced hunting with an enhanced IdentityInfo table
-
-- For tenants with Defender for Identity deployed, the Microsoft 365 **IdentityInfo** advanced hunting table now includes more attributes per identity, and identities detected by the Defender for Identity sensor from your on-premises environment.
-
-For more information, see the [Microsoft Defender XDR advanced hunting documentation](/microsoft-365/security/defender/advanced-hunting-identityinfo-table).
-
-### Defender for Identity release 2.205
-
-- This version includes improvements and bug fixes for internal sensor infrastructure.
 
 ## Next steps
 

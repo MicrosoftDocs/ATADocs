@@ -1,7 +1,7 @@
 ---
 title: Microsoft Defender for Identity health issues
 description: This article describes all the health issues that can occur for each component, listing the cause and the steps needed to resolve the problem
-ms.date: 12/28/2023
+ms.date: 02/11/2024
 ms.topic: how-to
 ---
 
@@ -190,12 +190,6 @@ Sensor-specific health issues are displayed in the **Sensor health issues** tab 
 |Alert|Description|Resolution|Severity|Displayed in|
 |----|----|----|----|----|
 |Radius accounting (VPN integration) data ingestion failures.|The listed Defender for Identity sensors have radius accounting (VPN integration) data ingestion failures.|Validate that the shared secret in the Defender for Identity configuration settings matches your VPN server, according to the guidance described [Configure VPN in Defender for Identity](vpn-integration.md#configure-vpn-in-defender-for-identity) section, in the [Defender for Identity VPN integration](vpn-integration.md) page.|Low|Health issues page|
-
-### The 'Remove learning period' toggle was automatically switched off for this tenant
-
-|Alert|Description|Resolution|Severity|Displayed in|
-|----|----|----|----|----|
-|The 'Remove learning period' toggle was automatically switched off for this tenant|The learning period for Defender for Identity has ended, and as a result, the 'Remove learning mode' feature has been automatically disabled. This is just a notification, and no immediate action is required. You can safely close this health issue.|See our documentation for more details about [Remove learning period](https://aka.ms/mdi/advanced-settings). Optionally, adjust the sensitivity of affected alerts from the [Defender for Identity Advanced Settings page](https://security.microsoft.com/settings/identities?tabid=advancedSettings)|Low|Sensors health issues tab|
 
 ## Next steps
 
