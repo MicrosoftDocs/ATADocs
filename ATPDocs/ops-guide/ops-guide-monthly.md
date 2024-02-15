@@ -9,20 +9,6 @@ ms.topic: how-to
 
 This article reviews the Microsoft Defender for Identity activities we recommend for your team on a monthly basis.
 
-## Review Microsoft service health
-
-**Where**: Check the following locations:
-
-- In the Microsoft 365 admin center, select **Health > Service health**
-- [Microsoft 365 Service health status](https://status.office365.com/)
-- X: https://twitter.com/MSFT365status
-
-**Persona**: Security and compliance administrators
-
-If you're experiencing issues with a cloud service, we recommend checking service health updates to determine whether it's a known issue, with a resolution in progress, before you call support or spend time troubleshooting.
-
-For more information, see [Review Defender for Identity health issues](ops-guide-daily.md#review-defender-for-identity-health-issues).
-
 ## Review tuned alerts and adjust tuning if needed
 
 **Where**: In Microsoft Defender XDR, select **Hunting > Advanced hunting**
@@ -58,4 +44,4 @@ For more information, see:
 - [Microsoft Defender for Identity operational guide](ops-guide.md)
 - [Daily operational guide - Microsoft Defender for Identity](ops-guide-daily.md)
 - [Weekly operational guide - Microsoft Defender for Identity](ops-guide-weekly.md)
-- [Quarterly / Ad-hoc operational guide - Microsoft Defender for Identity](ops-guide-quarterly.md)
+- [Quarterly / Ad hoc operational guide - Microsoft Defender for Identity](ops-guide-quarterly.md)

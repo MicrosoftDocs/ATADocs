@@ -9,6 +9,14 @@ ms.topic: how-to
 
 This article reviews the Microsoft Defender for Identity activities we recommend for your team on a daily basis.
 
+## Review the ITDR dashboard
+
+**Where**: In Microsoft Defender XDR, under select **Identities** > **Dashboard**.
+
+**Persona**: SOC analysts, security administrators, identity, and access management administrators
+
+For more information, see [Work with Defender for Identity's ITDR dashboard (Preview)](../dashboard.md).
+
 ## Triage incidents by priority
 
 **Where**: In Microsoft Defender XDR, select **Incidents & alerts**
@@ -43,15 +51,18 @@ This article reviews the Microsoft Defender for Identity activities we recommend
 
 ## Investigate users with a high investigation score
 
-**Where**: In Microsoft Defender XDR:
+**Where**: In Microsoft Defender XDR and in Microsoft Entra.
+
+In Microsoft Defender XDR:
 
 1. Check the **Users at risk** widget on the **Home** page or the  **Entra ID users at risk** on the **Identities > Dashboard** page.
 
-    If you have users listed at *High risk*, select **View all users** to open the **Identities** page.
+1. If you have users listed at *High risk*:
 
-1. On the **Identities** page, sort the grid to view users with high **Investigation priority** scores at the top. Select an identity to view the identity details page, including more details in the **Investigation priority** widget.
+    - Select **View all users** to review high risk identities in Microsoft Entra.
+    - Go to the **Identities** page and sort the grid to view users with high **Investigation priority** scores at the top. Select an identity to view the identity details page, including more details in the **Investigation priority** widget.
 
-The investigation priority widget includes the calculated investigation priority score breakdown and a two-week trend for an identity, including whether the identity score is on the high percentile for that tenant.
+    The investigation priority widget includes the calculated investigation priority score breakdown and a two-week trend for an identity, including whether the identity score is on the high percentile for that tenant.
 
 Find more identity-related information on:
 
@@ -80,14 +91,6 @@ We recommend creating new rules as needed as your network grows to make sure tha
 
 For more information, see [Investigate Defender for Identity security alerts in Microsoft Defender XDR](../manage-security-alerts.md).
 
-## Review the ITDR dashboard
-
-**Where**: In Microsoft Defender XDR, under select **Identities** > **Dashboard**.
-
-**Persona**: SOC analysts, security administrators, identity and access management administrators
-
-For more information, see [Work with Defender for Identity's ITDR dashboard (Preview)](../dashboard.md).
-
 ## Proactively hunt
 
 **Where**: In Microsoft Defender XDR, select **Hunting > Advanced hunting**.
@@ -103,7 +106,6 @@ Inspect events in your network to locate threat indicators and entities, includi
 We recommend that beginners use guided advanced hunting, which provides a query builder. If you're comfortable using Kusto Query Language (KQL), build queries from scratch as needed for your investigations.
 
 For more information, see [Proactively hunt for threats with advanced hunting in Microsoft Defender XDR](/microsoft-365/security/defender/advanced-hunting-overview).
-
 
 ## Review Defender for Identity health issues
 
@@ -125,4 +127,4 @@ For more information, see:
 - [Microsoft Defender for Identity operational guide](ops-guide.md)
 - [Weekly operational guide - Microsoft Defender for Identity](ops-guide-weekly.md)
 - [Monthly operational guide - Microsoft Defender for Identity](ops-guide-monthly.md)
-- [Quarterly / Ad-hoc operational guide - Microsoft Defender for Identity](ops-guide-quarterly.md)
+- [Quarterly / Ad hoc operational guide - Microsoft Defender for Identity](ops-guide-quarterly.md)
