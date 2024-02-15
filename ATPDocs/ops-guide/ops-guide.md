@@ -19,13 +19,10 @@ This article summarizes the Microsoft Defender for Identity activities we recomm
 You might want to proactively hunt on a daily or weekly basis, depending on your level as a SOC analyst.
 
 
-## See also
-
-For more information, see the Microsoft Defender XDR [Security operations overview](/security/operations/overview).
-
 ## Related content
 
 - [Daily operational guide](ops-guide-daily.md)
 - [Weekly operational guide](ops-guide-weekly.md)
 - [Monthly operational guide](ops-guide-monthly.md)
 - [Quarterly / Ad-hoc operational guide](ops-guide-quarterly.md)
+- The Microsoft Defender XDR [Security operations overview](/security/operations/overview).
