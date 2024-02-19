@@ -30,6 +30,10 @@ For updates about versions and features released six months ago or earlier, see 
 
 ## February 2024
 
+### Defender for Identity release 2.229
+
+This version includes improvements and bug fixes for cloud services and the Defender for Identity sensor.
+
 ### Enhanced user experience for adjusting alert thresholds (Preview)
 
 The Defender for Identity **Advanced Settings** page is now renamed to **Adjust alert thresholds** and provides a refreshed experience with enhanced flexibility for adjusting alert thresholds.
