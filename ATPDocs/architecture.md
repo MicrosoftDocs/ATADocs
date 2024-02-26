@@ -67,9 +67,9 @@ If the domain synchronizer is offline for more than 30 minutes, another sensor i
 
 ### Resource limitations
 
-The Defender for Identity sensor includes a monitoring component that evaluates the available compute and memory capacity on the domain controller on which it's running. The monitoring process runs every 10 seconds and dynamically updates the CPU and memory utilization quota on the Defender for Identity sensor process. The monitoring process makes sure the domain controller always has at least 15% of free compute and memory resources available.
+The Defender for Identity sensor includes a monitoring component that evaluates the available compute and memory capacity on the server on which it's running. The monitoring process runs every 10 seconds and dynamically updates the CPU and memory utilization quota on the Defender for Identity sensor process. The monitoring process makes sure the server always has at least 15% of free compute and memory resources available.
 
-No matter what occurs on the domain controller, the monitoring process continually frees up resources to make sure the domain controller's core functionality is never affected.
+No matter what occurs on the server, the monitoring process continually frees up resources to make sure the server's core functionality is never affected.
 
 If the monitoring process causes the Defender for Identity sensor to run out of resources, only partial traffic is monitored and the health alert "Dropped port mirrored network traffic" appears in the Defender for Identity sensor page.
 
