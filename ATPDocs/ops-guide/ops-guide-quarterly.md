@@ -1,5 +1,5 @@
 ---
-title: Quarterly or Ad hoc operational guide - Microsoft Defender for Identity
+title: Quarterly or ad hoc operational guide - Microsoft Defender for Identity
 description: Learn about the Microsoft Defender for Identity activities that we recommend for your team on a quarterly or ad-hoc basis.
 ms.date: 01/29/2024
 ms.topic: how-to
