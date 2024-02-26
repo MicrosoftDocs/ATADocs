@@ -209,6 +209,19 @@ items:
       href: security-assessment-weak-cipher.md
 - name: Reference
   items:
+  - name: Operations guide
+    items:
+    - name: Overview
+      displayName: operations guide
+      href: ops-guide/ops-guide.md
+    - name: Daily activities
+      href: ops-guide/ops-guide-daily.md
+    - name: Weekly activities
+      href: ops-guide/ops-guide-weekly.md
+    - name: Monthly activities
+      href: ops-guide/ops-guide-monthly.md
+    - name: Quarterly / Ad-hoc activities
+      href: ops-guide/ops-guide-quarterly.md
   - name: Frequently asked questions
     href: technical-faq.yml
   - name: SIEM log reference
