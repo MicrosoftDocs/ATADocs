@@ -15,6 +15,8 @@ This article reviews the Microsoft Defender for Identity activities we recommend
 
 **Persona**: SOC analysts, security administrators, identity, and access management administrators
 
+Use Defender for Identity's **Dashboard** page to view critical insights and real-time data about identity threat detection and response (ITDR). On a daily basis, we recommend that you focus on the **Top insights**, **Identity related incidents**, and **Entra ID users at risk** widgets.
+
 For more information, see [Work with Defender for Identity's ITDR dashboard (Preview)](../dashboard.md).
 
 ## Triage incidents by priority
