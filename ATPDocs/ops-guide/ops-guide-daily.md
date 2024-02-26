@@ -89,7 +89,7 @@ If you find either benign true positives or outright false positives, we recomme
 
 We recommend creating new rules as needed as your network grows to make sure that your alert tuning remains relevant and effective.
 
-For more information, see [Investigate Defender for Identity security alerts in Microsoft Defender XDR](../manage-security-alerts.md).
+For more information, see [Tune an alert](/microsoft-365/security/defender/investigate-alerts#tune-an-alert).
 
 ## Proactively hunt
 
