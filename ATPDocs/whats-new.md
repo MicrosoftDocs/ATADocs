@@ -40,7 +40,7 @@ This version includes improvements and bug fixes for cloud services and the Defe
 
 This version includes improvements and bug fixes for cloud services and the Defender for Identity sensor.
 
-### New security posture assessment for insecure AD CS IIS endpoint configuration (Preview)
+### New security posture assessment for insecure AD CS IIS endpoint configuration
 
 Defender for Identity has added the new **Edit insecure ADCS certificate enrollment IIS endpoints (ESC8)** recommendation in Microsoft Secure Score.
 
@@ -50,8 +50,8 @@ The new **Edit insecure ADCS certificate enrollment IIS endpoints (ESC8)** recom
 
 For more information, see:
 
-- [Security assessment: Edit insecure ADCS certificate enrollment IIS endpoints (ESC8) (Preview)](security-assessment-insecure-adcs-certificate-enrollment.md)
-- [Security posture assessments for AD CS sensors (Preview)](#security-posture-assessments-for-ad-cs-sensors-preview)
+- [Security assessment: Edit insecure ADCS certificate enrollment IIS endpoints (ESC8)](security-assessment-insecure-adcs-certificate-enrollment.md)
+- [Security posture assessments for AD CS sensors](#security-posture-assessments-for-ad-cs-sensors-preview)
 - [Microsoft Defender for Identity's security posture assessments](security-assessment.md)
 
 ### Defender for Identity release 2.229

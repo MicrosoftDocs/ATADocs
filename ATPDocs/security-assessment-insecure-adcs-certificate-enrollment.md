@@ -5,7 +5,7 @@ ms.date: 03/04/2024
 ms.topic: how-to
 ---
 
-# Security assessment: Edit insecure ADCS certificate enrollment IIS endpoints (ESC8) (Preview)
+# Security assessment: Edit insecure ADCS certificate enrollment IIS endpoints (ESC8)
 
 This article provides describes Microsoft Defender for Identity's **Edit insecure ADCS certificate enrollment IIS endpoints** identity security posture assessment report.
 
