@@ -1,7 +1,7 @@
 ---
 title: What's new | Microsoft Defender for Identity
 description: This article is updated frequently to let you know what's new in the latest release of Microsoft Defender for Identity.
-ms.date: 02/12/2024
+ms.date: 03/04/2024
 ms.topic: overview
 #CustomerIntent: As a Defender for Identity customer, I want to know what's new in the latest release of Defender for Identity, so that I can take advantage of new features and functionality. 
 ---
@@ -39,6 +39,20 @@ This version includes improvements and bug fixes for cloud services and the Defe
 ### Defender for Identity release 2.230
 
 This version includes improvements and bug fixes for cloud services and the Defender for Identity sensor.
+
+### New security posture assessment for insecure AD CS IIS endpoint configuration (Preview)
+
+Defender for Identity has added the new **Edit insecure ADCS certificate enrollment IIS endpoints (ESC8)** recommendation in Microsoft Secure Score.
+
+Active Directory Certificate Services (AD CS) supports certificate enrollment through various methods and protocols, including enrollment via HTTP using the Certificate Enrollment Service (CES) or the Web Enrollment interface (Certsrv). Insecure configurations of the CES or Certsrv IIS endpoints might create vulnerabilities to relay attacks (ESC8).
+
+The new **Edit insecure ADCS certificate enrollment IIS endpoints (ESC8)** recommendation is added to other AD CS-related recommendations recently released. Together, these assessments offer security posture reports that surface security issues and severe misconfigurations that post risks to the entire organization, together with related detections.
+
+For more information, see:
+
+- [Security assessment: Edit insecure ADCS certificate enrollment IIS endpoints (ESC8) (Preview)](security-assessment-insecure-adcs-certificate-enrollment.md)
+- [Security posture assessments for AD CS sensors (Preview)](#security-posture-assessments-for-ad-cs-sensors-preview)
+- [Microsoft Defender for Identity's security posture assessments](security-assessment.md)
 
 ### Defender for Identity release 2.229
 
