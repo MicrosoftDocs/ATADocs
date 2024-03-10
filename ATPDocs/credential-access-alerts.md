@@ -403,6 +403,47 @@ None
 |MITRE attack technique  | [Adversary-in-the-Middle (T1557)](https://attack.mitre.org/techniques/T1557/)        |
 |MITRE attack sub-technique | [LLMNR/NBT-NS Poisoning and SMB Relay (T1557.001)](https://attack.mitre.org/techniques/T1557/001/)  |
 
+## Password Spray Against OneLogin 
+
+**Severity**: High
+
+**Description**:
+
+In Password spray, attackers will try to guess small subset of passwords against large number of users. This will be done in order to try and find if any of the users is using known\weak password. 
+We will recommend to investigate to source IP performing the failed logins and determine whether they are legitimate or not. 
+
+**Learning period**:
+
+None
+
+**MITRE**:
+
+|Primary MITRE tactic  | [Credential Access (TA0006)](https://attack.mitre.org/tactics/TA0006)  |
+|---------|---------|
+|MITRE attack technique  | [Brute Force (T1110)](https://attack.mitre.org/techniques/T1110/)        |
+|MITRE attack sub-technique | [Password Spraying (T1110.003)](https://attack.mitre.org/techniques/T1110/003/)  |
+
+## Suspicious OneLogin MFA Fatigue 
+
+**Severity**: High
+
+**Description**:
+
+In MFA fatigue, attackers will send multiple MFA attempts to user while trying to make them feel there is a bug in the system that keeps showing MFA requests which ask to allow the login or deny. Attackers will try to force the victim to allow the login which will stop the notifications and allow the attacker to login to the system. 
+
+We will recommend investigating to source IP performing the failed MFA attempts and determine whether they are legitimate or not and if the user is performing logins. 
+
+**Learning period**:
+
+None
+
+**MITRE**:
+
+|Primary MITRE tactic  | [Credential Access (TA0006)](https://attack.mitre.org/tactics/TA0006)  |
+|---------|---------|
+|MITRE attack technique  | [Multi-Factor Authentication Request Generation (T1621)](https://attack.mitre.org/techniques/T1621/)        |
+|MITRE attack sub-technique | N/A  |
+
 ## See also
 
 - [Investigate assets](investigate-assets.md)
