@@ -278,6 +278,26 @@ None
 |MITRE attack technique  |   [Account Manipulation (T1098)](https://attack.mitre.org/techniques/T1098/)  |
 |MITRE attack sub-technique |  N/A       |
 
+## Possible Okta Session Theft 
+
+**Severity**: High
+
+**Description**:
+
+In session theft, attackers will steal the cookies of legitimate user and will use it from other locations. 
+We will recommend investigating to source IP performing the operations and determine whether they are legitimate or not, and that the IP address is used by the user. 
+
+**Learning period**:
+
+2 weeks
+
+**MITRE**:
+
+|Primary MITRE tactic  | [Collection (TA0009)](https://attack.mitre.org/tactics/TA0009) |
+|---------|---------|
+|MITRE attack technique  |   [Browser Session Hijacking (T1185)](https://attack.mitre.org/techniques/T1185/)  |
+|MITRE attack sub-technique |  N/A       |
+
 ## See also
 
 - [Investigate assets](investigate-assets.md)
