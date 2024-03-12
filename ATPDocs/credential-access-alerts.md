@@ -46,7 +46,7 @@ None
 
 **Suggested steps for prevention**:
 
-1. Enforce [complex and long passwords](/windows/device-security/security-policy-settings/password-policy) in the organization, it will provide the necessary first level of security against future brute-force attacks.
+1. Enforce [complex and long passwords](/windows/device-security/security-policy-settings/password-policy) in the organization. Doing so provides the necessary first level of security against future brute-force attacks.
 1. Prevent future usage of LDAP clear text protocol in your organization.
 
 ## Suspected Golden Ticket usage (forged authorization data) (external ID 2013)
@@ -123,7 +123,7 @@ In a password spray, after successfully enumerating a list of valid users from t
 
 **Suggested steps for prevention**:
 
-1. Enforce [complex and long passwords](/windows/device-security/security-policy-settings/password-policy) in the organization, it will provide the necessary first level of security against future brute-force attacks.
+1. Enforce [complex and long passwords](/windows/device-security/security-policy-settings/password-policy) in the organization. Doing so provides the necessary first level of security against future brute-force attacks.
 
 ## Security principal reconnaissance (LDAP) (external ID 2038)
 
@@ -205,9 +205,9 @@ None
 
 An attacker can create a straightforward path to a Domain Admin user in an Active Directory environment that isn't patched. This escalation attack allows attackers to easily elevate their privilege to that of a Domain Admin once they compromise a regular user in the domain.
 
-When performing an authentication using Kerberos, Ticket-Granting-Ticket (TGT) and the Ticket-Granting-Service (TGS) are requested from the Key Distribution Center (KDC). If a TGS was requested for an account that couldn't be found, the KDC will attempt to search it again with a trailing &dollar;.
+When performing an authentication using Kerberos, Ticket-Granting-Ticket (TGT) and the Ticket-Granting-Service (TGS) are requested from the Key Distribution Center (KDC). If a TGS was requested for an account that couldn't be found, the KDC attemptS to search it again with a trailing &dollar;.
 
-When processing the TGS request, the KDC will fail its lookup for the requestor machine *DC1* the attacker created. Therefore, the KDC will perform another lookup appending a trailing &dollar;. The lookup will succeed. As a result, the KDC will issue the ticket using the privileges of *DC1$*.
+When processing the TGS request, the KDC fails its lookup for the requestor machine *DC1* the attacker created. Therefore, the KDC performs another lookup appending a trailing &dollar;. The lookup succeeds. As a result, the KDC issues the ticket using the privileges of *DC1$*.
 
 Combining CVEs CVE-2021-42278 and CVE-2021-42287, an attacker with domain user credentials can leverage them for granting access as a domain admin.
 
@@ -403,14 +403,14 @@ None
 |MITRE attack technique  | [Adversary-in-the-Middle (T1557)](https://attack.mitre.org/techniques/T1557/)        |
 |MITRE attack sub-technique | [LLMNR/NBT-NS Poisoning and SMB Relay (T1557.001)](https://attack.mitre.org/techniques/T1557/001/)  |
 
-## Password Spray Against OneLogin 
+## Password spray against OneLogin 
 
 **Severity**: High
 
 **Description**:
 
-In Password spray, attackers will try to guess small subset of passwords against large number of users. This will be done in order to try and find if any of the users is using known\weak password. 
-We will recommend to investigate to source IP performing the failed logins and determine whether they are legitimate or not. 
+In Password spray, attackers try to guess small subset of passwords against large number of users. This is done in order to try and find if any of the users is using known\weak password. 
+We recommend investigating the source IP performing the failed logins to determine whether they're legitimate or not. 
 
 **Learning period**:
 
@@ -423,15 +423,15 @@ None
 |MITRE attack technique  | [Brute Force (T1110)](https://attack.mitre.org/techniques/T1110/)        |
 |MITRE attack sub-technique | [Password Spraying (T1110.003)](https://attack.mitre.org/techniques/T1110/003/)  |
 
-## Suspicious OneLogin MFA Fatigue 
+## Suspicious OneLogin MFA fatigue 
 
 **Severity**: High
 
 **Description**:
 
-In MFA fatigue, attackers will send multiple MFA attempts to user while trying to make them feel there is a bug in the system that keeps showing MFA requests which ask to allow the login or deny. Attackers will try to force the victim to allow the login which will stop the notifications and allow the attacker to login to the system. 
+In MFA fatigue, attackers send multiple MFA attempts to user while trying to make them feel there's a bug in the system that keeps showing MFA requests which ask to allow the login or deny. Attackers try to force the victim to allow the login, which will stop the notifications and allow the attacker to login to the system. 
 
-We will recommend investigating to source IP performing the failed MFA attempts and determine whether they are legitimate or not and if the user is performing logins. 
+We recommend investigating the source IP performing the failed MFA attempts to determine whether they're legitimate or not and if the user is performing logins. 
 
 **Learning period**:
 
@@ -441,7 +441,7 @@ None
 
 |Primary MITRE tactic  | [Credential Access (TA0006)](https://attack.mitre.org/tactics/TA0006)  |
 |---------|---------|
-|MITRE attack technique  | [Multi-Factor Authentication Request Generation (T1621)](https://attack.mitre.org/techniques/T1621/)        |
+|MITRE attack technique  | [Multifactor Authentication Request Generation (T1621)](https://attack.mitre.org/techniques/T1621/)        |
 |MITRE attack sub-technique | N/A  |
 
 ## See also
