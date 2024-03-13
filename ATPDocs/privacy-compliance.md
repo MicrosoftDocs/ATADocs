@@ -26,6 +26,7 @@ Defender for Identity shares data, including customer data, among the following 
 - Microsoft Defender for Endpoint
 - Microsoft Defender for Cloud
 - Microsoft Sentinel
+- Microsoft Security Exposure Management (public preview)
 
 ## Update personal data
 
