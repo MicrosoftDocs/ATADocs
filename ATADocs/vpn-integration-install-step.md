@@ -10,7 +10,6 @@ manager: raynew
 ms.date: 01/10/2023
 ms.topic: conceptual
 ms.service: advanced-threat-analytics
-ms.technology:
 ms.assetid: e0aed853-ba52-46e1-9c55-b336271a68e7
 
 # optional metadata
