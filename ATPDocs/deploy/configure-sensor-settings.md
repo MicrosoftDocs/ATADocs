@@ -104,7 +104,9 @@ When using the examples in the following steps, make sure to replace `contosodc.
    
 1. Repeat the previous two steps for each sensor you want to test.
 
-1. From the Microsoft Defender XDR **Devices** page, open the details page for the computer you ran the connectivity test from. Select the **Timeline** tab to view the following activity:
+1. Access the device details page for the computer you ran the connectivity test from, either from the **Devices** page or by searching for device name.
+
+1. On the device details tab, select the **Timeline** tab to view the following activity:
 
     - **Events**: DNS queries performed to a specified domain name
     - **Action type** MdiDnsQuery
