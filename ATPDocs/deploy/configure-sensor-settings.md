@@ -104,7 +104,7 @@ When using the examples in the following steps, make sure to replace `contosodc.
    
 1. Repeat the previous two steps for each sensor you want to test.
 
-1. Access the device details page for the computer you ran the connectivity test from, such as from the **Devices** page, by searching for device name, or elsewhere in the Defender portal.
+1. Access the device details page for the computer you ran the connectivity test from, such as from the **Devices** page, by searching for device name, or from elsewhere in the Defender portal.
 
 1. On the device details tab, select the **Timeline** tab to view the following activity:
 
