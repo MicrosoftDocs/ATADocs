@@ -51,13 +51,7 @@ For more information, see [Network access: Restrict clients allowed to make remo
 > [!IMPORTANT]
 > When configuring user rights assignments in group policies, it's important to note that the setting *replaces* the previous one rather than adding to it. Therefore, make sure to include *all* the desired accounts in the effective group policy. By default, workstations and servers include the following accounts: Administrators, Backup Operators, Users, and Everyone
 >
-> The [Microsoft Security Compliance Toolkit](https://www.microsoft.com/download/details.aspx?id=55319) recommends replacing the default *Everyone* as follows prevent anonymous connections from performing network sign-ins:
->
-> - For Windows Server that aren't domain controllers, replace *Everyone* with *Administrators* and *Authenticated Users*.
-> - For Windows Server domain controllers, replace *Everyone* with *Administrators*, *Authenticated Users*, and *Enterprise Domain Controllers*.
-> - For Windows 10 or 11, replace *Everyone* with *Administrators* and *Remote Desktop Users*.
->
-> Review your local policy settings before managing the [Access this computer from the network](/windows/security/threat-protection/security-policy-settings/access-this-computer-from-the-network) setting from a GPO, and consider including *Authenticated Users* in the GPO if needed.
+> The [Microsoft Security Compliance Toolkit](https://www.microsoft.com/download/details.aspx?id=55319) recommends replacing the default *Everyone* with *Authenticated Users* to prevent anonymous connections from performing network sign-ins. Review your local policy settings before managing the [Access this computer from the network](/windows/security/threat-protection/security-policy-settings/access-this-computer-from-the-network) setting from a GPO, and consider including *Authenticated Users* in the GPO if needed.
 
 ## Configure a Device profile for Microsoft Entra joined devices only
 
