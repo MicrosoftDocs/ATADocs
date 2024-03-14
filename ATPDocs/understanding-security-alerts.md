@@ -66,9 +66,7 @@ Defender for Identity security alerts are divided into the following categories 
 
 ## Advanced security alert investigation
 
-To get more details on a security alert, download the detailed Excel alert report.
-
-1. Select the three dots in the upper right corner of any alert, then select **Download Details**.
+To get more details on a security alert, select **Export** on an alert details page to download the detailed Excel alert report.
 
 Each Defender for Identity alert Excel download provides the following information:
 
