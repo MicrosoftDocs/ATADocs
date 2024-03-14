@@ -110,11 +110,15 @@ sections:
           The Defender for Identity sensor can cover most virtual domain controllers. For more information, see [Defender for Identity Capacity Planning](deploy/capacity-planning.md).
 
           If the Defender for Identity sensor can't cover a virtual domain controller, use either a virtual or physical Defender for Identity standalone sensor instead. For more information, see [Configure port mirroring](deploy/configure-port-mirroring.md).
+          
           The easiest way is to have a virtual Defender for Identity standalone sensor on every host where a virtual domain controller exists.
+          
           If your virtual domain controllers move between hosts, you need to perform one of the following steps:
 
           - When the virtual domain controller moves to another host, preconfigure the Defender for Identity standalone sensor in that host to receive the traffic from the recently moved virtual domain controller.
+          
           - Make sure that you affiliate the virtual Defender for Identity standalone sensor with the virtual domain controller so that if it's moved, the Defender for Identity standalone sensor moves with it.
+          
           - There are some virtual switches that can send traffic between hosts.
 
       - question: How do I configure the Defender for Identity sensors to communicate with Defender for Identity cloud service when I have a proxy?
@@ -164,6 +168,9 @@ sections:
           
           See the Npcap license agreement [here](https://github.com/nmap/Npcap/blob/master/LICENSE), and search for Microsoft Defender for Identity. 
 
+      - question: Is Npcap also relevant for ATA? 
+        answer: No, only the Microsoft Defender for Identity sensor supports Npcap version 1.00.
+        
       - question: I would like to script the deployment of Npcap, do I need to purchase the OEM version? 
         answer: No, you don't need to purchase the OEM version. Download the sensor installation package version 2.156 and above from the Defender for Identity console, which includes the OEM version of Npcap.
 
