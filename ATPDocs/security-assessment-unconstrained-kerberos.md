@@ -1,7 +1,7 @@
 ---
-title: Unsecure Kerberos delegation assessment
+title: Unsecure Kerberos delegation assessment | Microsoft Defender for Identity
 description: This article provides an overview of Microsoft Defender for Identity's unconstrained Kerberos identity security posture assessment reports.
-ms.date: 01/29/2023
+ms.date: 02/21/2024
 ms.topic: how-to
 ---
 

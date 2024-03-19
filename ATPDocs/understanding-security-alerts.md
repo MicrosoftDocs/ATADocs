@@ -1,5 +1,5 @@
 ---
-title: Understanding security alerts
+title: Understanding security alerts | Microsoft Defender for Identity
 description: This article explains how to use and understand Microsoft Defender for Identity security alerts.
 ms.date: 01/29/2023
 ms.topic: how-to
@@ -22,7 +22,7 @@ In this article, you'll learn the structure of Defender for Identity security al
 
 ## Security alert structure
 
-Each Defender for Identity security alert includes an **Alert story**. This the chain of events  related to this alert in chronological order, and other important information related to the alert.
+Each Defender for Identity security alert includes an **Alert story**. This is the chain of events related to this alert in chronological order, and other important information related to the alert.
 
 On the alert page you can:
 
@@ -52,7 +52,9 @@ For each alert, ask the following questions to determine the alert classificatio
 1. Was the alert triggered by the same types of computers or users?
    For example, servers with the same role or users from the same group/department? If the computers or users were similar, you may decide to exclude it to avoid additional future FP alerts.
 
-Note: An increase of alerts of the exact same type typically reduces the suspicious/importance level of the alert. For repeated alerts, verify configurations, and use security alert details and definitions to understand exactly what is happening that trigger the repeats.
+> [!NOTE]
+> An increase of alerts of the exact same type typically reduces the suspicious/importance level of the alert. For repeated alerts, verify configurations, and use security alert details and definitions to understand exactly what is happening that trigger the repeats.
+>
 
 ## Security alert categories
 
@@ -68,35 +70,41 @@ Defender for Identity security alerts are divided into the following categories 
 
 To get more details on a security alert, select **Export** on an alert details page to download the detailed Excel alert report.
 
-Each Defender for Identity alert Excel download provides the following information:
+The downloaded file includes summary details about the alert on the first tab, including:
 
-- Summary – the first tab includes the highlights of the alert
-  - Title
-  - Description
-  - Start Time (UTC)
-  - End Time (UTC)
-  - Severity – Low/Medium/High
-  - Status – Open/Closed
-  - Status Update Time (UTC)
-  - View in browser
-- All involved entities (accounts, computers, and resources) are listed, separated by their role.
-  - Source, destination, or attacked, depending on the alert.
-- Most of the tabs include the following data per entity:
-  - Name
-  - Details
-  - Type
-  - SamName
-  - Source Computer
-  - Source User (if available)
-  - Domain Controllers
-  - Accessed Resource: Time, Computer, Name, Details, Type, Service.
-  - Additional tabs per alert:
-    - On attacked accounts when the suspected attack used Brute Force.
-    - On Domain Name System (DNS) servers when the suspected attacked involved network mapping reconnaissance (DNS).
-  - Related entities: ID, Type, Name, Unique Entity Json, Unique Entity Profile Json
+- Title
+- Description
+- Start Time (UTC)
+- End Time (UTC)
+- Severity – Low/Medium/High
+- Status – Open/Closed
+- Status Update Time (UTC)
+- View in browser
+
+All involved entities, including accounts, computers, and resources are listed, separated by their role. Details are provided for the source, destination, or attacked entity, depending on the alert.
+
+Most of the tabs include the following data per entity:
+
+- Name
+- Details
+- Type
+- SamName
+- Source Computer
+- Source User (if available)
+- Domain Controllers
+- Accessed Resource: Time, Computer, Name, Details, Type, Service.
+- Related entities: ID, Type, Name, Unique Entity Json, Unique Entity Profile Json
 - All raw activities captured by Defender for Identity Sensors related to the alert (network or event activities) including:
+
   - Network Activities
   - Event Activities
+
+Some alerts have extra tabs, such as details about:
+
+- Attacked accounts when the suspected attack used Brute Force.
+- Domain Name System (DNS) servers when the suspected attacked involved network mapping reconnaissance (DNS).
+
+For example:
 
 ![Involved entities.](media/involved-entities.png)
 
@@ -104,11 +112,11 @@ Each Defender for Identity alert Excel download provides the following informati
 
 In each alert, the last tab provides the **Related Entities**. Related entities are all entities involved in a suspicious activity, without the separation of the "role" they played in the alert. Each entity has two Json files, the Unique Entity Json and Unique Entity Profile Json. Use these two Json files to learn more about the entity and to help you investigate the alert.
 
-#### Unique Entity Json
+#### Unique Entity Json file
 
 Includes the data Defender for Identity learned from Active Directory about the account. This includes all attributes such as *Distinguished Name*, *SID*, *LockoutTime*, and *PasswordExpiryTime*. For user accounts, includes data such as *Department*, *Mail*, and *PhoneNumber*. For computer accounts, includes data such as *OperatingSystem*, *IsDomainController*, and *DnsName*.
 
-#### Unique Entity Profile Json
+#### Unique Entity Profile Json file
 
 Includes all data Defender for Identity profiled on the entity. Defender for Identity uses the network and event activities captured to learn about the environment's users and computers. Defender for Identity profiles relevant information per entity. This information contributes Defender for Identity's threat identification capabilities.
 
@@ -146,7 +154,7 @@ Download report data appears in two columns:
 
 For more information about how to work with Defender for Identity security alerts, see [Working with security alerts](/defender-for-identity/manage-security-alerts).
 
-## See Also
+## Related content
 
 - [Investigate a user](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-users)
 - [Investigate a computer](/defender-for-identity/investigate-assets#investigation-steps-for-suspicious-devices)

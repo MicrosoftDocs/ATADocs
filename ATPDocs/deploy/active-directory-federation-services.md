@@ -1,7 +1,7 @@
 ---
 title: Configuring sensors for AD FS and AD CS | Microsoft Defender for Identity
 description: Learn how to configure Microsoft Defender for Identity on Active Directory Federation Services (AD FS) 
-ms.date: 01/30/2023
+ms.date: 02/21/2024
 ms.topic: how-to
 ---
 

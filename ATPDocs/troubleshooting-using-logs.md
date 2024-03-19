@@ -1,7 +1,7 @@
 ---
-title: Troubleshooting the sensor using logs
+title: Troubleshooting the sensor using logs  | Microsoft Defender for Identity
 description: Describes how you can use the Microsoft Defender for Identity logs to troubleshoot issues
-ms.date: 01/29/2023
+ms.date: 02/21/2024
 ms.topic: how-to
 ---
 
@@ -10,6 +10,8 @@ ms.topic: how-to
 The Defender for Identity logs provide insight into what each component of Microsoft Defender for Identity sensor is doing at any given point in time.
 
 The Defender for Identity logs are located in a subfolder called **Logs** where Defender for Identity is installed; the default location is: **C:\Program Files\Azure Advanced Threat Protection Sensor\\**. In the default installation location, it can be found at: **C:\Program Files\Azure Advanced Threat Protection Sensor\version number\Logs**.
+
+## Defender for Identity sensor logs
 
 The Defender for Identity sensor has the following logs:
 
@@ -24,7 +26,7 @@ The Defender for Identity sensor has the following logs:
 > [!NOTE]
 > The log files have a maximum size of up to 50 MB. When that size is reached, a new log file is opened and the previous one is renamed to "&lt;original file name&gt;-Archived-00000" where the number increments each time it is renamed. By default, if more than 10 files from the same type already exist, the oldest are deleted.
 
-## Defender for Identity Deployment logs
+## Defender for Identity deployment logs
 
 The Defender for Identity deployment logs are located in the temp directory of the user who installed the product. It will usually be found at **%USERPROFILE%\AppData\Local\Temp**. If it was deployed by a service, it might be found at **C:\Windows\Temp**.
 
@@ -39,7 +41,7 @@ Defender for Identity sensor deployment logs:
 > [!NOTE]
 > In addition to the deployment logs mentioned here, there are other logs that begin with "Azure Advanced Threat Protection" that can also provide additional information on the deployment process.
 
-## See Also
+## Related content
 
 - [Defender for Identity prerequisites](deploy/prerequisites.md)
 - [Defender for Identity capacity planning](deploy/capacity-planning.md)
