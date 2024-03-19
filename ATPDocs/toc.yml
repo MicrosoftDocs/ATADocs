@@ -173,6 +173,8 @@ items:
       href: security-assessment-enforce-encryption-rpc.md
     - name: Entities exposing credentials in clear text assessment
       href: security-assessment-clear-text.md
+    - name: Insecure ADCS certificate enrollment IIS endpoints (ESC8)
+      href: security-assessment-insecure-adcs-certificate-enrollment.md
     - name: LAPS usage assessment
       href: security-assessment-laps.md
     - name: Misconfigured Certificate Authority ACL  (ESC7)
@@ -209,6 +211,19 @@ items:
       href: security-assessment-weak-cipher.md
 - name: Reference
   items:
+  - name: Operations guide
+    items:
+    - name: Overview
+      displayName: operations guide
+      href: ops-guide/ops-guide.md
+    - name: Daily activities
+      href: ops-guide/ops-guide-daily.md
+    - name: Weekly activities
+      href: ops-guide/ops-guide-weekly.md
+    - name: Monthly activities
+      href: ops-guide/ops-guide-monthly.md
+    - name: Quarterly / Ad-hoc activities
+      href: ops-guide/ops-guide-quarterly.md
   - name: Frequently asked questions
     href: technical-faq.yml
   - name: SIEM log reference

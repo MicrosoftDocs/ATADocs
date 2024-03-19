@@ -68,7 +68,7 @@ Defender for Identity security alerts are divided into the following categories 
 
 ## Advanced security alert investigation
 
-To get more details on a security alert, download the detailed Excel alert report. Select the three dots in the upper right corner of any alert, then select **Download Details**.
+To get more details on a security alert, select **Export** on an alert details page to download the detailed Excel alert report.
 
 The downloaded file includes summary details about the alert on the first tab, including:
 
@@ -83,7 +83,7 @@ The downloaded file includes summary details about the alert on the first tab, i
 
 All involved entities, including accounts, computers, and resources are listed, separated by their role. Details are provided for the source, destination, or attacked entity, depending on the alert.
 
-Most of the tabs also include the following data per entity:
+Most of the tabs include the following data per entity:
 
 - Name
 - Details
@@ -95,6 +95,7 @@ Most of the tabs also include the following data per entity:
 - Accessed Resource: Time, Computer, Name, Details, Type, Service.
 - Related entities: ID, Type, Name, Unique Entity Json, Unique Entity Profile Json
 - All raw activities captured by Defender for Identity Sensors related to the alert (network or event activities) including:
+
   - Network Activities
   - Event Activities
 

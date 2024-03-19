@@ -175,7 +175,7 @@ Use the following command to configure your proxy together with a silent install
 |**ProxyUserPassword**|`ProxyUserPassword="P@ssw0rd"`|No|Specifies the password for your  proxy user name. <br><br>Credentials are encrypted and stored locally by the Defender for Identity sensor.|
 
 > [!TIP]
-> If you've configured a proxy during installation, changing the proxy configuration requires you to remove and install the sensor. Therefore, we recommend creating and using a custom DNS A record for the proxy server, which you can use to change the proxy server's address when needed and use the *hosts* file for testing.
+> If you need to update your proxy settings later on, use PowerShell or the CLI. For more information, see [Configure endpoint proxy and internet connectivity settings](configure-proxy.md). We recommend creating and using a custom DNS A record for the proxy server, which you can use to change the proxy server's address when needed and use the *hosts* file for testing.
 >
 
 ## Related content

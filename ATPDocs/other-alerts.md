@@ -103,7 +103,7 @@ Defender for Identity learns the entity behavior for users VPN connections over 
 
 The VPN-behavior model is based on the machines users log in to and the locations the users connect from.
 
-An alert is opened when there is a deviation from the user's behavior based on a machine learning algorithm.
+An alert is opened when there's a deviation from the user's behavior based on a machine learning algorithm.
 
 **Learning period**:
 
@@ -264,8 +264,8 @@ None
 
 **Description**:
 
-Directory Services Restore Mode (DSRM) is a special boot mode in Microsoft Windows Server operating systems that allows an administrator to repair or restore the Active Directory database. This mode is typically used when there are issues with the Active Directory and normal booting is not possible. The DSRM password is set during the promotion of a server to a domain controller. In this detection, an alert is triggered when Defender for Identity detects a DSRM password is changed. 
-We will recommend investigating the source computer and the user who made the request to understand if the DSRM password change was initiated from a legitimate administrative action or if it raises concerns about unauthorized access or potential security threats. 
+Directory Services Restore Mode (DSRM) is a special boot mode in Microsoft Windows Server operating systems that allows an administrator to repair or restore the Active Directory database. This mode is typically used when there are issues with the Active Directory and normal booting isn't possible. The DSRM password is set during the promotion of a server to a domain controller. In this detection, an alert is triggered when Defender for Identity detects a DSRM password is changed. 
+We recommend investigating the source computer and the user who made the request to understand if the DSRM password change was initiated from a legitimate administrative action or if it raises concerns about unauthorized access or potential security threats. 
 
 **Learning period**:
 
@@ -276,6 +276,26 @@ None
 |Primary MITRE tactic  | [Persistence (TA0003)](https://attack.mitre.org/tactics/TA0003) |
 |---------|---------|
 |MITRE attack technique  |   [Account Manipulation (T1098)](https://attack.mitre.org/techniques/T1098/)  |
+|MITRE attack sub-technique |  N/A       |
+
+## Possible Okta session theft 
+
+**Severity**: High
+
+**Description**:
+
+In session theft, attackers steal the cookies of legitimate user and use it from other locations. 
+We recommend investigating the source IP performing the operations to determine whether those operations are legitimate or not, and that the IP address is used by the user. 
+
+**Learning period**:
+
+2 weeks
+
+**MITRE**:
+
+|Primary MITRE tactic  | [Collection (TA0009)](https://attack.mitre.org/tactics/TA0009) |
+|---------|---------|
+|MITRE attack technique  |   [Browser Session Hijacking (T1185)](https://attack.mitre.org/techniques/T1185/)  |
 |MITRE attack sub-technique |  N/A       |
 
 ## See also

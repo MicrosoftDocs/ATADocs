@@ -213,6 +213,26 @@ None
 |MITRE attack technique  | [Account Discovery (T1087)](https://attack.mitre.org/techniques/T1087/)  |
 |MITRE attack sub-technique | [Domain Account (T1087.002)](https://attack.mitre.org/techniques/T1087/002/)  |
 
+## Suspicious Okta account Enumeration 
+
+**Severity**: High
+
+**Description**:
+
+In account enumeration, attackers will try to guess user names by performing logins into Okta with users which are not belonged to the organization. 
+We will recommend investigating to source IP performing the failed attempts and determine whether they are legitimate or not. 
+
+**Learning period**:
+
+None
+
+**MITRE**:
+
+|Primary MITRE tactic  |[Initial Access (TA0001)](https://attack.mitre.org/tactics/TA0001/), [Defense Evasion (TA0005)](https://attack.mitre.org/tactics/TA0005/), [Persistence (TA0003)](https://attack.mitre.org/tactics/TA0003/), [Privilege Escalation (TA0004)](https://attack.mitre.org/tactics/TA0004/)  |
+|---------|---------|
+|MITRE attack technique  | [Valid Accounts (T1078)](https://attack.mitre.org/techniques/T1087/)  |
+|MITRE attack sub-technique | [Cloud Accounts (T1078.004)](https://attack.mitre.org/techniques/T1078/004/)  |
+
 
 
 ## See also
