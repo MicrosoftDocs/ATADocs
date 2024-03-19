@@ -30,6 +30,12 @@ For updates about versions and features released six months ago or earlier, see 
 
 ## March 2024
 
+### New read-only permissions for viewing Defender for Identity settings
+
+Now you can configure Defender for Identity users with read-only permissions to view Defender for Identity settings. 
+
+For more information, see [Required permissions Defender for Identity in Microsoft Defender XDR](https://learn.microsoft.com/en-us/defender-for-identity/role-groups#required-permissions-defender-for-identity-in-microsoft-defender-xdr).
+
 ### Defender for Identity release 2.232
 
 This version includes improvements and bug fixes for cloud services and the Defender for Identity sensor.
