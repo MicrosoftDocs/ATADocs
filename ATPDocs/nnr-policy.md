@@ -1,7 +1,7 @@
 ---
-title: Network Name Resolution
+title: Network Name Resolution | Microsoft Defender for Identity
 description: This article provides an overview of Microsoft Defender for Identity's Advanced Network Name Resolution functionality and uses.
-ms.date: 01/29/2023
+ms.date: 02/21/2024
 ms.topic: conceptual
 ---
 

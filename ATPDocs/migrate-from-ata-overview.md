@@ -1,7 +1,7 @@
 ---
 title: Migrate from Advanced Threat Analytics | Microsoft Defender for Identity
 description: Learn how to move an existing Advanced Threat Analytics installation to Microsoft Defender for Identity.
-ms.date: 08/10/2023
+ms.date: 02/21/2024
 ms.topic: how-to
 ---
 
@@ -18,6 +18,19 @@ This article describes how to migrate from an existing ATA installation to a Mic
 > - Perform post-migration checks and verifications
 > - Decommission ATA
 
+ATA is a standalone on-premises solution with multiple components, such as the ATA Center that requires dedicated hardware on-premises.
+
+Defender for Identity is a cloud-based security solution that uses your on-premises Active Directory signals. The solution is highly scalable and is frequently updated.
+
+In contrast to the ATA sensor, the Defender for Identity sensor also uses data sources such as Event Tracing for Windows (ETW) enabling Defender for Identity to deliver extra detections. Defender for Identity also provides:
+
+- Support for [multi-forest environments](deploy/multi-forest.md)
+- [Microsoft Secure Score posture assessments](/defender-for-identity/security-assessment)
+- [UEBA capabilities](/cloud-app-security/tutorial-ueba)
+- Direct integrations with other services like Microsoft Defender for Cloud Apps and Microsoft Entra for a hybrid view of what's taking place in both on-premises and hybrid environments
+- And more
+
+Defender for Identity also uses the Microsoft 365 security portfolio to automatically analyze cross-domain threat data, building a complete picture of each attack in a single dashboard.
 
 > [!IMPORTANT]
 > This migration guide is designed for Defender for Identity sensors only, and not standalone sensors.

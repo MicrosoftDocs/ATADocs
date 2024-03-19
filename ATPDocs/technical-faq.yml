@@ -2,7 +2,7 @@
 metadata:
   title: Microsoft Defender for Identity frequently asked questions
   description: Provides a list of frequently asked questions about Microsoft Defender for Identity and the associated answers
-  ms.date: 03/30/2022
+  ms.date: 02/21/2024
   ms.topic: conceptual
 
 title: Microsoft Defender for Identity frequently asked questions
@@ -57,22 +57,24 @@ sections:
           ATA is a standalone on-premises solution with multiple components, such as the ATA Center that requires dedicated hardware on-premises.
 
           Defender for Identity is a cloud-based security solution that uses your on-premises Active Directory signals. The solution is highly scalable and is frequently updated.
-
+          
           The final release of ATA is [generally available](https://support.microsoft.com/help/4568997/update-3-for-microsoft-advanced-threat-analytics-1-9). ATA ended Mainstream Support on January 12, 2021. Extended Support continues until January 2026. For more information, read [our blog](https://techcommunity.microsoft.com/t5/microsoft-security-and/end-of-mainstream-support-for-advanced-threat-analytics-january/ba-p/1539181).
-
+          
           In contrast to the ATA sensor, the Defender for Identity sensor also uses data sources such as Event Tracing for Windows (ETW) enabling Defender for Identity to deliver extra detections.
-
+          
           Defender for Identity's frequent updates include the following features and capabilities:
-
+          
           - **Support for [multi-forest environments](deploy/multi-forest.md)**: Provides organizations visibility across AD forests.
-
+          
           - **[Microsoft Secure Score posture assessments](/defender-for-identity/security-assessment)**: Identifies common misconfigurations and exploitable components and provides remediation paths to reduce the attack surface.
-
+          
           - **[UEBA capabilities](/cloud-app-security/tutorial-ueba)**: Insights into individual user risk through user investigation priority scoring. The score can assist SecOps in their investigations and help analysts understand unusual activities for the user and the organization.
-
+          
           - **Native integrations**: Integrates with Microsoft Defender for Cloud Apps and Azure AD Identity Protection to provide a hybrid view of what's taking place in both on-premises and hybrid environments.
-
-          - **Contributes to Microsoft Defender XDR**: Contributes alert and threat data to  Microsoft Defender XDR. Microsoft Defender XDR uses the Microsoft 365 security portfolio (identities, endpoints, data, and applications) to automatically analyze cross-domain threat data, building a complete picture of each attack in a single dashboard. With this breadth and depth of clarity, defenders can focus on critical threats and hunt for sophisticated breaches. Defenders can trust that Microsoft Defender XDR's powerful automation stops attacks anywhere in the kill chain and returns the organization to a secure state.
+          
+          - **Contributes to Microsoft Defender XDR**: Contributes alert and threat data to  Microsoft Defender XDR. Microsoft Defender XDR uses the Microsoft 365 security portfolio (identities, endpoints, data, and applications) to automatically analyze cross-domain threat data, building a complete picture of each attack in a single dashboard. 
+          
+            With this breadth and depth of clarity, Defenders can focus on critical threats and hunt for sophisticated breaches. Defenders can trust that Microsoft Defender XDR's powerful automation stops attacks anywhere in the kill chain and returns the organization to a secure state.
 
   - name: Licensing and privacy
     questions:
@@ -119,11 +121,15 @@ sections:
           The Defender for Identity sensor can cover most virtual domain controllers. For more information, see [Defender for Identity Capacity Planning](deploy/capacity-planning.md).
 
           If the Defender for Identity sensor can't cover a virtual domain controller, use either a virtual or physical Defender for Identity standalone sensor instead. For more information, see [Configure port mirroring](deploy/configure-port-mirroring.md).
+          
           The easiest way is to have a virtual Defender for Identity standalone sensor on every host where a virtual domain controller exists.
+          
           If your virtual domain controllers move between hosts, you need to perform one of the following steps:
 
           - When the virtual domain controller moves to another host, preconfigure the Defender for Identity standalone sensor in that host to receive the traffic from the recently moved virtual domain controller.
+          
           - Make sure that you affiliate the virtual Defender for Identity standalone sensor with the virtual domain controller so that if it's moved, the Defender for Identity standalone sensor moves with it.
+          
           - There are some virtual switches that can send traffic between hosts.
 
       - question: How do I configure the Defender for Identity sensors to communicate with Defender for Identity cloud service when I have a proxy?
@@ -144,7 +150,7 @@ sections:
 
       - question: Does Microsoft Defender for Identity require synchronizing users to Microsoft Entra ID?
         answer: |
-          Microsoft Defender for Identity provides security value for all Active Directory accounts including those that are not synced to Microsoft Entra ID. User accounts that are synced to Entra ID will also benefit of security value provided by Entra ID (based on license level) and of Investigation Priority Scoring.
+          Microsoft Defender for Identity provides security value for all Active Directory accounts including those that are not synced to Microsoft Entra ID. User accounts that are synced to Microsoft Entra ID will also benefit of security value provided by Microsoft Entra ID (based on license level) and of Investigation Priority Scoring.
 
   - name: WinPcap and Npcap drivers
     questions: 
@@ -175,7 +181,7 @@ sections:
 
       - question: Is Npcap also relevant for ATA? 
         answer: No, only the Microsoft Defender for Identity sensor supports Npcap version 1.00.
-
+        
       - question: I would like to script the deployment of Npcap, do I need to purchase the OEM version? 
         answer: No, you don't need to purchase the OEM version. Download the sensor installation package version 2.156 and above from the Defender for Identity console, which includes the OEM version of Npcap.
 
@@ -232,7 +238,7 @@ sections:
         answer: |
           Defender for Identity generates traffic from domain controllers to computers in the organization in one of three scenarios:
 
-          1. **Network Name resolution**
+          - **Network Name resolution**
           Defender for Identity captures traffic and events, learning and profiling users and computer activities in the network. To learn and profile activities according to computers in the organization, Defender for Identity needs to resolve IPs to computer accounts. To resolve IPs to computer names Defender for Identity sensors, request the IP address for the computer name *behind* the IP address.
 
               Requests are made using one of four methods:
@@ -242,10 +248,10 @@ sections:
               - Query the DNS server using reverse DNS lookup of the IP address (UDP 53)
 
               After getting the computer name,  Defender for Identity sensors cross check the details in Active Directory to see if there's a correlated computer object with the same computer name. If a match is found, an association is made between the IP address and the matched computer object.
-          2. **Lateral Movement Path (LMP)**
+          - **Lateral Movement Path (LMP)**
           To build potential LMPs to sensitive users, Defender for Identity requires information about the local administrators on computers. In this scenario, the Defender for Identity sensor uses SAM-R (TCP 445) to query the IP address identified in the network traffic, in order to determine the local administrators of the computer. To learn more about Defender for Identity and SAM-R, See [Configure SAM-R required permissions](/defender-for-identity/remote-calls-sam).
 
-          3. **Querying Active Directory using LDAP** for entity data
+          - **Querying Active Directory using LDAP** for entity data
           Defender for Identity sensors query the domain controller from the domain where the entity belongs. It can be the same sensor, or another domain controller from that domain.
 
           |Protocol|Service|Port|Source| Direction|
@@ -266,7 +272,7 @@ sections:
           Look at the most recent error in the current error [log](troubleshooting-using-logs.md) (Where Defender for Identity is installed under the "Logs" folder).
 
 additionalContent: |
-  ## See Also
+  ## Related content
   - [Defender for Identity prerequisites](deploy/prerequisites.md)
   - [Defender for Identity capacity planning](deploy/capacity-planning.md)
   - [Configure event collection](deploy/configure-event-collection.md)
