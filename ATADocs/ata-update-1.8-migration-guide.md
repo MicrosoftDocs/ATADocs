@@ -10,7 +10,6 @@ manager: raynew
 ms.date: 01/10/2023
 ms.topic: conceptual
 ms.service: advanced-threat-analytics
-ms.technology:
 ms.assetid: e5a9718c-b22e-41f7-a614-f00fc4997682
 
 # optional metadata
@@ -35,7 +34,7 @@ If you already have ATA version 1.7 deployed, this procedure walks you through t
 
 Follow these steps to update to ATA version 1.8:
 
-1. [Download the update version of ATA 1.8 from the Download Center](https://www.microsoft.com/download/details.aspx?id=55536).
+1. [Download the update version of ATA 1.8 from the Download Center](https://www.microsoft.com/download).
 In the migration version, the file can be used only for updating from ATA 1.7.
 
 1. Update the ATA Center

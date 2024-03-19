@@ -10,7 +10,6 @@ manager: raynew
 ms.date: 01/10/2023
 ms.topic: conceptual
 ms.service: advanced-threat-analytics
-ms.technology:
 ms.assetid: 9592d413-df0e-4cec-8e03-be1ae00ba5dc
 
 # optional metadata
@@ -27,7 +26,7 @@ ms.suite: ems
 
 # What's new in ATA version 1.8
 
-The latest update version of ATA can be [downloaded from the Download Center](https://www.microsoft.com/download/details.aspx?id=55536).
+The latest update version of ATA can be [downloaded from the Download Center](https://www.microsoft.com/download).
 
 These release notes provide information about updates, new features, bug fixes and known issues in this version of Advanced Threat Analytics.
 

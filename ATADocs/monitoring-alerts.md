@@ -11,7 +11,6 @@ ms.date: 01/10/2023
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: advanced-threat-analytics
-ms.technology:
 ms.assetid: b04fb8a4-b366-4b55-9d4c-6f054fa58a90
 
 
