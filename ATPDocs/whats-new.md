@@ -34,7 +34,7 @@ For updates about versions and features released six months ago or earlier, see 
 
 Now you can configure Defender for Identity users with read-only permissions to view Defender for Identity settings. 
 
-For more information, see [Required permissions Defender for Identity in Microsoft Defender XDR](https://learn.microsoft.com/en-us/defender-for-identity/role-groups#required-permissions-defender-for-identity-in-microsoft-defender-xdr).
+For more information, see [Required permissions Defender for Identity in Microsoft Defender XDR](role-groups.md#required-permissions-defender-for-identity-in-microsoft-defender-xdr).
 
 ### Defender for Identity release 2.232
 
