@@ -74,7 +74,7 @@ sections:
           
           - **Contributes to Microsoft Defender XDR**: Contributes alert and threat data to  Microsoft Defender XDR. Microsoft Defender XDR uses the Microsoft 365 security portfolio (identities, endpoints, data, and applications) to automatically analyze cross-domain threat data, building a complete picture of each attack in a single dashboard. 
           
-            With this breadth and depth of clarity, defenders can focus on critical threats and hunt for sophisticated breaches. Defenders can trust that Microsoft Defender XDR's powerful automation stops attacks anywhere in the kill chain and returns the organization to a secure state.
+            With this breadth and depth of clarity, Defenders can focus on critical threats and hunt for sophisticated breaches. Defenders can trust that Microsoft Defender XDR's powerful automation stops attacks anywhere in the kill chain and returns the organization to a secure state.
 
   - name: Licensing and privacy
     questions:
@@ -150,7 +150,7 @@ sections:
 
       - question: Does Microsoft Defender for Identity require synchronizing users to Microsoft Entra ID?
         answer: |
-          Microsoft Defender for Identity provides security value for all Active Directory accounts including those that are not synced to Microsoft Entra ID. User accounts that are synced to Entra ID will also benefit of security value provided by Entra ID (based on license level) and of Investigation Priority Scoring.
+          Microsoft Defender for Identity provides security value for all Active Directory accounts including those that are not synced to Microsoft Entra ID. User accounts that are synced to Microsoft Entra ID will also benefit of security value provided by Microsoft Entra ID (based on license level) and of Investigation Priority Scoring.
 
   - name: WinPcap and Npcap drivers
     questions: 
