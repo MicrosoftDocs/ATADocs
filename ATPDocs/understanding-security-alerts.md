@@ -22,7 +22,7 @@ In this article, you'll learn the structure of Defender for Identity security al
 
 ## Security alert structure
 
-Each Defender for Identity security alert includes an **Alert story**. This the chain of events  related to this alert in chronological order, and other important information related to the alert.
+Each Defender for Identity security alert includes an **Alert story**. This is the chain of events related to this alert in chronological order, and other important information related to the alert.
 
 On the alert page you can:
 
