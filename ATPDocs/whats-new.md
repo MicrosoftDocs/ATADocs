@@ -36,6 +36,12 @@ Now you can configure Defender for Identity users with read-only permissions to 
 
 For more information, see [Required permissions Defender for Identity in Microsoft Defender XDR](role-groups.md#required-permissions-defender-for-identity-in-microsoft-defender-xdr).
 
+### New Graph based API for viewing and managing Health issues
+
+Now you can view and manage Microsoft Defender for Identity health issues through the Graph API
+
+For more information, see [Managing Health issues through Graph API](/graph/api/resources/security-healthissue?view=graph-rest-beta&preserve-view=true).
+
 ### Defender for Identity release 2.232
 
 This version includes improvements and bug fixes for cloud services and the Defender for Identity sensor.
