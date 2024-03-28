@@ -67,19 +67,6 @@ New-ADServiceAccount -Name $gMSA_AccountName -DNSHostName "$gMSA_AccountName.$en
 
 [!INCLUDE [dsa-permissions](../includes/dsa-permissions.md)]
 
-### Validate that the domain controller can retrieve the gMSA's password
-
-To validate that the server has the required permissions to retrieve the gMSA's password, run the following PowerShell command:
-
-```powershell
-Test-ADServiceAccount -Identity 'mdiSvc01'
-```
-
-If it has the permissions, the command will return a **True** message.
-
->[!NOTE]
->If you get an error message when running Test-ADServiceAccount, either restart the server or run `klist purge -li 0x3e7` and try again.
-
 ## Verify that the gMSA account has the required rights
 
 The Defender for Identity sensor service, *Azure Advanced Threat Protection Sensor*, runs as a *LocalService* and performs impersonation of the DSA account. The impersonation will fail if the *Log on as a service* policy is configured but the permission hasn't been granted to the gMSA account. In such cases, you'll see the following health issue: **Directory services user credentials are incorrect.**
