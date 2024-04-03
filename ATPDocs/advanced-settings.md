@@ -52,7 +52,7 @@ Select **Revert to default** and then **Apply changes** to reset all alerts to t
 
 The **Recommended test mode** option is designed to help you understand all Defender for Identity alerts, including some related to legitimate traffic and activities so that you can thoroughly evaluate Defender for Identity as efficiently as possible.
 
-If you recently deployed Defender for Identity, select the **Recommended test mode** option to switch all alert thresholds to **Low** and increase the number of alerts triggered. 
+If you recently deployed Defender for Identity and want to test it, select the **Recommended test mode** option to switch all alert thresholds to **Low** and increase the number of alerts triggered. 
 
 Threshold levels are read-only when the **Recommended test mode** option is selected. When you're finished testing, toggle the **Recommended test mode** option back off to return to your previous settings.
 
