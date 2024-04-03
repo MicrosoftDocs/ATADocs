@@ -70,7 +70,7 @@ When installing your sensors, consider scheduling a maintenance window for your 
 ## Install Defender for Identity
 
 
-This procedure describes how to install the Defender for Identity sensor on a Windows server version 2016 or higher. Make sure that your server has the [minium system requirements](#minimum-system-requirements).
+This procedure describes how to install the Defender for Identity sensor on a Windows server version 2016 or higher. Make sure that your server has the [minimum system requirements](#minimum-system-requirements).
 
 > [!NOTE]
 > Defender for Identity sensors should be installed on all domain controllers, including read-only domain controllers (RODC). If you're installing on an AD FS / AD CS farm or cluster, we recommend installing the sensor on each AD FS / AD CS server.
