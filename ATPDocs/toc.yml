@@ -35,12 +35,16 @@ items:
       displayName: proxy
     - name: Test connectivity settings
       href: deploy/test-connectivity.md
-    - name: Download the Defender for Identity sensor
-      href: deploy/download-sensor.md
-    - name: Install the Defender for Identity sensor
-      href: deploy/install-sensor.md
-    - name: Configure the Defender for Identity sensor
-      href: deploy/configure-sensor-settings.md
+    - name: Deploy a unified sensor
+      href: deploy/onboard-unified-sensor.md
+    - name: Deploy a Defender for Identity sensor
+      items:
+      - name: Download a Defender for Identity sensor
+        href: deploy/download-sensor.md
+      - name: Install a Defender for Identity sensor
+        href: deploy/install-sensor.md
+      - name: Configure a Defender for Identity sensor
+        href: deploy/configure-sensor-settings.md
   - name: Post-deployment configuration
     items:
     - name: Configure event collection
