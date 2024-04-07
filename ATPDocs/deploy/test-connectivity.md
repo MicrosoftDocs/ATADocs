@@ -20,7 +20,7 @@ For more information, see [Required ports](../prerequisites.md#ports).
 
     For example, if the proxy settings are defined for **Local System**, you'll need to use PSExec to open a session as **Local System** and open the browser from that session.
 
-1. Browse to the following URL: `https://<your_workspace_name>sensorapi.atp.azure.com/tri/sensor/api/ping.` Replace `<your_workspace_name>` with the name of your Defender for Identity workspace.
+1. Browse to the following URL: `https://<your_workspace_name>sensorapi.atp.azure.com/tri/sensor/api/ping`. Replace `<your_workspace_name>` with the name of your Defender for Identity workspace.
 
     > [!IMPORTANT]
     > You must specify `HTTPS`, not `HTTP`, to properly test connectivity.
