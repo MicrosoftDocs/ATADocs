@@ -34,8 +34,13 @@ The following Unified RBAC permissions:
 
 7.	Domain Controllers onboarded to Defender for Endpoint (for this current preview), these servers should also not be onboarded to Defender for Identity with the existing agent.
 8.	Configuration of auditing is required for Defender for Identity detections; this is covered in detail in the section below: Defender for Identity Auditing configuration. The Defender for Identity PowerShell module can be used to help in this configuration.
+
+## Onboard to Defender for Endpoint
+
 Defender for Endpoint onboarding 
 For this stage of our private preview, we require Domain Controllers to be onboarded to Defender for Endpoint. For more detailed information on onboarding servers to Defender for Endpoint please see this link: Defender for Endpoint onboarding Windows Server | Microsoft Learn
+
+## Configure Defender for Identity auditing
 
 Defender for Identity Auditing configuration 
 Microsoft Defender for Identity detections rely on specific Windows Event log entries to enhance detections and provide extra information on the users who performed specific actions, such as NTLM logons and security group modifications. Full details on the auditing configuration requirements can be found here: Configure audit policies for Windows event logs - Microsoft Defender for Identity | Microsoft Learn
@@ -43,6 +48,7 @@ The Defender For Identity PowerShell module can be used to easily enable the req
 This example command sets all configurations for the domain, creating the GPOs and linking them.
 Set-MDIConfiguration -Mode Domain -Configuration All
 
+## Onboard your unified sensor
 Defender for Identity onboarding
 Onboarding
 Once the requirements above are met you can navigate to the Defender XDR portal https://security.microsoft.com and locate the onboarding page under Settings > Identities > Onboarding (https://security.microsoft.com/settings/identities?tabid=onboarding)
@@ -52,7 +58,9 @@ To onboard a server, first select the server from the list and then click Onboar
  
  
 A green banner stating the server has been successfully installed should show, you can select “Click here to see the onboarded servers” this will take you to the Sensors page at Settings > Identities > Sensors.
- 
+
+## Check sensor health
+
 Check sensor health
 You can check the health of the new sensor in the Sensors page. This provides details on the Health status and any Health issues.
 NOTE: For the first sensor being onboarded this can take up to 1 hour to show as onboarded. For subsequent sensors this should show within 5 minutes.

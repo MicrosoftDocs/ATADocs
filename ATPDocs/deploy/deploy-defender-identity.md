@@ -43,11 +43,18 @@ For more information, see:
 
 ## Plan and prepare
 
-Use the following steps to prepare for deploying Defender for Identity:
+Defender for Identity's default deployment supports deploying a Defender for Identity sensor on a domain controller, AD CS, or AD FS server. However, Defender for Endpoint customers can also use their Defender for Endpoint sensors as a unified sensor for both Defender for Endpoint and Defender for Identity.
 
-1. Make sure that you have all [prerequisites](prerequisites.md) required. 
+Use the following steps to prepare for deploying Defender for Identity, making sure to the follow the links for a Defender for Identity or a unified sensor, as relevant for your environment.
 
-1. [Plan your Defender for Identity capacity](capacity-planning.md).
+1. Make sure that you have all prerequisites required. For more information, see:
+
+    - [Microsoft Defender for Identity prerequisites](prerequisites.md)
+    - [Unified sensor prerequisites](onboard-unified-sensor.md#prerequisites)
+
+    <!--is there anything from the main prerequistites that we also need here?-->
+
+1. [Plan your Defender for Identity capacity](capacity-planning.md). <!--is this also relevant for unified sensor?-->
 
 > [!TIP]
 > We recommend running the [*Test-MdiReadiness.ps1*](https://github.com/microsoft/Microsoft-Defender-for-Identity/tree/main/Test-MdiReadiness) script to test and see if your environment has the necessary prerequisites.
@@ -56,11 +63,7 @@ Use the following steps to prepare for deploying Defender for Identity:
 
 ## Deploy Defender for Identity
 
-Defender for Identity's default recommendation is to deploy a Defender for Identity sensor on a domain controller, AD FS, or AD CS server. However, if you're a Microsoft Defender for Endpoint customer, you can use a Defender for Endpoint sensor for your Defender for Identity sensor too, deploying a unified sensor for both services.
-
-After you've prepared your system, use one of the folloiwng sets of steps to deploy your sensor:
-
-### [Defender for Identity sensor](#tab/mdi-sensor)
+If you're using a unified sensor, continue directly with  After you've prepared your system, the following sets of steps to deploy your sensor:
 
 The following steps describe how to deploy a Defender for Identity sensor:
 
@@ -69,14 +72,10 @@ The following steps describe how to deploy a Defender for Identity sensor:
 1. [Install the Defender for Identity sensor](install-sensor.md). 
 1. [Configure the Defender for Identity sensor](configure-sensor-settings.md) to start receiving data.
 
-### [Unified Defender for Identity and Defender for Endpoint sensor](#tab/unified-sensor)
-
-TBD steps
----
 
 ## Post-deployment configuration
 
-Regardless of whether you're using a Defender for Identity or unified sensor, use the following procedures to help complete the deployment process. If you're using a unified sensor, perform these procedures on your unified sensor machine.
+Use the following procedures to help complete the deployment process.
 
 - **Configure Windows event collection**. For more information, see [Event collection with Microsoft Defender for Identity](event-collection-overview.md) and [Configure audit policies for Windows event logs](configure-windows-event-collection.md).
 

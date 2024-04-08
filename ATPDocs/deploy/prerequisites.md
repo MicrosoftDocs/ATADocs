@@ -31,8 +31,6 @@ For more information, see [Licensing and privacy FAQs](/defender-for-identity/te
 
 ## Connectivity requirements
 
-### [Defender for Identity sensor](#mdi-sensor)
-
 The Defender for Identity sensor must be able to communicate with the Defender for Identity cloud service, using one of the following methods:
 
 |Method  |Description  |Considerations |Learn more |
@@ -42,14 +40,6 @@ The Defender for Identity sensor must be able to communicate with the Defender f
 |**Firewall, using the Defender for Identity Azure IP addresses**     | Customers who don’t have a proxy or ExpressRoute can configure their firewall with the IP addresses assigned to the MDI cloud service. This requires that the customer monitor the Azure IP address list for any changes in the IP addresses used by the MDI cloud service.  <br><br> If you chose this option, we recommend that you download the [Azure IP Ranges and Service Tags – Public Cloud](https://www.microsoft.com/download/details.aspx?id=56519) file and use the **AzureAdvancedThreatProtection** service tag to add the relevant IP addresses.      |  Customer must monitor Azure IP assignments       |   [Virtual network service tags](/azure/virtual-network/service-tags-overview)      |
 
 For more information, see [Microsoft Defender for Identity architecture](../architecture.md).
-
-### [Unified sensor](#unified-sensor)
-
-If you're using a unified Microsoft Defender for Endpoint and Defender for Identity sensor, the sensor uses Microsoft Defender for Endpoint URL endpoints for communication. The unified sensor supports simplified URLs.
-
-For more information, see [Configure your network environment to ensure connectivity with Defender for Endpoint](/microsoft-365/security/defender-endpoint/configure-environment##enable-access-to-microsoft-defender-for-endpoint-service-urls-in-the-proxy-server).
-
----
 
 ## Sensor requirements and recommendations
 
@@ -119,10 +109,6 @@ The following table describes memory requirements on the server used for the Def
 ## Time synchronization
 
 The servers and domain controllers onto which the sensor is installed must have time synchronized to within five minutes of each other.
-
-## Unified sensor prerequisites
-
-If you're deploying the unified Microsoft Defender for Endpoint and Defender for Identity sensor,
 
 ## Test your prerequisites
 
