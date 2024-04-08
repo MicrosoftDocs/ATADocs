@@ -27,7 +27,11 @@ For more information, see [Licensing and privacy FAQs](/defender-for-identity/te
 
 - We recommend using at least one Directory Service account, with read access to all objects in the monitored domains. For more information, see [Configure a Directory Service account for Microsoft Defender for Identity](directory-service-accounts.md).
 
+- If you're deploying a unified Microsoft Defender for Endpoint and Defender for Identity sensor, the supported Windows Server role is *Active Directory Domain Services*. <!--unclear--> 
+
 ## Connectivity requirements
+
+### [Defender for Identity sensor](#mdi-sensor)
 
 The Defender for Identity sensor must be able to communicate with the Defender for Identity cloud service, using one of the following methods:
 
@@ -39,6 +43,13 @@ The Defender for Identity sensor must be able to communicate with the Defender f
 
 For more information, see [Microsoft Defender for Identity architecture](../architecture.md).
 
+### [Unified sensor](#unified-sensor)
+
+If you're using a unified Microsoft Defender for Endpoint and Defender for Identity sensor, the sensor uses Microsoft Defender for Endpoint URL endpoints for communication. The unified sensor supports simplified URLs.
+
+For more information, see [Configure your network environment to ensure connectivity with Defender for Endpoint](/microsoft-365/security/defender-endpoint/configure-environment##enable-access-to-microsoft-defender-for-endpoint-service-urls-in-the-proxy-server).
+
+---
 
 ## Sensor requirements and recommendations
 
@@ -106,7 +117,12 @@ The following table describes memory requirements on the server used for the Def
 > When running as a virtual machine, all memory must be allocated to the virtual machine at all times.
 
 ## Time synchronization
+
 The servers and domain controllers onto which the sensor is installed must have time synchronized to within five minutes of each other.
+
+## Unified sensor prerequisites
+
+If you're deploying the unified Microsoft Defender for Endpoint and Defender for Identity sensor,
 
 ## Test your prerequisites
 

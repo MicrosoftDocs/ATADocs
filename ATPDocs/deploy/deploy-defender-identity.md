@@ -1,7 +1,7 @@
 ---
 title: Deploy Microsoft Defender for Identity
 description: Learn how to deploy Microsoft Defender for Identity from the Microsoft Defender portal.
-ms.date: 08/27/2023
+ms.date: 04/08/2024
 ms.topic: how-to
 ---
 
@@ -56,16 +56,27 @@ Use the following steps to prepare for deploying Defender for Identity:
 
 ## Deploy Defender for Identity
 
-After you've prepared your system, use the following steps to deploy Defender for Identity:
+Defender for Identity's default recommendation is to deploy a Defender for Identity sensor on a domain controller, AD FS, or AD CS server. However, if you're a Microsoft Defender for Endpoint customer, you can use a Defender for Endpoint sensor for your Defender for Identity sensor too, deploying a unified sensor for both services.
+
+After you've prepared your system, use one of the folloiwng sets of steps to deploy your sensor:
+
+### [Defender for Identity sensor](#tab/mdi-sensor)
+
+The following steps describe how to deploy a Defender for Identity sensor:
 
 1. [Verify connectivity to the Defender for Identity service](configure-proxy.md).
 1. [Download the Defender for Identity sensor](download-sensor.md).
 1. [Install the Defender for Identity sensor](install-sensor.md). 
 1. [Configure the Defender for Identity sensor](configure-sensor-settings.md) to start receiving data.
 
+### [Unified Defender for Identity and Defender for Endpoint sensor](#tab/unified-sensor)
+
+TBD steps
+---
+
 ## Post-deployment configuration
 
-The following procedures help you complete the deployment process:
+Regardless of whether you're using a Defender for Identity or unified sensor, use the following procedures to help complete the deployment process. If you're using a unified sensor, perform these procedures on your unified sensor machine.
 
 - **Configure Windows event collection**. For more information, see [Event collection with Microsoft Defender for Identity](event-collection-overview.md) and [Configure audit policies for Windows event logs](configure-windows-event-collection.md).
 
@@ -83,4 +94,3 @@ The following procedures help you complete the deployment process:
 
 > [!div class="step-by-step"]
 > [Defender for Identity prerequisites »](prerequisites.md)
-
