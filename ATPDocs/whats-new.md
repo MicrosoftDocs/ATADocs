@@ -30,7 +30,7 @@ For updates about versions and features released six months ago or earlier, see 
 
 ## April 2024
 
-### Unified Defender for Identity and Defender for Endpoint sensor
+### Unified Defender for Identity and Defender for Endpoint sensor (Preview)
 
 Defender for Identity now provides a unified sensor together with Microsoft Defender for Endpoint with a simplified onboarding and deployment.
 
