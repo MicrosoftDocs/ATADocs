@@ -234,7 +234,7 @@ If you no longer need a sensor, delete it from the **Sensors** page.
 1. In the Defender portal, select **Settings > Identities > Sensors**.
 1. Select the sensor, select **Delete**, and confirm your selection.
 
-If you're using a unified Defender for Endpoint and Defender for Identity sensor, this action doesn't remove the server from Defender for Endpoint. For more information, see TBD <!--link to MDE-->.
+If you're using a unified Defender for Endpoint and Defender for Identity sensor, this action doesn't remove the server from Defender for Endpoint. For more information, see [Defender for Endpoint documentation](/microsoft-365/security/defender-endpoint/). <!--do we have a better link?-->
 
 ## Next steps
 

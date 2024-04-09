@@ -31,7 +31,7 @@ You must have a Defender for Identity license to view Defender for Identity secu
 
 - While *certificate template* assessments are available to all customers that have AD CS installed on their environment, *certificate authority* assessments are available only to customers who've installed a sensor on an AD CS server. For more information, see [Configuring sensors for AD FS and AD CS](deploy/active-directory-federation-services.md).
 
-- The unified Defender for Endpoint and Defender for Identity sensor supports only the [**Resolve unsecure domain configurations**](../security-assessment-unsecure-domain-configurations.md) assessment. For more information, see [Onboard a unified Defender for Identity and Defender for Endpoint sensor (Preview)](deploy/onboard-unified-sensor.md).
+- The unified Defender for Endpoint and Defender for Identity sensor supports only the [**Resolve unsecure domain configurations**](security-assessment-unsecure-domain-configurations.md) assessment. For more information, see [Onboard a unified Defender for Identity and Defender for Endpoint sensor (Preview)](deploy/onboard-unified-sensor.md).
 
 **To access identity security posture assessments**:
 

@@ -63,7 +63,7 @@ Configure Windows event collection to support Defender for Identity detections. 
 
 You might want to use the Defender for Identity PowerShell module to configure the required settings. For more information, see:
 
-- [DefenderForIdentity Module](/powershell/module/defenderforidentity/?view=defenderforidentity-latest)
+- [DefenderForIdentity Module](/powershell/module/defenderforidentity/)
 - [Defender for Identity in the PowerShell Gallery](https://www.powershellgallery.com/packages/DefenderForIdentity/)
 
 For example, the following command defines all settings for the domain, creates group policy objects, and links them.
