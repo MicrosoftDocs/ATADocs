@@ -90,7 +90,7 @@ items:
       href: deploy/configure-event-collection.md
       displayName: standalone
   - name: Test sensor functionality
-    href: /deploy/test-initial-functionality.md
+    href: deploy/test-initial-functionality.md
 - name: Manage
   items:
   - name: View the ITDR dashboard
