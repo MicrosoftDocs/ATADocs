@@ -27,8 +27,6 @@ For more information, see [Licensing and privacy FAQs](/defender-for-identity/te
 
 - We recommend using at least one Directory Service account, with read access to all objects in the monitored domains. For more information, see [Configure a Directory Service account for Microsoft Defender for Identity](directory-service-accounts.md).
 
-- If you're deploying a unified Microsoft Defender for Endpoint and Defender for Identity sensor, the supported Windows Server role is *Active Directory Domain Services*. <!--unclear--> 
-
 ## Connectivity requirements
 
 The Defender for Identity sensor must be able to communicate with the Defender for Identity cloud service, using one of the following methods:

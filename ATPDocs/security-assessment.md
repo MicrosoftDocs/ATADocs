@@ -1,7 +1,7 @@
 ---
 title: Security posture assessments
 description: This article provides an overview of Microsoft Defender for Identity's identity security posture assessment reports.
-ms.date: 02/21/2024
+ms.date: 04/09/2024
 ms.topic: how-to
 ---
 
@@ -29,7 +29,9 @@ Microsoft Secure Score is a measurement of an organization's security posture, w
 
 You must have a Defender for Identity license to view Defender for Identity security posture assessments in Microsoft Secure Score.
 
-While *certificate template* assessments are available to all customers that have AD CS installed on their environment, *certificate authority* assessments are available only to customers who've installed a sensor on an AD CS server. For more information, see [Configuring sensors for AD FS and AD CS](deploy/active-directory-federation-services.md).
+- While *certificate template* assessments are available to all customers that have AD CS installed on their environment, *certificate authority* assessments are available only to customers who've installed a sensor on an AD CS server. For more information, see [Configuring sensors for AD FS and AD CS](deploy/active-directory-federation-services.md).
+
+- The unified Defender for Endpoint and Defender for Identity sensor supports only the [**Resolve unsecure domain configurations**](../security-assessment-unsecure-domain-configurations.md) assessment. For more information, see [Onboard a unified Defender for Identity and Defender for Endpoint sensor (Preview)](deploy/onboard-unified-sensor.md).
 
 **To access identity security posture assessments**:
 
@@ -43,7 +45,6 @@ While *certificate template* assessments are available to all customers that hav
     [![Select the assessment.](media/select-assessment.png)](media/select-assessment.png#lightbox)
 
 [!INCLUDE [secure-score-note](../includes/secure-score-note.md)]
-
 
 ## Next steps
 

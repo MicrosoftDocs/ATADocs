@@ -51,7 +51,7 @@ The sensors page provides the following information about each sensor:
 
 * **Type**:  Displays the type of the sensor. Possible values are:
 
-  * **Domain controller sensor**
+  * **Domain controller sensor**, including unified Defender for Endpoint and Defender for Identity sensors
 
   * **AD FS sensor** (Active Directory Federation Services)
 
@@ -217,13 +217,24 @@ To update the Defender for Identity sensor silently:
 "Azure ATP sensor Setup.exe" /quiet NetFrameworkCommandLineArguments="/q"
 ```
 
-## Configure proxy settings
+## Configure Defender for Identity sensor proxy settings
 
-We recommend that you configure initial proxy settings during installation [using command line switches](deploy/install-sensor.md#defender-for-identity-sensor-silent-installation). If you need to update your proxy settings later on, use either the [CLI](deploy/configure-proxy.md#change-proxy-configuration-using-the-cli) or [PowerShell](deploy/configure-proxy.md#change-proxy-configuration-using-powershell).
+This section is not relevant for a unified Defender for Endpoint and Defender for Identity sensor.
+
+If you're using a Defender for Identity sensor, we recommend that you configure initial proxy settings during installation [using command line switches](deploy/install-sensor.md#defender-for-identity-sensor-silent-installation). If you need to update your proxy settings later on, use either the [CLI](deploy/configure-proxy.md#change-proxy-configuration-using-the-cli) or [PowerShell](deploy/configure-proxy.md#change-proxy-configuration-using-powershell).
 
 If you'd previously configured your proxy settings via either WinINet or a registry key and need to update them, you'll need to [use the same method](deploy/configure-proxy.md#change-proxy-configuration-using-legacy-methods) you used originally.
 
 For more information, see [Configure endpoint proxy and internet connectivity settings](deploy/configure-proxy.md).
+
+## Remove a sensor
+
+If you no longer need a sensor, delete it from the **Sensors** page. 
+
+1. In the Defender portal, select **Settings > Identities > Sensors**.
+1. Select the sensor, select **Delete**, and confirm your selection.
+
+If you're using a unified Defender for Endpoint and Defender for Identity sensor, this action doesn't remove the server from Defender for Endpoint. For more information, see TBD <!--link to MDE-->.
 
 ## Next steps
 

@@ -63,9 +63,9 @@ Use the following steps to prepare for deploying Defender for Identity, making s
 
 ## Deploy Defender for Identity
 
-If you're using a unified sensor, continue directly with  After you've prepared your system, the following sets of steps to deploy your sensor:
+If you're using a unified sensor, continue directly with  [Onboard a unified Defender for Identity and Defender for Endpoint sensor (Preview)](onboard-unified-sensor.md). 
 
-The following steps describe how to deploy a Defender for Identity sensor:
+If you're deploying a Defender for Identity sensor, use the following steps to deploy your sensor:
 
 1. [Verify connectivity to the Defender for Identity service](configure-proxy.md).
 1. [Download the Defender for Identity sensor](download-sensor.md).
