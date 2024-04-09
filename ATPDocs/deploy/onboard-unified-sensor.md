@@ -35,6 +35,7 @@ Make sure that you don't have a [Defender for Identity sensor](deploy-defender-i
 
 ### Required permissions
 
+
 To access the Defender for Identity sensor onboarding page, you must either be a [Security Administrator](/entra/identity/role-based-access-control/permissions-reference), or have the following Unified RBAC permissions:
 
 - `Authorization and settings/Security settings/Read`

@@ -29,7 +29,7 @@ Confirm that entites, such as domain controllers, users, and groups, are populat
 
     If no event data is found on the group timeline, you may need to create some manually. For example, do this by adding and removing users from the group in Active Directory.
 
-For more information, see <xref>.
+For more information, see [Investigate assets](../investigate-assets.md).
 
 ## Check the ITDR dashboard
 

@@ -63,7 +63,7 @@ Use the following steps to prepare for deploying Defender for Identity, making s
 
 ## Deploy Defender for Identity
 
-If you're using a unified sensor, continue directly with  [Onboard a unified Defender for Identity and Defender for Endpoint sensor (Preview)](onboard-unified-sensor.md). 
+If you're using a unified sensor, continue directly with  [Onboard a unified Defender for Identity and Defender for Endpoint sensor (Preview)](onboard-unified-sensor.md).
 
 If you're deploying a Defender for Identity sensor, use the following steps to deploy your sensor:
 
@@ -72,10 +72,15 @@ If you're deploying a Defender for Identity sensor, use the following steps to d
 1. [Install the Defender for Identity sensor](install-sensor.md). 
 1. [Configure the Defender for Identity sensor](configure-sensor-settings.md) to start receiving data.
 
+> [!IMPORTANT]
+> Installing a Defender for Identity sensor on an AD FS / AD CS server requires extra steps. For more information, see [Configuring sensors for AD FS and AD CS](active-directory-federation-services.md).
+>
 
 ## Post-deployment configuration
 
-Use the following procedures to help complete the deployment process.
+If you're using a Defender for Identity sensor, use the following procedures to help complete the deployment process:
+
+<!--are any of these definately not relevant for defensor?-->
 
 - **Configure Windows event collection**. For more information, see [Event collection with Microsoft Defender for Identity](event-collection-overview.md) and [Configure audit policies for Windows event logs](configure-windows-event-collection.md).
 
@@ -85,9 +90,7 @@ Use the following procedures to help complete the deployment process.
 
 - [**Configure remote calls to SAM**](remote-calls-sam.md) as needed. While this step is optional, we recommend that you configure remote calls to SAM-R for lateral movement path detection with Defender for Identity.
 
-> [!IMPORTANT]
-> Installing a Defender for Identity sensor on an AD FS / AD CS server requires extra steps. For more information, see [Configuring sensors for AD FS and AD CS](active-directory-federation-services.md).
-> 
+If you're using a unified Defender for Endpoint and Defender for Identity sensor, only configuring Windows event collection is relevant.
 
 ## Next step
 
