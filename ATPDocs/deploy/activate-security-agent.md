@@ -138,21 +138,28 @@ For more information, see [Microsoft Defender for Identity's security posture as
 
 The following alerts are supported by the Microsoft Security Agent:
 
-- [Honeytoken user attributes modified](../persistence-privilege-escalation-alerts.md#honeytoken-user-attributes-modified-external-id-2427)
-- [Security principal reconnaissance (LDAP)](../credential-access-alerts.md#security-principal-reconnaissance-ldap-external-id-2038)
-- [Honeytoken was queried via LDAP](../reconnaissance-discovery-alerts.md#honeytoken-was-queried-via-ldap-external-id-2429)
-- [Active Directory attributes Reconnaissance using LDAP](../reconnaissance-discovery-alerts.md#active-directory-attributes-reconnaissance-ldap-external-id-2210) <!--not documented-->
-- [Remote code execution attempt](../other-alerts.md#remote-code-execution-attempt-external-id-2019)
-- [Suspicious modification of the Resource Based Constrained Delegation attribute by a machine account](../persistence-privilege-escalation-alerts.md#suspicious-modification-of-the-resource-based-constrained-delegation-attribute-by-a-machine-account--external-id-2423)
-- [Suspicious additions to sensitive groups](../persistence-privilege-escalation-alerts.md#suspicious-additions-to-sensitive-groups-external-id-2024)
-- [Suspicious service creation](../other-alerts.md#suspicious-service-creation-external-id-2026)
-- [Honeytoken group membership changed](../persistence-privilege-escalation-alerts.md#honeytoken-group-membership-changed-external-id-2428) 
-- [Suspected DFSCoerce attack using Distributed File System Protocol](../credential-access-alerts.md#suspected-dfscoerce-attack-using-distributed-file-system-protocol-external-id-2426) 
-- [Suspicious modification of a dNSHostName attribute (CVE-2022-26923)](../persistence-privilege-escalation-alerts.md#suspicious-modification-of-a-dnshostname-attribute-cve-2022-26923--external-id-2421)
-- [Suspected DCShadow attack (domain controller promotion)](../other-alerts.md#suspected-dcshadow-attack-domain-controller-promotion-external-id-2028)
-- [Suspicious modification of a sAMNameAccount attribute (CVE-2021-42278 and CVE-2021-42287)](../credential-access-alerts.md#suspicious-modification-of-a-samnameaccount-attribute-cve-2021-42278-and-cve-2021-42287-exploitation-external-id-2419)
-- [Suspected DCShadow attack (domain controller replication request)](../other-alerts.md#suspected-dcshadow-attack-domain-controller-replication-request-external-id-2029)
-- [Suspected account takeover using shadow credentials](../credential-access-alerts.md#suspected-account-takeover-using-shadow-credentials-external-id-2431)
+:::row:::
+   :::column span="":::
+    - [Honeytoken user attributes modified](../persistence-privilege-escalation-alerts.md#honeytoken-user-attributes-modified-external-id-2427)
+    - [Security principal reconnaissance (LDAP)](../credential-access-alerts.md#security-principal-reconnaissance-ldap-external-id-2038)
+    - [Honeytoken was queried via LDAP](../reconnaissance-discovery-alerts.md#honeytoken-was-queried-via-ldap-external-id-2429)
+    - [Active Directory attributes Reconnaissance using LDAP](../reconnaissance-discovery-alerts.md#active-directory-attributes-reconnaissance-ldap-external-id-2210) <!--not documented-->
+    - [Remote code execution attempt](../other-alerts.md#remote-code-execution-attempt-external-id-2019)
+    - [Suspicious modification of the Resource Based Constrained Delegation attribute by a machine account](../persistence-privilege-escalation-alerts.md#suspicious-modification-of-the-resource-based-constrained-delegation-attribute-by-a-machine-account--external-id-2423)
+    - [Suspicious additions to sensitive groups](../persistence-privilege-escalation-alerts.md#suspicious-additions-to-sensitive-groups-external-id-2024)
+    - [Suspicious service creation](../other-alerts.md#suspicious-service-creation-external-id-2026)
+   :::column-end:::
+   :::column span="":::
+    - [Honeytoken group membership changed](../persistence-privilege-escalation-alerts.md#honeytoken-group-membership-changed-external-id-2428) 
+    - [Suspected DFSCoerce attack using Distributed File System Protocol](../credential-access-alerts.md#suspected-dfscoerce-attack-using-distributed-file-system-protocol-external-id-2426) 
+    - [Suspicious modification of a dNSHostName attribute (CVE-2022-26923)](../persistence-privilege-escalation-alerts.md#suspicious-modification-of-a-dnshostname-attribute-cve-2022-26923--external-id-2421)
+    - [Suspected DCShadow attack (domain controller promotion)](../other-alerts.md#suspected-dcshadow-attack-domain-controller-promotion-external-id-2028)
+    - [Suspicious modification of a sAMNameAccount attribute (CVE-2021-42278 and CVE-2021-42287)](../credential-access-alerts.md#suspicious-modification-of-a-samnameaccount-attribute-cve-2021-42278-and-cve-2021-42287-exploitation-external-id-2419)
+    - [Suspected DCShadow attack (domain controller replication request)](../other-alerts.md#suspected-dcshadow-attack-domain-controller-replication-request-external-id-2029)
+    - [Suspected account takeover using shadow credentials](../credential-access-alerts.md#suspected-account-takeover-using-shadow-credentials-external-id-2431)
+   :::column-end:::
+:::row-end:::
+
 
 Test alert functionality by simulating risky activity in your environment. For example:
 
