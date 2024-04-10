@@ -5,7 +5,7 @@ ms.date: 04/10/2024
 ms.topic: how-to
 ---
 
-# Activate Microsoft Security Agent capabilites for Microsoft Defender for Identity(Preview)
+# Activate Microsoft Security Agent capabilites for Microsoft Defender for Identity (Preview)
 
 <!--what are we calling this? microsoft security agent-->
 
