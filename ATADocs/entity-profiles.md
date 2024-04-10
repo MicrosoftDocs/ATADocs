@@ -65,7 +65,7 @@ Using the **Filter by** button above the activity timeline, you can filter the a
 
 ## View directory data
 
-The **Directory data** tab provides the static information available from Active Directory, including user access control security flags. ATA also displays group memberships for the user so that you can tell if the user has a direct membership or a recursive membership. For groups, ATA lists members of the group.
+The **Directory data** tab provides the static information available from Active Directory, including user access control security flags. ATA also displays group memberships for the user so that you can tell if the user has a direct membership or a recursive membership. For groups, ATA lists up to 1000 members of the group.
 
  ![user profile directory data.](media/user-profile-dir-data.png)
 
