@@ -39,6 +39,7 @@ The Defender for Identity sensor must be able to communicate with the Defender f
 
 For more information, see [Microsoft Defender for Identity architecture](../architecture.md).
 
+
 ## Sensor requirements and recommendations
 
 The following table summarizes requirements and recommendations for the domain controller, AD FS, or AD CS server where you'll install the Defender for Identity sensor.
@@ -105,7 +106,6 @@ The following table describes memory requirements on the server used for the Def
 > When running as a virtual machine, all memory must be allocated to the virtual machine at all times.
 
 ## Time synchronization
-
 The servers and domain controllers onto which the sensor is installed must have time synchronized to within five minutes of each other.
 
 ## Test your prerequisites

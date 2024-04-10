@@ -7,10 +7,16 @@ ms.topic: how-to
 
 # Quick installation guide
 
-This article outlines the steps required when installing Microsoft Defender for Identity sensors on Active Directory, Active Directory Federation Services (AD FS), or Active Directory Certification Services (AD CS) servers.
+This article outlines the steps required when installing Microsoft Defender for Identity sensors on Active Directory, Active Directory Federation Services (AD FS), or Active Directory Certification Services (AD CS) servers. For more detailed instructions, see [Deploy Microsoft Defender for Identity with Microsoft Defender XDR](deploy-defender-identity.md).
 
-- **For more detailed instructions**, see [Deploy Microsoft Defender for Identity with Microsoft Defender XDR](deploy-defender-identity.md). 
-- **If you're onboarding a unified Defender for Identity and Microsoft Defender for Endpoint sensor**, see [Onboard a unified Defender for Identity and Defender for Endpoint sensor](onboard-unified-sensor.md).
+Watch the following video for a step-by-step demo and to learn about:
+
+- The importance of installing Defender for Identity sensors to protect your organization against identity-based attacks
+- Downloading and installing the sensor
+- Finding potential sensor and configuration health issues
+- Viewing identity-related posture assessments in Microsoft Secure Score
+
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RW16oLB]
 
 ## Prerequisites
 
@@ -79,17 +85,6 @@ This procedure describes how to install the Defender for Identity sensor on a Wi
 
 1. From the domain controller, run the installer you'd downloaded from Microsoft Defender XDR and follow the instructions on the screen.  
 
-
-## Learn by watching!
-
-Watch the following video for a step-by-step demo and to learn about:
-
-- The importance of installing Defender for Identity sensors to protect your organization against identity-based attacks
-- Downloading and installing the sensor
-- Finding potential sensor and configuration health issues
-- Viewing identity-related posture assessments in Microsoft Secure Score
-
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RW16oLB]
 
 ## Next step
 

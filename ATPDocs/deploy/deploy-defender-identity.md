@@ -1,7 +1,7 @@
 ---
 title: Deploy Microsoft Defender for Identity
 description: Learn how to deploy Microsoft Defender for Identity from the Microsoft Defender portal.
-ms.date: 04/08/2024
+ms.date: 08/27/2023
 ms.topic: how-to
 ---
 
@@ -43,18 +43,11 @@ For more information, see:
 
 ## Plan and prepare
 
-Defender for Identity's default deployment supports deploying a Defender for Identity sensor on a domain controller, AD CS, or AD FS server. However, Defender for Endpoint customers can also use their Defender for Endpoint sensors as a unified sensor for both Defender for Endpoint and Defender for Identity.
+Use the following steps to prepare for deploying Defender for Identity:
 
-Use the following steps to prepare for deploying Defender for Identity, making sure to the follow the links for a Defender for Identity or a unified sensor, as relevant for your environment.
+1. Make sure that you have all [prerequisites](prerequisites.md) required. 
 
-1. Make sure that you have all prerequisites required. For more information, see:
-
-    - [Microsoft Defender for Identity prerequisites](prerequisites.md)
-    - [Unified sensor prerequisites](onboard-unified-sensor.md#prerequisites)
-
-    <!--is there anything from the main prerequistites that we also need here?-->
-
-1. [Plan your Defender for Identity capacity](capacity-planning.md). <!--is this also relevant for unified sensor?-->
+1. [Plan your Defender for Identity capacity](capacity-planning.md).
 
 > [!TIP]
 > We recommend running the [*Test-MdiReadiness.ps1*](https://github.com/microsoft/Microsoft-Defender-for-Identity/tree/main/Test-MdiReadiness) script to test and see if your environment has the necessary prerequisites.
@@ -63,24 +56,16 @@ Use the following steps to prepare for deploying Defender for Identity, making s
 
 ## Deploy Defender for Identity
 
-If you're using a unified sensor, continue directly with  [Onboard a unified Defender for Identity and Defender for Endpoint sensor (Preview)](onboard-unified-sensor.md).
-
-If you're deploying a Defender for Identity sensor, use the following steps to deploy your sensor:
+After you've prepared your system, use the following steps to deploy Defender for Identity:
 
 1. [Verify connectivity to the Defender for Identity service](configure-proxy.md).
 1. [Download the Defender for Identity sensor](download-sensor.md).
 1. [Install the Defender for Identity sensor](install-sensor.md). 
 1. [Configure the Defender for Identity sensor](configure-sensor-settings.md) to start receiving data.
 
-> [!IMPORTANT]
-> Installing a Defender for Identity sensor on an AD FS / AD CS server requires extra steps. For more information, see [Configuring sensors for AD FS and AD CS](active-directory-federation-services.md).
->
-
 ## Post-deployment configuration
 
-If you're using a Defender for Identity sensor, use the following procedures to help complete the deployment process:
-
-<!--are any of these definately not relevant for defensor?-->
+The following procedures help you complete the deployment process:
 
 - **Configure Windows event collection**. For more information, see [Event collection with Microsoft Defender for Identity](event-collection-overview.md) and [Configure audit policies for Windows event logs](configure-windows-event-collection.md).
 
@@ -90,9 +75,12 @@ If you're using a Defender for Identity sensor, use the following procedures to 
 
 - [**Configure remote calls to SAM**](remote-calls-sam.md) as needed. While this step is optional, we recommend that you configure remote calls to SAM-R for lateral movement path detection with Defender for Identity.
 
-If you're using a unified Defender for Endpoint and Defender for Identity sensor, only configuring Windows event collection is relevant.
+> [!IMPORTANT]
+> Installing a Defender for Identity sensor on an AD FS / AD CS server requires extra steps. For more information, see [Configuring sensors for AD FS and AD CS](active-directory-federation-services.md).
+> 
 
 ## Next step
 
 > [!div class="step-by-step"]
 > [Defender for Identity prerequisites »](prerequisites.md)
+

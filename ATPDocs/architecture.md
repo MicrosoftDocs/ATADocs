@@ -20,15 +20,13 @@ Installed directly on your domain controller, Active Directory Federation Servic
 
 Defender for Identity consists of the following components:
 
-- **Microsoft Defender portal**: The Microsoft Defender portal creates your Defender for Identity workspace, displays the data received from Defender for Identity sensors, and enables you to monitor, manage, and investigate threats in your network environment.
+- **Microsoft Defender portal**  
+The Microsoft Defender portal creates your Defender for Identity workspace, displays the data received from Defender for Identity sensors, and enables you to monitor, manage, and investigate threats in your network environment.
 
-- **Sensors**: The default architecture includes a Defender for Identity sensor, which can be installed on the followng servers:
-
+- **Defender for Identity sensor** 
+Defender for Identity sensors can be directly installed on the following servers:
   - **Domain controllers**: The sensor directly monitors domain controller traffic, without the need for a dedicated server, or configuration of port mirroring.
   - **AD FS / AD CS**: The sensor directly monitors network traffic and authentication events.
-
-  (Preview) However, Microsoft Defender for Endpoint customers can use a Defender for Endpoint sensor as a unified sensor for both Defender for Endpoint and Defender for Identity. Unified sensors are supported on domain controllers only.
-
 - **Defender for Identity cloud service**  
 Defender for Identity cloud service runs on Azure infrastructure and is currently deployed in the US, Europe, Australia East, and Asia. Defender for Identity cloud service is connected to Microsoft's intelligent security graph.
 
@@ -47,10 +45,9 @@ Use the Microsoft Defender portal to:
 > If no sensor is installed on your Defender for Identity workspace within 60 days, the workspace may be deleted and you'll need to recreate it.
 
 
-## Sensors
+## Defender for Identity sensor
 
-Both the Defender for Identity sensor and the unified sensor provide the following core functionality:
-
+The Defender for Identity sensor has the following core functionality:
 
 - Capture and inspect domain controller network traffic (local traffic of the domain controller)
 - Receive Windows Events directly from the domain controllers
@@ -59,7 +56,8 @@ Both the Defender for Identity sensor and the unified sensor provide the followi
 - Perform resolution of network entities (users, groups, and computers)
 - Transfer relevant data to the Defender for Identity cloud service
 
-The sensor sensor reads events locally, without the need to purchase and maintain additional hardware or configurations, and  Event Tracing for Windows (ETW) to provide log information for multiple detections. ETW-based detections include Suspected DCShadow attacks attempted using domain controller replication requests and domain controller promotion.
+
+Defender for Identity sensor reads events locally, without the need to purchase and maintain additional hardware or configurations. The Defender for Identity sensor also supports Event Tracing for Windows (ETW) which provides the log information for multiple detections. ETW-based detections include Suspected DCShadow attacks attempted using domain controller replication requests and domain controller promotion.
 
 ### Domain synchronizer process
 
@@ -79,11 +77,8 @@ If the monitoring process causes the Defender for Identity sensor to run out of 
 
 To enhance Defender for Identity detection coverage related to NTLM authentications, modifications to sensitive groups and creation of suspicious services, Defender for Identity analyzes the logs of [specific Windows events](configure-windows-event-collection.md).
 
-To ensure that the logs are read, make sure that your sensor has advanced audit policy settings configured correctly. To make sure that [Windows Event 8004 is audited](configure-windows-event-collection.md#configure-ntlm-auditing) as needed by the service, review your [NTLM audit settings](/archive/blogs/askds/ntlm-blocking-and-you-application-analysis-and-auditing-methodologies-in-windows-7)
+To ensure that the logs are read, make sure that your Defender for Identity sensor has advanced audit policy settings configured correctly. To make sure that [Windows Event 8004 is audited](configure-windows-event-collection.md#configure-ntlm-auditing) as needed by the service, review your [NTLM audit settings](/archive/blogs/askds/ntlm-blocking-and-you-application-analysis-and-auditing-methodologies-in-windows-7)
 
-## Next steps
+## Next step
 
-For more information, see:
-
-- [Deploy Microsoft Defender for Identity with Microsoft Defender XDR](deploy-defender-identity.md)
-- [Deploy a unified Defender for Identity and Defender for Endpoint sensor](deploy/onboard-unified-sensor.md)
+[Deploy Microsoft Defender for Identity with Microsoft Defender XDR](deploy-defender-identity.md)
