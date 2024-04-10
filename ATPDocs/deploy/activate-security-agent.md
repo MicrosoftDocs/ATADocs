@@ -1,17 +1,17 @@
 ---
-title: Activate Microsoft Security Agent capabilites for Microsoft Defender for Identity
+title: Activate Microsoft Defender for Identity capabilities with the Microsoft Security Agent
 description: Learn about the Microsoft Security Agent capabilities for Microsoft Defender for Identity and how to activate them.
 ms.date: 04/10/2024
 ms.topic: how-to
 ---
 
-# Activate Microsoft Security Agent capabilites for Microsoft Defender for Identity (Preview)
+# Activate Microsoft Defender for Identity capabilities with the Microsoft Security Agent (Preview)
 
 <!--what are we calling this? microsoft security agent-->
 
-Microsoft Defender for Endpoint customers who already onboarded their domain controllers can activate the Microsoft security agent capabilities instead of using a [Microsoft Defender for Identity sensor](deploy-defender-identity.md).
+Microsoft Defender for Endpoint customers, who've already onboarded their domain controllers to Defender for Endpoint, can activate Microsoft Defender for Identity capabilities with the Microsoft Security Agent instead of using a [Microsoft Defender for Identity sensor](deploy-defender-identity.md).
 
-This article describes how to active Microsoft Security Agent capabilities for Defender for Identity on your domain controller, and lists supported Defender for Identity functionality.
+This article describes how to activate and test Microsoft Defender for Identity capabilities with the Microsoft Security Agent on your domain controller.
 
 > [!IMPORTANT]
 > Information in this article relates to a prerelease product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
@@ -22,11 +22,14 @@ Before activating the Microsoft Security Agent capabilites for Defender for Iden
 
 ### Defender for Identity sensor conflicts
 
-Make sure that you don't already have a [Defender for Identity sensor](deploy-defender-identity.md) deployed on the same domain controller as you're planning to activate Microsoft Security Agent capabilites for Defender for Identity.
+The Microsoft Security Agent isn't supported for domain controllers with a Defender for Identity sensor deployed.
+
+Make sure that the domain controller where you're planning to active Defender for Identity capabilities with the Microsoft Security Agent doesn't already have a [Defender for Identity sensor](deploy-defender-identity.md) deployed.
+
 
 ### System requirements
 
-Unified Defender for Endpoint and Defender for Identity sensors are supported on domain controllers only, using the one of the following operating systems only:
+The Microsoft Security Agent is supported on domain controllers only, using the one of the following operating systems:
 
 - Windows Server 2019
 - Windows Server 2022
@@ -46,7 +49,7 @@ For more information, see [Onboard a Windows server](/microsoft-365/security/def
 
 ### Required permissions
 
-To access the Defender for Identity sensor onboarding page, you must either be a [Security Administrator](/entra/identity/role-based-access-control/permissions-reference), or have the following Unified RBAC permissions:
+To access the Defender for Identity **Activation** page, you must either be a [Security Administrator](/entra/identity/role-based-access-control/permissions-reference), or have the following Unified RBAC permissions: <!--do we need to write global admin?-->
 
 - `Authorization and settings/Security settings/Read`
 - `Authorization and settings/Security settings/All permissions`
@@ -62,7 +65,7 @@ The Microsoft Security Agent uses Defender for Endpoint URL endpoints for commun
 
 For more information, see [Configure your network environment to ensure connectivity with Defender for Endpoint](/microsoft-365/security/defender-endpoint/configure-environment##enable-access-to-microsoft-defender-for-endpoint-service-urls-in-the-proxy-server).
 
-## Configure Defender for Identity auditing
+## Configure Windows auditing
 
 Defender for Identity detections rely on specific Windows Event Log entries to enhance detections and provide extra information about the users performing specific actions, such as NTLM sign-ins and security group modifications.
 
@@ -81,30 +84,46 @@ Set-MDIConfiguration -Mode Domain -Configuration All
 
 ## Activate Defender for Identity capabilities
 
-After ensuring that your environment is completety configured, activate the Microsoft Security Agent's capabilities for Defender for Identity.
+After ensuring that your environment is completety configured, activate the  Microsoft Defender for Identity capabilities with the Microsoft Security Agent.
 
 1. In the [Defender portal](https://security.microsoft.com), select **Settings > Identities > [Activation](https://security.microsoft.com/settings/identities?tabid=onboarding)**.
 
-    The **Activation** page lists any detected domain controllers that are eligible for activation.
+    The **Activation** page lists any detected and eligible domain controllers.
 
-1. Select the domain controller where you want to activate the Security Agent capabilities for Defender for Identity and then select **Activate**. Confirm your selection when prompted.
+1. Select the domain controller where you want to activate the Defender for Identity capabilities with the Microsoft Security Agent and then select **Activate**. Confirm your selection when prompted.
 
 When the activation is complete, a green success banner shows. In the banner, select **Click here to see the onboarded servers** to jump to the **Settings > Identities > Sensors** page, where you can check your sensor health.
 
-The first time you activate Microsoft Security Agent capabilities on your domain controller, it may take up to an hour to show on the **Sensors** page. Subsequent activations should show within five minutes.
+The first time you activate Defender for Identity capabilities with the Microsoft Security Agent on your domain controller, it may take up to an hour to show on the **Sensors** page. Subsequent activations show within five minutes.
 
-## Test Security Agent capabilities
+## Test activated capabilties
 
-Use the following procedures to test Security Agent capabilities for Defender for Identity.
+Defender for Identity capabilities with the Microsoft Security Agent currently support the following Defender for Identity functionality:
+
+- Investigation features on the [ITDR dashboard](#check-the-itdr-dashboard), [identity inventory](#confirm-entity-page-details), and [identity advanced hunting data](#test-advanced-hunting-tables)
+- [Specified security posture recommendations](#test-identity-security-posture-management-ispm-recommendations)
+- [Specified alert detections](#test-alert-functionality)
+- [Remediation actions](#test-remediation-actions)
+- [Automatic attack disruption](/microsoft-365/security/defender/automatic-attack-disruption)
+
+Use the following procedures to test your environment for Defender for Identity capabilties with the Microsoft Security Agent.
+
+### Check the ITDR dashboard
+
+In the Defender portal, select **Identities > Dashboard** and review the details shown, checking for expected results from your environment.
+
+For more information, see [Work with Defender for Identity's ITDR dashboard (Preview)](../dashboard.md).
 
 
 ### Confirm entity page details
 
-Confirm that entites, such as domain controllers, users, and groups, are populated as expected:
+Confirm that entites, such as domain controllers, users, and groups, are populated as expected. 
 
-- **Device entities**: In the Defender portal, select **Assets > Devices**, and select the machine for your new sensor. Defender for Identity events are shown on the device timeline.
+In the Defender portal, check for the following details:
 
-- **User entities**. In the Defender portal, select **Assets > Users** and check for users from a newly onboarded domain. Alternately, use the global search option to search for specific users. User details pages should include **Overview**, **Observed in organization**, and **Timeline** data.
+- **Device entities**: Select **Assets > Devices**, and select the machine for your new sensor. Defender for Identity events are shown on the device timeline.
+
+- **User entities**. Select **Assets > Users** and check for users from a newly onboarded domain. Alternately, use the global search option to search for specific users. User details pages should include **Overview**, **Observed in organization**, and **Timeline** data.
 
 - **Group entities**: Use the global search to find a user group, or pivot from a user or device details page where group details are shown. Check for details of group membership, view group users, and group timeline data.
 
@@ -112,31 +131,61 @@ Confirm that entites, such as domain controllers, users, and groups, are populat
 
 For more information, see [Investigate assets](../investigate-assets.md).
 
-### Check the ITDR dashboard
+### Test advanced hunting tables
 
-In the Defender portal, select **Identities > Dashboard** and review the details shown.
+In the Defender portal's **Advanced hunting** page, use the following sample queries to check that data appears in relevant tables as expected for your environment:
 
-For more information, see [Work with Defender for Identity's ITDR dashboard (Preview)](../dashboard.md).
+```kusto
+IdentityDirectoryEvents
+| where TargetDeviceName contains "DC_FQDN" // insert domain controller FQDN
+
+IdentityInfo 
+| where AccountDomain contains "domain" // insert domain
+
+IdentityQueryEvents 
+| where DeviceName contains "DC_FQDN" // insert domain controller FQDN
+```
+
+For more information, see [Advanced hunting in the Microsoft Defender portal](/microsoft-365/security/defender/advanced-hunting-microsoft-defender).
+
 
 ### Test Identity Security Posture Management (ISPM) recommendations
 
-The unified Defender for Endpoint and Defender for Identity sensor supports the following assesments:
+Defender for Identity capabilities with the Microsoft Security Agent support the following ISPM assesments:
 
-- [**Resolve unsecure domain configurations**](security-assessment-unsecure-domain-configurations.md)
 - [**Install Defender for Identity Sensor on all Domain Controllers**](../security-assessment-unmonitored-domain-controller.md)
-- **Set a honeytoken account** <!--are we missing this in docs?-->
+- **Set a honeytoken account**
+- [**Resolve unsecure domain configurations**](security-assessment-unsecure-domain-configurations.md)
 
 We recommend simulating risky behavior in a test environment to trigger supported assessments and verify that they appear as expected. For example:
 
-1. Trigger a new **Resolve unsecure domain configurations** recommednation by setting your Active Directory configuration to a non-compliant state, and then returning it to a compliant state.
+1. Trigger a new **Resolve unsecure domain configurations** recommendation by setting your Active Directory configuration to a non-compliant state, and then returning it to a compliant state. For example, run the following commands:
 
-1. In Microsoft Secure Score, select **Recommended Actions** to check a new **Resolve unsecure domain configurations** recommendation. You might want to filter recommendations by the **Defender for Identity** product.
+    **To set a non-compliant state**
+
+    ```powershell
+    Set-ADObject -Identity ((Get-ADDomain).distinguishedname) -Replace @{"ms-DS-MachineAccountQuota"="10"}
+    ```
+
+    **To return it to a compliant state**:
+
+    ```powershell
+    Set-ADObject -Identity ((Get-ADDomain).distinguishedname) -Replace @{"ms-DS-MachineAccountQuota"="0"}
+    ```
+
+    **To check your local configuration**:
+
+    ```powershell
+    Get-ADObject -Identity ((Get-ADDomain).distinguishedname) -Properties ms-DS-MachineAccountQuota
+    ```
+
+1. In Microsoft Secure Score, select **Recommended Actions** to check for a new **Resolve unsecure domain configurations** recommendation. You might want to filter recommendations by the **Defender for Identity** product.
 
 For more information, see [Microsoft Defender for Identity's security posture assessments](../security-assessment.md)
 
 ### Test alert functionality
 
-The following alerts are supported by the Microsoft Security Agent:
+The following alerts are supported by Defender for Identity capabilities with the Microsoft Security Agent:
 
 :::row:::
    :::column span="":::
@@ -161,69 +210,38 @@ The following alerts are supported by the Microsoft Security Agent:
 :::row-end:::
 
 
-Test alert functionality by simulating risky activity in your environment. For example:
+Test alert functionality by simulating risky activity in a test environment. For example:
 
-- Tag an account as a honeytoken account, and then try signing in to the honeytoken account. 
+- Tag an account as a honeytoken account, and then try signing in to the honeytoken account.
 - Create a suspicious service on your domain controller.
-- Run a remote command on your domain controller as an administrator signed in from your workstation. 
+- Run a remote command on your domain controller as an administrator signed in from your workstation.
 
 For more information, see [Investigate Defender for Identity security alerts in Microsoft Defender XDR](../manage-security-alerts.md).
-
-### Test advanced hunting tables
-
-In the Defender portal's **Advanced hunting** page, use the following sample queries to check that data appears in relevant tables:
-
-```kusto
-IdentityDirectoryEvents
-| where TargetDeviceName contains "DC_FQDN" // insert domain controller FQDN
-IdentityInfo 
-| where AccountDomain contains "domain" // insert domain
-IdentityQueryEvents 
-| where DeviceName contains "DC_FQDN" // insert domain controller FQDN
-// Show users with sensitive tags
-IdentityInfo
-| where SourceProvider == "ActiveDirectory"
-| where Tags contains "Sensitive"
-// Service Creation
-IdentityDirectoryEvents
-| where ActionType == @"Service creation"
-| extend ParsedFields=parse_json(AdditionalFields)
-| project Timestamp, ActionType, TargetDeviceName, AccountName, AccountDomain, ServiceName=tostring(ParsedFields.ServiceName), ServiceCommand=tostring(ParsedFields.ServiceCommand)
-| where ServiceName != @"Microsoft Monitoring Agent Azure VM Extension Heartbeat Service"
-| where ServiceName != @"MOMAgentInstaller"
-| where ServiceName !contains @"MpKsl"
-```
-
-For more information, see [Advanced hunting in the Microsoft Defender portal](/microsoft-365/security/defender/advanced-hunting-microsoft-defender).
 
 ### Test remediation actions
 
 Test remediation actions on a test user. For example:
 
-1. Go to the user details page for a test user.
+1. In the Defender portal, go to the user details page for a test user.
 
 1. From the options menu, select any or all of the following, one at a time:
 
-    - Disable user in AD
-    - Enable user in AD
-    - Force password reset
+    - **Disable user in AD**
+    - **Enable user in AD**
+    - **Force password reset**
 
 1. Check Active Directory for the expected activity.
 
 For more information, see [Remediation actions in Microsoft Defender for Identity](../remediation-actions.md).
 
-## Test automatic attack disruption
+## Remove Defender for Identity capabilities with the Microsoft Security Agent
 
-For more information, see [Automatic attack disruption](/microsoft-365/security/defender/automatic-attack-disruption).
-
-## Remove Microsoft Security Agent capabilities for Defender for Identity
-
-If you want to remove Microsoft Security Agent capabilities for Defender for Identity from your domain controller, delete it from the **Sensors** page.
+If you want to remove Defender for Identity capabilities with the Microsoft Security Agent from your domain controller, delete it from the **Sensors** page:
 
 1. In the Defender portal, select **Settings > Identities > Sensors**.
-1. Select the sensor, select **Delete**, and confirm your selection.
+1. Select the domain controller where you want to remove Defender for Identity capabilities, select **Delete**, and confirm your selection.
 
-Removing Microsoft Security Agent capabilties for Defender for Identity doesn't remove the domain controller from Defender for Endpoint. For more information, see [Defender for Endpoint documentation](/microsoft-365/security/defender-endpoint/). <!--do we have a better link?-->
+Removing Defender for Identity capabilities with the Microsoft Security Agent doesn't remove the domain controller from Defender for Endpoint. For more information, see [Defender for Endpoint documentation](/microsoft-365/security/defender-endpoint/). <!--do we have a better link?-->
 
 ## Next steps
 
