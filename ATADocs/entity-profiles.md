@@ -29,7 +29,7 @@ ms.suite: ems
 
 [!INCLUDE [Banner for top of topics](includes/banner.md)]
 
-The entity profile provides you with a dashboard designed for full deep-dive investigation of users, computers, devices and the resources they have access to and their history. The profile page takes advantage of the new ATA logical activity translator which can look at a group of activities occurring (aggregated up to a minute) and group them into a single logical activity to give you a better understanding of the actual activities of your users.
+The entity profile provides you with a dashboard designed for full deep-dive investigation of users, computers, devices and the resources they have access to and their history. The profile page takes advantage of the new ATA logical activity translator that can look at a group of activities occurring (aggregated up to a minute) and group them into a single logical activity to give you a better understanding of the actual activities of your users.
 
 To access an entity profile page, select the name of the entity, such as a username, in the suspicious activity timeline.
 
@@ -44,7 +44,7 @@ To view all the activities performed by the user, or performed on an entity, sel
 
 By default, the main pane of the entity profile displays a timeline of the entity's activities with a history of up to 6 months back, from which you can also drill down into the entities accessed by the user, or for entities, users who accessed the entity.
 
-At the top, you can view the summary tiles that give you a quick overview of what you need to understand in a glance about your entity. These tiles change based on what type of entity it is, for a user, you will see:
+At the top, you can view the summary tiles that give you a quick overview of what you need to understand in a glance about your entity. These tiles change based on what type of entity it is, for a user, you'll see:
 - How many open suspicious activities there are for the user
 - How many computers the user logged onto
 - How many resources the user accessed
