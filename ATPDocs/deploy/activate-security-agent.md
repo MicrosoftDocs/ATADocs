@@ -155,7 +155,7 @@ Defender for Identity capabilities with the Microsoft Security Agent support the
 
 - [**Install Defender for Identity Sensor on all Domain Controllers**](../security-assessment-unmonitored-domain-controller.md)
 - **Set a honeytoken account**
-- [**Resolve unsecure domain configurations**](security-assessment-unsecure-domain-configurations.md)
+- [**Resolve unsecure domain configurations**](../security-assessment-unsecure-domain-configurations.md)
 
 We recommend simulating risky behavior in a test environment to trigger supported assessments and verify that they appear as expected. For example:
 
