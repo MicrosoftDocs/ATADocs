@@ -27,7 +27,8 @@ For more information, see [Custom roles in role-based access control for Microso
 
 > [!NOTE]
 > Information included from the [Defender for Cloud Apps activity log](classic-mcas-integration.md#activities) may still contain Defender for Identity data. This content adheres to existing Defender for Cloud Apps permissions.
-
+> 
+> Exception: If you have configured [Scoped deployment](/defender-cloud-apps/scoped-deployment) for Microsoft Defender for Identity alerts in the Microsoft Defender for Cloud Apps portal, these permissions do not carry over and you will have to explicitly grant the Security operations \ Security data \ Security data basics (read) permissions for the relevant portal users. 
 ## Required permissions Defender for Identity in Microsoft Defender XDR
 
 The following table details the specific permissions required for Defender for Identity activities in [Microsoft Defender XDR](/microsoft-365/security/defender/microsoft-365-security-center-mdi).
