@@ -50,10 +50,13 @@ For more information, see [Onboard a Windows server](/microsoft-365/security/def
 
 To access the Defender for Identity **Activation** page, you must either be a [Security Administrator](/entra/identity/role-based-access-control/permissions-reference), or have the following Unified RBAC permissions:
 
-- `Authorization and settings/Security settings/All permissions`
-- `Authorization and settings/System settings/All permissions`
+- `Authorization and settings / System settings (Read and manage)`
+- `Authorization and settings / Security setting (All permissions)`
 
-For more information, see [Unified role-based access control RBAC](/defender-for-identity/role-groups#unified-role-based-access-control-rbac).
+For more information, see:
+
+- [Unified role-based access control RBAC](role-groups.md#unified-role-based-access-control-rbac)
+- [Create a role to access and manage roles and permissions](/microsoft-365/security/defender/create-custom-rbac-roles#create-a-role-to-access-and-manage-roles-and-permissions).
 
 ### Connectivity requirements
 
@@ -188,7 +191,7 @@ The following alerts are supported by Defender for Identity capabilities on doma
     - [Honeytoken user attributes modified](../persistence-privilege-escalation-alerts.md#honeytoken-user-attributes-modified-external-id-2427)
     - [Security principal reconnaissance (LDAP)](../credential-access-alerts.md#security-principal-reconnaissance-ldap-external-id-2038)
     - [Honeytoken was queried via LDAP](../reconnaissance-discovery-alerts.md#honeytoken-was-queried-via-ldap-external-id-2429)
-    - [Active Directory attributes Reconnaissance using LDAP](../reconnaissance-discovery-alerts.md#active-directory-attributes-reconnaissance-ldap-external-id-2210) <!--not documented-->
+    - [Active Directory attributes Reconnaissance using LDAP](../reconnaissance-discovery-alerts.md#active-directory-attributes-reconnaissance-ldap-external-id-2210)
     - [Remote code execution attempt](../other-alerts.md#remote-code-execution-attempt-external-id-2019)
     - [Suspicious modification of the Resource Based Constrained Delegation attribute by a machine account](../persistence-privilege-escalation-alerts.md#suspicious-modification-of-the-resource-based-constrained-delegation-attribute-by-a-machine-account--external-id-2423)
     - [Suspicious additions to sensitive groups](../persistence-privilege-escalation-alerts.md#suspicious-additions-to-sensitive-groups-external-id-2024)
@@ -208,7 +211,7 @@ The following alerts are supported by Defender for Identity capabilities on doma
 
 Test alert functionality by simulating risky activity in a test environment. For example:
 
-- Tag an account as a honeytoken account, and then try signing in to the honeytoken account.
+- Tag an account as a honeytoken account, and then try signing in to the honeytoken account against the activated domain controller.
 - Create a suspicious service on your domain controller.
 - Run a remote command on your domain controller as an administrator signed in from your workstation.
 
@@ -230,16 +233,15 @@ Test remediation actions on a test user. For example:
 
 For more information, see [Remediation actions in Microsoft Defender for Identity](../remediation-actions.md).
 
-## Remove Defender for Identity capabilities from your domain controller
+## Deactivate Defender for Identity capabilities on your domain controller
 
-If you want to remove Defender for Identity capabilities from your domain controller, delete it from the **Sensors** page:
+If you want to deactivate Defender for Identity capabilities on your domain controller, delete it from the **Sensors** page:
 
 1. In the Defender portal, select **Settings > Identities > Sensors**.
-1. Select the domain controller where you want to remove Defender for Identity capabilities, select **Delete**, and confirm your selection.
+1. Select the domain controller where you want to deactivate Defender for Identity capabilities, select **Delete**, and confirm your selection.
 
-Removing Defender for Identity capabilities from your domain controller doesn't remove the domain controller from Defender for Endpoint. For more information, see [Defender for Endpoint documentation](/microsoft-365/security/defender-endpoint/). <!--do we have a better link?-->
+Deactivating Defender for Identity capabilities from your domain controller doesn't remove the domain controller from Defender for Endpoint. For more information, see [Defender for Endpoint documentation](/microsoft-365/security/defender-endpoint/).
 
 ## Next steps
 
-For more information, see [Manage and update Microsoft Defender for Identity sensors](../sensor-settings.md)
-
+For more information, see [Manage and update Microsoft Defender for Identity sensors](../sensor-settings.md).
