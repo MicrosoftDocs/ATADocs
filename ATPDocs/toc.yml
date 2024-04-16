@@ -81,6 +81,8 @@ items:
       - name: Listen for SIEM events
         href: deploy/configure-event-collection.md
         displayName: standalone
+    - name: Activate Defender for Identity capabilities on your domain controller
+      href: deploy/activate-capabilities.md
 - name: Manage
   items:
   - name: View the ITDR dashboard
