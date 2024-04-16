@@ -1,6 +1,6 @@
 ---
 title: Activate Microsoft Defender for Identity capabilities directly on a domain controller 
-description: Learn about the Microsfot Defender for Identity capabilities on domain controllers and how to activate them.
+description: Learn about the Microsoft Defender for Identity capabilities on domain controllers and how to activate them.
 ms.date: 04/10/2024
 ms.topic: how-to
 ---
@@ -17,7 +17,7 @@ This article describes how to activate and test Microsoft Defender for Identity 
 
 ## Prerequisites
 
-Before activating the Defender for Identity capabilites on your domain controller, make sure that your environment complies with the prerequisites in this section.
+Before activating the Defender for Identity capabilities on your domain controller, make sure that your environment complies with the prerequisites in this section.
 
 ### Defender for Identity sensor conflicts
 
@@ -28,7 +28,7 @@ Make sure that the domain controller where you're planning to activate Defender 
 
 ### System requirements
 
-Direct Defender for Identity capabilites are supported on domain controllers only, using the one of the following operating systems:
+Direct Defender for Identity capabilities are supported on domain controllers only, using the one of the following operating systems:
 
 - Windows Server 2019
 - Windows Server 2022
@@ -40,7 +40,7 @@ You must also have the [March 2024 Cumulative Update](https://support.microsoft.
 >
 > This issue is addressed in the out-of-band update [KB5037422](https://support.microsoft.com/en-gb/topic/march-22-2024-kb5037422-os-build-20348-2342-out-of-band-e8f5bf56-c7cb-4051-bd5c-cc35963b18f3).
 
-### Defender for Endpoint oboarding
+### Defender for Endpoint onboarding
 
 Your domain controller must be onboarded to Microsoft Defender for Endpoint.
 
@@ -60,7 +60,7 @@ For more information, see:
 
 ### Connectivity requirements
 
-Defender for Identity capabilites direcly on domain controllers use Defender for Endpoint URL endpoints for communication, including simplified URLs.
+Defender for Identity capabilities directly on domain controllers use Defender for Endpoint URL endpoints for communication, including simplified URLs.
 
 For more information, see [Configure your network environment to ensure connectivity with Defender for Endpoint](/microsoft-365/security/defender-endpoint/configure-environment##enable-access-to-microsoft-defender-for-endpoint-service-urls-in-the-proxy-server).
 
@@ -83,7 +83,7 @@ Set-MDIConfiguration -Mode Domain -Configuration All
 
 ## Activate Defender for Identity capabilities
 
-After ensuring that your environment is completety configured, activate the  Microsoft Defender for Identity capabilities on your domain controller.
+After ensuring that your environment is completely configured, activate the  Microsoft Defender for Identity capabilities on your domain controller.
 
 1. In the [Defender portal](https://security.microsoft.com), select **Settings > Identities > [Activation](https://security.microsoft.com/settings/identities?tabid=onboarding)**.
 
@@ -93,7 +93,7 @@ After ensuring that your environment is completety configured, activate the  Mic
 
 When the activation is complete, a green success banner shows. In the banner, select **Click here to see the onboarded servers** to jump to the **Settings > Identities > Sensors** page, where you can check your sensor health.
 
-## Test activated capabilties
+## Test activated capabilities
 
 The first time you activate Defender for Identity capabilities on your domain controller, it may take up to an hour for the first sensor to show as **Running** on the **Sensors** page. Subsequent activations show within five minutes.
 
@@ -105,7 +105,7 @@ Defender for Identity capabilities on domain controllers currently support the f
 - [Remediation actions](#test-remediation-actions)
 - [Automatic attack disruption](/microsoft-365/security/defender/automatic-attack-disruption)
 
-Use the following procedures to test your environment for Defender for Identity capabilties on a domain controller.
+Use the following procedures to test your environment for Defender for Identity capabilities on a domain controller.
 
 ### Check the ITDR dashboard
 
@@ -116,7 +116,7 @@ For more information, see [Work with Defender for Identity's ITDR dashboard (Pre
 
 ### Confirm entity page details
 
-Confirm that entites, such as domain controllers, users, and groups, are populated as expected. 
+Confirm that entities, such as domain controllers, users, and groups, are populated as expected. 
 
 In the Defender portal, check for the following details:
 
@@ -150,7 +150,7 @@ For more information, see [Advanced hunting in the Microsoft Defender portal](/m
 
 ### Test Identity Security Posture Management (ISPM) recommendations
 
-Defender for Identity capabilities on domain controllers support the following ISPM assesments:
+Defender for Identity capabilities on domain controllers support the following ISPM assessments:
 
 - [**Install Defender for Identity Sensor on all Domain Controllers**](../security-assessment-unmonitored-domain-controller.md)
 - **Set a honeytoken account**
