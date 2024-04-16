@@ -55,7 +55,7 @@ To access the Defender for Identity **Activation** page, you must either be a [S
 
 For more information, see:
 
-- [Unified role-based access control RBAC](role-groups.md#unified-role-based-access-control-rbac)
+- [Unified role-based access control RBAC](../role-groups.md#unified-role-based-access-control-rbac)
 - [Create a role to access and manage roles and permissions](/microsoft-365/security/defender/create-custom-rbac-roles#create-a-role-to-access-and-manage-roles-and-permissions)
 
 ### Connectivity requirements
