@@ -320,11 +320,11 @@ None
 
 **MITRE**:
 
-|Primary MITRE tactic  |[Defense Evasion (TA0005)](https://https://attack.mitre.org/tactics/TA0005)|
+|Primary MITRE tactic  |[Defense Evasion (TA0005)](https://attack.mitre.org/tactics/TA0005)|
 | -------- | -------- |
-|MITRE attack technique|Browser Session Hijacking (T1185)|
-|MITRE attack technique  |  [Browser Session Hijacking (T1185)](https://attack.mitre.org/techniques/T1185/)  |
-|MITRE attack sub-technique |  N/A       |
+|MITRE attack technique|Subvert Trust Controls (T1553)|
+|MITRE attack technique  |[Subvert Trust Controls (T1553)](https://attack.mitre.org/techniques/T1553/)|
+|MITRE attack sub-technique | N/A       |
 
 ##   
 See also
