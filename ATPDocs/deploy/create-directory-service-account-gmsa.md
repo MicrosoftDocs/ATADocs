@@ -43,24 +43,30 @@ This section describes how to create a specific group that can retrieve the acco
 Update the following code with variable values for your environment. Then, run the PowerShell commands as an administrator:
 
 ```powershell
-# Set the variables:
+# Variables:
+# Specify the name of the gMSA you want to create:
 $gMSA_AccountName = 'mdiSvc01'
+# Specify the name of the group you want to create for the gMSA,
+# or enter 'Domain Controllers' to use the built-in group when your environment is a single forest, and will contain only domain controller sensors.
 $gMSA_HostsGroupName = 'mdiSvc01Group'
+# Specify the computer accounts that will become members of the gMSA group and have permission to use the gMSA. 
+# If you are using the 'Domain Controllers' group in the $gMSA_HostsGroupName variable, then this list is ignored
 $gMSA_HostNames = 'DC1', 'DC2', 'DC3', 'DC4', 'DC5', 'DC6', 'ADFS1', 'ADFS2'
 
 # Import the required PowerShell module:
 Import-Module ActiveDirectory
 
-# Create the group and add the members
-$gMSA_HostsGroup = New-ADGroup -Name $gMSA_HostsGroupName -GroupScope Global -PassThru
-$gMSA_HostNames | ForEach-Object { Get-ADComputer -Identity $_ } |
-    ForEach-Object { Add-ADGroupMember -Identity $gMSA_HostsGroupName -Members $_ }
-# Or, use the built-in 'Domain Controllers' group if the environment is a single forest, and will contain only domain controller sensors
-# $gMSA_HostsGroup = Get-ADGroup -Identity 'Domain Controllers'
-  
+# Set the group
+if ($gMSA_HostsGroupName -eq 'Domain Controllers') {
+    $gMSA_HostsGroup = Get-ADGroup -Identity 'Domain Controllers'
+} else {
+    $gMSA_HostsGroup = New-ADGroup -Name $gMSA_HostsGroupName -GroupScope DomainLocal -PassThru
+    $gMSA_HostNames | ForEach-Object { Get-ADComputer -Identity $_ } |
+        ForEach-Object { Add-ADGroupMember -Identity $gMSA_HostsGroupName -Members $_ }
+}
+
 # Create the gMSA:
-New-ADServiceAccount -Name $gMSA_AccountName -DNSHostName "$gMSA_AccountName.$env:USERDNSDOMAIN" `
--PrincipalsAllowedToRetrieveManagedPassword $gMSA_HostsGroupName
+New-ADServiceAccount -Name $gMSA_AccountName -DNSHostName "$gMSA_AccountName.$env:USERDNSDOMAIN" -PrincipalsAllowedToRetrieveManagedPassword $gMSA_HostsGroup
 ```
 
 ## Grant required DSA permissions
