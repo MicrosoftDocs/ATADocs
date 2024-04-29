@@ -66,7 +66,8 @@ if ($gMSA_HostsGroupName -eq 'Domain Controllers') {
 }
 
 # Create the gMSA:
-New-ADServiceAccount -Name $gMSA_AccountName -DNSHostName "$gMSA_AccountName.$env:USERDNSDOMAIN" -PrincipalsAllowedToRetrieveManagedPassword $gMSA_HostsGroup
+New-ADServiceAccount -Name $gMSA_AccountName -DNSHostName "$gMSA_AccountName.$env:USERDNSDOMAIN" `
+ -PrincipalsAllowedToRetrieveManagedPassword $gMSA_HostsGroup
 ```
 
 ## Grant required DSA permissions
