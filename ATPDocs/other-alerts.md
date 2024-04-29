@@ -326,8 +326,7 @@ None
 |MITRE attack technique  |[Subvert Trust Controls (T1553)](https://attack.mitre.org/techniques/T1553/)|
 |MITRE attack sub-technique | N/A       |
 
-##   
-See also
+## See also
 
 - [Investigate assets](investigate-assets.md)
 - [Understanding security alerts](understanding-security-alerts.md)
