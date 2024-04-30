@@ -30,6 +30,31 @@ For updates about versions and features released six months ago or earlier, see 
 
 ## April 2024
 
+### Easily detect CVE-2024-21427 Windows Kerberos Security Feature Bypass Vulnerability
+
+To help customers better identify and detect attempts to bypass security protocols according to [this vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-21427), we have added a new activity within Advanced Hunting that monitors Kerberos AS authentication.   
+With this data customers can now easily create their own [custom detection rules within Microsoft Defender XDR](https://aka.ms/CustomDetectionsDocs) and automatically trigger alerts for this type of activity
+
+Access Defender XDR portal -> Hunting -> Advanced Hunting.
+
+Now, you can copy our recommended query as provided below, and click on “Create detection rule”. Please be aware that our provided query also tracks failed logon attempts, which may generate information unrelated to a potential attack. Therefore, feel free to customize the query to suit your specific requirements.
+
+
+```
+IdentityLogonEvents
+| where Application == "Active Directory"
+| where Protocol == "Kerberos"
+| where LogonType in("Resource access", "Failed logon")
+| extend Error =  AdditionalFields["Error"]
+| extend KerberosType = AdditionalFields['KerberosType']
+| where KerberosType == "KerberosAs"
+| extend Spns = AdditionalFields["Spns"]
+| extend DestinationDC = AdditionalFields["TO.DEVICE"]
+| where  Spns !contains "krbtgt" and Spns !contains "kadmin"
+| project Timestamp, ActionType, LogonType, AccountUpn, AccountSid, IPAddress, DeviceName, KerberosType, Spns, Error, DestinationDC, DestinationIPAddress, ReportId
+
+```
+
 ### Defender for Identity release 2.234
 
 This version includes improvements and bug fixes for cloud services and the Defender for Identity sensor.
@@ -130,7 +155,7 @@ For more information, see [Investigation steps for suspicious devices](investiga
 This version includes improvements and bug fixes for cloud services and the Defender for Identity sensor, and the following new alerts:
 
 - [Account Enumeration reconnaissance (LDAP) (external ID 2437)](reconnaissance-discovery-alerts.md#account-enumeration-reconnaissance-ldap-external-id-2437-preview) (Preview)
-- [Directory Services Restore Mode Password Change (external ID 2438)](other-alerts.md#directory-services-restore-mode-password-change-external-id-2438-preview) (Preview)
+- [Directory Services Restore Mode Password Change (external ID 2438)](other-alerts.md#directory-services-restore-mode-password-change-external-id-2438) (Preview)
 
 ## January 2024
 

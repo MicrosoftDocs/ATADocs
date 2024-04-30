@@ -231,7 +231,7 @@ None
 
 **MITRE**:
 
-|Primary MITRE tactic  | [Defense Evasion (TA0005)](https://attack.mitre.org/tactics/TA0005 ) |
+|Primary MITRE tactic  | [Defense Evasion (TA0005)](https://attack.mitre.org/tactics/TA0005) |
 |---------|---------|
 |MITRE attack technique  |   [Indicator Removal (T1070)](https://attack.mitre.org/techniques/T1070/)  |
 |MITRE attack sub-technique |  N/A     |
@@ -258,7 +258,7 @@ None
 |MITRE attack technique  |   [Impair Defenses (T1562)](https://attack.mitre.org/techniques/T1562/)  |
 |MITRE attack sub-technique |  [Disable Windows Event Logging (T1562.002)](https://attack.mitre.org/techniques/T1562/002/)      |
 
-## Directory Services Restore Mode Password Change (external ID 2438) (Preview)
+## Directory Services Restore Mode Password Change (external ID 2438)
 
 **Severity**: Medium
 
@@ -297,6 +297,34 @@ We recommend investigating the source IP performing the operations to determine 
 |---------|---------|
 |MITRE attack technique  |   [Browser Session Hijacking (T1185)](https://attack.mitre.org/techniques/T1185/)  |
 |MITRE attack sub-technique |  N/A       |
+
+## Group Policy Tampering (external ID 2439) (Preview)
+
+**Severity**: Medium
+
+**Description**:
+
+A suspicious change has been detected in Group Policy, resulting in the deactivation of Windows Defender Antivirus. This activity may indicate a security breach by an attacker with elevated privileges who could be setting the stage for distributing ransomware. 
+
+**Suggested steps for investigation:**
+
+1. Understand if the GPO change is legitimate 
+
+1. If it wasn’t, revert the change 
+
+1. Understand how the group policy is linked, to estimate its scope of impact 
+
+**Learning period**:
+
+None
+
+**MITRE**:
+
+|Primary MITRE tactic  |[Defense Evasion (TA0005)](https://attack.mitre.org/tactics/TA0005)|
+| -------- | -------- |
+|MITRE attack technique|Subvert Trust Controls (T1553)|
+|MITRE attack technique  |[Subvert Trust Controls (T1553)](https://attack.mitre.org/techniques/T1553/)|
+|MITRE attack sub-technique | N/A       |
 
 ## See also
 
