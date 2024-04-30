@@ -32,7 +32,7 @@ For updates about versions and features released six months ago or earlier, see 
 
 ### Easily detect CVE-2024-21427 Windows Kerberos Security Feature Bypass Vulnerability
 
-To help customers better identify and detect attempts to bypass security protocols according to [this vulnerability](https://https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-21427), we have added a new activity within Advanced Hunting that monitors Kerberos AS authentication.   
+To help customers better identify and detect attempts to bypass security protocols according to [this vulnerability](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-21427), we have added a new activity within Advanced Hunting that monitors Kerberos AS authentication.   
 With this data customers can now easily create their own [custom detection rules within Microsoft Defender XDR](https://aka.ms/CustomDetectionsDocs) and automatically trigger alerts for this type of activity
 
 Access Defender XDR portal -> Hunting -> Advanced Hunting.
