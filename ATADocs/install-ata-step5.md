@@ -10,7 +10,6 @@ manager: raynew
 ms.date: 01/10/2023
 ms.topic: conceptual
 ms.service: advanced-threat-analytics
-ms.technology:
 ms.assetid: 2a5b6652-2aef-464c-ac17-c7e5f12f920f
 
 # optional metadata
@@ -33,7 +32,7 @@ ms.suite: ems
 > [« Step 4](install-ata-step4.md)
 > [Step 6 »](install-ata-step6.md)
 
-## Step 5. Configure the ATA Gateway settings
+## Step 5: Configure the ATA Gateway settings
 
 After the ATA Gateway was installed, perform the following steps to configure the settings for the ATA Gateway.
 

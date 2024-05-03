@@ -31,7 +31,7 @@ Credential Access consists of techniques for stealing credentials like account n
 
 In a brute-force attack, the attacker attempts to authenticate with many different passwords for different accounts until a correct password is found for at least one account. Once found, an attacker can log in using that account.
 
-In this detection, an alert is triggered when Defender for Identity detects a massive number of simple bind authentications. This alert detects brute force attacks performed either *horizontally* with a small set of passwords across many users, *vertically* with a large set of passwords on just a few users, or any combination of the two options. The alert is based on authentication events from sensors running on domain controller and AD FS servers.
+In this detection, an alert is triggered when Defender for Identity detects a massive number of simple bind authentications. This alert detects brute force attacks performed either *horizontally* with a small set of passwords across many users, *vertically* with a large set of passwords on just a few users, or any combination of the two options. The alert is based on authentication events from sensors running on domain controller and AD FS / AD CS servers.
 
 **Learning period**:
 
@@ -46,7 +46,7 @@ None
 
 **Suggested steps for prevention**:
 
-1. Enforce [complex and long passwords](/windows/device-security/security-policy-settings/password-policy) in the organization, it will provide the necessary first level of security against future brute-force attacks.
+1. Enforce [complex and long passwords](/windows/device-security/security-policy-settings/password-policy) in the organization. Doing so provides the necessary first level of security against future brute-force attacks.
 1. Prevent future usage of LDAP clear text protocol in your organization.
 
 ## Suspected Golden Ticket usage (forged authorization data) (external ID 2013)
@@ -123,7 +123,7 @@ In a password spray, after successfully enumerating a list of valid users from t
 
 **Suggested steps for prevention**:
 
-1. Enforce [complex and long passwords](/windows/device-security/security-policy-settings/password-policy) in the organization, it will provide the necessary first level of security against future brute-force attacks.
+1. Enforce [complex and long passwords](/windows/device-security/security-policy-settings/password-policy) in the organization. Doing so provides the necessary first level of security against future brute-force attacks.
 
 ## Security principal reconnaissance (LDAP) (external ID 2038)
 
@@ -205,9 +205,9 @@ None
 
 An attacker can create a straightforward path to a Domain Admin user in an Active Directory environment that isn't patched. This escalation attack allows attackers to easily elevate their privilege to that of a Domain Admin once they compromise a regular user in the domain.
 
-When performing an authentication using Kerberos, Ticket-Granting-Ticket (TGT) and the Ticket-Granting-Service (TGS) are requested from the Key Distribution Center (KDC). If a TGS was requested for an account that couldn't be found, the KDC will attempt to search it again with a trailing &dollar;.
+When performing an authentication using Kerberos, Ticket-Granting-Ticket (TGT) and the Ticket-Granting-Service (TGS) are requested from the Key Distribution Center (KDC). If a TGS was requested for an account that couldn't be found, the KDC attemptS to search it again with a trailing &dollar;.
 
-When processing the TGS request, the KDC will fail its lookup for the requestor machine *DC1* the attacker created. Therefore, the KDC will perform another lookup appending a trailing &dollar;. The lookup will succeed. As a result, the KDC will issue the ticket using the privileges of *DC1$*.
+When processing the TGS request, the KDC fails its lookup for the requestor machine *DC1* the attacker created. Therefore, the KDC performs another lookup appending a trailing &dollar;. The lookup succeeds. As a result, the KDC issues the ticket using the privileges of *DC1$*.
 
 Combining CVEs CVE-2021-42278 and CVE-2021-42287, an attacker with domain user credentials can leverage them for granting access as a domain admin.
 
@@ -298,8 +298,151 @@ None
 
 |Primary MITRE tactic  | [Credential Access (TA0006)](https://attack.mitre.org/tactics/TA0006)  |
 |---------|---------|
-|MITRE attack technique  | [Unsecured Credentials)](https://attack.mitre.org/techniques/T1552/)        |
-|MITRE attack sub-technique | [Unsecured Credentials: Private Keys (T1552.004)](https://attack.mitre.org/techniques/T1552/004/)        
+|MITRE attack technique  | [Unsecured Credentials (T1552)](https://attack.mitre.org/techniques/T1552/)        |
+|MITRE attack sub-technique | [Unsecured Credentials: Private Keys (T1552.004)](https://attack.mitre.org/techniques/T1552/004/)  |
+
+> [!NOTE]
+> Suspected AD FS DKM key read alerts are only supported by Defender for Identity sensors on AD FS.
+
+## Suspected DFSCoerce attack using Distributed File System Protocol (external ID 2426)
+
+**Severity**: High
+
+**Description**:
+
+DFSCoerce attack can be used to force a domain controller to authenticate against a remote machine which is under an attacker’s control using the MS-DFSNM API, which triggers NTLM authentication. This, ultimately, enables a threat actor to launch an NTLM relay attack.  
+
+**Learning period**:
+
+None
+
+**MITRE**:
+
+|Primary MITRE tactic  | [Credential Access (TA0006)](https://attack.mitre.org/tactics/TA0006)  |
+|---------|---------|
+|MITRE attack technique  | [Forced Authentication (T1187)](https://attack.mitre.org/techniques/T1187/)        |
+|MITRE attack sub-technique | N/A |
+
+## Suspicious Kerberos delegation attempt using BronzeBit method (CVE-2020-17049 exploitation) (external ID 2048)
+
+**Severity**: Medium
+
+**Description**:
+
+Exploiting a vulnerability (CVE-2020-17049), attackers attempt suspicious Kerberos delegation using the BronzeBit method. This could lead to unauthorized privilege escalation and compromise the security of the Kerberos authentication process. 
+
+**Learning period**:
+
+None
+
+**MITRE**:
+
+|Primary MITRE tactic  | [Credential Access (TA0006)](https://attack.mitre.org/tactics/TA0006)  |
+|---------|---------|
+|MITRE attack technique  | [Steal or Forge Kerberos Tickets (T1558)](https://attack.mitre.org/techniques/T1558/)        |
+|MITRE attack sub-technique | N/A |
+
+## Abnormal Active Directory Federation Services (AD FS) authentication using a suspicious certificate (external ID 2424)
+
+**Severity**: High
+
+**Description**:
+
+Anomalous authentication attempts using suspicious certificates in Active Directory Federation Services (AD FS) may indicate potential security breaches. Monitoring and validating certificates during AD FS authentication are crucial for preventing unauthorized access. 
+
+**Learning period**:
+
+None
+
+**MITRE**:
+
+|Primary MITRE tactic  | [Credential Access (TA0006)](https://attack.mitre.org/tactics/TA0006)  |
+|---------|---------|
+|MITRE attack technique  | [Forge Web Credentials (T1606)](https://attack.mitre.org/techniques/T1606/)        |
+|MITRE attack sub-technique | N/A |
+
+> [!NOTE]
+> Abnormal Active Directory Federation Services (AD FS) authentication using a suspicious certificate alerts are only supported by Defender for Identity sensors on AD FS.
+
+## Suspected account takeover using shadow credentials (external ID 2431)
+
+**Severity**: High
+
+**Description**:
+
+The use of shadow credentials in an account takeover attempt suggests malicious activity. Attackers may attempt to exploit weak or compromised credentials to gain unauthorized access and control over user accounts. 
+
+**Learning period**:
+
+None
+
+**MITRE**:
+
+|Primary MITRE tactic  | [Credential Access (TA0006)](https://attack.mitre.org/tactics/TA0006)  |
+|---------|---------|
+|MITRE attack technique  | [OS Credential Dumping (T1003)](https://attack.mitre.org/techniques/T1003/)        |
+|MITRE attack sub-technique | N/A |
+
+## Suspected suspicious Kerberos ticket request (external ID 2418)
+
+**Severity**: High
+
+**Description**:
+
+This attack involves the suspicion of abnormal Kerberos ticket requests. Attackers may attempt to exploit vulnerabilities in the Kerberos authentication process, potentially leading to unauthorized access and compromise of the security infrastructure. 
+
+**Learning period**:
+
+None
+
+**MITRE**:
+
+|Primary MITRE tactic  | [Credential Access (TA0006)](https://attack.mitre.org/tactics/TA0006)  |
+|---------|---------|
+|Secondary MITRE tactic    | [Collection (TA0009)](https://attack.mitre.org/tactics/TA0009)      |
+|MITRE attack technique  | [Adversary-in-the-Middle (T1557)](https://attack.mitre.org/techniques/T1557/)        |
+|MITRE attack sub-technique | [LLMNR/NBT-NS Poisoning and SMB Relay (T1557.001)](https://attack.mitre.org/techniques/T1557/001/)  |
+
+## Password spray against OneLogin 
+
+**Severity**: High
+
+**Description**:
+
+In Password spray, attackers try to guess small subset of passwords against large number of users. This is done in order to try and find if any of the users is using known\weak password. 
+We recommend investigating the source IP performing the failed logins to determine whether they're legitimate or not. 
+
+**Learning period**:
+
+None
+
+**MITRE**:
+
+|Primary MITRE tactic  | [Credential Access (TA0006)](https://attack.mitre.org/tactics/TA0006)  |
+|---------|---------|
+|MITRE attack technique  | [Brute Force (T1110)](https://attack.mitre.org/techniques/T1110/)        |
+|MITRE attack sub-technique | [Password Spraying (T1110.003)](https://attack.mitre.org/techniques/T1110/003/)  |
+
+## Suspicious OneLogin MFA fatigue 
+
+**Severity**: High
+
+**Description**:
+
+In MFA fatigue, attackers send multiple MFA attempts to user while trying to make them feel there's a bug in the system that keeps showing MFA requests which ask to allow the login or deny. Attackers try to force the victim to allow the login, which will stop the notifications and allow the attacker to login to the system. 
+
+We recommend investigating the source IP performing the failed MFA attempts to determine whether they're legitimate or not and if the user is performing logins. 
+
+**Learning period**:
+
+None
+
+**MITRE**:
+
+|Primary MITRE tactic  | [Credential Access (TA0006)](https://attack.mitre.org/tactics/TA0006)  |
+|---------|---------|
+|MITRE attack technique  | [Multifactor Authentication Request Generation (T1621)](https://attack.mitre.org/techniques/T1621/)        |
+|MITRE attack sub-technique | N/A  |
 
 ## See also
 

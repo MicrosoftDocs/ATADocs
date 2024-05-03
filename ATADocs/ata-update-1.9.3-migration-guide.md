@@ -58,7 +58,7 @@ This update is available on Microsoft Update. For more information about how to 
 
 ### Microsoft Download Center
 
-To get the stand-alone package for this update, go to the Microsoft Download Center website: [Download the ATA 1.9.3 package now](https://www.microsoft.com/download/details.aspx?id=56725).
+To get the stand-alone package for this update, go to the Microsoft Download Center website: [Download the ATA 1.9.3 package now](https://www.microsoft.com/download).
 
 ### Prerequisites
 

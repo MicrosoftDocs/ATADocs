@@ -1,7 +1,7 @@
 ---
 title: Monitored activities
 description: Describes each activity type monitored by Microsoft Defender for Identity
-ms.date: 01/29/2023
+ms.date: 02/12/2024
 ms.topic: conceptual
 ---
 
@@ -17,7 +17,7 @@ The information monitored by Defender for Identity is presented in the form of a
 >
 > - This article is relevant for all Defender for Identity sensor types.
 > - Defender for Identity monitored activities appear on both the user and machine profile page.
-> - Defender for Identity monitored activities are also available in Microsoft 365 Defender's [Advanced Hunting](https://security.microsoft.com/advanced-hunting) page.
+> - Defender for Identity monitored activities are also available in Microsoft Defender XDR's [Advanced Hunting](https://security.microsoft.com/advanced-hunting) page.
 
 ## Monitored user activities: User account AD attribute changes
 
@@ -75,18 +75,7 @@ The information monitored by Defender for Identity is presented in the form of a
 
 ## Monitored user activities: Login operations
 
-|Logon type|Monitored activity|Description|
-|---------------------|---------------------|------------------|
-|Logon type 2|Credentials Validation|Domain-account authentication event using the NTLM and Kerberos authentication methods.|
-|Logon type 2|Interactive Logon|User gained network access by entering a username and password (authentication method Kerberos or NTLM).|
-|Logon type 2|Interactive Logon with Certificate|User gained network access by using a certificate.|
-|Logon type 2|VPN Connection|User connected by VPN - Authentication using RADIUS protocol.|
-|Logon type 3|Resource Access|User accessed a resource using Kerberos or NTLM authentication.|
-|Logon type 3|Delegated Resource Access|User accessed a resource using Kerberos delegation.|
-|Logon type 8|LDAP Cleartext|User authenticated using LDAP with a clear-text password (Simple authentication).|
-|Logon type 10|Remote Desktop|User performed an RDP session to a remote computer using Kerberos authentication.|
-|---|Failed Logon|Domain-account failed authentication attempt (via NTLM and Kerberos) due to the following: account was disabled/expired/locked/used an untrusted certificate or due to invalid logon hours/old password/expired password/wrong password.|
-|---|Failed Logon with Certificate|Domain-account failed authentication attempt (via Kerberos) due to the following: account was disabled/expired/locked/used an untrusted certificate or due to invalid logon hours/old password/expired password/wrong password.|
+For more information, see [Supported logon types](/microsoft-365/security/defender/advanced-hunting-identitylogonevents-table#supported-logon-types) for the `IdentityLogonEvents` table.
 
 ## Monitored machine activities: Machine account
 

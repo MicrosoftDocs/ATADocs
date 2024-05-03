@@ -10,7 +10,6 @@ manager: raynew
 ms.date: 01/10/2023
 ms.topic: conceptual
 ms.service: advanced-threat-analytics
-ms.technology:
 ms.assetid: 7597ed25-87f5-472c-a496-d5f205c9c391
 
 
@@ -36,7 +35,7 @@ ms.suite: ems
 > [!NOTE]
 > Before enforcing any new policy, always make sure that your environment remains secure, without impacting application compatibility by first enabling and verifying your proposed changes in audit mode.
 
-## Step 9. Configure SAM-R required permissions
+## Step 9: Configure SAM-R required permissions
 
 The [lateral movement path](use-case-lateral-movement-path.md) detection relies on queries that identify local admins on specific machines. These queries are performed using the SAM-R protocol, via the ATA Service account created in [Step 2. Connect to AD](install-ata-step2.md).
 

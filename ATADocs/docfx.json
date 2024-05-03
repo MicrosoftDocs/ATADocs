@@ -40,7 +40,7 @@
     "dest": "ATADocs",
     "template": "docs.html",
     "globalMetadata": {
-      "feedback_system": "GitHub",
+      "feedback_system": "Standard",
       "feedback_github_repo": "MicrosoftDocs/atadocs",
       "feedback_product_url": "https://techcommunity.microsoft.com/t5/Azure-Advanced-Threat-Protection/bd-p/AzureAdvancedThreatProtection",
       "layout": "Conceptual",

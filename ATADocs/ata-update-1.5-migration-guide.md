@@ -10,7 +10,6 @@ manager: raynew
 ms.date: 01/10/2023
 ms.topic: conceptual
 ms.service: advanced-threat-analytics
-ms.technology:
 ms.assetid: fb65eb41-b215-4530-93a2-0b8991f4e980
 
 # optional metadata
@@ -97,7 +96,7 @@ Follow these steps to update to ATA version 1.5:
 >
 > - Update all the ATA Gateways to make sure ATA functions properly.
 
-### Step 2. Download the ATA Gateway setup package
+### Step 2: Download the ATA Gateway setup package
 
 After configuring the domain connectivity settings, you can download the ATA Gateway setup package.
 

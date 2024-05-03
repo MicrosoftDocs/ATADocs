@@ -10,7 +10,6 @@ manager: raynew
 ms.date: 01/10/2023
 ms.topic: conceptual
 ms.service: advanced-threat-analytics
-ms.technology:
 ms.assetid: 7fb024e6-297a-4ad9-b962-481bb75a0ba3
 
 # optional metadata
@@ -31,7 +30,7 @@ ms.assetid: 7fb024e6-297a-4ad9-b962-481bb75a0ba3
 > [« Step 2](install-ata-step2.md)
 > [Step 4 »](install-ata-step4.md)
 
-## Step 3. Download the ATA Gateway setup package
+## Step 3: Download the ATA Gateway setup package
 
 After configuring the domain connectivity settings, you can download the ATA Gateway setup package. The ATA Gateway can be installed on a dedicated server or on a domain controller. If you install it on a domain controller, it is installed as an ATA Lightweight Gateway. For more information on the ATA Lightweight Gateway, see [ATA Architecture](ata-architecture.md). 
 

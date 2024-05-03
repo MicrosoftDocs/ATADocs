@@ -1,5 +1,245 @@
 {
     "redirections": [
+    {
+      "source_path": "ATPDocs/active-directory-federation-services.md",
+      "redirect_url": "deploy/active-directory-federation-services",
+      "redirect_document_id": false
+    },
+    {
+        "source_path": "ATPDocs/configure-event-collection.md",
+        "redirect_url": "deploy/configure-event-collection",
+        "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/configure-event-forwarding.md",
+      "redirect_url": "deploy/configure-event-forwarding",
+      "redirect_document_id": false
+    },
+    {
+        "source_path": "ATPDocs/configure-port-mirroring.md",
+        "redirect_url": "deploy/configure-port-mirroring",
+        "redirect_document_id": false
+    },
+    {
+        "source_path": "ATPDocs/manage-action-accounts.md",
+        "redirect_url": "deploy/manage-action-accounts",
+        "redirect_document_id": false
+    },
+    {
+        "source_path": "ATPDocs/multi-forest.md",
+        "redirect_url": "deploy/multi-forest",
+        "redirect_document_id": false
+    },
+    {
+        "source_path": "ATPDocs/remote-calls-sam.md",
+        "redirect_url": "deploy/remote-calls-sam",
+        "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/capacity-planning.md",
+      "redirect_url": "deploy/capacity-planning",
+      "redirect_document_id": false
+    },
+    {
+        "source_path": "ATPDocs/configure-proxy.md",
+        "redirect_url": "deploy/configure-proxy",
+        "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/configure-sensor-settings.md",
+      "redirect_url": "deploy/configure-sensor-settings",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/configure-windows-event-collection.md",
+      "redirect_url": "deploy/configure-windows-event-collection",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/deploy-defender-identity.md",
+      "redirect_url": "deploy/deploy-defender-identity",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/directory-service-accounts.md",
+      "redirect_url": "deploy/directory-service-accounts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/download-sensor.md",
+      "redirect_url": "deploy/download-sensor",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/install-sensor.md",
+      "redirect_url": "deploy/install-sensor",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/prerequisites.md",
+      "redirect_url": "deploy/prerequisites",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/quick-installation-guide.md",
+      "redirect_url": "deploy/quick-installation-guide",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/playbooks.md",
+      "redirect_url": "manage-security-alerts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/playbook-lab-overview.md",
+      "redirect_url": "manage-security-alerts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/playbook-setup-lab.md",
+      "redirect_url": "manage-security-alerts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/playbook-reconnaissance.md",
+      "redirect_url": "manage-security-alerts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/playbook-lateral-movement.md",
+      "redirect_url": "manage-security-alerts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/playbook-domain-dominance.md",
+      "redirect_url": "manage-security-alerts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/classic-activities-filtering-mcas.md",
+      "redirect_url": "/previous-versions/defender-for-identity/classic-activities-filtering-mcas",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/classic-activities-search.md",
+      "redirect_url": "/previous-versions/defender-for-identity/classic-activities-search",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/classic-configure-detection-exclusions.md",
+      "redirect_url": "/previous-versions/defender-for-identity/classic-configure-detection-exclusions",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/classic-entity-profiles.md",
+      "redirect_url": "/previous-versions/defender-for-identity/classic-entity-profiles",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/classic-health-center.md",
+      "redirect_url": "/previous-versions/defender-for-identity/classic-health-center",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/classic-install-step1.md",
+      "redirect_url": "/previous-versions/defender-for-identity/classic-install-step1",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/classic-install-step2.md",
+      "redirect_url": "/previous-versions/defender-for-identity/classic-install-step2",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/classic-install-step3.md",
+      "redirect_url": "/previous-versions/defender-for-identity/classic-install-step3",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/classic-install-step6-vpn.md",
+      "redirect_url": "/previous-versions/defender-for-identity/classic-install-step6-vpn",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/classic-integrate-mde.md",
+      "redirect_url": "/previous-versions/defender-for-identity/classic-integrate-mde",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/classic-investigate-entity.md",
+      "redirect_url": "/previous-versions/defender-for-identity/classic-investigate-entity",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/classic-investigate-lateral-movement-path.md",
+      "redirect_url": "/previous-versions/defender-for-identity/classic-investigate-lateral-movement-path",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/classic-manage-sensitive-honeytoken-accounts.md",
+      "redirect_url": "/previous-versions/defender-for-identity/classic-manage-sensitive-honeytoken-accounts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/classic-mcas-integration.md",
+      "redirect_url": "/previous-versions/defender-for-identity/classic-mcas-integration",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/classic-modifying-config-dcpassword.md",
+      "redirect_url": "/previous-versions/defender-for-identity/classic-modifying-config-dcpassword",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/classic-nnr-policy.md",
+      "redirect_url": "/previous-versions/defender-for-identity/classic-nnr-policy",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/classic-notifications.md",
+      "redirect_url": "/previous-versions/defender-for-identity/classic-notifications",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/classic-reports.md",
+      "redirect_url": "/previous-versions/defender-for-identity/classic-reports",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/classic-sensor-monitoring.md",
+      "redirect_url": "/previous-versions/defender-for-identity/classic-sensor-monitoring",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/classic-setting-syslog.md",
+      "redirect_url": "/previous-versions/defender-for-identity/classic-setting-syslog",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/classic-uninstall-sensor.md",
+      "redirect_url": "/previous-versions/defender-for-identity/classic-uninstall-sensor",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/classic-use-case-lateral-movement-path.md",
+      "redirect_url": "/previous-versions/defender-for-identity/classic-use-case-lateral-movement-path",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/classic-working-with-suspicious-activities.md",
+      "redirect_url": "/previous-versions/defender-for-identity/classic-working-with-suspicious-activities",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "ATPDocs/classic-workspace-portal.md",
+      "redirect_url": "/previous-versions/defender-for-identity/classic-workspace-portal",
+      "redirect_document_id": false
+    },
+        {
+            "source_path": "ATPDocs/validate-port-mirroring.md",
+            "redirect_url": "/defender-for-identity/configure-port-mirroring#validate-port-mirroring",
+            "redirect_document_id": false
+        },
         {
             "source_path": "ATPDocs/security-baseline.md",
             "redirect_url": "/security/benchmark/azure/baselines/defender-for-identity-security-baseline",
@@ -671,11 +911,6 @@
             "redirect_document_id": false
         },
         {
-            "source_path": "ATPDocs/reports.md",
-            "redirect_url": "/defender-for-identity/notifications",
-            "redirect_document_id": false
-        },
-        {
             "source_path": "ATPDocs/setting-syslog.md",
             "redirect_url": "/defender-for-identity/notifications",
             "redirect_document_id": false
@@ -789,6 +1024,12 @@
             "source_path": "ATPDocs/sensitive-accounts.md",
             "redirect_url": "/defender-for-identity/manage-sensitive-honeytoken-accounts",
             "redirect_document_id": false
+        },
+         {
+            "source_path": "ATPDocs/security-assessment-legacy-protocols.md",
+            "redirect_url": "/defender-for-identity/security-assessment",
+            "redirect_document_id": false
         }
+
     ]
 }

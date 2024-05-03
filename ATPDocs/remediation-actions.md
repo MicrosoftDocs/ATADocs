@@ -1,7 +1,7 @@
 ---
 title: Remediation actions
 description: Learn how to respond to compromised users with remediation actions in Microsoft Defender for Identity
-ms.date: 02/15/2023
+ms.date: 08/28/2023
 ms.topic: conceptual
 ---
 
@@ -10,28 +10,37 @@ ms.topic: conceptual
 Applies to:
 
 - Microsoft Defender for Identity
-- Microsoft 365 Defender
+- Microsoft Defender XDR
 
 Microsoft Defender for Identity allows you to respond to compromised users by disabling their accounts or resetting their password. After taking action on users, you can check on the activity details in the action center.
 
 The response actions on users are available directly from the user page, the user side panel, the advanced hunting page, or in the action center.
 
-The following actions can be performed directly on the user account:
+Watch the following video to learn more about remediation actions in Defender for Identity:
 
-- **Disable user in Active Directory**: This will temporarily prevent a user from logging in to the on-premises network. This can help prevent compromised users from moving laterally and attempting to exfiltrate data or further compromise the network.
-- **Suspend user in Azure Active Directory**: This will temporarily prevent a user from logging in to Azure Active Directory. This can help prevent compromised users from attempting to exfiltrate data and minimizes the time between Disable user in Active Directory and the sync of this status to the cloud.
-- **Reset user password** – This will prompt the user to change their password on the next logon, ensuring that this account can't be used for further impersonation attempts.
+<br>
 
-> [!NOTE]
-> For users with the **Password never expires** flag turned on, the password reset will only take place once the flag is removed.
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4U7Pe]
+
 
 ## Prerequisites
 
-To perform the above actions, you need to configure the account that Microsoft Defender for Identity will use to perform them. You can read about the requirements in [Microsoft Defender for Identity action accounts](manage-action-accounts.md).
+To perform any of the [supported actions](#supported-actions), you need to:
 
-## Permissions
+- Configure the account that Microsoft Defender for Identity will use to perform them.  By default, the Microsoft Defender for Identity sensor installed on a domain controller will impersonate the *LocalSystem* account of the domain controller and perform the above actions. However, you can change this default behavior by [setting up a gMSA account](manage-action-accounts.md) and scope the permissions as you need.
 
-Currently, this feature requires the account signed into Microsoft 365 Defender to possess the **Security Administrator** or **Security Operator** roles.
+- Be signed into Microsoft Defender XDR to with relevant permissions. For Defender for Identity actions, you'll need a custom role with **Response (manage)** permissions. For more information, see [Create custom roles with Microsoft Defender XDR Unified RBAC](/microsoft-365/security/defender/create-custom-rbac-roles).
+
+## Supported actions
+
+The following Defender for Identity actions can be performed directly on your on-premises identities:
+
+- **Disable user in Active Directory**: This will temporarily prevent a user from signing in to the on-premises network. This can help prevent compromised users from moving laterally and attempting to exfiltrate data or further compromise the network.
+
+- **Reset user password** – This will prompt the user to change their password on the next logon, ensuring that this account can't be used for further impersonation attempts.
+
+Depending on your Microsoft Entra ID roles, you may see additional Microsoft Entra ID action, such as requiring users to sign in again and confirming a users as compromised. For more information, see [Remediate risks and unblock users](/entra/id-protection/howto-identity-protection-remediate-unblock).
+
 
 ## Related videos
 
@@ -39,5 +48,4 @@ Currently, this feature requires the account signed into Microsoft 365 Defender 
 
 ## See also
 
-[Microsoft Defender for Identity action accounts](manage-action-accounts.md)
-
+[Microsoft Defender for Identity action accounts](deploy/manage-action-accounts.md)
