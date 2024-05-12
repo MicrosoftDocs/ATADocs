@@ -231,6 +231,10 @@ Test remediation actions on a test user. For example:
 
 1. Check Active Directory for the expected activity.
 
+> [!NOTE]
+> The current version does not collect the User Account Control (UAC) flags correctly. So disabled users, would still appear as Enabled in the portal.
+
+
 For more information, see [Remediation actions in Microsoft Defender for Identity](../remediation-actions.md).
 
 ## Deactivate Defender for Identity capabilities on your domain controller
