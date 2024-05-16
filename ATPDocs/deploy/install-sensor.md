@@ -95,7 +95,7 @@ The Defender for Identity silent installation is configured to automatically res
 
 Make sure to schedule a silent installation only during a maintenance window. Because of a Windows Installer bug, the *norestart* flag can't be reliably used to make sure the server doesn't restart.
 
-To track your deployment progress, monitor the Defender for Identity installer logs, which are located in `%AppData%\Local\Temp`.
+To track your deployment progress, monitor the Defender for Identity installer logs, which are located in `%localappdata%\Temp`.
 
 ### Silent installation via a deployment system
 
