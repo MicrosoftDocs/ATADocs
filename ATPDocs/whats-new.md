@@ -12,10 +12,6 @@ This article is updated frequently to let you know what's new in the latest rele
 
 [!INCLUDE [automatic-redirect](../includes/automatic-redirect.md)]
 
-## Get notified about updates
-
-Get notified when this page is updated by copying and pasting the following URL into your feed reader: `https://aka.ms/mdi/rss`
-
 ## What's new scope and references
 
 Defender for Identity releases are deployed gradually across customer tenants. If there's a feature documented here that you don't see yet in your tenant, check back later for the update.
