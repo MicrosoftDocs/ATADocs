@@ -19,7 +19,7 @@ This article describes the steps required when installing Defender for Identity 
 
 Prerequisites for installing Defender for Identity sensors on AD FS or AD CS servers are the same as for installing sensors on domain controllers. For more information, see [Microsoft Defender for Identity prerequisites](prerequisites.md).
 
-Note that a sensor installed on an AD FS / AD CS server cannot use the Local service account to connect to the Domain. Instead, you'll need to configure a [Directory Service Account](/deploy/directory-service-accounts.md).
+Note that a sensor installed on an AD FS / AD CS server cannot use the Local service account to connect to the Domain. Instead, you'll need to configure a [Directory Service Account](directory-service-accounts.md).
 
 In addition, the Defender for Identity sensor for AD CS only supports AD CS servers with Certification Authority Role Service. 
 
