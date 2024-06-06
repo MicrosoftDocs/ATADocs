@@ -60,8 +60,8 @@ Defender for Identity shares data, including customer data, among any of the fol
 
     We recommend adding **Read-only** permissions on the **Deleted Objects** container. For more information, see [Grant required DSA permissions](directory-service-accounts.md#grant-required-dsa-permissions).
 
-- **Personal data exports**: Export personal data to Excel using the same method as exporting security alert information. For more information, see [Review suspicious activities on the attack timeline](manage-security-alerts.md#review-suspicious-activities-on-the-attack-time-line).
-- 
+- **Personal data exports**: Export personal data to Excel using the same method as exporting security alert information. For more information, see [Review security alerts](manage-security-alerts.md#review-security-alerts).
+
 - **Search for personal data**: Use the [Microsoft Defender portal](https://security.microsoft.com) search bar to search for identifiable personal data, such as a specific user or computer. For more information, see [Investigate assets](investigate-assets.md).
 
 - **Data auditing**: Defender for Identity implements the audit of personal data changes, including the deleting and exporting of personal data records. Audit trail retention time is 90 days. Auditing in Defender for Identity is a back-end feature and not accessible to customers.
@@ -72,3 +72,4 @@ For more information, see:
 
 - The [Microsoft Service Trust portal](https://www.microsoft.com/en-us/trust-center/product-overview)
 - [Microsoft 365 Enterprise GDPR Compliance](https://www.microsoft.com/en-us/trust-center/product-overview)
+- [Licensing and privacy FAQ](technical-faq.yml#licensing-and-privacy)
