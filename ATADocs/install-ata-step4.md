@@ -10,7 +10,6 @@ manager: raynew
 ms.date: 01/10/2023
 ms.topic: conceptual
 ms.service: advanced-threat-analytics
-ms.technology:
 ms.assetid: 6bbc50c3-bfa8-41db-a2f9-56eed68ef5d2
 
 # optional metadata
@@ -33,7 +32,7 @@ ms.suite: ems
 > [« Step 3](install-ata-step3.md)
 > [Step 5 »](install-ata-step5.md)
 
-## Step 4. Install the ATA Gateway
+## Step 4: Install the ATA Gateway
 
 Before installing the ATA Gateway on a dedicated server, validate that port mirroring is properly configured and that the ATA Gateway can see traffic to and from the domain controllers. For more information, see [Validate port mirroring](validate-port-mirroring.md).
 

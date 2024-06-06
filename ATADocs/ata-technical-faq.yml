@@ -11,7 +11,6 @@ metadata:
   ms.date: 03/07/2019
   ms.topic: conceptual
   ms.service: advanced-threat-analytics
-  ms.technology:
   ms.assetid: a7d378ec-68ed-4a7b-a0db-f5e439c3e852
   # optional metadata
   #ROBOTS:
@@ -168,9 +167,9 @@ sections:
           Microsoft Advanced Threat Analytics is an on-premises product.
 
       - question: |
-          Is this going to be a part of Azure Active Directory or on-premises Active Directory?
+          Is this going to be a part of Microsoft Entra ID or on-premises Active Directory?
         answer: |
-          This solution is currently a standalone offering—it is not a part of Azure Active Directory or on-premises Active Directory.
+          This solution is currently a standalone offering—it is not a part of Microsoft Entra ID or on-premises Active Directory.
 
       - question: |
           Do you have to write your own rules and create a threshold/baseline?
@@ -221,4 +220,3 @@ additionalContent: |
   - [Configure event collection](configure-event-collection.md)
   - [Configuring Windows event forwarding](configure-event-collection.md)
   - [Check out the ATA forum!](https://social.technet.microsoft.com/Forums/security/home?forum=mata)
-         

@@ -1,7 +1,7 @@
 ---
-title: Network Name Resolution
+title: Network Name Resolution | Microsoft Defender for Identity
 description: This article provides an overview of Microsoft Defender for Identity's Advanced Network Name Resolution functionality and uses.
-ms.date: 01/29/2023
+ms.date: 02/21/2024
 ms.topic: conceptual
 ---
 
@@ -87,6 +87,6 @@ Each health alert provides specific details of the method, sensors, the problema
 
 ## See Also
 
-- [Defender for Identity prerequisites](prerequisites.md)
-- [Configure event collection](configure-event-collection.md)
+- [Defender for Identity prerequisites](deploy/prerequisites.md)
+- [Configure event collection](deploy/configure-event-collection.md)
 - [Check out the Defender for Identity forum!](<https://aka.ms/MDIcommunity>)

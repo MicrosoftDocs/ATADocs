@@ -10,7 +10,6 @@ manager: raynew
 ms.date: 01/10/2023
 ms.topic: conceptual
 ms.service: advanced-threat-analytics
-ms.technology:
 ms.assetid: b3cceb18-0f3c-42ac-8630-bdc6b310f1d6
 
 # optional metadata
@@ -42,7 +41,7 @@ This installation procedure provides instructions for performing a fresh install
 > [!IMPORTANT]
 > If using Windows 2012 R2, you can install KB2934520 on the ATA Center server and on the ATA Gateway servers before beginning installation, otherwise the ATA installation installs this update and requires a restart in the middle of the ATA installation.
 
-## Step 1. Download and Install the ATA Center
+## Step 1: Download and Install the ATA Center
 
 After you have verified that the server meets the requirements, you can proceed with the installation of the ATA Center.
 

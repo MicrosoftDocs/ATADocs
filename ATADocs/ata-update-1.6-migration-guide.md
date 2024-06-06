@@ -10,7 +10,6 @@ manager: raynew
 ms.date: 01/10/2023
 ms.topic: conceptual
 ms.service: advanced-threat-analytics
-ms.technology:
 ms.assetid: 0756ef64-3aef-4a69-8981-24fa8f285c6a
 
 # optional metadata
@@ -103,7 +102,7 @@ In this version of, the same installation file (Microsoft ATA Center Setup.exe) 
 > [!IMPORTANT]
 > Update all the ATA Gateways to make sure ATA functions properly.
 
-### Step 2. Download the ATA Gateway setup package
+### Step 2: Download the ATA Gateway setup package
 
 After configuring the domain connectivity settings, you can download the ATA Gateway setup package.
 

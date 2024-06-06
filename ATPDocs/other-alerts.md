@@ -103,7 +103,7 @@ Defender for Identity learns the entity behavior for users VPN connections over 
 
 The VPN-behavior model is based on the machines users log in to and the locations the users connect from.
 
-An alert is opened when there is a deviation from the user's behavior based on a machine learning algorithm.
+An alert is opened when there's a deviation from the user's behavior based on a machine learning algorithm.
 
 **Learning period**:
 
@@ -125,7 +125,7 @@ An alert is opened when there is a deviation from the user's behavior based on a
 
 **Description**:
 
-Attackers who compromise administrative credentials or use a zero-day exploit can execute remote commands on your domain controller or AD FS server. This can be used for gaining persistency, collecting information, denial of service (DOS) attacks or any other reason. Defender for Identity detects PSexec, Remote WMI, and PowerShell connections.
+Attackers who compromise administrative credentials or use a zero-day exploit can execute remote commands on your domain controller or AD FS / AD CS  server. This can be used for gaining persistency, collecting information, denial of service (DOS) attacks or any other reason. Defender for Identity detects PSexec, Remote WMI, and PowerShell connections.
 
 **Learning period**:
 
@@ -156,7 +156,7 @@ None
 
 **Description**:
 
-A suspicious service has been created on a domain controller or AD FS server in your organization. This alert relies on event 7045 to identify this suspicious activity.
+A suspicious service has been created on a domain controller or AD FS  / AD CS server in your organization. This alert relies on event 7045 to identify this suspicious activity.
 
 **Learning period**:
 
@@ -216,6 +216,115 @@ None
 |Secondary MITRE tactic    | [Lateral Movement (TA0008)](https://attack.mitre.org/tactics/TA0008),[Command and Control (TA0011)](https://attack.mitre.org/tactics/TA0011)        |
 |MITRE attack technique  | [Exfiltration Over Alternative Protocol (T1048)](https://attack.mitre.org/techniques/T1048/), [Lateral Tool Transfer (T1570)](https://attack.mitre.org/techniques/T1570/)      |
 |MITRE attack sub-technique | [Exfiltration Over Unencrypted/Obfuscated Non-C2 Protocol (T1048.003)](https://attack.mitre.org/techniques/T1048/003/)        |
+
+## Suspicious deletion of the certificate database entries  (external ID 2433)
+
+**Severity**: Medium 
+
+**Description**:
+
+The deletion of certificate database entries is a red flag, indicating potential malicious activity. This attack could disrupt the functioning of Public Key Infrastructure (PKI) systems, impacting authentication and data integrity. 
+
+**Learning period**:
+
+None
+
+**MITRE**:
+
+|Primary MITRE tactic  | [Defense Evasion (TA0005)](https://attack.mitre.org/tactics/TA0005) |
+|---------|---------|
+|MITRE attack technique  |   [Indicator Removal (T1070)](https://attack.mitre.org/techniques/T1070/)  |
+|MITRE attack sub-technique |  N/A     |
+
+> [!NOTE]
+> Suspicious deletion of the certificate database entries alerts are only supported by Defender for Identity sensors on AD CS.
+
+## Suspicious disable of audit filters of AD CS   (external ID 2434)
+
+**Severity**: Medium
+
+**Description**:
+
+Disabling audit filters in AD CS can allow attackers to operate without being detected. This attack aims to evade security monitoring by disabling filters that would otherwise flag suspicious activities. 
+
+**Learning period**:
+
+None
+
+**MITRE**:
+
+|Primary MITRE tactic  | [Defense Evasion (TA0005)](https://attack.mitre.org/tactics/TA0005 ) |
+|---------|---------|
+|MITRE attack technique  |   [Impair Defenses (T1562)](https://attack.mitre.org/techniques/T1562/)  |
+|MITRE attack sub-technique |  [Disable Windows Event Logging (T1562.002)](https://attack.mitre.org/techniques/T1562/002/)      |
+
+## Directory Services Restore Mode Password Change (external ID 2438)
+
+**Severity**: Medium
+
+**Description**:
+
+Directory Services Restore Mode (DSRM) is a special boot mode in Microsoft Windows Server operating systems that allows an administrator to repair or restore the Active Directory database. This mode is typically used when there are issues with the Active Directory and normal booting isn't possible. The DSRM password is set during the promotion of a server to a domain controller. In this detection, an alert is triggered when Defender for Identity detects a DSRM password is changed. 
+We recommend investigating the source computer and the user who made the request to understand if the DSRM password change was initiated from a legitimate administrative action or if it raises concerns about unauthorized access or potential security threats. 
+
+**Learning period**:
+
+None
+
+**MITRE**:
+
+|Primary MITRE tactic  | [Persistence (TA0003)](https://attack.mitre.org/tactics/TA0003) |
+|---------|---------|
+|MITRE attack technique  |   [Account Manipulation (T1098)](https://attack.mitre.org/techniques/T1098/)  |
+|MITRE attack sub-technique |  N/A       |
+
+## Possible Okta session theft 
+
+**Severity**: High
+
+**Description**:
+
+In session theft, attackers steal the cookies of legitimate user and use it from other locations. 
+We recommend investigating the source IP performing the operations to determine whether those operations are legitimate or not, and that the IP address is used by the user. 
+
+**Learning period**:
+
+2 weeks
+
+**MITRE**:
+
+|Primary MITRE tactic  | [Collection (TA0009)](https://attack.mitre.org/tactics/TA0009) |
+|---------|---------|
+|MITRE attack technique  |   [Browser Session Hijacking (T1185)](https://attack.mitre.org/techniques/T1185/)  |
+|MITRE attack sub-technique |  N/A       |
+
+## Group Policy Tampering (external ID 2439) (Preview)
+
+**Severity**: Medium
+
+**Description**:
+
+A suspicious change has been detected in Group Policy, resulting in the deactivation of Windows Defender Antivirus. This activity may indicate a security breach by an attacker with elevated privileges who could be setting the stage for distributing ransomware. 
+
+**Suggested steps for investigation:**
+
+1. Understand if the GPO change is legitimate 
+
+1. If it wasn’t, revert the change 
+
+1. Understand how the group policy is linked, to estimate its scope of impact 
+
+**Learning period**:
+
+None
+
+**MITRE**:
+
+|Primary MITRE tactic  |[Defense Evasion (TA0005)](https://attack.mitre.org/tactics/TA0005)|
+| -------- | -------- |
+|MITRE attack technique|Subvert Trust Controls (T1553)|
+|MITRE attack technique  |[Subvert Trust Controls (T1553)](https://attack.mitre.org/techniques/T1553/)|
+|MITRE attack sub-technique | N/A       |
 
 ## See also
 

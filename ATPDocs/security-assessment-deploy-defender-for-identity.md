@@ -15,7 +15,7 @@ If you've obtained a Defender for Identity license, but haven't yet deployed Def
 
 Defender for Identity uses your on-premises Active Directory signals to identify, detect, and investigate advanced threats, compromised identities, and malicious insider actions directed at your organization.
 
-Defender for Identity is also part of monitoring for Zero Trust. You may also want to use [advanced hunting queries in Microsoft 365 Defender](/microsoft-365/security/defender/advanced-hunting-overview) to look for threats across identities, devices, and cloud apps.
+Defender for Identity is also part of monitoring for Zero Trust. You may also want to use [advanced hunting queries in Microsoft Defender XDR](/microsoft-365/security/defender/advanced-hunting-overview) to look for threats across identities, devices, and cloud apps.
 
 For more information, see:
 
@@ -26,12 +26,13 @@ For more information, see:
 
 1. Review the recommended action at <https://security.microsoft.com/securescore?viewid=actions> to be alerted if you have a Defender for Identity license, but don't have Defender for Identity deployed.
 
-1. Take appropriate action by deploying Defender for Identity. For more information, see [Deploy Microsoft Defender for Identity with Microsoft 365 Defender](deploy-defender-identity.md).
+1. Take appropriate action by deploying Defender for Identity. For more information, see [Deploy Microsoft Defender for Identity with Microsoft Defender XDR](deploy-defender-identity.md).
 
 > [!NOTE]
-> This assessment is updated in near real time.
+> While assessments are updated in near real time, scores and statuses are updated every 24 hours.  While the list of impacted entities is updated within a few minutes of your implementing the recommendations, the status may still take time until it's marked as **Completed**.
+>
 
-## See Also
+## See also
 
 - [Learn more about Microsoft Secure Score](/microsoft-365/security/defender/microsoft-secure-score)
 - [Check out the Defender for Identity forum!](<https://aka.ms/MDIcommunity>)

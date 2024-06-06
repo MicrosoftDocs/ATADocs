@@ -11,7 +11,7 @@ This article describes the **Remove local admins on identity assets** security a
 
 ## Why are local admins on identity assets a risk?
 
-Accounts with indirect control over an identity system, such as AD FS, Active Directory, and so on, have the rights to escalate their privileges within the environment, which can lead to obtaining Domain Admin access or equivalent. 
+Accounts with indirect control over an identity system, such as AD FS, AD CS, Active Directory, and so on, have the rights to escalate their privileges within the environment, which can lead to obtaining Domain Admin access or equivalent. 
 
 Every local admin on a Tier-0 system is an indirect Domain Admin from an attacker's point of view.
 
@@ -29,9 +29,7 @@ Every local admin on a Tier-0 system is an indirect Domain Admin from an attacke
 
 To achieve a full score, you must remediate all exposed entities.
 
-> [!NOTE]
-> This assessment is updated in near real time.
-> The reports show the affected entities from the last 30 days. After that time, entities no longer affected will be removed from the exposed entities list.
+[!INCLUDE [secure-score-note](../includes/secure-score-note.md)]
 
 ## Next steps
 

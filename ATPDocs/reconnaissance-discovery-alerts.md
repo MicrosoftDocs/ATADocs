@@ -35,7 +35,7 @@ In account enumeration reconnaissance, an attacker uses a dictionary with thousa
 
 **NTLM**: Attacker makes NTLM authentication requests using the dictionary of names to try to find a valid username in the domain. If a guess successfully determines a username, the attacker gets the **WrongPassword (0xc000006a)** instead of **NoSuchUser (0xc0000064)** NTLM error.
 
-In this alert detection, Defender for Identity detects where the account enumeration attack came from, the total number of guess attempts, and how many attempts were matched. If there are too many unknown users, Defender for Identity detects it as a suspicious activity. The alert is based on authentication events from sensors running on domain controller and AD FS servers.
+In this alert detection, Defender for Identity detects where the account enumeration attack came from, the total number of guess attempts, and how many attempts were matched. If there are too many unknown users, Defender for Identity detects it as a suspicious activity. The alert is based on authentication events from sensors running on domain controller and AD FS / AD CS servers.
 
 **Learning period**:
 
@@ -51,6 +51,29 @@ None
 **Suggested steps for prevention**:
 
 1. Enforce [Complex and long passwords](/windows/device-security/security-policy-settings/password-policy) in the organization. Complex and long passwords provide the necessary first level of security against brute-force attacks. Brute force attacks are typically the next step in the cyber-attack kill chain following enumeration.
+
+## Account Enumeration reconnaissance (LDAP) (external ID 2437) (Preview)
+
+**Severity**: Medium
+
+**Description**:
+
+In account enumeration reconnaissance, an attacker uses a dictionary with thousands of user names, or tools such as Ldapnomnom in an attempt to guess user names in the domain.  
+
+**LDAP**: Attacker makes LDAP Ping requests (cLDAP) using these names to try to find a valid username in the domain. If a guess successfully determines a username, the attacker may receive a response indicating that the user exists in the domain.  
+
+In this alert detection, Defender for Identity detects where the account enumeration attack came from, the total number of guess attempts, and how many attempts were matched. If there are too many unknown users, Defender for Identity detects it as a suspicious activity. The alert is based on LDAP search activities from sensors running on domain controller servers. 
+
+**Learning period**:
+
+None
+
+**MITRE**:
+
+|Primary MITRE tactic  |[Discovery (TA0007)](https://attack.mitre.org/tactics/TA0007/)  |
+|---------|---------|
+|MITRE attack technique  | [Account Discovery (T1087)](https://attack.mitre.org/techniques/T1087/)        |
+|MITRE attack sub-technique | [Domain Account (T1087.002)](https://attack.mitre.org/techniques/T1087/002/)        |
 
 ## Network-mapping reconnaissance (DNS) (external ID 2007)
 
@@ -138,6 +161,10 @@ Four weeks per domain controller starting from the first network activity of SAM
 
 Active Directory LDAP reconnaissance is used by attackers to gain critical information about the domain environment. This information can help attackers map the domain structure, as well as identify privileged accounts for use in later steps in their attack kill chain. Lightweight Directory Access Protocol (LDAP) is one of the most popular methods used for both legitimate and malicious purposes to query Active Directory.
 
+**Learning period**:
+
+None
+
 **MITRE**:
 
 |Primary MITRE tactic  |[Discovery (TA0007)](https://attack.mitre.org/tactics/TA0007/)  |
@@ -145,18 +172,18 @@ Active Directory LDAP reconnaissance is used by attackers to gain critical infor
 |MITRE attack technique  | [Account Discovery (T1087)](https://attack.mitre.org/techniques/T1087/), [Indirect Command Execution (T1202)](https://attack.mitre.org/techniques/T1202/), [Permission Groups Discovery (T1069)](https://attack.mitre.org/techniques/T1069/)        |
 |MITRE attack sub-technique | [Domain Account (T1087.002)](https://attack.mitre.org/techniques/T1087/002/), [Domain Groups (T1069.002)](https://attack.mitre.org/techniques/T1069/002/)        |
 
-**Learning period**:
-
-None
-
-## Honeytoken was queried via SAM-R (external ID 2426)
+## Honeytoken was queried via SAM-R (external ID 2439)
 
 **Severity**: Low
 
 **Description**:
 
 User reconnaissance is used by attackers to map the directory structure and target privileged accounts for later steps in their attack. The Security Account Manager Remote (SAM-R) protocol is one of the methods used to query the directory to perform this type of mapping.
-In this detection, Microsoft Defender for Identity will trigger this alert for any reconnaissance activities against a pre-configured [honeytoken user](entity-tags.md).
+In this detection, Microsoft Defender for Identity will trigger this alert for any reconnaissance activities against a pre-configured [honeytoken user](entity-tags.md)
+
+**Learning period**:
+
+None
 
 **MITRE**:
 
@@ -165,10 +192,6 @@ In this detection, Microsoft Defender for Identity will trigger this alert for a
 |MITRE attack technique  | [Account Discovery (T1087)](https://attack.mitre.org/techniques/T1087/)|
 |MITRE attack sub-technique | [Domain Account (T1087.002)](https://attack.mitre.org/techniques/T1087/002/)|
 
-**Learning period**:
-
-None
-
 ## Honeytoken was queried via LDAP (external ID 2429)
 
 **Severity**: Low
@@ -176,7 +199,12 @@ None
 **Description**:
 
 User reconnaissance is used by attackers to map the directory structure and target privileged accounts for later steps in their attack. Lightweight Directory Access Protocol (LDAP) is one of the most popular methods used for both legitimate and malicious purposes to query Active Directory.
+
 In this detection, Microsoft Defender for Identity will trigger this alert for any reconnaissance activities against a pre-configured [honeytoken user](entity-tags.md).
+
+**Learning period**:
+
+None
 
 **MITRE**:
 
@@ -185,9 +213,27 @@ In this detection, Microsoft Defender for Identity will trigger this alert for a
 |MITRE attack technique  | [Account Discovery (T1087)](https://attack.mitre.org/techniques/T1087/)  |
 |MITRE attack sub-technique | [Domain Account (T1087.002)](https://attack.mitre.org/techniques/T1087/002/)  |
 
+## Suspicious Okta account Enumeration 
+
+**Severity**: High
+
+**Description**:
+
+In account enumeration, attackers will try to guess user names by performing logins into Okta with users which are not belonged to the organization. 
+We will recommend investigating to source IP performing the failed attempts and determine whether they are legitimate or not. 
+
 **Learning period**:
 
 None
+
+**MITRE**:
+
+|Primary MITRE tactic  |[Initial Access (TA0001)](https://attack.mitre.org/tactics/TA0001/), [Defense Evasion (TA0005)](https://attack.mitre.org/tactics/TA0005/), [Persistence (TA0003)](https://attack.mitre.org/tactics/TA0003/), [Privilege Escalation (TA0004)](https://attack.mitre.org/tactics/TA0004/)  |
+|---------|---------|
+|MITRE attack technique  | [Valid Accounts (T1078)](https://attack.mitre.org/techniques/T1087/)  |
+|MITRE attack sub-technique | [Cloud Accounts (T1078.004)](https://attack.mitre.org/techniques/T1078/004/)  |
+
+
 
 ## See also
 

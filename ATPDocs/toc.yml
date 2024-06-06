@@ -3,75 +3,94 @@ items:
   href: index.yml
 - name: Overview
   items:
-  - name: What is Microsoft Defender for Identity?
+  - name: Welcome to Defender for Identity
     href: what-is.md
-  - name: What's new in Defender for Identity?
+  - name: What's new?
     href: whats-new.md
-  - name: Defender for Identity architecture
+  - name: Deploy and monitor for Zero Trust
+    href: zero-trust.md
+  - name: System architecture
     href: architecture.md
-  - name: Defender for Identity in Microsoft 365 Defender
+  - name: Defender for Identity in Microsoft Defender XDR
     href: /microsoft-365/security/defender/microsoft-365-security-center-mdi?bc=/defender-for-identity/breadcrumb/toc.json&toc=/defender-for-identity/TOC.json
   - name: Defender for Identity for US Government
     href: us-govt-gcc-high.md
-- name: Get started
+- name: Deploy
+  expanded: true
   items:
   - name: Quick installation guide
-    href: quick-installation-guide.md
-  - name: Deploy Defender for Identity with Microsoft 365 Defender
-    href: deploy-defender-identity.md
-  - name: Prepare
+    href: deploy/quick-installation-guide.md
+  - name: Deployment overview
+    href: deploy/deploy-defender-identity.md
+  - name: Plan and prepare
     items:
     - name: Defender for Identity prerequisites
-      href: prerequisites.md
+      href: deploy/prerequisites.md
     - name: Plan your Defender for Identity capacity
-      href: capacity-planning.md
-    - name: Configure Windows Event collection
-      href: configure-windows-event-collection.md
-    - name: Directory Service accounts
-      href: directory-service-accounts.md
-    - name: Role groups
-      href: role-groups.md
-    - name: Configure remote calls to SAM
-      href: remote-calls-sam.md
-  - name: Deploy
+      href: deploy/capacity-planning.md
+  - name: Deploy Defender for Identity
     items:
+    - name: Configure connectivity settings
+      href: deploy/configure-proxy.md
+      displayName: proxy
+    - name: Test connectivity settings
+      href: deploy/test-connectivity.md
     - name: Download the Defender for Identity sensor
-      href: download-sensor.md
-    - name: Proxy configuration
-      href: configure-proxy.md
+      href: deploy/download-sensor.md
     - name: Install the Defender for Identity sensor
-      href: install-sensor.md
-    - name: Manage action accounts
-      href: manage-action-accounts.md
+      href: deploy/install-sensor.md
     - name: Configure the Defender for Identity sensor
-      href: configure-sensor-settings.md
-  - name: Special scenarios
+      href: deploy/configure-sensor-settings.md
+  - name: Post-deployment configuration
     items:
-    - name: Deploying and monitoring for Zero Trust
-      href: zero-trust.md
-    - name: Installing on Active Directory Federation Services
-      href: active-directory-federation-services.md
-    - name: Multi-forest support
-      href: multi-forest.md
-    - name: Migrate from Advanced Threat Analytics (ATA)
-      href: migrate-from-ata-overview.md
-    - name: Standalone sensor
+    - name: Configure event collection
       items:
+      - name: Event collection overview 
+        href: deploy/event-collection-overview.md
+      - name: Configure audit policies for Windows event logs
+        href: deploy/configure-windows-event-collection.md
+    - name: Roles and permissions
+      href: role-groups.md
+    - name: Configure a Directory Service account
+      items:
+      - name: Overview
+        href: deploy/directory-service-accounts.md
+        displayName: Directory Service Account, DSA
+      - name: Configure a DSA with a gMSA
+        href: deploy/create-directory-service-account-gmsa.md
+    - name: Configure remote calls to SAM
+      href: deploy/remote-calls-sam.md
+  - name: Extra deployment scenarios
+    items:
+    - name: Install on AD FS / AD CS servers
+      href: deploy/active-directory-federation-services.md
+    - name: Configure action accounts
+      href: deploy/manage-action-accounts.md
+    - name: Deploy for multiple Active Directory forests
+      href: deploy/multi-forest.md
+    - name: Configure a standalone sensor
+      items:
+      - name: Prerequisites for a standalone sensor
+        href: deploy/prerequisites-standalone.md
       - name: Configure port mirroring
-        href: configure-port-mirroring.md
-      - name: Validate port mirroring
-        href: validate-port-mirroring.md
-      - name: Configure event collection
-        href: configure-event-collection.md
+        href: deploy/configure-port-mirroring.md
+        displayName: standalone
       - name: Configure Windows Event Forwarding
-        href: configure-event-forwarding.md
-  expanded: true
-- name: Tutorials
-  items:
-  - name: Attack simulations
-    href: playbooks.md
+        href: deploy/configure-event-forwarding.md
+        displayName: standalone
+      - name: Listen for SIEM events
+        href: deploy/configure-event-collection.md
+        displayName: standalone
+    - name: Activate Defender for Identity capabilities on your domain controller
+      href: deploy/activate-capabilities.md
 - name: Manage
   items:
+  - name: View the ITDR dashboard
+    href: dashboard.md
+  - name: View and manage health issues
+    href: health-alerts.md
+  - name: Defender for Identity reports
+    href: reports.md
   - name: Settings
     items:
     - name: About page
@@ -80,8 +99,6 @@ items:
       href: sensor-settings.md
     - name: Uninstall a sensor
       href: uninstall-sensor.md
-    - name: Health issues
-      href: health-alerts.md
     - name: VPN integration
       href: vpn-integration.md
     - name: Set entity tags
@@ -92,10 +109,9 @@ items:
       href: automated-response-exclusions.md
     - name: Email and syslog notifications
       href: notifications.md
-    - name: Download and schedule reports
-      href: reports.md
-    - name: Advanced settings
+    - name: Adjust alert thresholds
       href: advanced-settings.md
+      displayName: advanced settings
   - name: Troubleshooting
     items:
     - name: Troubleshooting known issues
@@ -142,6 +158,7 @@ items:
     items:
     - name: Overview
       href: security-assessment.md
+      displayName: security posture, security assessment
     - name: Admin SDHolder permissions
       href: security-assessment-remove-suspicious-access-rights.md
     - name: DCSync permissions
@@ -154,14 +171,28 @@ items:
       href: security-assessment-do-not-expire-passwords.md
     - name: Dormant entities in sensitive groups assessment
       href: security-assessment-dormant-entities.md
+    - name: Enforce encryption for RPC certificate enrollment interface  (ESC8)
+      href: security-assessment-enforce-encryption-rpc.md
     - name: Entities exposing credentials in clear text assessment
       href: security-assessment-clear-text.md
+    - name: Insecure ADCS certificate enrollment IIS endpoints (ESC8)
+      href: security-assessment-insecure-adcs-certificate-enrollment.md
     - name: LAPS usage assessment
       href: security-assessment-laps.md
-    - name: Legacy protocols usage assessment
-      href: security-assessment-legacy-protocols.md
+    - name: Misconfigured Certificate Authority ACL  (ESC7)
+      href: security-assessment-edit-misconfigured-ca-acl.md
+    - name: Misconfigured certificate templates ACL (ESC4)
+      href: security-assessment-edit-misconfigured-acl.md
+    - name: Misconfigured certificate templates owner  (ESC4)
+      href: security-assessment-edit-misconfigured-owner.md
+    - name: Misconfigured enrollment agent certificate template  (ESC3)
+      href: security-assessment-edit-misconfigured-enrollment-agent.md
+    - name: Overly permissive certificate template with privileged EKU (ESC2)
+      href: security-assessment-edit-overly-permissive-template.md
     - name: Passwords older than 180 days
       href: security-assessment-old-passwords.md
+    - name: Prevent requests for certificates valid for arbitrary users  (ESC1)
+      href: security-assessment-prevent-users-request-certificate.md
     - name: Remove local admins on identity assets
       href: security-assessment-remove-local-admins.md      
     - name: Riskiest lateral movement paths
@@ -176,14 +207,31 @@ items:
       href: security-assessment-unconstrained-kerberos.md
     - name: Unsecure SID History attributes
       href: security-assessment-unsecure-sid-history-attribute.md
+    - name: Vulnerable Certificate Authority setting (ESC6)
+      href: security-assessment-edit-vulnerable-ca-setting.md
     - name: Weak cipher usage assessment
       href: security-assessment-weak-cipher.md
 - name: Reference
   items:
+  - name: Operations guide
+    items:
+    - name: Overview
+      displayName: operations guide
+      href: ops-guide/ops-guide.md
+    - name: Daily activities
+      href: ops-guide/ops-guide-daily.md
+    - name: Weekly activities
+      href: ops-guide/ops-guide-weekly.md
+    - name: Monthly activities
+      href: ops-guide/ops-guide-monthly.md
+    - name: Quarterly / Ad-hoc activities
+      href: ops-guide/ops-guide-quarterly.md
   - name: Frequently asked questions
     href: technical-faq.yml
   - name: SIEM log reference
     href: cef-format-sa.md
+  - name: PowerShell
+    href: /powershell/defenderforidentity/overview-defenderforidentity
   - name: Support
     href: support.md
   - name: Defender for Identity data security and privacy
@@ -192,9 +240,11 @@ items:
     href: /security/benchmark/azure/baselines/defender-for-identity-security-baseline?toc=/defender-for-identity/toc.json
   - name: What's new archive
     href: whats-new-archive.md
-- name: Microsoft 365 Defender Docs
+  - name: Migrate from Advanced Threat Analytics (ATA)
+    href: migrate-from-ata-overview.md
+- name: Microsoft Defender XDR Docs
   items:
-  - name: Microsoft 365 Defender
+  - name: Microsoft Defender XDR
     href: /microsoft-365/security/defender/
   - name: Microsoft Defender for Office 365
     href: /microsoft-365/security/office-365-security/

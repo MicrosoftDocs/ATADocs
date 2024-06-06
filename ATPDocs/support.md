@@ -15,7 +15,7 @@ This article provides information about support, troubleshooting options, and co
 
 To contact Microsoft Support:
 
-If you have Premier Support, visit the [portal for Premier Support customers](https://premier.microsoft.com/) to submit incidents, browse solutions, and get help.
+If you have Unified Support, visit the [portal for Unified Support customers](/services-hub/unified/support/open-support-requests) to submit incidents, browse solutions, and get help.
 
 For other customers, use the support widget as follows:
 
@@ -35,9 +35,9 @@ Accessing the new support widget can be done in one of two ways:
 
 1. Selecting the question mark on the top right of the portal and then selecting "Microsoft support":
 
-   :::image type="content" source="media/contactsupport.png" alt-text="The Microsoft support icon in the Microsoft 365 Defender portal" lightbox="media/contactsupport.png":::
+   :::image type="content" source="media/contactsupport.png" alt-text="The Microsoft support icon in the Microsoft Defender portal" lightbox="media/contactsupport.png":::
 
-2. Selecting the **Need help?** button in the bottom right of the Microsoft 365 Defender portal:
+2. Selecting the **Need help?** button in the bottom right of the Microsoft Defender portal:
 
    :::image type="content" source="media/need-help-option.png" alt-text="The Need help button" lightbox="media/need-help-option.png":::
 
@@ -73,7 +73,7 @@ After you've searched for your issue in **How can we help?** (and selected the b
 
 ### System health status
 
-The service health status for Defender for Identity is displayed in the [Microsoft 365 admin center - Service health page](https://aka.ms/mdi/health), under **Microsoft 365 Defender**. This page tells you if the Defender for Identity portal is up and active, if there are issues with detections, and if the sensor can send traffic to the cloud.
+The service health status for Defender for Identity is displayed in the [Microsoft 365 admin center - Service health page](https://aka.ms/mdi/health), under **Microsoft Defender XDR**. This page tells you if the Defender for Identity portal is up and active, if there are issues with detections, and if the sensor can send traffic to the cloud.
 
 ### Troubleshooting
 

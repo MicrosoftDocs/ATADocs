@@ -1,30 +1,30 @@
 ---
-title: Microsoft Defender for Identity security alerts in Microsoft 365 Defender
-description: Learn how to manage and review security alerts issued by Microsoft Defender for Identity in Microsoft 365 Defender
+title: Microsoft Defender for Identity security alerts in Microsoft Defender XDR
+description: Learn how to manage and review security alerts issued by Microsoft Defender for Identity in Microsoft Defender XDR
 ms.date: 04/16/2023
 ms.topic: how-to
 ---
 
-# Investigate Defender for Identity security alerts in Microsoft 365 Defender
+# Investigate Defender for Identity security alerts in Microsoft Defender XDR
 
-This article explains the basics of how to work with Microsoft Defender for Identity security alerts in [Microsoft 365 Defender](/microsoft-365/security/defender/overview-security-center).
+This article explains the basics of how to work with Microsoft Defender for Identity security alerts in [Microsoft Defender XDR](/microsoft-365/security/defender/overview-security-center).
 
-Defender for Identity alerts are natively integrated into Microsoft 365 Defender with a dedicated Identity alert page format.
+Defender for Identity alerts are natively integrated into Microsoft Defender XDR with a dedicated Identity alert page format.
 
 The Identity alert page gives Microsoft Defender for Identity customers better cross-domain signal enrichment and new automated identity response capabilities. It ensures that you stay secure and helps improve the efficiency of your security operations.
 
-One of the benefits of investigating alerts through [Microsoft 365 Defender](/microsoft-365/security/defender/microsoft-365-defender) is that Microsoft Defender for Identity alerts are further correlated with information obtained from each of the other products in the suite. These enhanced alerts are consistent with the other Microsoft 365 Defender alert formats originating from [Microsoft Defender for Office 365](/microsoft-365/security/office-365-security) and [Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint). The new page effectively eliminates the need to navigate to another product portal to investigate alerts associated with identity.
+One of the benefits of investigating alerts through [Microsoft Defender XDR](/microsoft-365/security/defender/microsoft-365-defender) is that Microsoft Defender for Identity alerts are further correlated with information obtained from each of the other products in the suite. These enhanced alerts are consistent with the other Microsoft Defender XDR alert formats originating from [Microsoft Defender for Office 365](/microsoft-365/security/office-365-security) and [Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint). The new page effectively eliminates the need to navigate to another product portal to investigate alerts associated with identity.
 
-Alerts originating from Defender for Identity can now trigger the [Microsoft 365 Defender automated investigation and response (AIR)](/microsoft-365/security/defender/m365d-autoir) capabilities, including automatically remediating alerts and the mitigation of tools and processes that can contribute to the suspicious activity.
+Alerts originating from Defender for Identity can now trigger the [Microsoft Defender XDR automated investigation and response (AIR)](/microsoft-365/security/defender/m365d-autoir) capabilities, including automatically remediating alerts and the mitigation of tools and processes that can contribute to the suspicious activity.
 
 > [!IMPORTANT]
-> As part of the convergence with Microsoft 365 Defender, some options and details have changed from their location in the Defender for Identity portal. Please read the details below to discover where to find both the familiar and new features.
+> As part of the convergence with Microsoft Defender XDR, some options and details have changed from their location in the Defender for Identity portal. Please read the details below to discover where to find both the familiar and new features.
 
 ## Review security alerts
 
 Alerts can be accessed from multiple locations, including the **Alerts** page, the **Incidents** page, the pages of individual **Devices**, and from the **Advanced hunting** page. In this example, we'll review the **Alerts page**.
 
-In [Microsoft 365 Defender](https://security.microsoft.com), go to **Incidents & alerts** and then to **Alerts**.
+In [Microsoft Defender XDR](https://security.microsoft.com), go to **Incidents & alerts** and then to **Alerts**.
 
 :::image type="content" source="media/incidents-alerts.png" alt-text="The Alerts menu item" lightbox="media/incidents-alerts.png":::
 
@@ -84,13 +84,13 @@ On the right pane, you'll see the **Alert details**. Here you can see more detai
     You can also export the alert to an Excel file. To do this, select **Export.**
 
     > [!NOTE]
-    > In the Excel file, you now have two links available: **View in Microsoft Defender for Identity** and **View in Microsoft 365 Defender**. Each link will bring you to the relevant portal, and provide information about the alert there.
+    > In the Excel file, you now have two links available: **View in Microsoft Defender for Identity** and **View in Microsoft Defender XDR**. Each link will bring you to the relevant portal, and provide information about the alert there.
 
-## Tuning alerts (Public Preview)
+## Tuning alerts
 
-Tune your alerts to adjust and optimize them, reducing false positives. Alert tuning allows your SOC teams to focus on high-priority alerts and improve threat detection coverage across your system. In Microsoft 365 Defender, create rule conditions based on evidence types, and then apply your rule on any rule type that matches your conditions. 
+Tune your alerts to adjust and optimize them, reducing false positives. Alert tuning allows your SOC teams to focus on high-priority alerts and improve threat detection coverage across your system. In Microsoft Defender XDR, create rule conditions based on evidence types, and then apply your rule on any rule type that matches your conditions. 
 
-For more information, see [Tune an alert](/microsoft-365/security/defender/investigate-alerts#public-preview-tune-an-alert).
+For more information, see [Tune an alert](/microsoft-365/security/defender/investigate-alerts#tune-an-alert).
 
 ## See also
 
@@ -99,5 +99,6 @@ For more information, see [Tune an alert](/microsoft-365/security/defender/inves
 ## Learn more
 
 - Try our interactive guide: [Detect suspicious activities and potential attacks with Microsoft Defender for Identity](https://mslearn.cloudguides.com/guides/Detect%20suspicious%20activities%20and%20potential%20attacks%20with%20Microsoft%20Defender%20for%20Identity)
+
 
 

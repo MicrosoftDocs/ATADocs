@@ -1,7 +1,7 @@
 ---
-title: Unsecure Kerberos delegation assessment
+title: Unsecure Kerberos delegation assessment | Microsoft Defender for Identity
 description: This article provides an overview of Microsoft Defender for Identity's unconstrained Kerberos identity security posture assessment reports.
-ms.date: 01/29/2023
+ms.date: 02/21/2024
 ms.topic: how-to
 ---
 
@@ -31,7 +31,9 @@ The following is a description of the risk posed by different delegation types:
 1. Take appropriate action on those at-risk users, such as removing their unconstrained attribute or changing it to a more secure constrained delegation.
 
 > [!NOTE]
-> This assessment is updated every 24 hours.
+> While assessments are updated in near real time, scores and statuses are updated every 24 hours.  While the list of impacted entities is updated within a few minutes of your implementing the recommendations, the status may still take time until it's marked as **Completed**.
+> 
+
 
 ## Remediation
 
@@ -60,7 +62,7 @@ Review the sensitive users listed in the recommendations and remove them from th
 
 ### Resource-based constrained delegation (RBCD)
 
-Review the sensitive users listed in the recommendations and remove them from the resource. For more information about configuring RBCD, see [Configure Kerberos constrained delegation (KCD) in Azure Active Directory Domain Services](/azure/active-directory-domain-services/deploy-kcd).
+Review the sensitive users listed in the recommendations and remove them from the resource. For more information about configuring RBCD, see [Configure Kerberos constrained delegation (KCD) in Microsoft Entra Domain Services](/azure/active-directory-domain-services/deploy-kcd).
 
 ## Next steps
 

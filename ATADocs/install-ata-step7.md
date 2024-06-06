@@ -10,7 +10,6 @@ manager: raynew
 ms.date: 01/10/2023
 ms.topic: conceptual
 ms.service: advanced-threat-analytics
-ms.technology:
 ms.assetid: 8980e724-06a6-40b0-8477-27d4cc29fd2b
 
 # optional metadata
@@ -33,7 +32,7 @@ ms.suite: ems
 > [« Step 7](vpn-integration-install-step.md)
 > [Step 9 »](install-ata-step9-samr.md)
 
-## Step 8. Configure IP address exclusions and Honeytoken user
+## Step 8: Configure IP address exclusions and Honeytoken user
 
 ATA enables the exclusion of specific IP addresses or users from a number of detections.
 
