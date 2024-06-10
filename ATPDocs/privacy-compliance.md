@@ -52,20 +52,6 @@ Defender for Identity shares data, including customer data, among any of the fol
 - Microsoft Sentinel
 - Microsoft Security Exposure Management (public preview)
 
-## Data management
-
-- **Personal data updates**: Personal user data in Defender for Identity is derived from the user's object in the organization's Active Directory, and can't be updated directly in Defender for Identity.
-
-- **Personal data deletion**: After a user is deleted from the organization's Active Directory, Defender for Identity automatically deletes the user profile and any related network activity within a year.
-
-    We recommend adding **Read-only** permissions on the **Deleted Objects** container. For more information, see [Grant required DSA permissions](directory-service-accounts.md#grant-required-dsa-permissions).
-
-- **Personal data exports**: Export personal data to Excel using the same method as exporting security alert information. For more information, see [Review security alerts](manage-security-alerts.md#review-security-alerts).
-
-- **Search for personal data**: Use the [Microsoft Defender portal](https://security.microsoft.com) search bar to search for identifiable personal data, such as a specific user or computer. For more information, see [Investigate assets](investigate-assets.md).
-
-- **Data auditing**: Defender for Identity implements the audit of personal data changes, including the deleting and exporting of personal data records. Audit trail retention time is 90 days. Auditing in Defender for Identity is a back-end feature and not accessible to customers.
-
 ## Related content
 
 For more information, see:
