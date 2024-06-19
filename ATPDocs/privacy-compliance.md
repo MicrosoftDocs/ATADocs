@@ -57,5 +57,4 @@ Defender for Identity shares data, including customer data, among any of the fol
 For more information, see:
 
 - The [Microsoft Service Trust portal](https://www.microsoft.com/en-us/trust-center/product-overview)
-- [Microsoft 365 Enterprise GDPR Compliance](https://www.microsoft.com/en-us/trust-center/product-overview)
 - [Licensing and privacy FAQ](technical-faq.yml#licensing-and-privacy)
