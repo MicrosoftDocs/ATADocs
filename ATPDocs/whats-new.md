@@ -26,6 +26,14 @@ For updates about versions and features released six months ago or earlier, see 
 
 ## June 2024
 
+### Easily Go Hunt For user Information From the ITDR Dashboard
+
+The Shield Widget provides a quick overview of the number of users in hybrid, cloud, and on-premises environments. This feature now includes direct links to the Advanced Hunting platform, offering detailed user information at your fingertips.
+
+### ITDR Deployment Health Widget Now Include Entra Conditional Access and Entra Private Access 
+
+Now you can view the license availability for Entra Workload Conditional Access, Entra User Conditional Access, and Entra Private Access.
+
 ### Defender for Identity release 2.237
 
 This version includes improvements and bug fixes for cloud services and the Defender for Identity sensor.
