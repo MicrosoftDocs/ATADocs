@@ -1,7 +1,7 @@
 ---
 title: Microsoft Defender for Identity health issues
 description: This article describes all the health issues that can occur for each component, listing the cause and the steps needed to resolve the problem
-ms.date: 02/11/2024
+ms.date: 07/09/2024
 ms.topic: how-to
 ---
 
@@ -139,7 +139,7 @@ Sensor-specific health issues are displayed in the **Sensor health issues** tab 
 
 |Alert|Description|Resolution|Severity|Displayed in|
 |----|----|----|----|----|
-|The Defender for Identity sensor is using WinPcap drivers instead of Npcap drivers.|All customers should be using Npcap drivers instead of the WinPcap drivers. Starting with Defender for Identity version 2.184, the installation package installs Npcap 1.0 OEM.|Install Npcap according to the guidance as described in: <https://aka.ms/mdi/npcap>|Low|Sensors health issues tab|
+|The Defender for Identity sensor is using WinPcap drivers instead of Npcap drivers.|All customers should be using Npcap drivers instead of the WinPcap drivers. Starting with Defender for Identity version 2.184, the installation package installs Npcap 1.0 OEM.|Install Npcap according to the guidance as described in: <https://aka.ms/mdi/npcap>|High|Sensors health issues tab|
 |The Defender for Identity sensor is running an Npcap version older than the minimum required version.|The minimum Npcap version supported is 1.0. Starting with Defender for Identity version 2.184, the installation package installs Npcap 1.0 OEM.|Upgrade Npcap according to the guidance as described in: <https://aka.ms/mdi/npcap>|Medium|Sensors health issues tab|
 |The Defender for Identity sensor is running an Npcap component that is not configured as required.|The Npcap installation is missing the required configuration options.|Install Npcap according to the guidance as described in: <https://aka.ms/mdi/npcap>|High|Sensors health issues tab|
 
