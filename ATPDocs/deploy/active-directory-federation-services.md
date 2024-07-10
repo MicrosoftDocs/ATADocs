@@ -148,7 +148,7 @@ To validate that the Defender for Identity sensor has been successfully deployed
 
 ## Post-installation steps for AD FS / AD CS servers (Optional)
 
-Installing the sensor on an AD FS / AD CS server automatically selects the closest domain controller. Use the following steps to check or modify the selected domain controller.
+Only during the sensor installation on an AD FS / AD CS server the closest domain controller is automatically selected. Use the following steps to check or modify the selected domain controller.
 
 1. In [Microsoft Defender XDR](https://security.microsoft.com), go to **Settings**  > **Identities** > **Sensors** to view all of your Defender for Identity sensors.
 
