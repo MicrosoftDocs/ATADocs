@@ -1,11 +1,11 @@
 ---
-title: Enforce encryption for RPC certificate enrollment interface (ESC8) | Microsoft Defender for Identity
+title: Enforce encryption for RPC certificate enrollment interface (ESC11) | Microsoft Defender for Identity
 description: This article provides an overview of Microsoft Defender for Identity's enforce encryption for RPC certificate enrollment security posture assessment report.
 ms.date: 11/20/2023
 ms.topic: how-to
 ---
 
-# Security assessment: Enforce encryption for RPC certificate enrollment interface (ESC8)  (Preview)
+# Security assessment: Enforce encryption for RPC certificate enrollment interface (ESC11)  (Preview)
 
 This article describes Microsoft Defender for Identity's **Enforce encryption for RPC certificate enrollment** security posture assessment report.
 
@@ -15,7 +15,7 @@ Active Directory Certificate Services (AD CS) supports certificate enrollment us
 
 If the `IF_ENFORCEENCRYPTICERTREQUEST` flag is turned on, the RPC interface only accepts connections with the `RPC_C_AUTHN_LEVEL_PKT_PRIVACY` authentication level. This is the highest authentication level, and requires each packet to be signed and encrypted so as to prevent any kind of relay attack. This is similar to `SMB Signing` in the SMB protocol.
 
-If the RPC enrollment interface doesn't require packet privacy, it becomes vulnerable to relay attacks (ESC8). The `IF_ENFORCEENCRYPTICERTREQUEST` flag is on by default, but is often turned off to allow clients that can't support the required RPC authentication level, such as clients running Windows XP. 
+If the RPC enrollment interface doesn't require packet privacy, it becomes vulnerable to relay attacks (ESC11). The `IF_ENFORCEENCRYPTICERTREQUEST` flag is on by default, but is often turned off to allow clients that can't support the required RPC authentication level, such as clients running Windows XP. 
 
 ## Prerequisites
 
@@ -25,7 +25,7 @@ This assessment is available only to customers who have installed a sensor on an
 
 1. Review the recommended action at <https://security.microsoft.com/securescore?viewid=actions> for enforcing encryption for RPC certificate enrollment.  For example:
 
-    :::image type="content" source="media/secure-score/enforce-encryption-rpc-certificate.png" alt-text="Screenshot of the Enforce encryption for RPC certificate enrollment interface (ESC8) recommendation." lightbox="media/secure-score/enforce-encryption-rpc-certificate.png":::
+    :::image type="content" source="media/secure-score/enforce-encryption-rpc-certificate.png" alt-text="Screenshot of the Enforce encryption for RPC certificate enrollment interface (ESC11) recommendation." lightbox="media/secure-score/enforce-encryption-rpc-certificate.png":::
 
 1. Research why the `IF_ENFORCEENCRYPTICERTREQUEST` flag is turned off.
 
