@@ -2,12 +2,12 @@
     "redirections": [
     {
         "source_path": "ATPDocs/security-assessment-do-not-expire-passwords.md",
-        "redirect_url": "deploy/security-assessment",
+        "redirect_url": "security-assessment",
         "redirect_document_id": false
     },
     {
         "source_path": "ATPDocs/security-assessment-old-passwords.md",
-        "redirect_url": "deploy/security-assessment",
+        "redirect_url": "security-assessment",
         "redirect_document_id": false
     },
             
