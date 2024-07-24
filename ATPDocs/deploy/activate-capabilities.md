@@ -153,7 +153,6 @@ For more information, see [Advanced hunting in the Microsoft Defender portal](/m
 Defender for Identity capabilities on domain controllers support the following ISPM assessments:
 
 - [**Install Defender for Identity Sensor on all Domain Controllers**](../security-assessment-unmonitored-domain-controller.md)
-- [**Manage accounts with passwords more than 180 days old**](../security-assessment-old-passwords.md)
 - [**Microsoft LAPS usage**](../security-assessment-laps.md)
 - [**Resolve unsecure domain configurations**](../security-assessment-unsecure-domain-configurations.md)
 - **Set a honeytoken account**

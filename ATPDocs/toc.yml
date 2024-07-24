@@ -167,8 +167,6 @@ items:
       href: security-assessment-deploy-defender-for-identity.md
     - name: Domain controllers with Print spooler service available assessment
       href: security-assessment-print-spooler.md
-    - name: Do not expire passwords
-      href: security-assessment-do-not-expire-passwords.md
     - name: Dormant entities in sensitive groups assessment
       href: security-assessment-dormant-entities.md
     - name: Enforce encryption for RPC certificate enrollment interface  (ESC8)
@@ -189,7 +187,7 @@ items:
       href: security-assessment-edit-misconfigured-enrollment-agent.md
     - name: Overly permissive certificate template with privileged EKU (ESC2)
       href: security-assessment-edit-overly-permissive-template.md
-    - name: Passwords older than 180 days
+    - name: Passwords older than 180 days *
       href: security-assessment-old-passwords.md
     - name: Prevent requests for certificates valid for arbitrary users  (ESC1)
       href: security-assessment-prevent-users-request-certificate.md
