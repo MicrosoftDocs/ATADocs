@@ -1,6 +1,17 @@
 {
     "redirections": [
     {
+        "source_path": "ATPDocs/security-assessment-do-not-expire-passwords.md",
+        "redirect_url": "deploy/security-assessment",
+        "redirect_document_id": false
+    },
+    {
+        "source_path": "ATPDocs/security-assessment-old-passwords.md",
+        "redirect_url": "deploy/security-assessment",
+        "redirect_document_id": false
+    },
+            
+    {
       "source_path": "ATPDocs/active-directory-federation-services.md",
       "redirect_url": "deploy/active-directory-federation-services",
       "redirect_document_id": false
