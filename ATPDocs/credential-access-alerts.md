@@ -301,9 +301,6 @@ None
 |MITRE attack technique  | [Unsecured Credentials (T1552)](https://attack.mitre.org/techniques/T1552/)        |
 |MITRE attack sub-technique | [Unsecured Credentials: Private Keys (T1552.004)](https://attack.mitre.org/techniques/T1552/004/)  |
 
-> [!NOTE]
-> Suspected AD FS DKM key read alerts are only supported by Defender for Identity sensors on AD FS.
-
 ## Suspected DFSCoerce attack using Distributed File System Protocol (external ID 2426)
 
 **Severity**: High
