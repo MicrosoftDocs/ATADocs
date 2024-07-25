@@ -187,8 +187,6 @@ items:
       href: security-assessment-edit-misconfigured-enrollment-agent.md
     - name: Overly permissive certificate template with privileged EKU (ESC2)
       href: security-assessment-edit-overly-permissive-template.md
-    - name: Passwords older than 180 days *
-      href: security-assessment-old-passwords.md
     - name: Prevent requests for certificates valid for arbitrary users  (ESC1)
       href: security-assessment-prevent-users-request-certificate.md
     - name: Remove local admins on identity assets
