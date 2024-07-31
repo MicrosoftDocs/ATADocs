@@ -25,7 +25,7 @@ For more information, see also:
 For updates about versions and features released six months ago or earlier, see the [What's new archive for Microsoft Defender for Identity](whats-new-archive.md).
 
 ## July 2024
-7 New detections are new in public preview:
+6 New detections are new in public preview:
 * Possible NetSync attack
     * NetSync is a module in Mimikatz, a post-exploitation tool, that requests the password hash of a target device's password by pretending to be a domain controller. An attacker might be performing malicious activities inside the network using this feature to gain access to the organization's resources.
 * Possible takeover of a Microsoft Entra seamless SSO account
