@@ -25,6 +25,19 @@ For more information, see also:
 For updates about versions and features released six months ago or earlier, see the [What's new archive for Microsoft Defender for Identity](whats-new-archive.md).
 
 ## July 2024
+7 New detections are new in public preview:
+* Possible NetSync attack
+    * NetSync is a module in Mimikatz, a post-exploitation tool, that requests the password hash of a target device's password by pretending to be a domain controller. An attacker might be performing malicious activities inside the network using this feature to gain access to the organization's resources.
+* Possible takeover of a Microsoft Entra seamless SSO account
+    * A Microsoft Entra seamless SSO (single sign-on) account object, AZUREADSSOACC, was modified suspiciously. An attacker might be moving laterally from the on-premises environment to the cloud.
+* Suspicious LDAP query
+    * A suspicious Lightweight Directory Access Protocol (LDAP) query associated with a known attack tool was detected. An attacker might be performing reconnaissance for later steps.
+* Suspicious SPN was added to a user
+    * A suspicious service principal name (SPN) was added to a sensitive user. An attacker might be attempting to gain elevated access for lateral movement within the organization
+* Suspicious creation of ESXi group
+    * A suspicious VMWare ESXi group was created in the domain. This might indicate that an attacker is trying to get more permissions for later steps in an attack.
+* Suspicious ADFS authentication
+    * A domain-joined account signed in using Active Directory Federation Services (ADFS) from a suspicious IP address. An attacker might have stolen a user's credentials and is using it to move laterally in the organization.
 
 ### Defender for Identity release 2.238
 
