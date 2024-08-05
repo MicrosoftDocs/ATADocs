@@ -164,7 +164,7 @@ This section describes the extra configuration steps needed to audit Event ID 80
 > - Domain group policies to collect Windows Event 8004 should **only** be applied to domain controllers.
 > - When Windows Event 8004 is parsed by Defender for Identity Sensor, Defender for Identity NTLM authentications activities are enriched with the server accessed data.
 
-1. Following the [initial steps](#configure-advanced-audit-policy-settings), open **Group Policy Management** and go to the **Default Domain Controllers Policy** > **Local Policies** > **Security Options**.
+1. After configuring your initial Advanced Audit Policy settings ([UI](#configure-advanced-audit-policy-settings-from-the-ui) / [PowerShell](#configure-advanced-audit-policy-settings-using-powershell)), open **Group Policy Management** and go to the **Default Domain Controllers Policy** > **Local Policies** > **Security Options**.
 
 1. Under **Security Options**, configure the specified security policies as follows:
 
