@@ -48,6 +48,7 @@ The information monitored by Defender for Identity is presented in the form of a
 
 |Monitored activity|Description|
 |---------------------|------------------|
+|User Account Created|User account was created|  
 |Computer Account Created|Computer account was created|
 |Security Principal Deleted Changed|Account was deleted/restored (both user and computer).|
 |Security Principal Display Name Changed|Account display name was changed from X to Y.|
