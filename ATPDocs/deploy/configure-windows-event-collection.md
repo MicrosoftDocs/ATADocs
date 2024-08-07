@@ -11,6 +11,8 @@ To enhance detections and gather more information on user actions like NTLM logo
 
 This article describes how to configure your Advanced Audit Policy settings as needed for a Defender for Identity sensor, and other configurations for specific event types.
 
+Defender for Identity generates health issues for each of these scenarios if they're detected. For more information, see [Microsoft Defender for Identity health issues](../health-alerts.md).
+
 ## Prerequisites
 
 - Before running Defender for Identity PowerShell commands, make sure that you downloaded the [Defender for Identity PowerShell module](https://www.powershellgallery.com/packages/DefenderForIdentity/).
@@ -54,6 +56,10 @@ Use the following procedures to configure auditing on the domain controllers you
 ### Configure Advanced Audit Policy settings from the UI
 
 This procedure describes how to modify your domain controller's Advanced Audit Policies as needed for Defender for Identity via the UI.
+
+**Related health issue**: [Directory Services Advanced Auditing is not enabled as required](../health-alerts.md#directory-services-advanced-auditing-is-not-enabled-as-required)
+
+**To configure your Advanced Audit Policy settings**:
 
 1. Sign in to the server as **Domain Administrator**.
 1. Open the Group Policy Management Editor from **Server Manager** > **Tools** > **Group Policy Management**.
@@ -107,7 +113,9 @@ For more information, see [auditpol reference documentation](/windows-server/adm
 
 This procedure describes how to modify your domain controller's Advanced Audit Policies as needed for Defender for Identity using Powershell.
 
-To configure your settings, run:
+**Related health issue**: [Directory Services Advanced Auditing is not enabled as required](../health-alerts.md#directory-services-advanced-auditing-is-not-enabled-as-required)
+
+**To configure your settings, run**:
 
 ```powershell
 Set-MDIConfiguration [-Mode] <String> [-Configuration] <String[]> [-CreateGpoDisabled] [-SkipGpoLink] [-Force]
@@ -164,6 +172,10 @@ This section describes the extra configuration steps needed to audit Event ID 80
 > - Domain group policies to collect Windows Event 8004 should **only** be applied to domain controllers.
 > - When Windows Event 8004 is parsed by Defender for Identity Sensor, Defender for Identity NTLM authentications activities are enriched with the server accessed data.
 
+**Related health issue:**: [NTLM Auditing is not enabled](../health-alerts.md#ntlm-auditing-is-not-enabled)
+
+**To configure NTLM auditing**:
+
 1. After configuring your initial Advanced Audit Policy settings ([UI](#configure-advanced-audit-policy-settings-from-the-ui) / [PowerShell](#configure-advanced-audit-policy-settings-using-powershell)), open **Group Policy Management** and go to the **Default Domain Controllers Policy** > **Local Policies** > **Security Options**.
 
 1. Under **Security Options**, configure the specified security policies as follows:
@@ -184,6 +196,10 @@ To collect events for object changes, such as event 4662, you must also configur
 
 > [!IMPORTANT]
 > Make sure to [review and verify your audit policies](#configure-advanced-audit-policy-settings) before enabling event collection to ensure that the domain controllers are properly configured to record the necessary events. If configured properly, this auditing should have minimal effect on server performance.
+
+**Related health issue:** [Directory Services Object Auditing is not enabled as required](../health-alerts.md#directory-services-object-auditing-is-not-enabled-as-required)
+
+**To configure domain object auditing**:
 
 1. Go to the **Active Directory Users and Computers** console.
 1. Select the domain you want to audit.
@@ -236,6 +252,10 @@ To collect events for object changes, such as event 4662, you must also configur
 
 ## Configure auditing on an Active Directory Federation Services (AD FS)
 
+**Related health issue:** [Auditing on the ADFS container is not enabled as required](../health-alerts.md#auditing-on-the-adfs-container-is-not-enabled-as-required)
+
+**To configure auditing on an Active Directory Federation Services (AD FS)**:
+
 1. Go to the **Active Directory Users and Computers** console, and select the domain you want to enable the logs on.
 
 1. Go to **Program Data** > **Microsoft** > **ADFS**. For example:
@@ -260,7 +280,7 @@ To collect events for object changes, such as event 4662, you must also configur
 
 ## Configure auditing for Active Directory Certificate Services (AD CS)
 
-If you're working with a dedicated server with Active Directory Certificate Services (AD CS) configured, make sure to configure auditing as follows to view dedicated alerts and Secure Score reports:
+If you're working with a dedicated server with Active Directory Certificate Services (AD CS) configured, make sure to configure auditing as follows to view dedicated alerts and Secure Score reports.
 
 1. Create a group policy to apply to your AD CS server. Edit it and configure the following auditing settings:
 
@@ -295,6 +315,8 @@ If you're working with a dedicated server with Active Directory Certificate Serv
 
 ## Configure auditing on the configuration container
 <a name="enable-auditing-on-an-exchange-object"></a>
+
+**Related health issue**: [Auditing on the Configuration container is not enabled as required](../health-alerts.md#auditing-on-the-configuration-container-is-not-enabled-as-required)
 
 1. Open ADSI Edit by selecting **Start** > **Run**. Enter `ADSIEdit.msc` and select **OK**.
 
