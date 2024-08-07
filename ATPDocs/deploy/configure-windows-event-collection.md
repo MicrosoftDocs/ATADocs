@@ -111,7 +111,7 @@ For more information, see [auditpol reference documentation](/windows-server/adm
 
 ### Configure Advanced Audit Policy settings using PowerShell
 
-This procedure describes how to modify your domain controller's Advanced Audit Policies as needed for Defender for Identity using Powershell.
+This procedure describes how to modify your domain controller's Advanced Audit Policies as needed for Defender for Identity using PowerShell.
 
 **Related health issue**: [Directory Services Advanced Auditing is not enabled as required](../health-alerts.md#directory-services-advanced-auditing-is-not-enabled-as-required)
 
