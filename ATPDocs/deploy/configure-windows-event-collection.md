@@ -195,7 +195,7 @@ For example, to configure **Outgoing NTLM traffic to remote servers**, under **S
 To collect events for object changes, such as event 4662, you must also configure object auditing on the user, group, computer, and other objects. This procedure describes how to enable auditing in the Active Directory domain.
 
 > [!IMPORTANT]
-> Make sure to [review and verify your audit policies](#configure-advanced-audit-policy-settings) before enabling event collection to ensure that the domain controllers are properly configured to record the necessary events. If configured properly, this auditing should have minimal effect on server performance.
+> Make sure to review and audit your policies ([UI](#configure-advanced-audit-policy-settings-from-the-ui) / [PowerShell](#configure-advanced-audit-policy-settings-using-powershell)) before enabling event collection to ensure that the domain controllers are properly configured to record the necessary events. If configured properly, this auditing should have minimal effect on server performance.
 
 **Related health issue:** [Directory Services Object Auditing is not enabled as required](../health-alerts.md#directory-services-object-auditing-is-not-enabled-as-required)
 
