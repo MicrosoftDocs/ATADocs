@@ -156,6 +156,9 @@ items:
       href: remediation-actions.md
   - name: Security posture
     items:
+    - name: "Remove unnecessary replication permissions for Entra Connect Account "
+      href: remove-replication-permissions-entra-connect.md
+      displayName: Entra Connect
     - name: "Rotate password for Entra Connect connector account "
       href: rotate-password-entra-connect.md
       displayName: Entra Connect
