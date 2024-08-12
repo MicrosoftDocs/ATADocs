@@ -156,6 +156,9 @@ items:
       href: remediation-actions.md
   - name: Security posture
     items:
+    - name: "Rotate password for Entra Connect connector account "
+      href: rotate-password-entra-connect.md
+      displayName: Entra Connect
     - name: Overview
       href: security-assessment.md
       displayName: security posture, security assessment
