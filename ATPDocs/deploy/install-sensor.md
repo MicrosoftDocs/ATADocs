@@ -159,6 +159,8 @@ Use the following commands to silently install the Defender for Identity sensor:
 
 Use the following command to configure your proxy together with a silent installation:
 
+<!--can we remove username / pw here?-->
+
 ```cmd
 "Azure ATP sensor Setup.exe" [/quiet] [/Help] [ProxyUrl="http://proxy.internal.com"] [ProxyUserName="domain\proxyuser"] [ProxyUserPassword="ProxyPassword"]`
 ```
