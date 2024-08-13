@@ -1,7 +1,7 @@
 ---
 title: Activate Microsoft Defender for Identity capabilities directly on a domain controller 
 description: Learn about the Microsoft Defender for Identity capabilities on domain controllers and how to activate them.
-ms.date: 05/29/2024
+ms.date: 08/13/2024
 ms.topic: how-to
 ---
 
@@ -201,6 +201,7 @@ The following alerts are supported by Defender for Identity capabilities on doma
     - [Remote code execution attempt](../other-alerts.md#remote-code-execution-attempt-external-id-2019)
     - [Security principal reconnaissance (LDAP)](../credential-access-alerts.md#security-principal-reconnaissance-ldap-external-id-2038)
     - [Suspicious service creation](../other-alerts.md#suspicious-service-creation-external-id-2026)
+    - [Suspected NTLM relay attack (Exchange account)](../lateral-movement-alerts.md#suspected-ntlm-relay-attack-exchange-account-external-id-2037)
    :::column-end:::
    :::column span="":::
     - [Suspicious modification of the Resource Based Constrained Delegation attribute by a machine account](../persistence-privilege-escalation-alerts.md#suspicious-modification-of-the-resource-based-constrained-delegation-attribute-by-a-machine-account--external-id-2423)
