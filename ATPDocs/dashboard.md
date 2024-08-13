@@ -20,6 +20,8 @@ To access this new dashboard, you need:
 
 To view a comprehensive list of recommendations and select the recommended action links, you need the [Global Administrator](/azure/active-directory/roles/permissions-reference#global-administrator) role.
 
+<!--can we change this?-->
+
 ## Access the dashboard
 
 To access the dashboard, sign into Microsoft 365 Defender and select **Identities > Dashboard**.

@@ -432,10 +432,11 @@ The issue can be caused when the installation process can't access the Defender 
 
 Ensure that the sensor can browse to \*.atp.azure.com directly or through the configured proxy. If needed, set the proxy server settings for the installation using the command line:
 
+<!--can we remove username / pw here?-->
 `"Azure ATP sensor Setup.exe" [ProxyUrl="http://proxy.internal.com"] [ProxyUserName="domain\proxyuser"] [ProxyUserPassword="ProxyPassword"]`
 
 For more information, see [Run a silent installation with a proxy configuration](install-sensor.md#run-a-silent-installation-with-a-proxy-configuration).
-
+[Install the Microsoft Defender for Identity sensor](deploy/install-sensor.md)
 ## Sensor service could not run and remains in Starting state
 
 The following errors will appear in the **System log** in **Event viewer**:
