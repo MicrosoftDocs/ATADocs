@@ -13,7 +13,6 @@ Use the **Dashboard** page to view critical insights and real-time data about id
 
 ## Prerequisites
 
-<!--can we remove global admin here?-->
 To access this new dashboard, you need:
 
 - A  Microsoft Defender for Identity license and an Entra ID Identity Protection license
