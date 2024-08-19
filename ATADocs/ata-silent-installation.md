@@ -148,19 +148,24 @@ To silently uninstall the ATA Center from the server, removing all existing data
 
 ## ATA Gateway silent installation
 
+When silently deploying the ATA Lightweight Gateway via System Center Configuration Manager or other software deployment system, we recommend that you create two deployment packages:
+
+- Net Framework 4.6.1 including rebooting the domain controller
+- ATA Gateway.
+
+Make the ATA Gateway package dependent on the deployment of the .Net Framework package deployment. Get the [.Net Framework 4.6.1 offline deployment package](https://www.microsoft.com/download/details.aspx?id=49982).
+
 > [!NOTE]
-> When silently deploying the ATA Lightweight Gateway via System Center Configuration Manager or other software deployment system, it is recommended to create two deployment packages:</br>- Net Framework 4.6.1 including rebooting the domain controller</br>- ATA Gateway. </br>Make the ATA Gateway package dependent on the deployment of the .Net Framework package deployment. </br>Get the [.Net Framework 4.6.1 offline deployment package](https://www.microsoft.com/download/details.aspx?id=49982).
+> We recommend that you work on a domain-joined computer and sign in using a secure authentication flow, in which case, you don't need to specify credentials as part of the installation.
 
 Use the following command to silently install the ATA Gateway:
 
 **Syntax**:
 
 ```cmd
-"Microsoft ATA Gateway Setup.exe" [/quiet] [/Help] [NetFrameworkCommandLineArguments="/q"] [ConsoleAccountName="<AccountName>"] [ConsoleAccountPassword="<AccountPassword>"]
+"Microsoft ATA Gateway Setup.exe" [/quiet] [/Help] [NetFrameworkCommandLineArguments="/q"] [ConsoleAccountName="<AccountName>"]
 ```
 
-> [!NOTE]
-> If you are working on a domain joined computer and have logged in using your ATA admin username and password, it is unnecessary to provide your credentials here.
 
 **Installation options**:
 
@@ -180,14 +185,14 @@ Use the following command to silently install the ATA Gateway:
 > |---|---|---|---|
 >|InstallationPath|InstallationPath=`<InstallPath>`|No|Sets the path for the installation of ATA binaries. Default path: C:\Program Files\Microsoft Advanced Threat Analytics\Center
 >|ConsoleAccountName|ConsoleAccountName=`<AccountName>`|Yes|Sets the name of the user account (user@domain.com) that is used to register the ATA Gateway with the ATA Center.|
->|ConsoleAccountPassword|ConsoleAccountPassword=`<AccountPassword>`|Yes|Sets the password for the user account (user@domain.com) that is used to register the ATA Gateway with the ATA Center.|
+>|ConsoleAccountPassword|ConsoleAccountPassword=`<AccountPassword>`|Yes|Used only if you aren't already signed in to the computer as an ATA Admin. Sets the password for the user account (user@domain.com) that is used to register the ATA Gateway with the ATA Center.|
 
 **Examples**:
 
-To silently install the ATA Gateway, log into the domain joined computer with your ATA admin credentials so that you do not need to specify credentials as part of the installation. Otherwise, register it with the ATA Center using the specified credentials:
+To silently install the ATA Gateway, log into the domain joined computer with your ATA admin credentials so that you do not need to specify credentials as part of the installation, and then run:
 
 ```cmd
-"Microsoft ATA Gateway Setup.exe" /quiet NetFrameworkCommandLineArguments="/q" ConsoleAccountName="user@contoso.com" ConsoleAccountPassword="userpwd"
+"Microsoft ATA Gateway Setup.exe" /quiet NetFrameworkCommandLineArguments="/q" 
 ```
 
 ## Update the ATA Gateway
