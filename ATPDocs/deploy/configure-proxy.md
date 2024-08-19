@@ -44,11 +44,9 @@ For more information, see [Virtual network service tags](/azure/virtual-network/
 
 **To change the current sensor's proxy configuration**:
 
-
 ```cmd
 Microsoft.Tri.Sensor.Deployment.Deployer.exe ProxyUrl="http://myproxy.contoso.local" ProxyUserName="CONTOSO\myProxyUser" ProxyUserPassword="myPr0xyPa55w0rd"
 ```
-
 
 **To remove the current sensor's proxy configuration entirely**:
 
