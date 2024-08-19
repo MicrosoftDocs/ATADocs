@@ -437,7 +437,7 @@ Ensure that the sensor can browse to \*.atp.azure.com directly or through the co
 For more information, see [Run a silent installation with a proxy configuration](install-sensor.md#run-a-silent-installation-with-a-proxy-configuration) and [Install the Microsoft Defender for Identity sensor](deploy/install-sensor.md).
 
 > [!IMPORTANT]
-> Microsoft recommends that you use the most secure authentication flow avaialable. The authentication flow described in this procedure requires a very high degree of trust in the application, and carries risks that are not present in other flows. You should only use this flow when other more secure flows, such as managed identities, aren't viable.
+> Microsoft recommends that you use the most secure authentication flow available. The authentication flow described in this procedure requires a very high degree of trust in the application, and carries risks that are not present in other flows. You should only use this flow when other more secure flows, such as managed identities, aren't viable.
 >
 
 ## Sensor service could not run and remains in Starting state
