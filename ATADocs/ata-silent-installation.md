@@ -148,8 +148,15 @@ To silently uninstall the ATA Center from the server, removing all existing data
 
 ## ATA Gateway silent installation
 
+When silently deploying the ATA Lightweight Gateway via System Center Configuration Manager or other software deployment system, we recommend that you create two deployment packages:
+
+- Net Framework 4.6.1 including rebooting the domain controller
+- ATA Gateway.
+
+Make the ATA Gateway package dependent on the deployment of the .Net Framework package deployment. Get the [.Net Framework 4.6.1 offline deployment package](https://www.microsoft.com/download/details.aspx?id=49982).
+
 > [!NOTE]
-> When silently deploying the ATA Lightweight Gateway via System Center Configuration Manager or other software deployment system, it is recommended to create two deployment packages:</br>- Net Framework 4.6.1 including rebooting the domain controller</br>- ATA Gateway. </br>Make the ATA Gateway package dependent on the deployment of the .Net Framework package deployment. </br>Get the [.Net Framework 4.6.1 offline deployment package](https://www.microsoft.com/download/details.aspx?id=49982).
+> We recommend that you work on a domain-joined computer and sign in using a secure authentication flow, in which case, you don't need to specify credentials as part of the installation.
 
 Use the following command to silently install the ATA Gateway:
 
@@ -159,8 +166,6 @@ Use the following command to silently install the ATA Gateway:
 "Microsoft ATA Gateway Setup.exe" [/quiet] [/Help] [NetFrameworkCommandLineArguments="/q"] [ConsoleAccountName="<AccountName>"]
 ```
 
-> [!NOTE]
-> We recommend that you work on a domain-joined computer and sign in using a secure authentication flow, in which case, you don't need to specify credentials as part of the installation.
 
 **Installation options**:
 
