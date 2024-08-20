@@ -11,7 +11,7 @@ This article explains how to use the About page to collect important details abo
 
 ## Details on About page
 
-To access the About page, in  [Microsoft Defender XDR](https://security.microsoft.com), go to **Settings** and then **Identities**. Then select **About**.
+To access the About page, in  [Microsoft Defender XDR](https://security.microsoft.com), go to **Settings** and then **Identities**. Under **General**, select **About**.
 
 :::image type="content" source="media/settings-about-page.png" alt-text="About page.":::
 
