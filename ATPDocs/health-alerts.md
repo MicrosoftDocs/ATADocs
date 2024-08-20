@@ -147,13 +147,13 @@ Sensor-specific health issues are displayed in the **Sensor health issues** tab 
 
 |Alert|Description|Resolution|Severity|Displayed in|
 |----|----|----|----|----|
-|NTLM Auditing isn't enabled.|NTLM Auditing (for event ID 8004) is not enabled on the server. (This configuration is validated once a week, per sensor).|Enable NTLM Auditing events according to the guidance as described at the [Event ID 8004](configure-windows-event-collection.md#configure-ntlm-auditing) section, in the [Configure Windows Event collection](configure-windows-event-collection.md) page.|Medium|Sensors health issues tab|
+|NTLM Auditing isn't enabled.|NTLM Auditing (for event ID 8004) is not enabled on the server. (This configuration is validated once a day, per sensor).|Enable NTLM Auditing events according to the guidance as described at the [Event ID 8004](configure-windows-event-collection.md#configure-ntlm-auditing) section, in the [Configure Windows Event collection](configure-windows-event-collection.md) page.|Medium|Sensors health issues tab|
 
 ### Directory Services Advanced Auditing is not enabled as required
 
 |Alert|Description|Resolution|Severity|Displayed in|
 |----|----|----|----|----|
-|Directory Services Advanced Auditing is not enabled as required. (This configuration is validated once a day, per domain).|The Directory Services Advanced Auditing configuration doesn't include all the categories and subcategories as required.|Enable the Directory Services Advanced Auditing events. For more information, see [Configure audit policies for Windows event logs](configure-windows-event-collection.md).|Medium|Global health issues tab|
+|Directory Services Advanced Auditing is not enabled as required. (This configuration is validated once a day, per sensor).|The Directory Services Advanced Auditing configuration doesn't include all the categories and subcategories as required.|Enable the Directory Services Advanced Auditing events. For more information, see [Configure audit policies for Windows event logs](configure-windows-event-collection.md).|Medium|Sensors health issues tab|
 
 ### Directory Services Object Auditing is not enabled as required
 
