@@ -26,7 +26,7 @@ This report lists all MSOL (AD DS connector account) accounts in your organizati
 How do I use this security assessment to improve my hybrid organizational security posture? 
 
 1. Review the recommended action at[ https://security.microsoft.com/securescore?viewid=actions](https://security.microsoft.com/securescore?viewid=actions) for **Rotate password for Entra Connect Connector account.  
-**  
+ 
 For example:  
 ![User's image](media/rotate-password-entra-connect/image1.png)
 
