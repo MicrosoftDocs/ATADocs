@@ -34,7 +34,7 @@ The DefenderForIdentity PowerShell module has been updated, incorporating new fu
 
 For more information, see:
 [DefenderForIdentity PowerShell module (PowerShell Gallery)](https://www.powershellgallery.com/packages/DefenderForIdentity/)
-[DefenderForIdentity PowerShell reference documentation](https://learn.microsoft.com/powershell/defenderforidentity/overview-defenderforidentity)
+[DefenderForIdentity PowerShell reference documentation](/powershell/defenderforidentity/overview-defenderforidentity)
 
 
 ## July 2024
