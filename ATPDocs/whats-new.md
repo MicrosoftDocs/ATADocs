@@ -33,8 +33,9 @@ The DefenderForIdentity PowerShell module has been updated, incorporating new fu
 - **Manual Domain Controller Targeting**: New Server parameter for `Get/Set/Test-MDIConfiguration` cmdlets, allowing you to specify a domain controller for targeting instead of the PDCe.
 
 For more information, see:
-[DefenderForIdentity PowerShell module (PowerShell Gallery)](https://www.powershellgallery.com/packages/DefenderForIdentity/)
-[DefenderForIdentity PowerShell reference documentation](/powershell/defenderforidentity/overview-defenderforidentity)
+
+- [DefenderForIdentity PowerShell module (PowerShell Gallery)](https://www.powershellgallery.com/packages/DefenderForIdentity/)
+- [DefenderForIdentity PowerShell reference documentation](/powershell/defenderforidentity/overview-defenderforidentity)
 
 
 ## July 2024
