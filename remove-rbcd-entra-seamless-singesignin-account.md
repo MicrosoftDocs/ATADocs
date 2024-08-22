@@ -3,14 +3,14 @@
 # For more information, see https://review.learn.microsoft.com/en-us/help/platform/learn-editor-add-metadata?branch=main
 # For valid values of ms.service, ms.prod, and ms.topic, see https://review.learn.microsoft.com/en-us/help/platform/metadata-taxonomies?branch=main
 
-title:       # Add a title for the browser tab
-description: # Add a meaningful description for search results
+title: 'Security assessment: Remove Resource Based Constrained Delegation for Entra seamless SSO account'
+description: This article describes Microsoft Defender for Identity's Entra Seamless Single sign-on (SSO) account with Resource Based Constrained Delegation (RBCD) applied security posture assessment report.
 author:      LiorShapiraa # GitHub alias
-ms.author:   t-lshapira # Microsoft alias
-ms.service:  # Add the ms.service or ms.prod value
-# ms.prod:   # To use ms.prod, uncomment it and delete ms.service
-ms.topic:    # Add the ms.topic value
+ms.author: liorshapira
+ms.service: microsoft-defender-for-identity
+ms.topic: article
 ms.date:     08/22/2024
+ms.subservice: ''
 ---
 
 # Security assessment: Remove Resource Based Constrained Delegation for Entra seamless SSO account
