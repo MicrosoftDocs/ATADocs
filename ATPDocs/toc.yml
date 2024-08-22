@@ -156,9 +156,6 @@ items:
       href: remediation-actions.md
   - name: Security posture
     items:
-    - name: Remove Resource Based Constrained Delegation for Entra seamless SSO account
-      href: ../../../undefined/remove-rbcd-entra-seamless-singesignin-account.md
-      displayName: entra connect
     - name: Change password for Entra seamless SSO account
       href: change-password-entra-seamless-singlesingin.md
       displayName: Entra connect
@@ -203,6 +200,9 @@ items:
       href: security-assessment-prevent-users-request-certificate.md
     - name: Remove local admins on identity assets
       href: security-assessment-remove-local-admins.md      
+    - name: Remove Resource Based Constrained Delegation for Entra seamless SSO account
+      href: ../../../undefined/remove-rbcd-entra-seamless-singesignin-account.md
+      displayName: entra connect
     - name: Riskiest lateral movement paths
       href: security-assessment-riskiest-lmp.md
     - name: Unmonitored domain controllers
