@@ -201,7 +201,7 @@ items:
     - name: Remove local admins on identity assets
       href: security-assessment-remove-local-admins.md      
     - name: Remove Resource Based Constrained Delegation for Entra seamless SSO account
-      href: ../../../undefined/remove-rbcd-entra-seamless-singesignin-account.md
+      href: remove-rbcd-entra-seamless-single-sign-in-account.md
       displayName: entra connect
     - name: Riskiest lateral movement paths
       href: security-assessment-riskiest-lmp.md
