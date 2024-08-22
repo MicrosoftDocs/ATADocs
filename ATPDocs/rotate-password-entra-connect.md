@@ -6,7 +6,7 @@
 title: 'Security assessment: Rotate password for Entra Connect connector account '
 description: Microsoft Defender for Identity security posture assessment on Entra Connect. In this assessment we recommend customers change the password of MSOL accounts with password last set over 90 days ago.
 author:      LiorShapiraa # GitHub alias
-ms.author:   t-lshapira # Microsoft alias
+ms.author:   liorshapira
 ms.service: microsoft-defender-for-identity
 ms.topic: article
 ms.date:     08/12/2024
@@ -22,8 +22,7 @@ This article describes Microsoft Defender for Identity's Entra Connect connector
 
 This report lists all MSOL (AD DS connector account) accounts in your organization with password last set over 90 days ago. It's important to change the password of MSOL accounts every 90 days to prevent attackers from allowing use of the high privileges that the connector account typically holds - replication permissions, reset password and so on. 
 
-##   
-How do I use this security assessment to improve my hybrid organizational security posture? 
+##   How do I use this security assessment to improve my hybrid organizational security posture?
 
 1. Review the recommended action at[ https://security.microsoft.com/securescore?viewid=actions](https://security.microsoft.com/securescore?viewid=actions) for **Rotate password for Entra Connect Connector account.  
  

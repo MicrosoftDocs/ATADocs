@@ -6,7 +6,7 @@
 title: 'Security assessment: Remove unnecessary replication permissions for Entra Connect Account '
 description: 'Security assessment: Remove unnecessary replication permissions for Entra Connect Account '
 author:      LiorShapiraa # GitHub alias
-ms.author:   t-lshapira # Microsoft alias
+ms.author:   liorshapira
 ms.service: microsoft-defender-for-identity
 ms.topic: article
 ms.date:     08/12/2024
