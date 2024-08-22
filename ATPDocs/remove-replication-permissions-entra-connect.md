@@ -12,65 +12,32 @@ ms.topic: article
 ms.date:     08/12/2024
 ---
 
-# Security Assessment: Remove unnecessary replication permissions for Entra Connect Connector Account
+# Security Assessment: Remove unnecessary replication permissions for Entra Connect AD DS Connector Account
 
-This article describes Microsoft Defender for Identity's unnecessary replication permissions for Entra Connect security posture assessment report.
+This article describes Microsoft Defender for Identity's unnecessary replication permissions for Entra Connect (also known as Azure AD Connect) AD DS Connector account security posture assessment report.
 
 > [!NOTE]
-> This security assessment will be available only if Microsoft Defender for Identity sensor is installed on servers running Entra Connect services.
-## Why might the Entra Connect Connector account with unnecessary replication permissions be a risk?
+> This security assessment will be available only if Microsoft Defender for Identity sensor is installed on servers running Entra Connect services.  
+> Additionally, if the Password Hash Sync (PHS) sign-in method is set up, AD DS Connector accounts with replication permissions won't be affected because those permissions are necessary.
+## Why might the Entra Connect AD DS Connector account with unnecessary replication permissions be a risk?
 
-How do I use this security assessment to improve my hybrid organizational security posture?
+Smart attackers are likely to target Entra Connect in on-premises environments, and for good reason. The Entra Connect server can be a prime target, especially based on the permissions assigned to the AD DS Connector account (created in on-prem AD with the MSOL_ prefix). In the default 'express' installation of Entra Connect, the connector service account is granted replication permissions, among others, to ensure proper synchronization. If Password Hash Sync isn’t configured, it’s important to remove unnecessary permissions to minimize the potential attack surface.
 
-1. Review the recommended action at[ https://security.microsoft.com/securescore?viewid=actions](https://security.microsoft.com/securescore?viewid=actions) for **Rotate password for Entra Connect Connector account. ** For example: 
+## How do I use this security assessment to improve my hybrid organizational security posture?
 
-Review the list of exposed entities to discover which of your AD DS connector accounts have a password more than 90 days old.
+1. Review the recommended action at[ https://security.microsoft.com/securescore?viewid=actions](https://security.microsoft.com/securescore?viewid=actions) for Remove unnecessary replication permissions for __Entra Connect AD DS Connector account.__
 
-Take appropriate action on those accounts by following the steps on [how to change the AD DS connector account password](https://aka.ms/EntraIdPasswordChangeSyncService).
+1. Review the list of exposed entities to discover which of your AD DS Connector accounts have unnecessary replication permissions.
 
-Note
+1. Take appropriate action on those accounts and remove their 'Replication Directory Changes' and 'Replication Directory Changes All' permissions by unchecking the following permissions:  
+  
+![Replication permissions.](media/remove-replication-permissions-entra-connect/image.png)
 
-While assessments are updated in near real time, scores and statuses are updated every 24 hours. While the list of impacted entities is updated within a few minutes of your implementing the recommendations, the status may still take time until it's marked as **Completed**.
-
-Next steps
+> [!IMPORTANT]
+> For environments with multiple Entra Connect servers, it’s crucial to install sensors on each server to ensure Microsoft Defender for Identity can fully monitor your setup. It has been detected that your Entra Connect configuration does not utilize Password Hash Sync, which means that replication permissions are not necessary for the accounts in the Exposed Entities list. Additionally, it’s important to ensure that each exposed MSOL account is not required for Replication Permissions by any other applications.
+> [!NOTE]
+> While assessments are updated in near real time, scores and statuses are updated every 24 hours. While the list of impacted entities is updated within a few minutes of your implementing the recommendations, the status may still take time until it's marked as __Completed__.
+## Next steps
 
 - [Learn more about Microsoft Secure Score](/microsoft-365/security/defender/microsoft-secure-score)
 
-[Check out the Defender for Identity forum!](https://aka.ms/MDIcommunity)his article describes Microsoft Defender for Identity's Entra Connect connector account password rotation security posture assessment report.
-
- Note
-
-This security assessment will be available only if Microsoft Defender for Identity sensor is installed on servers running Entra Connect services.
-
-Why might the Entra Connect Connector account old password be a risk?
-
-This report lists all MSOL (AD DS connector account) accounts in your organization with password last set over 90 days ago. It's important to change the password of MSOL accounts every 90 days to prevent attackers from allowing use of the high privileges that the connector account typically holds - replication permissions, reset password and so on.
-
-How do I use this security assessment to improve my hybrid organizational security posture?
-
-   Review the recommended action at[ https://security.microsoft.com/securescore?viewid=actions](https://security.microsoft.com/securescore?viewid=actions) for **Rotate password for Entra Connect Connector account.  
-   **  
-   For example:  
-   ![User's image](https://review.learn.microsoft.com/en-us/defender-for-identity/media/rotate-password-entra-connect/image1.png)
-   
-```
-  Review the list of exposed entities to discover which of your AD DS connector accounts have a password more than 90 days old.
-
-  
-     Take appropriate action on those accounts by following the steps on [how to change the AD DS connector account password](https://aka.ms/EntraIdPasswordChangeSyncService).
-
-     
-      Note
-
-     
-     While assessments are updated in near real time, scores and statuses are updated every 24 hours. While the list of impacted entities is updated within a few minutes of your implementing the recommendations, the status may still take time until it's marked as **Completed**.
-
-     
-     Next steps
-
-     
-        [Learn more about Microsoft Secure Score](/microsoft-365/security/defender/microsoft-secure-score)
-
-        
-           [Check out the Defender for Identity forum!](https://aka.ms/MDIcommunity)
-```
