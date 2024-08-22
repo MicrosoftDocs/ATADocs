@@ -179,7 +179,7 @@ items:
       href: security-assessment-enforce-encryption-rpc.md
     - name: Entities exposing credentials in clear text assessment
       href: security-assessment-clear-text.md
-    - name: "Remove unnecessary replication permissions for Entra Connect Account "
+    - name: Remove unnecessary replication permissions for Entra Connect Account
       href: remove-replication-permissions-entra-connect.md
       displayName: Entra Connect
     - name: Insecure ADCS certificate enrollment IIS endpoints (ESC8)
