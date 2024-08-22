@@ -43,5 +43,6 @@ Smart attackers are likely to target Entra Connect in on-premises environments, 
 ## Next steps
 
 - [Learn more about Microsoft Secure Score](/microsoft-365/security/defender/microsoft-secure-score)
-- [Learn more about Defender for Identity Sensor for Entra Connect](/defender-for-identity/deploy/install-sensor).
+- [Learn more about Defender for Identity Sensor for Entra Connect](https://aka.ms/MdiSensorForEntraConnectInstallation)
+
 
