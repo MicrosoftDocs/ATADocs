@@ -25,13 +25,13 @@ Smart attackers are likely to target Entra Connect in on-premises environments, 
 
 ## How do I use this security assessment to improve my hybrid organizational security posture?
 
-1. Review the recommended action at[ https://security.microsoft.com/securescore?viewid=actions](https://security.microsoft.com/securescore?viewid=actions) for Remove unnecessary replication permissions for __Entra Connect AD DS Connector account.__
+1. Review the recommended action at [https://security.microsoft.com/securescore?viewid=actions](https://security.microsoft.com/securescore?viewid=actions) for Remove unnecessary replication permissions for __Entra Connect AD DS Connector account.__
 
 1. Review the list of exposed entities to discover which of your AD DS Connector accounts have unnecessary replication permissions.
 
 1. Take appropriate action on those accounts and remove their 'Replication Directory Changes' and 'Replication Directory Changes All' permissions by unchecking the following permissions:  
   
-![Replication permissions.](media/remove-replication-permissions-entra-connect/image.png)
+![Screenshot of the replication permissions.](media/remove-replication-permissions-entra-connect/permissions.png)
 
 > [!IMPORTANT]
 > For environments with multiple Entra Connect servers, it’s crucial to install sensors on each server to ensure Microsoft Defender for Identity can fully monitor your setup. It has been detected that your Entra Connect configuration does not utilize Password Hash Sync, which means that replication permissions are not necessary for the accounts in the Exposed Entities list. Additionally, it’s important to ensure that each exposed MSOL account is not required for Replication Permissions by any other applications.
