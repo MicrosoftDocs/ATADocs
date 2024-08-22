@@ -12,7 +12,7 @@ ms.topic: article
 ms.date:     08/12/2024
 ---
 
-# Security Assessment: Remove unnecessary replication permissions for Entra Connect Account
+# Security Assessment: Remove unnecessary replication permissions for Entra Connect Connector Account
 
 This article describes Microsoft Defender for Identity's unnecessary replication permissions for Entra Connect security posture assessment report.
 
@@ -53,17 +53,24 @@ How do I use this security assessment to improve my hybrid organizational securi
    For example:  
    ![User's image](https://review.learn.microsoft.com/en-us/defender-for-identity/media/rotate-password-entra-connect/image1.png)
    
-      Review the list of exposed entities to discover which of your AD DS connector accounts have a password more than 90 days old.
-      
-         Take appropriate action on those accounts by following the steps on [how to change the AD DS connector account password](https://aka.ms/EntraIdPasswordChangeSyncService).
-         
-          Note
-         
-         While assessments are updated in near real time, scores and statuses are updated every 24 hours. While the list of impacted entities is updated within a few minutes of your implementing the recommendations, the status may still take time until it's marked as **Completed**.
-         
-         Next steps
-         
-            [Learn more about Microsoft Secure Score](/microsoft-365/security/defender/microsoft-secure-score)
-            
-               [Check out the Defender for Identity forum!](https://aka.ms/MDIcommunity)
-               
+```
+  Review the list of exposed entities to discover which of your AD DS connector accounts have a password more than 90 days old.
+
+  
+     Take appropriate action on those accounts by following the steps on [how to change the AD DS connector account password](https://aka.ms/EntraIdPasswordChangeSyncService).
+
+     
+      Note
+
+     
+     While assessments are updated in near real time, scores and statuses are updated every 24 hours. While the list of impacted entities is updated within a few minutes of your implementing the recommendations, the status may still take time until it's marked as **Completed**.
+
+     
+     Next steps
+
+     
+        [Learn more about Microsoft Secure Score](/microsoft-365/security/defender/microsoft-secure-score)
+
+        
+           [Check out the Defender for Identity forum!](https://aka.ms/MDIcommunity)
+```
