@@ -19,6 +19,7 @@ This article describes Microsoft Defender for Identity's unnecessary replication
 > [!NOTE]
 > This security assessment will be available only if Microsoft Defender for Identity sensor is installed on servers running Entra Connect services.  
 > Additionally, if the Password Hash Sync (PHS) sign-in method is set up, AD DS Connector accounts with replication permissions won't be affected because those permissions are necessary.
+
 ## Why might the Entra Connect AD DS Connector account with unnecessary replication permissions be a risk?
 
 Smart attackers are likely to target Entra Connect in on-premises environments, and for good reason. The Entra Connect server can be a prime target, especially based on the permissions assigned to the AD DS Connector account (created in on-prem AD with the MSOL_ prefix). In the default 'express' installation of Entra Connect, the connector service account is granted replication permissions, among others, to ensure proper synchronization. If Password Hash Sync isn’t configured, it’s important to remove unnecessary permissions to minimize the potential attack surface.
@@ -37,8 +38,10 @@ Smart attackers are likely to target Entra Connect in on-premises environments, 
 > For environments with multiple Entra Connect servers, it’s crucial to install sensors on each server to ensure Microsoft Defender for Identity can fully monitor your setup. It has been detected that your Entra Connect configuration does not utilize Password Hash Sync, which means that replication permissions are not necessary for the accounts in the Exposed Entities list. Additionally, it’s important to ensure that each exposed MSOL account is not required for Replication Permissions by any other applications.
 > [!NOTE]
 > While assessments are updated in near real time, scores and statuses are updated every 24 hours. While the list of impacted entities is updated within a few minutes of your implementing the recommendations, the status may still take time until it's marked as __Completed__.
+>
+
 ## Next steps
 
 - [Learn more about Microsoft Secure Score](/microsoft-365/security/defender/microsoft-secure-score)
-- [Learn more about Defender for Identity Sensor for Entra Connect](https://aka.ms/MdiSensorForEntraConnectInstallation).
+- [Learn more about Defender for Identity Sensor for Entra Connect](/defender-for-identity/deploy/install-sensor).
 
