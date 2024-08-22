@@ -27,7 +27,7 @@ This report lists all MSOL (AD DS connector account) accounts in your organizati
 1. Review the recommended action at[ https://security.microsoft.com/securescore?viewid=actions](https://security.microsoft.com/securescore?viewid=actions) for **Rotate password for Entra Connect Connector account.  
  
 For example:  
-![User's image](media/rotate-password-entra-connect/image1.png)
+![Screenshot of a user details page](media/rotate-password-entra-connect/user-details.png)
 
 1. Review the list of exposed entities to discover which of your AD DS connector accounts have a password more than 90 days old.
 
