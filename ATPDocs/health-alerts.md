@@ -195,7 +195,7 @@ Sensor-specific health issues are displayed in the **Sensor health issues** tab 
 
 | Alert|| Description  ||Resolution|Severity|Displayed in|
 | -------- | -------- | -------- | -------- | -------- | -------- | -------- |
-|Failed to retrieve Entra Connect service configuration||The sensor is unable to retrieve the configuration from the Entra Connect service (also known as Microsoft Azure AD sync).  ||Ensure that the Entra connect services are operational, have access to the database, and check that the configuration is intact. |Medium|Sensors health issues tab|
+|Failed to retrieve Entra Connect service configuration||The sensor is unable to retrieve the configuration from the Entra Connect service (also known as Microsoft Azure AD sync).  ||Ensure that the Entra connect services are operational and check that the configuration is intact. If the **Microsoft Azure AD Sync** service is not running, **Start** it.                                                                                                                     If the service is up, validate that the Entra Connect service have access to the database. If there's an issue, follow the troubleshooting guidance for [SQL connectivity](/entra/identity/hybrid/connect/tshoot-connect-tshoot-sql-connectivity). |Medium|Sensors health issues tab|
 
 ## Next steps
 
