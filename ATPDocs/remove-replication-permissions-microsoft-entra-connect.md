@@ -15,7 +15,7 @@ This article describes Microsoft Defender for Identity's unnecessary replication
 > [!NOTE]
 > This security assessment will be available only if Microsoft Defender for Identity sensor is installed on servers running Microsoft Entra Connect services.
 > 
-> Additionally, if the Password Hash Sync (PHS) sign-in method is set up, AD DS Connector accounts with replication permissions won't be affected because those permissions are necessary.
+> Additionally, if the Password Hash Sync (PHS) sign-on method is set up, AD DS Connector accounts with replication permissions won't be affected because those permissions are necessary.
 
 ## Why might the Microsoft Entra Connect AD DS Connector account with unnecessary replication permissions be a risk?
 
