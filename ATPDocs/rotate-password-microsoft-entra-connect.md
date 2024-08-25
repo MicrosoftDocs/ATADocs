@@ -26,7 +26,7 @@ This report lists all MSOL accounts in your organization with password last set 
 
 1. Review the list of exposed entities to discover which of your AD DS connector accounts have a password more than 90 days old.
 
-1. Take appropriate action on those accounts by following the steps on [how to change the AD DS connector account password](https://aka.ms/EntraIdPasswordChangeSyncService).
+1. Take appropriate action on those accounts by following the steps on [how to change the AD DS connector account password](https://aka.ms/MicrosoftEntraIdPasswordChangeSyncService).
 
 > [!NOTE]
 > While assessments are updated in near real time, scores and statuses are updated every 24 hours. While the list of impacted entities is updated within a few minutes of your implementing the recommendations, the status may still take time until it's marked as **Completed**.
@@ -34,5 +34,5 @@ This report lists all MSOL accounts in your organization with password last set 
 
 - [Learn more about Microsoft Secure Score](/microsoft-365/security/defender/microsoft-secure-score)
 
-- [Learn more about Defender for Identity Sensor for Microsoft Entra Connect](https://aka.ms/MdiSensorForEntraConnectInstallation)
+- [Learn more about Defender for Identity Sensor for Microsoft Entra Connect](https://aka.ms/MdiSensorForMicrosoftEntraConnectInstallation)
 

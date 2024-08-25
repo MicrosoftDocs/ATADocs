@@ -41,4 +41,4 @@ Microsoft Microsoft Entra seamless SSO automatically signs in users when they're
 
 - [Learn more about Microsoft Secure Score](/microsoft-365/security/defender/microsoft-secure-score)
 
-- [Learn more about Defender for Identity sensor for Microsoft Entra Connect](https://aka.ms/MdiSensorForMicrosoft EntraConnectInstallation) 
+- [Learn more about Defender for Identity sensor for Microsoft Entra Connect](https://aka.ms/MdiSensorForMicrosoftEntraConnectInstallation) 
