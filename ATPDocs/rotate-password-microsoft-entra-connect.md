@@ -16,7 +16,7 @@ This article describes Microsoft Defender for Identity's Microsoft Entra Connect
 > This security assessment will be available only if Microsoft Defender for Identity sensor is installed on servers running Microsoft Entra Connect services. 
 ## Why might the Microsoft Entra Connect Connector account old password be a risk?
 
-Smart attackers are likely to target Microsoft Entra Connect in on-premises environments, and for good reason. The Microsoft Entra Connect server can be a prime target, especially based on the permissions assigned to the AD DS connector account (created in on-prem AD with the MSOL_ prefix).
+Smart attackers are likely to target Microsoft Entra Connect in on-premises environments, and for good reason. The Microsoft Entra Connect server can be a prime target, especially based on the permissions assigned to the AD DS connector account (created in on-premises AD with the MSOL_ prefix).
 
 This report lists all MSOL accounts in your organization with password last set over 90 days ago. It's important to change the password of MSOL accounts every 90 days to prevent attackers from allowing use of the high privileges that the connector account typically holds - replication permissions, reset password and so on.
 
