@@ -1,8 +1,4 @@
 ---
-# Required metadata
-# For more information, see https://review.learn.microsoft.com/en-us/help/platform/learn-editor-add-metadata?branch=main
-# For valid values of ms.service, ms.prod, and ms.topic, see https://review.learn.microsoft.com/en-us/help/platform/metadata-taxonomies?branch=main
-
 title: 'Security assessment: Remove Resource Based Constrained Delegation for Microsoft Entra seamless SSO account'
 description: This article describes Microsoft Defender for Identity's Microsoft Entra Seamless Single sign-on (SSO) account with Resource Based Constrained Delegation (RBCD) applied security posture assessment report.
 author:      LiorShapiraa # GitHub alias
