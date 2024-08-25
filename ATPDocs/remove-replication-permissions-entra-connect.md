@@ -18,7 +18,7 @@ This article describes Microsoft Defender for Identity's unnecessary replication
 
 ## Why might the Microsoft Entra Connect AD DS Connector account with unnecessary replication permissions be a risk?
 
-Smart attackers are likely to target Microsoft Entra Connect in on-premises environments, and for good reason. The Microsoft Entra Connect server can be a prime target, especially based on the permissions assigned to the AD DS Connector account (created in on-prem AD with the MSOL_ prefix). In the default 'express' installation of Microsoft Entra Connect, the connector service account is granted replication permissions, among others, to ensure proper synchronization. If Password Hash Sync isn’t configured, it’s important to remove unnecessary permissions to minimize the potential attack surface.
+Smart attackers are likely to target Microsoft Entra Connect in on-premises environments, and for good reason. The Microsoft Entra Connect server can be a prime target, especially based on the permissions assigned to the AD DS Connector account (created in on-premises AD with the MSOL_ prefix). In the default 'express' installation of Microsoft Entra Connect, the connector service account is granted replication permissions, among others, to ensure proper synchronization. If Password Hash Sync isn’t configured, it’s important to remove unnecessary permissions to minimize the potential attack surface.
 
 ## How do I use this security assessment to improve my hybrid organizational security posture?
 
@@ -32,6 +32,7 @@ Smart attackers are likely to target Microsoft Entra Connect in on-premises envi
 
 > [!IMPORTANT]
 > For environments with multiple Microsoft Entra Connect servers, it’s crucial to install sensors on each server to ensure Microsoft Defender for Identity can fully monitor your setup. It has been detected that your Microsoft Entra Connect configuration does not utilize Password Hash Sync, which means that replication permissions are not necessary for the accounts in the Exposed Entities list. Additionally, it’s important to ensure that each exposed MSOL account is not required for Replication Permissions by any other applications.
+
 > [!NOTE]
 > While assessments are updated in near real time, scores and statuses are updated every 24 hours. While the list of impacted entities is updated within a few minutes of your implementing the recommendations, the status may still take time until it's marked as __Completed__.
 >
