@@ -14,12 +14,12 @@ ms.subservice: ''
 This article describes Microsoft Defender for Identity's Microsoft Entra Seamless Single sign-on (SSO) account with Resource Based Constrained Delegation (RBCD) applied security posture assessment report.
 
 > [!NOTE]
-> This security assessment will be available only if Microsoft Defender for Identity sensor is installed on servers running Microsoft Entra Connect services and Sign on method as part of Microsoft Entra Connect configuration is set to single sign-on and the SSO computer account exists. Learn more about Microsoft Microsoft Entra seamless sign-on [here](https://go.microsoft.com/fwlink/LinkID=829638).
+> This security assessment will be available only if Microsoft Defender for Identity sensor is installed on servers running Microsoft Entra Connect services and Sign on method as part of Microsoft Entra Connect configuration is set to single sign-on and the SSO computer account exists. Learn more about Microsoft Entra seamless sign-on [here](https://go.microsoft.com/fwlink/LinkID=829638).
 >
 
 ## Why might the Microsoft Entra seamless SSO computer account with RBCD configured be a risk?
 
-Microsoft Microsoft Entra seamless SSO automatically signs in users when they're using their corporate desktops that are connected to your corporate network. Seamless SSO provides users with easy access to your cloud-based applications without using any other on-premises components. Seamless SSO creates a computer account named AZUREADSSOACC in each Windows Server AD Forest in your on-premises Windows Server AD directory. If resource-based constrained delegation is configured on the AZUREADSSOACC computer account, an account with the delegation would be able to generate service tickets for the AZUREADSSOACC account on behalf of any user and impersonate any user in the Microsoft Entra tenant that is synchronized from AD.
+Microsoft Entra seamless SSO automatically signs in users when they're using their corporate desktops that are connected to your corporate network. Seamless SSO provides users with easy access to your cloud-based applications without using any other on-premises components. Seamless SSO creates a computer account named AZUREADSSOACC in each Windows Server AD Forest in your on-premises Windows Server AD directory. If resource-based constrained delegation is configured on the AZUREADSSOACC computer account, an account with the delegation would be able to generate service tickets for the AZUREADSSOACC account on behalf of any user and impersonate any user in the Microsoft Entra tenant that is synchronized from AD.
 
 ## How do I use this security assessment to improve my hybrid organizational security posture?
 
