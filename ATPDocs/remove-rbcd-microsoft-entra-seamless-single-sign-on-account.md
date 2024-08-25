@@ -33,7 +33,7 @@ Microsoft Microsoft Entra seamless SSO automatically signs in users when they're
 
 1. Evaluate if the RBCD configuration for the AZUREADSSOACC account is essential for your operations. If the delegation is not required for critical functionalities, it’s safer to remove it by ensuring that the `msDS-AllowedToActOnBehalfOfOtherIdentity` attribute on any AZUREADSSOACC account is empty – this is the normal state for this account:
 
-![Screenshot of the user details page.](media/remove-rbcd-Microsoft Entra-seamless-single-sign-in-account/permissions.png)
+![Screenshot of the user details page.](media/remove-rbcd-microsoft-entra-seamless-single-sign-on-account/permissions.png)
 
 > [!NOTE]
 > While assessments are updated in near real time, scores and statuses are updated every 24 hours. While the list of impacted entities is updated within a few minutes of your implementing the recommendations, the status may still take time until it's marked as __Completed__.

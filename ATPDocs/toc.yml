@@ -157,7 +157,7 @@ items:
   - name: Security posture
     items:
     - name: Change password for Entra seamless SSO account
-      href: change-password-entra-seamless-singlesingin.md
+      href: change-password-microsoft-entra-seamless-single-sign-on.md
       displayName: Entra connect
     - name: "Rotate password for Entra Connect connector account "
       href: rotate-password-entra-connect.md
@@ -201,7 +201,7 @@ items:
     - name: Remove local admins on identity assets
       href: security-assessment-remove-local-admins.md      
     - name: Remove Resource Based Constrained Delegation for Entra seamless SSO account
-      href: remove-rbcd-entra-seamless-single-sign-in-account.md
+      href: remove-rbcd-microsoft-entra-seamless-single-sign-on-account.md
       displayName: entra connect
     - name: Riskiest lateral movement paths
       href: security-assessment-riskiest-lmp.md
