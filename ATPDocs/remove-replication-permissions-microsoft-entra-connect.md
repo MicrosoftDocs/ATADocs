@@ -1,6 +1,6 @@
 ---
-title: 'Security assessment: Remove unnecessary replication permissions for Microsoft Entra Connect Account '
-description: 'Security assessment: Remove unnecessary replication permissions for Microsoft Entra Connect Account '
+title: 'Security assessment: Remove unnecessary replication permissions for Microsoft Entra Connect connector account'
+description: 'Security assessment: Remove unnecessary replication permissions for Microsoft Entra Connect connector account'
 author:      LiorShapiraa # GitHub alias
 ms.author:   liorshapira
 ms.service: microsoft-defender-for-identity
