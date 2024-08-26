@@ -8,7 +8,7 @@ ms.topic: article
 ms.date:     08/12/2024
 ---
 
-# Security Assessment: Remove unnecessary replication permissions for Microsoft Entra Connect AD DS Connector Account
+# Security Assessment: Remove unnecessary replication permissions for Microsoft Entra Connect AD DS Connector account
 
 This article describes Microsoft Defender for Identity's unnecessary replication permissions for Microsoft Entra Connect (also known as Azure AD Connect) AD DS Connector account security posture assessment report.
 
