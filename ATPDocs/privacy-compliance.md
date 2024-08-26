@@ -29,6 +29,8 @@ Defender for Identity operates in the Microsoft Azure data centers in the follow
 - Switzerland
 - Singapore
 
+- India
+
 Customer data collected by the service might be stored as follows:
 
 - Your workspace is automatically created in data center that's geographically closest to your Microsoft Entra ID. Once created, Defender for Identity workspaces can't be moved to another data center. Your workspace's data center is listed in the Microsoft Defender portal, under **Settings** > **Identity** > **About** > **Geolocation**.
