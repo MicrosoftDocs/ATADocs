@@ -5,21 +5,21 @@ ms.date: 02/21/2024
 ms.topic: how-to
 ---
 
-# Configuring sensors for AD FS and AD CS
+# Configuring sensors for AD FS, AD CS and Entra Connect
 
-Install Defender for Identity sensors on Active Directory Federation Services (AD FS) and Active Directory Certificate Services (AD CS) servers to protect them from on-premises attacks.
+Install Defender for Identity sensors on Active Directory Federation Services (AD FS), Active Directory Certificate Services (AD CS) and Microsoft Entra Connect (Microsoft Azure AD Sync) servers to protect them from on-premises and hybrid attacks.
 
-This article describes the steps required when installing Defender for Identity sensors on AD FS or AD CS servers.
+This article describes the steps required when installing Defender for Identity sensors on AD FS or AD CS or Entra Connect servers.
 
 > [!NOTE]
-> For AD FS environments, the Defender for Identity sensor is supported only on the federation servers, and isn't required on the Web Application Proxy (WAP) servers. For AD CS environments, you don't need to install the sensor on any AD CS servers that are offline.
->
-
+> For AD FS environments, the Defender for Identity sensor is supported only on the federation servers, and isn't required on the Web Application Proxy (WAP) servers.   
+> For AD CS environments, you don't need to install the sensor on any AD CS servers that are offline.  
+> For Entra Connect servers, install the sensor on both active and staging servers.
 ## Prerequisites
 
 Prerequisites for installing Defender for Identity sensors on AD FS or AD CS servers are the same as for installing sensors on domain controllers. For more information, see [Microsoft Defender for Identity prerequisites](prerequisites.md).
 
-Note that a sensor installed on an AD FS / AD CS server cannot use the Local service account to connect to the Domain. Instead, you'll need to configure a [Directory Service Account](directory-service-accounts.md).
+Note that a sensor installed on an AD FS / AD CS / Entra Connect server cannot use the Local service account to connect to the Domain. Instead, you'll need to configure a [Directory Service Account](directory-service-accounts.md).
 
 In addition, the Defender for Identity sensor for AD CS only supports AD CS servers with Certification Authority Role Service. 
 
@@ -108,15 +108,23 @@ If you're working with AD FS / AD CS servers, make sure that you've configured a
 
 - **AD FS**:
 
-    - [Required Active Directory Federation Services (AD FS) events](event-collection-overview.md#required-active-directory-federation-services-ad-fs-events)
-    - [Configure auditing on an Active Directory Federation Services (AD FS)](configure-windows-event-collection.md#configure-auditing-on-an-active-directory-federation-services-ad-fs)
-
+  - [Required Active Directory Federation Services (AD FS) events](event-collection-overview.md#required-active-directory-federation-services-ad-fs-events)
+    
+  - [Configure auditing on an Active Directory Federation Services (AD FS)](configure-windows-event-collection.md#configure-auditing-on-an-active-directory-federation-services-ad-fs)
+    
 - **AD CS**:
 
-    - [Required Active Directory Certificate Services (AD CS) events](event-collection-overview.md#required-active-directory-certificate-services-ad-cs-events)
-    - [Configure auditing for Active Directory Certificate Services (AD CS)](configure-windows-event-collection.md#configure-auditing-for-active-directory-certificate-services-ad-cs)
+  - [Required Active Directory Certificate Services (AD CS) events](event-collection-overview.md#required-active-directory-certificate-services-ad-cs-events)
+    
+  - [Configure auditing for Active Directory Certificate Services (AD CS)](configure-windows-event-collection.md#configure-auditing-for-active-directory-certificate-services-ad-cs)
+    
+- **Entra Connect:**
 
-## Validate successful deployment on AD FS / AD CS servers
+  - [Required Entra Connect events](event-collection-overview.md#required-entra-connect-events)
+
+  - [Configure auditing for Entra Connect](configure-windows-event-collection.md#configure-auditing-for-entra-connect)
+    
+  ## Validate successful deployment on AD FS / AD CS servers
 
 To validate that the Defender for Identity sensor has been successfully deployed on an AD FS server:
 
@@ -165,4 +173,6 @@ Initializing the sensor may take a couple of minutes, at which time the AD FS / 
 For more information, see:
 
 - [Microsoft Defender for Identity prerequisites](prerequisites.md)
+
 - [Install the Microsoft Defender for Identity sensor](install-sensor.md)
+
