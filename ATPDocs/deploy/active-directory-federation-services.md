@@ -154,9 +154,9 @@ To validate that the Defender for Identity sensor has been successfully deployed
 
    :::image type="content" source="../media/adfs-logon-advanced-hunting.png" alt-text="Screenshot of the results of an AD FS logon advanced hunting query." lightbox="../media/adfs-logon-advanced-hunting.png":::
 
-## Post-installation steps for AD FS / AD CS servers (Optional)
+## Post-installation steps for AD FS / AD CS / Entra Connect servers (Optional)
 
-Only during the sensor installation on an AD FS / AD CS server the closest domain controller is automatically selected. Use the following steps to check or modify the selected domain controller.
+Only during the sensor installation on an AD FS / AD CS / Entra Connect server the closest domain controller is automatically selected. Use the following steps to check or modify the selected domain controller.
 
 1. In [Microsoft Defender XDR](https://security.microsoft.com), go to **Settings**  > **Identities** > **Sensors** to view all of your Defender for Identity sensors.
 
@@ -166,7 +166,7 @@ Only during the sensor installation on an AD FS / AD CS server the closest domai
 
     ![Screenshot of the Defender for Identity configure AD FS sensor resolver.](../media/sensor-config-adfs-resolver.png)
 
-Initializing the sensor may take a couple of minutes, at which time the AD FS / AD CS sensor service status should change from **stopped** to **running**.
+Initializing the sensor may take a couple of minutes, at which time the AD FS / AD CS / Entra Connect sensor service status should change from **stopped** to **running**.
 
 ## Related content
 
