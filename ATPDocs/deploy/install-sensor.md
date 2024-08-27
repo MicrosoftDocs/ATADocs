@@ -182,7 +182,7 @@ Use the following command to configure your proxy together with a silent install
 
 If you installed the sensor on an AD FS / AD CS server, or if you installed a standalone sensor, following the extra post-installation steps:
 
-- **AD FS / AD CS servers**: [Post-installation steps for AD FS / AD CS servers (Optional)](active-directory-federation-services.md#post-installation-steps-for-ad-fs--ad-cs-servers-optional)
+- **AD FS / AD CS servers**: [Post-installation steps for AD FS / AD CS servers (Optional)](active-directory-federation-services.md#post-installation-steps-for-ad-fs--ad-cs--entra-connect-servers-optional)
 
 - **Standalone sensors**:
 
