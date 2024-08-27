@@ -284,7 +284,7 @@ If you're working with a dedicated server with Active Directory Certificate Serv
 
 1. Create a group policy to apply to your AD CS server. Edit it and configure the following auditing settings:
 
-    1. Go to and double select **Computer Configuration\Policies\Windows Settings\Security Settings\Advanced Audit Policy Configuration\Audit Policies\Object Access\Audit Certification Services**.
+    1. Go to **Computer Configuration\Policies\Windows Settings\Security Settings\Advanced Audit Policy Configuration\Audit Policies\Object Access\Audit Certification Services**.
     
     1. Select to configure audit events for **Success** and **Failure**. For example:
 
@@ -300,15 +300,27 @@ If you're working with a dedicated server with Active Directory Certificate Serv
         net stop certsvc && net start certsvc
         ````
 
-    - **To Configure CA auditing using the GUI**:
-
+   - **To Configure CA auditing using the GUI**:
+   
         1. Select **Start -> Certification Authority (MMC Desktop application)**. Right-click your CA's name and select **Properties**. For example: 
 
             :::image type="content" source="../media/configure-windows-event-collection/certification-authority.png" alt-text="Screenshot of the Certification Authority dialog.":::
 
-        1. Select the **Auditing** tab, select all the events you want to audit, and then select **Apply**. For example:
+    1. Select the **Auditing** tab, select all the events you want to audit, and then select **Apply**. For example:
+    
+        :::image type="content" source="../media/configure-windows-event-collection/auditing.png" alt-text="Screenshot of the Properties Auditing tab.":::
+       
+## Configure auditing for Entra Connect
 
-            :::image type="content" source="../media/configure-windows-event-collection/auditing.png" alt-text="Screenshot of the Properties Auditing tab.":::
+**To configure auditing on Entra Connect servers**:
+
+1. Create a group policy to apply to your Entra Connect servers. Edit it and configure the following auditing settings:
+
+    1. Go to **Computer Configuration\Policies\Windows Settings\Security Settings\Advanced Audit Policy Configuration\Audit Policies\Logon/Logoff\Audit Logon**.
+    
+   1. Select to configure audit events for **Success** and **Failure**. For example:
+   
+![Screenshot of the Group Policy Management Editor.](media/configure-windows-event-collection/image.png)
 
 > [!NOTE]
 > Configuring *Start and Stop Active Directory Certificate Services* event auditing may cause restart delays when dealing with a large AD CS database. Consider removing irrelevant entries from the database, or alternatively, refrain from enabling this specific type of event.
@@ -372,6 +384,7 @@ For more information, see:
 
 - [What is Windows event collection for Defender for Identity](event-collection-overview.md)
 - [Windows security auditing](/windows/security/threat-protection/auditing/security-auditing-overview)
+
 - [Advanced security audit policies](/windows/security/threat-protection/auditing/advanced-security-auditing)
 
 ## Next step
