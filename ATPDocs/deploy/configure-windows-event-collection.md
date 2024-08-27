@@ -292,7 +292,6 @@ If you're working with a dedicated server with Active Directory Certificate Serv
       
 1. Configure auditing on the certificate authority (CA) using one of the following methods:
 
-   ```
    - **To configure CA auditing using the command line**, run:
    
    
@@ -302,7 +301,7 @@ If you're working with a dedicated server with Active Directory Certificate Serv
    
     net stop certsvc && net start certsvc
     ````
-   ```
+
    - **To Configure CA auditing using the GUI**:
    
     1. Select **Start -> Certification Authority (MMC Desktop application)**. Right-click your CA's name and select **Properties**. For example: 
