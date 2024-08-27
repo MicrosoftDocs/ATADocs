@@ -15,7 +15,8 @@ Use the **Dashboard** page to view critical insights and real-time data about id
 
 To access this new dashboard, you need:
 
-- A  Microsoft Defender for Identity license and an Entra ID Identity Protection license
+- A Microsoft Defender for Identity license and an Entra ID Identity Protection license
+
 - A user role with at least the [Security Reader](/azure/active-directory/roles/permissions-reference#security-reader) permissions
 
 To view a comprehensive list of recommendations and select all recommended action links, you need the [Global Administrator](/azure/active-directory/roles/permissions-reference#global-administrator) role.
@@ -40,6 +41,7 @@ Select links in the cards to just to more details, such as documentation, relate
 
 |Name  |Description |
 |---------|---------|
+|**Identities overview (Sheild widget)** |Provides a quick overview of the number of users in hybrid, cloud, and on-premises environments (AD and Microsoft Entra ID). This feature updates every 24 hours and includes direct links to the Advanced Hunting platform, offering detailed user information at your fingertips.|
 |**Top insights** /<br>**Users identified in a risky lateral movement path** | Indicates any sensitive accounts with risky lateral movement paths, which are windows of opportunity for attackers and can expose risks.  <br><br>We recommend that you take action on any sensitive accounts found with risky lateral movement paths to minimize your risk. <br><br>For more information, see [Understand and investigate Lateral Movement Paths (LMPs) with Microsoft Defender for Identity](understand-lateral-movement-paths.md).|
 |**Top insights** /<br>**Dormant Active Directory users who should be removed from sensitive groups** | Lists accounts that have been left unused for at least 180 days. <br><br>An easy and quiet path deep into your organization is through inactive accounts that are a part of sensitive groups, therefore we recommend removing those users from sensitive groups. <br><br>For more information, see [Security assessment: Riskiest lateral movement paths (LMP)](security-assessment-riskiest-lmp.md).|
 |**ITDR deployment health**     |  Lists any sensor deployment progress, any health alerts, and license availability.     |
