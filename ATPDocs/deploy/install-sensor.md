@@ -28,7 +28,7 @@ Before you start, make sure that you have:
     - [Deploying Microsoft Defender for Identity on AD FS and AD CS servers](active-directory-federation-services.md)
     - [Microsoft Defender for Identity standalone sensor prerequisites](prerequisites-standalone.md)
 
-- Trusted root certificates on your machine. If your trusted root CA-signed certificates are missing, [you may recieve a connection error](../troubleshooting-known-issues.md#proxy-authentication-problem-presents-as-a-connection-error).
+- Trusted root certificates on your machine. If your trusted root CA-signed certificates are missing, [you may receive a connection error](../troubleshooting-known-issues.md#proxy-authentication-problem-presents-as-a-connection-error).
 
 ## Install the sensor using the UI
 
@@ -182,7 +182,7 @@ Use the following command to configure your proxy together with a silent install
 
 If you installed the sensor on an AD FS / AD CS server, or if you installed a standalone sensor, following the extra post-installation steps:
 
-- **AD FS / AD CS servers**: [Post-installation steps for AD FS / AD CS servers (Optional)](active-directory-federation-services.md#post-installation-steps-for-ad-fs--ad-cs-servers-optional)
+- **AD FS / AD CS servers**: [Post-installation steps for AD FS / AD CS servers (Optional)](active-directory-federation-services.md#post-installation-steps-for-ad-fs--ad-cs--entra-connect-servers-optional)
 
 - **Standalone sensors**:
 

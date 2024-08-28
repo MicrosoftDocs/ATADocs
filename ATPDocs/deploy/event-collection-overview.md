@@ -44,6 +44,14 @@ The following events are required for Active Directory Certificate Services (AD 
 
 For more information, see [Configure auditing for Active Directory Certificate Services (AD CS)](../configure-windows-event-collection.md#configure-auditing-for-active-directory-certificate-services-ad-cs).
 
+### Required Entra Connect events
+
+The following events are required for Entra Connect servers:
+
+- 4624 - An account was successfully logged on
+
+For more information, see [Configure auditing on Entra Connect](../configure-windows-event-collection.md#configure-auditing-for-entra-connect)
+
 ### Other required Windows events
 
 The following general Windows events are required for all Defender for Identity sensors: 

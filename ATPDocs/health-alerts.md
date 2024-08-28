@@ -191,6 +191,12 @@ Sensor-specific health issues are displayed in the **Sensor health issues** tab 
 |----|----|----|----|----|
 |Radius accounting (VPN integration) data ingestion failures.|The listed Defender for Identity sensors have radius accounting (VPN integration) data ingestion failures.|Validate that the shared secret in the Defender for Identity configuration settings matches your VPN server, according to the guidance described [Configure VPN in Defender for Identity](vpn-integration.md#configure-vpn-in-defender-for-identity) section, in the [Defender for Identity VPN integration](vpn-integration.md) page.|Low|Health issues page|
 
+### Sensor failed to retrieve Entra Connect service configuration
+
+| Alert|| Description  ||Resolution|Severity|Displayed in|
+| -------- | -------- | -------- | -------- | -------- | -------- | -------- |
+|Failed to retrieve Entra Connect service configuration||The sensor is unable to retrieve the configuration from the Entra Connect service (also known as Microsoft Azure AD sync).  ||Ensure that the Entra connect service **(Microsoft Azure AD Sync)** is running and validate that the service account or computer account have access to the SQL database.                                                                         If there's an issue, follow the troubleshooting guidance at [SQL connectivity issues with Microsoft Entra Connect](/entra/identity/hybrid/connect/tshoot-connect-tshoot-sql-connectivity). |Medium|Sensors health issues tab|
+
 ## Next steps
 
 - [Defender for Identity prerequisites](deploy/prerequisites.md)
