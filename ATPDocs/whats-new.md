@@ -26,6 +26,36 @@ For updates about versions and features released six months ago or earlier, see 
 
 ## August 2024
 
+As part of our ongoing effort to enhance Microsoft Defender for Identity coverage in hybrid identity environments, we've introduce support for a new sensor on Entra Connect servers. Additionally, we've released 3 new hybrid security detections and 4 new identity posture recommendations specifically for Entra Connect, helping customers stay protected and mitigate potential risks.
+
+#### New Entra Connect Identity posture recommendations:
+* **Rotate password for Entra Connect connector account**
+   * A compromised Entra Connect connector account (AD DS connector account, commonly shown as MSOL_XXXXXXXX) can grant access to high-privilege functions like replication and password resets, allowing attackers to modify synchronization settings and compromise security in both cloud and on-premises environments as well as offering several paths for compromising the entire domain. In this assessment we recommend customers change the password of MSOL accounts with the password last set over 90 days ago.
+* **Remove unnecessary replication permissions for Entra Connect Account**
+   * By default, the Entra Connect connector account has extensive permissions to ensure proper synchronization (even if they are not actually required). If Password Hash Sync is not configured, it’s important to remove unnecessary permissions to reduce the potential attack surface.
+* **Change password for Entra seamless SSO account configuration**
+   * This report lists all [Entra seamless SSO](https://learn.microsoft.com/en-us/entra/identity/hybrid/connect/how-to-connect-sso) computer accounts with password last set over 90 days ago. The password for the Azure SSO computer account is not automatically changed every 30 days. If an attacker compromises this account, they can generate service tickets for the AZUREADSSOACC account on behalf of any user and impersonate any user in the Entra tenant that is synchronized from Active Directory. An attacker can use this to move laterally from Active Directory into Entra ID.
+* **Remove Resource Based Constrained Delegation for Entra seamless SSO account**
+   *  If resource-based constrained delegation is configured on the AZUREADSSOACC computer account, an account with the delegation would be able to generate service tickets for the AZUREADSSOACC account on behalf of any user and impersonate any user in the Entra tenant that is synchronized from AD.       
+
+#### New Entra Connect detections:
+
+* **Suspicious Interactive Logon to the Entra Connect Server**
+   * Direct logins to Entra Connect servers are highly unusual and potentially malicious. Attackers often target these servers to steal credentials for broader network access. Microsoft Defender for Identity can now detect abnormal logins to Entra Connect servers, helping you identify and respond to these potential threats faster. It is specifically applicable when the Entra Connect server is a standalone server and not operating as a Domain Controller.
+* **User Password Reset by Entra Connect Account**
+   *  The Entra Connect connector account often holds high privileges, including the ability to reset user’s passwords. Microsoft Defender for Identity now has visibility into those actions and will detect any usage of those permissions that were identified as malicious and non-legitimate. This alert will be triggered only if the [password writeback feature](https://learn.microsoft.com/en-us/entra/identity/authentication/concept-sspr-writeback) is disabled.
+*  **Suspicious writeback by Entra Connect on a sensitive user**
+   * While Entra Connect already prevents writeback for users in privileged groups, Microsoft Defender for Identity expands this protection by identifying additional types of sensitive accounts. This enhanced detection helps prevent unauthorized password resets on critical accounts, which can be a crucial step in advanced attacks targeting both cloud and on-premises environments.
+
+#### Additional improvements and capabilities:
+* New activity of any **failed password reset on a sensitive account** available in the ‘IdentityDirectoryEvents’ table in Advanced Hunting. This can help customers track failed password reset events and create custom detection based on this data.
+* Enhanced accuracy for the **DC sync attack** detection.
+* New [health alert](https://go.microsoft.com/fwlink/?linkid=2283735) for cases where the sensor is unable to retrieve the configuration from the Entra Connect service.
+Extended monitoring for security alerts, such as PowerShell Remote Execution Detector, by enabling the new sensor on Entra Connect servers.
+
+[Learn more about the new sensor](https://aka.ms/MdiSensorForEntraConnectInstallation)
+
+
 The DefenderForIdentity PowerShell module has been updated, incorporating new functionality and addressing several bug fixes. Key improvements include:
 
 - **New `New-MDIDSA` Cmdlet**: Simplifies creation of service accounts, with a default setting for Group Managed Service Accounts (gMSA) and an option to create standard accounts.
@@ -41,17 +71,17 @@ For more information, see:
 ## July 2024
 
 6 New detections are new in public preview:
-* Possible NetSync attack
+* **Possible NetSync attack**
     * NetSync is a module in Mimikatz, a post-exploitation tool, that requests the password hash of a target device's password by pretending to be a domain controller. An attacker might be performing malicious activities inside the network using this feature to gain access to the organization's resources.
-* Possible takeover of a Microsoft Entra seamless SSO account
+* **Possible takeover of a Microsoft Entra seamless SSO account**
     * A Microsoft Entra seamless SSO (single sign-on) account object, AZUREADSSOACC, was modified suspiciously. An attacker might be moving laterally from the on-premises environment to the cloud.
-* Suspicious LDAP query
+* **Suspicious LDAP query**
     * A suspicious Lightweight Directory Access Protocol (LDAP) query associated with a known attack tool was detected. An attacker might be performing reconnaissance for later steps.
-* Suspicious SPN was added to a user
+* **Suspicious SPN was added to a user**
     * A suspicious service principal name (SPN) was added to a sensitive user. An attacker might be attempting to gain elevated access for lateral movement within the organization
-* Suspicious creation of ESXi group
+* **Suspicious creation of ESXi group**
     * A suspicious VMWare ESXi group was created in the domain. This might indicate that an attacker is trying to get more permissions for later steps in an attack.
-* Suspicious ADFS authentication
+* **Suspicious ADFS authentication**
     * A domain-joined account signed in using Active Directory Federation Services (ADFS) from a suspicious IP address. An attacker might have stolen a user's credentials and is using it to move laterally in the organization.
 
 ### Defender for Identity release 2.238
