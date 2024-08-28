@@ -42,12 +42,13 @@ For more information, see [Microsoft Defender for Identity architecture](../arch
 
 ## Sensor requirements and recommendations
 
-The following table summarizes requirements and recommendations for the domain controller, AD FS, or AD CS server where you'll install the Defender for Identity sensor.
+The following table summarizes requirements and recommendations for the domain controller, AD FS, AD CS, Entra Connect server where you'll install the Defender for Identity sensor.
 
 | Prerequisite / Recommendation |Description  |
 |---------|---------|
 |**Specifications**     |  Make sure to install Defender for Identity on Windows version 2016 or higher, on a domain controller server with a minimum of:<br><br>- 2 cores<br>- 6 GB of RAM<br>- 6 GB of disk space required, 10 GB recommended, including space for Defender for Identity binaries and logs <br><br>Defender for Identity supports read-only domain controllers (RODC).     |
 |**Performance**   | For optimal performance, set the **Power Option** of the machine running the Defender for Identity sensor to **High Performance**.        |
+|**Network interface configuration** | If you are using VMware virtual machines, make sure the virtual machine's NIC configuration has Large Send Offload (LSO) disabled. See [VMware virtual machine sensor issue](../troubleshooting-known-issues.md#vmware-virtual-machine-sensor-issue) for more details.|
 |**Maintenance window**     |   We recommend scheduling a maintenance window for your domain controllers, as a restart might be required if the installation runs and a restart is already pending, or if .NET Framework needs to be installed. <br><br>If .NET Framework version 4.7 or later isn't already found on the system, .NET Framework version 4.7 is installed, and may require a restart.      |
 
 ### Minimum operating system requirements
@@ -116,7 +117,7 @@ The link to the *Test-MdiReadiness.ps1* script is also available from Microsoft 
 
 ## Related content
 
-This article lists prerequisites required for a basic installation. Additional prerequisites are required when installing on an AD FS / AD CS server, to support multiple Active Directory forests, or when you're installing a standalone Defender for Identity sensor.
+This article lists prerequisites required for a basic installation. Additional prerequisites are required when installing on an AD FS / AD CS server or Entra Connect, to support multiple Active Directory forests, or when you're installing a standalone Defender for Identity sensor.
 
 For more information, see:
 

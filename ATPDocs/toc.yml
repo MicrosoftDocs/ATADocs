@@ -62,7 +62,7 @@ items:
       href: deploy/remote-calls-sam.md
   - name: Extra deployment scenarios
     items:
-    - name: Install on AD FS / AD CS servers
+    - name: Install on Microsoft AD FS / AD CS / Entra Connect servers
       href: deploy/active-directory-federation-services.md
     - name: Configure action accounts
       href: deploy/manage-action-accounts.md
