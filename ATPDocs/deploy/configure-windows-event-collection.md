@@ -315,11 +315,11 @@ If you're working with a dedicated server with Active Directory Certificate Serv
 > [!NOTE]
 > Configuring *Start and Stop Active Directory Certificate Services* event auditing may cause restart delays when dealing with a large AD CS database. Consider removing irrelevant entries from the database, or alternatively, refrain from enabling this specific type of event.
       
-## Configure auditing for Entra Connect
+## Configure auditing for Microsoft Entra Connect
 
-**To configure auditing on Entra Connect servers**:
+**To configure auditing on Microsoft Entra Connect servers**:
 
-1. Create a group policy to apply to your Entra Connect servers. Edit it and configure the following auditing settings:
+1. Create a group policy to apply to your Microsoft Entra Connect servers. Edit it and configure the following auditing settings:
 
     1. Go to **Computer Configuration\Policies\Windows Settings\Security Settings\Advanced Audit Policy Configuration\Audit Policies\Logon/Logoff\Audit Logon**.
     
@@ -387,7 +387,6 @@ For more information, see:
 
 - [What is Windows event collection for Defender for Identity](event-collection-overview.md)
 - [Windows security auditing](/windows/security/threat-protection/auditing/security-auditing-overview)
-
 - [Advanced security audit policies](/windows/security/threat-protection/auditing/advanced-security-auditing)
 
 ## Next step
