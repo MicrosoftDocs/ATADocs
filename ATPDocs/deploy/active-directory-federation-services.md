@@ -12,8 +12,10 @@ Install Defender for Identity sensors on Active Directory Federation Services (A
 This article describes the steps required when installing Defender for Identity sensors on AD FS or AD CS or Entra Connect servers.
 
 > [!NOTE]
-> For AD FS environments, the Defender for Identity sensor is supported only on the federation servers, and isn't required on the Web Application Proxy (WAP) servers.   
-> For AD CS environments, you don't need to install the sensor on any AD CS servers that are offline.  
+> For AD FS environments, the Defender for Identity sensor is supported only on the federation servers, and isn't required on the Web Application Proxy (WAP) servers.
+
+> For AD CS environments, you don't need to install the sensor on any AD CS servers that are offline.
+  
 > For Entra Connect servers, you need to install the sensor on both active and staging servers.
 ## Prerequisites
 
