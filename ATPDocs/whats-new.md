@@ -1,7 +1,7 @@
 ---
 title: What's new | Microsoft Defender for Identity
 description: This article is updated frequently to let you know what's new in the latest release of Microsoft Defender for Identity.
-ms.date: 07/11/2024
+ms.date: 08/29/2024
 ms.topic: overview
 #CustomerIntent: As a Defender for Identity customer, I want to know what's new in the latest release of Defender for Identity, so that I can take advantage of new features and functionality. 
 ---
@@ -26,9 +26,12 @@ For updates about versions and features released six months ago or earlier, see 
 
 ## August 2024
 
-As part of our ongoing effort to enhance Microsoft Defender for Identity coverage in hybrid identity environments, we've introduce support for a new sensor on Entra Connect servers. Additionally, we've released 3 new hybrid security detections and 4 new identity posture recommendations specifically for Entra Connect, helping customers stay protected and mitigate potential risks.
+#### New Entra Connect sensor:
 
-#### New Entra Connect Identity posture recommendations:
+As part of our ongoing effort to enhance Microsoft Defender for Identity coverage in hybrid identity environments, we have introduced a new sensor for Entra Connect servers. Additionally, we've released 3 new hybrid security detections and 4 new identity posture recommendations specifically for Entra Connect, helping customers stay protected and mitigate potential risks.
+
+**New Entra Connect Identity posture recommendations:**
+
 * **Rotate password for Entra Connect connector account**
    * A compromised Entra Connect connector account (AD DS connector account, commonly shown as MSOL_XXXXXXXX) can grant access to high-privilege functions like replication and password resets, allowing attackers to modify synchronization settings and compromise security in both cloud and on-premises environments as well as offering several paths for compromising the entire domain. In this assessment we recommend customers change the password of MSOL accounts with the password last set over 90 days ago.
 * **Remove unnecessary replication permissions for Entra Connect Account**
@@ -38,7 +41,7 @@ As part of our ongoing effort to enhance Microsoft Defender for Identity coverag
 * **Remove Resource Based Constrained Delegation for Entra seamless SSO account**
    *  If resource-based constrained delegation is configured on the AZUREADSSOACC computer account, an account with the delegation would be able to generate service tickets for the AZUREADSSOACC account on behalf of any user and impersonate any user in the Entra tenant that is synchronized from AD.       
 
-#### New Entra Connect detections:
+**New Entra Connect detections:**
 
 * **Suspicious Interactive Logon to the Entra Connect Server**
    * Direct logins to Entra Connect servers are highly unusual and potentially malicious. Attackers often target these servers to steal credentials for broader network access. Microsoft Defender for Identity can now detect abnormal logins to Entra Connect servers, helping you identify and respond to these potential threats faster. It is specifically applicable when the Entra Connect server is a standalone server and not operating as a Domain Controller.
@@ -47,14 +50,16 @@ As part of our ongoing effort to enhance Microsoft Defender for Identity coverag
 *  **Suspicious writeback by Entra Connect on a sensitive user**
    * While Entra Connect already prevents writeback for users in privileged groups, Microsoft Defender for Identity expands this protection by identifying additional types of sensitive accounts. This enhanced detection helps prevent unauthorized password resets on critical accounts, which can be a crucial step in advanced attacks targeting both cloud and on-premises environments.
 
-#### Additional improvements and capabilities:
+**Additional improvements and capabilities:**
+
 * New activity of any **failed password reset on a sensitive account** available in the ‘IdentityDirectoryEvents’ table in Advanced Hunting. This can help customers track failed password reset events and create custom detection based on this data.
 * Enhanced accuracy for the **DC sync attack** detection.
-* New [health alert](https://go.microsoft.com/fwlink/?linkid=2283735) for cases where the sensor is unable to retrieve the configuration from the Entra Connect service.
-Extended monitoring for security alerts, such as PowerShell Remote Execution Detector, by enabling the new sensor on Entra Connect servers.
+* New [health issue](health-alerts.md#sensor-failed-to-retrieve-entra-connect-service-configuration) for cases where the sensor is unable to retrieve the configuration from the Entra Connect service.
+* Extended monitoring for security alerts, such as PowerShell Remote Execution Detector, by enabling the new sensor on Entra Connect servers.
 
-[Learn more about the new sensor](https://aka.ms/MdiSensorForEntraConnectInstallation)
+[Learn more about the new sensor](deploy/active-directory-federation-services.md)
 
+### Updated DefenderForIdentity PowerShell module
 
 The DefenderForIdentity PowerShell module has been updated, incorporating new functionality and addressing several bug fixes. Key improvements include:
 
