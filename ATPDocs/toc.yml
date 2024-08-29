@@ -156,15 +156,15 @@ items:
       href: remediation-actions.md
   - name: Security posture
     items:
+    - name: Overview
+      href: security-assessment.md
+      displayName: security posture, security assessment
     - name: Change password for Microsoft Entra seamless SSO account
       href: change-password-microsoft-entra-seamless-single-sign-on.md
       displayName: Microsoft Entra connect
     - name: "Rotate password for Microsoft Entra Connect connector account "
       href: rotate-password-microsoft-entra-connect.md
       displayName: Microsoft Entra Connect
-    - name: Overview
-      href: security-assessment.md
-      displayName: security posture, security assessment
     - name: Admin SDHolder permissions
       href: security-assessment-remove-suspicious-access-rights.md
     - name: DCSync permissions
