@@ -119,7 +119,7 @@ The sensors page provides the following information about each sensor:
 
 Keeping your Microsoft Defender for Identity sensors up to date, provides the best possible protection for your organization.
 
-The Microsoft Defender for Identity service is typically updated a few times a month with new detections, features, and  performance improvements. Typically these updates include a corresponding minor update to the sensors. Defender for Identity sensors and corresponding updates never have write permissions to your domain controllers. Sensor update packages only control the Defender for Identity sensor and sensor detection capabilities.
+The Microsoft Defender for Identity service is typically updated a few times a month with new detections, features, and  performance improvements. Typically these updates include a corresponding minor update to the sensors. Sensor update packages only control the Defender for Identity sensor and sensor detection capabilities.
 
 ### Defender for Identity sensor update types
 
