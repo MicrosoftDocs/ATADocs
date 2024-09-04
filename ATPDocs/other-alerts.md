@@ -298,7 +298,7 @@ We recommend investigating the source IP performing the operations to determine 
 |MITRE attack technique  |   [Browser Session Hijacking (T1185)](https://attack.mitre.org/techniques/T1185/)  |
 |MITRE attack sub-technique |  N/A       |
 
-## Group Policy Tampering (external ID 2439) (Preview)
+## Group Policy Tampering (external ID 2440) (Preview)
 
 **Severity**: Medium
 
