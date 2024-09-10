@@ -1,6 +1,6 @@
 ---
 title: Event collection overview | Microsoft Defender for Identity
-description: Learn about required event collection for the Microsoft Defender for Identity sensor on domain controllers or AD FS / AD CS.
+description: Learn about required event collection for the Microsoft Defender for Identity sensor on domain controllers, AD FS, and AD CS.
 ms.date: 08/10/2023
 ms.topic: conceptual
 ---
@@ -9,19 +9,19 @@ ms.topic: conceptual
 
 The Microsoft Defender for Identity sensor is configured to automatically collect syslog events. For Windows events, Defender for Identity detection relies on specific event logs, which the sensor parses from your domain controllers.
 
-## Event collection for domain controllers and AD FS / AD CS servers
+## Event collection for domain controllers, AD FS servers, and AD CS servers
 
-For the correct events to be audited and included in the Windows event log, your domain controllers or AD FS / AD CS servers require accurate, advanced audit policy settings.
+For the correct events to be audited and included in the Windows event log, your domain controllers, Active Directory Federation Services (AD FS) servers, or Active Directory Certificate Services (AD CS) servers require accurate, advanced audit policy settings.
 
 For more information, see [Configure audit policies for Windows event logs](../configure-windows-event-collection.md).
 
 ## Reference of required events
 
-This section lists the Windows events required by the Defender for Identity sensor, when installed on AD FS / AD CS servers, or on domain controllers.
+This section lists the Windows events required by the Defender for Identity sensor, when installed on AD FS or AD CS servers, or on domain controllers.
 
-### Required Active Directory Federation Services (AD FS) events
+### Required AD FS events
 
-The following events are required for Active Directory Federation Services (AD FS) servers:
+The following events are required for AD FS servers:
 
 - 1202 - The Federation Service validated a new credential
 - 1203 - The Federation Service failed to validate a new credential
@@ -30,9 +30,9 @@ The following events are required for Active Directory Federation Services (AD F
 
 For more information, see [Configure auditing on an Active Directory Federation Services (AD FS)](../configure-windows-event-collection.md#configure-auditing-on-an-active-directory-federation-services-ad-fs).
 
-### Required Active Directory Certificate Services (AD CS) events
+### Required AD CS events
 
-The following events are required for Active Directory Certificate Services (AD CS) servers:
+The following events are required for AD CS servers:
 
 - 4870: Certificate Services revoked a certificate
 - 4882: The security permissions for Certificate Services changed
@@ -44,17 +44,17 @@ The following events are required for Active Directory Certificate Services (AD 
 
 For more information, see [Configure auditing for Active Directory Certificate Services (AD CS)](../configure-windows-event-collection.md#configure-auditing-for-active-directory-certificate-services-ad-cs).
 
-### Required Entra Connect events
+### Required Microsoft Entra Connect events
 
-The following events are required for Entra Connect servers:
+The following events are required for Microsoft Entra Connect servers:
 
 - 4624 - An account was successfully logged on
 
-For more information, see [Configure auditing on Entra Connect](../configure-windows-event-collection.md#configure-auditing-for-entra-connect)
+For more information, see [Configure auditing on Microsoft Entra Connect](../configure-windows-event-collection.md#configure-auditing-for-entra-connect)
 
 ### Other required Windows events
 
-The following general Windows events are required for all Defender for Identity sensors: 
+The following general Windows events are required for all Defender for Identity sensors:
 
 - 4662 - An operation was performed on an object
 - 4726 - User Account Deleted
@@ -96,4 +96,4 @@ For more information, see your SIEM or syslog server's product documentation.
 ## Next step
 
 > [!div class="step-by-step"]
-> [Configure audit policies for Windows event logs »](../configure-windows-event-collection.md)
+> [Configure audit policies for Windows event logs](../configure-windows-event-collection.md)
