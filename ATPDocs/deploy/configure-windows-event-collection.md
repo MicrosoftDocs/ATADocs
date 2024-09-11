@@ -138,7 +138,7 @@ In the preceding command:
 - `Mode` specifies whether you want to use `Domain` or `LocalMachine` mode. In `Domain` mode, the settings are collected from the Group Policy objects. In `LocalMachine` mode, the settings are collected from the local machine.
 - `Configuration` specifies which configuration to get. Use `All` to get all configurations.
 
-To test your audit polices, use the `Test-MDIConfiguration` command to get a `true` or `false` response as to whether the values are configured correctly:
+To test your audit policies, use the `Test-MDIConfiguration` command to get a `true` or `false` response as to whether the values are configured correctly:
 
 ```powershell
 Test-MDIConfiguration [-Mode] <String> [-Configuration] <String[]>
@@ -266,7 +266,7 @@ To configure auditing on Active Directory Federation Services (AD FS):
 
 1. Select **OK**.
 
-## Configure auditing for Active Directory Certificate Services
+## Configure auditing on Active Directory Certificate Services
 
 If you're working with a dedicated server that has Active Directory Certificate Services (AD CS) configured, configure auditing as follows to view dedicated alerts and Secure Score reports:
 
@@ -302,7 +302,7 @@ If you're working with a dedicated server that has Active Directory Certificate 
 > [!NOTE]
 > Configuring **Start and Stop Active Directory Certificate Services** event auditing might cause restart delays when you're dealing with a large AD CS database. Consider removing irrelevant entries from the database. Alternatively, refrain from enabling this specific type of event.
 
-## Configure auditing for Microsoft Entra Connect
+## Configure auditing on Microsoft Entra Connect
 
 To configure auditing on Microsoft Entra Connect servers:
 

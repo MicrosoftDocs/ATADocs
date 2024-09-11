@@ -9,9 +9,9 @@ ms.topic: how-to
 
 This article describes how to install a Microsoft Defender for Identity sensor, including a standalone sensor. The default recommendation is to use the UI. However:
 
-- When you're installing the sensor on Windows Server Core, or to deploy the sensor via a software deployment system, follow the steps for [silent installation](#defender-for-identity-sensor-silent-installation) instead.
+- When you're installing the sensor on Windows Server Core, or to deploy the sensor via a software deployment system, follow the steps for [silent installation](#defender-for-identity-silent-installation) instead.
 
-- If you're using a proxy, we recommend that you install the sensor and configure your proxy together [from the command line](#run-a-silent-installation-with-a-proxy-configuration). If you need to update your proxy settings later on, use PowerShell or the Azure CLI. For more information, see [Configure endpoint proxy and internet connectivity settings](configure-proxy.md).
+- If you're using a proxy, we recommend that you install the sensor and configure your proxy together [from the command line](#command-for-running-a-silent-installation-with-a-proxy-configuration). If you need to update your proxy settings later on, use PowerShell or the Azure CLI. For more information, see [Configure endpoint proxy and internet connectivity settings](configure-proxy.md).
 
 ## Prerequisites
 

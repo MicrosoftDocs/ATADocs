@@ -11,7 +11,7 @@ A Microsoft Defender for Identity sensor is configured to automatically collect 
 
 ## Event collection for domain controllers, AD FS servers, and AD CS servers
 
-For the correct events to be audited and included in the Windows event log, your domain controllers, Active Directory Federation Services (AD FS) servers, or Active Directory Certificate Services (AD CS) servers require accurate, advanced audit policy settings.
+For the correct events to be audited and included in the Windows event log, your domain controllers, Active Directory Federation Services (AD FS) servers, or Active Directory Certificate Services (AD CS) servers require accurate Advanced Audit Policy settings.
 
 For more information, see [Configure audit policies for Windows event logs](../configure-windows-event-collection.md).
 

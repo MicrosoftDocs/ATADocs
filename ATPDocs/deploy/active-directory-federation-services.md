@@ -33,8 +33,8 @@ Set-AdfsProperties -AuditLevel Verbose
 
 For more information, see:
 
-- [Required Active Directory Federation Services (AD FS) events](event-collection-overview.md#required-active-directory-federation-services-ad-fs-events)
-- [Configure auditing on Active Directory Federation Services (AD FS)](configure-windows-event-collection.md#configure-auditing-on-an-active-directory-federation-services-ad-fs)
+- [Required Active Directory Federation Services (AD FS) events](event-collection-overview.md#required-ad-fs-events)
+- [Configure auditing on Active Directory Federation Services (AD FS)](configure-windows-event-collection.md#configure-auditing-on-active-directory-federation-services)
 - [Troubleshoot Active Directory Federation Services with events and logging](/windows-server/identity/ad-fs/troubleshooting/ad-fs-tshoot-logging#event-auditing-information-for-ad-fs-on-windows-server-2016)
 
 ## Configure read permissions for the AD FS database
@@ -108,21 +108,21 @@ If you're working with AD FS or AD CS servers, make sure that you configured aud
 
 - AD FS:
 
-  - [Required Active Directory Federation Services (AD FS) events](event-collection-overview.md#required-active-directory-federation-services-ad-fs-events)
+  - [Required Active Directory Federation Services (AD FS) events](event-collection-overview.md#required-ad-fs-events)
 
-  - [Configure auditing on an Active Directory Federation Services (AD FS)](configure-windows-event-collection.md#configure-auditing-on-an-active-directory-federation-services-ad-fs)
+  - [Configure auditing on an Active Directory Federation Services (AD FS)](configure-windows-event-collection.md#configure-auditing-on-active-directory-federation-services)
 
 - AD CS:
 
-  - [Required Active Directory Certificate Services (AD CS) events](event-collection-overview.md#required-active-directory-certificate-services-ad-cs-events)
+  - [Required Active Directory Certificate Services (AD CS) events](event-collection-overview.md#required-ad-cs-events)
 
-  - [Configure auditing for Active Directory Certificate Services (AD CS)](configure-windows-event-collection.md#configure-auditing-for-active-directory-certificate-services-ad-cs)
+  - [Configure auditing for Active Directory Certificate Services (AD CS)](configure-windows-event-collection.md#configure-auditing-on-active-directory-certificate-services)
 
 - Microsoft Entra Connect:
 
-  - [Required Microsoft Entra Connect events](event-collection-overview.md#required-entra-connect-events)
+  - [Required Microsoft Entra Connect events](event-collection-overview.md#required-microsoft-entra-connect-events)
 
-  - [Configure auditing for Microsoft Entra Connect](configure-windows-event-collection.md#configure-auditing-for-entra-connect)
+  - [Configure auditing for Microsoft Entra Connect](configure-windows-event-collection.md#configure-auditing-on-microsoft-entra-connect)
 
 ## Validate successful deployment
 
