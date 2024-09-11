@@ -66,7 +66,7 @@ After adding the **Network Service** to the **Event Log Readers** group, reboot 
 
    3. Under **SubscriptionManagers**, enter the following value and select **OK**: `Server=http://<fqdnATAGateway\>:5985/wsman/SubscriptionManager/WEC,Refresh=10`
 
-        *(For example: Server=`http://atagateway9.contoso.com:5985/wsman/SubscriptionManager/WEC,Refresh=10`)*
+        *(For example: Server=`http://atagateway.contoso.com:5985/wsman/SubscriptionManager/WEC,Refresh=10`)*
 
         ![Configure target subscription image.](media/wef-2-config-target-sub-manager.png)
 
