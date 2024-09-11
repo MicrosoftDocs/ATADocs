@@ -17,7 +17,7 @@ Defender for Identity generates health issues for each of these scenarios if the
 
 - Before you run Defender for Identity PowerShell commands, make sure that you downloaded the [Defender for Identity PowerShell module](https://www.powershellgallery.com/packages/DefenderForIdentity/).
 
-## Generate a report with current configurations via PowerShell
+## Generate a report of current configurations via PowerShell
 
 Before you start creating new event and audit policies, we recommend that you run the following PowerShell command to generate a report of your current domain configurations:
 
@@ -56,18 +56,18 @@ Use the following procedures to configure auditing on the domain controllers tha
 
 This procedure describes how to modify your domain controller's Advanced Audit Policy settings as needed for Defender for Identity via the UI.
 
-**Related health issue**: [Directory Services Advanced Auditing is not enabled as required](../health-alerts.md#directory-services-advanced-auditing-is-not-enabled-as-required)
+**Related health issue:** [Directory Services Advanced Auditing is not enabled as required](../health-alerts.md#directory-services-advanced-auditing-is-not-enabled-as-required)
 
 To configure your Advanced Audit Policy settings:
 
 1. Sign in to the server as **Domain Administrator**.
 1. Open the Group Policy Management Editor from **Server Manager** > **Tools** > **Group Policy Management**.
-1. Expand the **Domain Controllers Organizational Units**, right-click  **Default Domain Controllers Policy**, and then select **Edit**.
+1. Expand **Domain Controllers Organizational Units**, right-click  **Default Domain Controllers Policy**, and then select **Edit**.
 
     ![Screenshot of the pane for editing the default policy for domain controllers.](../media/advanced-audit-policy-check-step-1.png)
 
     > [!NOTE]
-    > Use the Default Domain Controllers Policy or a dedicated GPO to set these policies.
+    > Use the Default Domain Controllers policy or a dedicated GPO to set these policies.
 
 1. In the window that opens, go to **Computer Configuration** > **Policies** > **Windows Settings** > **Security Settings**. Depending on the policy you want to enable, do the following:
 
@@ -111,7 +111,7 @@ For more information, see the [auditpol reference documentation](/windows-server
 
 The following actions describe how to modify your domain controller's Advanced Audit Policy settings as needed for Defender for Identity by using PowerShell.
 
-**Related health issue**: [Directory Services Advanced Auditing is not enabled as required](../health-alerts.md#directory-services-advanced-auditing-is-not-enabled-as-required)
+**Related health issue:** [Directory Services Advanced Auditing is not enabled as required](../health-alerts.md#directory-services-advanced-auditing-is-not-enabled-as-required)
 
 To configure your settings, run:
 
@@ -164,7 +164,7 @@ This section describes the extra configuration steps that you need for auditing 
 > - Domain group policies to collect Windows event 8004 should be applied *only* to domain controllers.
 > - When a Defender for Identity sensor parses Windows event 8004, Defender for Identity NTLM authentication activities are enriched with the server-accessed data.
 
-**Related health issue:**: [NTLM Auditing is not enabled](../health-alerts.md#ntlm-auditing-is-not-enabled)
+**Related health issue:** [NTLM Auditing is not enabled](../health-alerts.md#ntlm-auditing-is-not-enabled)
 
 To configure NTLM auditing:
 
@@ -239,17 +239,17 @@ To configure domain object auditing:
    - **Descendant msDS-ManagedServiceAccount Objects**
 
 > [!NOTE]
-> Assigning the auditing permissions on **All descendant objects** would also work, but you require only the object types detailed in the last step.
+> Assigning the auditing permissions on **All descendant objects** would also work, but you need only the object types detailed in the last step.
 
 ## Configure auditing on Active Directory Federation Services
 
-**Related health issue:** [Auditing on the ADFS container is not enabled as required](../health-alerts.md#auditing-on-the-adfs-container-is-not-enabled-as-required)
+**Related health issue:** [Auditing on the AD FS container is not enabled as required](../health-alerts.md#auditing-on-the-adfs-container-is-not-enabled-as-required)
 
 To configure auditing on Active Directory Federation Services (AD FS):
 
 1. Go to the **Active Directory Users and Computers** console, and select the domain where you want to enable the logs.
 
-1. Go to **Program Data** > **Microsoft** > **ADFS**. For example:
+1. Go to **Program Data** > **Microsoft** > **ADFS**.
 
     ![Screenshot of a container for Active Directory Federation Services.](../media/adfs-container.png)
 
@@ -300,7 +300,7 @@ If you're working with a dedicated server that has Active Directory Certificate 
         :::image type="content" source="../media/configure-windows-event-collection/auditing.png" alt-text="Screenshot of the Auditing tab for certificate authority properties.":::
 
 > [!NOTE]
-> Configuring **Start and Stop Active Directory Certificate Services** event auditing might cause restart delays when you're dealing with a large AD CS database. Consider removing irrelevant entries from the database, or alternatively, refrain from enabling this specific type of event.
+> Configuring **Start and Stop Active Directory Certificate Services** event auditing might cause restart delays when you're dealing with a large AD CS database. Consider removing irrelevant entries from the database. Alternatively, refrain from enabling this specific type of event.
 
 ## Configure auditing for Microsoft Entra Connect
 
@@ -317,7 +317,7 @@ To configure auditing on Microsoft Entra Connect servers:
 ## Configure auditing on the configuration container
 <a name="enable-auditing-on-an-exchange-object"></a>
 
-**Related health issue**: [Auditing on the Configuration container is not enabled as required](../health-alerts.md#auditing-on-the-configuration-container-is-not-enabled-as-required)
+**Related health issue:** [Auditing on the Configuration container is not enabled as required](../health-alerts.md#auditing-on-the-configuration-container-is-not-enabled-as-required)
 
 1. Open the ADSI Edit tool. Select **Start** > **Run**, enter `ADSIEdit.msc`, and then select **OK**.
 
@@ -325,7 +325,7 @@ To configure auditing on Microsoft Entra Connect servers:
 
 1. In the **Connection Settings** dialog, under **Select a well known Naming Context**, select **Configuration** > **OK**.
 
-1. Expand the **Configuration** container to show the **Configuration** node, beginning with `"CN=Configuration,DC=..."`.
+1. Expand the **Configuration** container to show the **Configuration** node, which begins with **"CN=Configuration,DC=..."**.
 
 1. Right-click the **Configuration** node and select **Properties**.
 
@@ -349,10 +349,9 @@ To configure auditing on Microsoft Entra Connect servers:
 
 1. Select **OK**.
 
-## Legacy configurations
+## Update legacy configurations
 
-> [!IMPORTANT]
-> Defender for Identity no longer requires logging 1644 events. If you have this registry setting enabled, you can remove it.
+Defender for Identity no longer requires logging 1644 events. If you have this registry setting enabled, you can remove it.
 
 ```reg
 Windows Registry Editor Version 5.00
