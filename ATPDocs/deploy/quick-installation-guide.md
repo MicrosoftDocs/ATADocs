@@ -88,4 +88,4 @@ This procedure describes how to install the Defender for Identity sensor on a Wi
 
 ## Next step
 
-For full installation instructions with additional details, see [Deploy Microsoft Defender for Identity with Microsoft Defender XDR](deploy-defender-identity.md).  For example, to deploy on multiple domain controllers, we recommend using the [silent installation](install-sensor.md#defender-for-identity-silent-installation) instead.
+For full installation instructions with additional details, see [Deploy Microsoft Defender for Identity with Microsoft Defender XDR](deploy-defender-identity.md).  For example, to deploy on multiple domain controllers, we recommend using the [silent installation](install-sensor.md#perform-a-defender-for-identity-silent-installation) instead.
