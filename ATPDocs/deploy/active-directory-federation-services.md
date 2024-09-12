@@ -33,8 +33,8 @@ Set-AdfsProperties -AuditLevel Verbose
 
 For more information, see:
 
-- [Required Active Directory Federation Services (AD FS) events](event-collection-overview.md#required-ad-fs-events)
-- [Configure auditing on Active Directory Federation Services (AD FS)](configure-windows-event-collection.md#configure-auditing-on-active-directory-federation-services)
+- [Required AD FS events](event-collection-overview.md#required-ad-fs-events)
+- [Configure auditing on AD FS](configure-windows-event-collection.md#configure-auditing-on-ad-fs)
 - [Troubleshoot Active Directory Federation Services with events and logging](/windows-server/identity/ad-fs/troubleshooting/ad-fs-tshoot-logging#event-auditing-information-for-ad-fs-on-windows-server-2016)
 
 ## Configure read permissions for the AD FS database
@@ -108,21 +108,18 @@ If you're working with AD FS or AD CS servers, make sure that you configured aud
 
 - AD FS:
 
-  - [Required Active Directory Federation Services (AD FS) events](event-collection-overview.md#required-ad-fs-events)
-
-  - [Configure auditing on an Active Directory Federation Services (AD FS)](configure-windows-event-collection.md#configure-auditing-on-active-directory-federation-services)
+  - [Required AD FS events](event-collection-overview.md#required-ad-fs-events)
+  - [Configure auditing on AD FS](configure-windows-event-collection.md#configure-auditing-on-ad-fs)
 
 - AD CS:
 
-  - [Required Active Directory Certificate Services (AD CS) events](event-collection-overview.md#required-ad-cs-events)
-
-  - [Configure auditing for Active Directory Certificate Services (AD CS)](configure-windows-event-collection.md#configure-auditing-on-active-directory-certificate-services)
+  - [Required AD CS events](event-collection-overview.md#required-ad-cs-events)
+  - [Configure auditing on AD CS](configure-windows-event-collection.md#configure-auditing-on-ad-cs)
 
 - Microsoft Entra Connect:
 
   - [Required Microsoft Entra Connect events](event-collection-overview.md#required-microsoft-entra-connect-events)
-
-  - [Configure auditing for Microsoft Entra Connect](configure-windows-event-collection.md#configure-auditing-on-microsoft-entra-connect)
+  - [Configure auditing on Microsoft Entra Connect](configure-windows-event-collection.md#configure-auditing-on-microsoft-entra-connect)
 
 ## Validate successful deployment
 
@@ -150,7 +147,7 @@ To validate that you successfully deployed a Defender for Identity sensor on an 
      IdentityDirectoryEvents | where Protocol == "Adcs"
      ```
 
-     The results pane shows a list of events of failed and successful certificate issuance. Select a specific row to see additional details on the **Inspect Record** pane.
+     The results pane shows a list of events of failed and successful certificate issuance. Select a specific row to see additional details on the **Inspect record** pane.
 
      :::image type="content" source="../media/adfs-logon-advanced-hunting.png" alt-text="Screenshot of the results of an Active Directory Certificate Services logon advanced hunting query." lightbox="../media/adfs-logon-advanced-hunting.png":::
 
@@ -162,7 +159,7 @@ During the sensor installation on an AD FS, AD CS, or Microsoft Entra Connect se
 
 1. Locate and select the sensor that you installed on the server.
 
-1. On the pane that opens, in the **Domain Controller (FQDN)** box, enter the fully qualified domain name (FQDN) of the resolver domain controllers. Select **+ Add** to add the FQDN, and then select **Save**.
+1. On the pane that opens, in the **Domain controller (FQDN)** box, enter the fully qualified domain name (FQDN) of the resolver domain controllers. Select **+ Add** to add the FQDN, and then select **Save**.
 
    ![Screenshot of selections for configuring an  Active Directory Federation Services sensor resolver in Defender for Identity.](../media/sensor-config-adfs-resolver.png)
 

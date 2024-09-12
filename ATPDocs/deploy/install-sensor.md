@@ -9,7 +9,7 @@ ms.topic: how-to
 
 This article describes how to install a Microsoft Defender for Identity sensor, including a standalone sensor. The default recommendation is to use the UI. However:
 
-- When you're installing the sensor on Windows Server Core, or to deploy the sensor via a software deployment system, follow the steps for [silent installation](#defender-for-identity-silent-installation) instead.
+- When you're installing the sensor on Windows Server Core, or to deploy the sensor via a software deployment system, follow the steps for [silent installation](#perform-a-defender-for-identity-silent-installation) instead.
 
 - If you're using a proxy, we recommend that you install the sensor and configure your proxy together [from the command line](#command-for-running-a-silent-installation-with-a-proxy-configuration). If you need to update your proxy settings later on, use PowerShell or the Azure CLI. For more information, see [Configure endpoint proxy and internet connectivity settings](configure-proxy.md).
 
@@ -43,12 +43,12 @@ Perform the following steps on the domain controller, Active Directory Federatio
 
     ![Screenshot that shows selection of the Defender for Identity standalone sensor installation language.](../media/sensor-install-language.png)
 
-    The installation wizard automatically checks if the server is a domain controller, an AD FS server, an AD CS server, or a dedicated server.
+    The installation wizard automatically checks if the server is a domain controller, an AD FS server, an AD CS server, or a dedicated server. The server type determines the sensor type:
 
-    - If it's a domain controller, AD FS server, or AD CS server, the Defender for Identity sensor is installed.
-    - If it's a dedicated server, the Defender for Identity standalone sensor is installed.
+    - If the server is a domain controller, AD FS server, or AD CS server, the Defender for Identity sensor is installed.
+    - If the server is dedicated, the Defender for Identity standalone sensor is installed.
 
-    For example, the wizard displays the following page to indicate that a Defender for Identity sensor will be installed on domain controllers.
+    For example, the wizard displays the following page to indicate that a Defender for Identity sensor is installed on domain controllers.
 
     ![Screenshot of the page that identifies the sensor deployment type.](../media/sensor-install-deployment-type.png)
 
@@ -60,14 +60,12 @@ Perform the following steps on the domain controller, Active Directory Federatio
 
     For production environments, we highly recommend working with the [Defender for Identity sizing tool](capacity-planning.md) to make sure your domain controllers or dedicated servers meet the capacity requirements.
 
-1. On the **Configure the sensor** page, enter the installation path and the access key for the setup package.
-
-    ![Screenshot of the wizard page for Defender for Identity sensor configuration.](../media/sensor-install-config.png)
-
-    Enter the following details:
+1. On the **Configure the sensor** page, enter the following information for the setup package:
 
     - **Installation path**: The location where the Defender for Identity sensor is installed. By default, the path is `%programfiles%\Azure Advanced Threat Protection sensor`. Leave the default value.
     - **Access key**: Retrieved from the Microsoft Defender portal in a [previous step](download-sensor.md).
+
+    ![Screenshot of the wizard page for Defender for Identity sensor configuration.](../media/sensor-install-config.png)
 
 1. Select **Install**. The following components are installed and configured during the installation of the Defender for Identity sensor:
 
@@ -86,7 +84,7 @@ The installed version continues to appear even after the Defender for Identity c
 
 View the sensor's real version on the Microsoft Defender XDR [sensor settings page](https://security.microsoft.com/settings/identities?tabid=sensor), in the executable path or in the file version.
 
-## Defender for Identity silent installation
+## Perform a Defender for Identity silent installation
 
 The Defender for Identity silent installation for sensors is configured to automatically restart the server at the end of the installation, if necessary.
 
@@ -98,7 +96,7 @@ To track your deployment progress, monitor the Defender for Identity installer l
 
 When you're silently deploying a Defender for Identity sensor via System Center Configuration Manager or another software deployment system, we recommend that you create two deployment packages:
 
-- Net Framework 4.7 or later, which might include restarting the domain controller
+- .NET Framework 4.7 or later, which might include restarting the domain controller
 - The Defender for Identity sensor
 
 Make the Defender for Identity sensor package dependent on the deployment of the .NET Framework package deployment. If necessary, get the [.NET Framework 4.7 offline deployment package](https://support.microsoft.com/topic/the-net-framework-4-7-offline-installer-for-windows-f32bcb33-5f94-57ce-6120-62c9526a91f2).
@@ -138,7 +136,7 @@ Use the following commands to perform a fully silent installation of the Defende
 |`AccessKey`|`AccessKey="\*\*"`|Yes|Sets the access key that's used to register the Defender for Identity sensor with the Defender for Identity workspace.|
 |`AccessKeyFile`|`AccessKeyFile=""`|No|Sets the workspace access key from the provided text file path.|
 |`DelayedUpdate`|`DelayedUpdate=true`|No|Sets the sensor's update mechanism to delay the update for 72 hours from the official release of each service update. For more information, see [Delayed sensor update](../sensor-settings.md#delayed-sensor-update).|
-|`LogsPath`|`LogsPath=""`|No|Sets the path for the Defender for Identity Sensor logs. Default path: `%programfiles%\Azure Advanced Threat Protection Sensor`.|
+|`LogsPath`|`LogsPath=""`|No|Sets the path for the Defender for Identity sensor logs. Default path: `%programfiles%\Azure Advanced Threat Protection Sensor`.|
 
 #### Examples
 
@@ -163,7 +161,7 @@ Use the following command to configure your proxy together with a silent install
 > [!NOTE]
 > If you previously configured your proxy by using legacy options, including WinINet or a registry key update, you need to make any changes with the same method that you used originally. For more information, see [Change proxy configuration using legacy methods](configure-proxy.md#change-proxy-configuration-using-legacy-methods).
 
-**Installation parameters**:
+#### Installation parameters
 
 |Name|Syntax|Mandatory for silent installation?|Description|
 |-------------|----------|---------|---------|
@@ -176,7 +174,7 @@ Use the following command to configure your proxy together with a silent install
 
 ## Related content
 
-After you install a sensor, you can follow extra post-installation steps:
+After you install a sensor, you can follow extra steps:
 
 - If you installed the sensor on an AD FS or AD CS server, see [Post-installation steps (optional)](active-directory-federation-services.md#post-installation-steps-optional).
 

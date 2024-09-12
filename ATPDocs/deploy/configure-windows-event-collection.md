@@ -241,7 +241,7 @@ To configure domain object auditing:
 > [!NOTE]
 > Assigning the auditing permissions on **All descendant objects** would also work, but you need only the object types detailed in the last step.
 
-## Configure auditing on Active Directory Federation Services
+## Configure auditing on AD FS
 
 **Related health issue:** [Auditing on the AD FS container is not enabled as required](../health-alerts.md#auditing-on-the-adfs-container-is-not-enabled-as-required)
 
@@ -266,7 +266,7 @@ To configure auditing on Active Directory Federation Services (AD FS):
 
 1. Select **OK**.
 
-## Configure auditing on Active Directory Certificate Services
+## Configure auditing on AD CS
 
 If you're working with a dedicated server that has Active Directory Certificate Services (AD CS) configured, configure auditing as follows to view dedicated alerts and Secure Score reports:
 

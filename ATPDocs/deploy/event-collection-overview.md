@@ -23,10 +23,10 @@ This section lists the Windows events that the Defender for Identity sensor requ
 
 The following events are required for AD FS servers:
 
-- 1202 - The Federation Service validated a new credential
-- 1203 - The Federation Service failed to validate a new credential
-- 4624 - An account was successfully logged on
-- 4625 - An account failed to log on
+- 1202: The Federation Service validated a new credential
+- 1203: The Federation Service failed to validate a new credential
+- 4624: An account was successfully logged on
+- 4625: An account failed to log on
 
 For more information, see [Configure auditing on Active Directory Federation Services](../configure-windows-event-collection.md#configure-auditing-on-active-directory-federation-services).
 
@@ -48,7 +48,7 @@ For more information, see [Configure auditing for Active Directory Certificate S
 
 The following event is required for Microsoft Entra Connect servers:
 
-- 4624 - An account was successfully logged on
+- 4624: An account was successfully logged on
 
 For more information, see [Configure auditing on Microsoft Entra Connect](../configure-windows-event-collection.md#configure-auditing-for-entra-connect).
 
@@ -56,24 +56,24 @@ For more information, see [Configure auditing on Microsoft Entra Connect](../con
 
 The following general Windows events are required for all Defender for Identity sensors:
 
-- 4662 - An operation was performed on an object
-- 4726 - User Account Deleted
-- 4728 - Member Added to Global Security Group
-- 4729 - Member Removed from Global Security Group
-- 4730 - Global Security Group Deleted
-- 4732 - Member Added to Local Security Group
-- 4733 - Member Removed from Local Security Group
-- 4741 - Computer Account Added
-- 4743 - Computer Account Deleted
-- 4753 - Global Distribution Group Deleted
-- 4756 - Member Added to Universal Security Group
-- 4757 - Member Removed from Universal Security Group
-- 4758 - Universal Security Group Deleted
-- 4763 - Universal Distribution Group Deleted
-- 4776 - Domain Controller Attempted to Validate Credentials for an Account (NTLM)
-- 5136 - A directory service object was modified
-- 7045 - New Service Installed
-- 8004 - NTLM Authentication
+- 4662: An operation was performed on an object
+- 4726: User Account Deleted
+- 4728: Member Added to Global Security Group
+- 4729: Member Removed from Global Security Group
+- 4730: Global Security Group Deleted
+- 4732: Member Added to Local Security Group
+- 4733: Member Removed from Local Security Group
+- 4741: Computer Account Added
+- 4743: Computer Account Deleted
+- 4753: Global Distribution Group Deleted
+- 4756: Member Added to Universal Security Group
+- 4757: Member Removed from Universal Security Group
+- 4758: Universal Security Group Deleted
+- 4763: Universal Distribution Group Deleted
+- 4776: Domain Controller Attempted to Validate Credentials for an Account (NTLM)
+- 5136: A directory service object was modified
+- 7045: New Service Installed
+- 8004: NTLM Authentication
 
 For more information, see [Configure NTLM auditing](../configure-windows-event-collection.md#configure-ntlm-auditing) and [Configure domain object auditing](../configure-windows-event-collection.md#configure-domain-object-auditing).
 
