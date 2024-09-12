@@ -43,7 +43,7 @@ For sensors running on AD FS servers to have access to the AD FS database, you n
 
 If you have more than one AD FS server, make sure to grant this permission across all of them. Database permissions aren't replicated across servers.
 
-Configure the SQL server to allow Directory Service Accounts with the following permissions to the *AdfsConfiguration* database:
+Configure the SQL server to allow the Directory Service Account with the following permissions to the *AdfsConfiguration* database:
 
 - *connect*
 - *log in*
@@ -51,7 +51,7 @@ Configure the SQL server to allow Directory Service Accounts with the following 
 - *select*
 
 > [!NOTE]
-> If the AD FS database runs on a dedicated SQL server instead of the local AD FS server, and you're using a group Managed Service Account (gMSA) as the [Directory Service Account](directory-service-accounts.md), make sure that you grant the SQL server the [required permissions](create-directory-service-account-gmsa.md#prerequisites-grant-permissions-to-retrieve-the-gmsa-accounts-password) to retrieve the gMSA's password.
+> If the AD FS database runs on a dedicated SQL server instead of the local AD FS server, and you're using a group Managed Service Account (gMSA) as the Directory Service Account, make sure that you grant the SQL server the [required permissions](create-directory-service-account-gmsa.md#prerequisites-grant-permissions-to-retrieve-the-gmsa-accounts-password) to retrieve the gMSA's password.
 
 ### Grant access to the AD FS database
 
@@ -104,7 +104,7 @@ $SQLConnection.Close()
 
 ## Configure event collection
 
-If you're working with AD FS or AD CS servers, make sure that you configured auditing as needed. For more information, see:
+If you're working with AD FS, AD CS, or Microsoft Entra Connect servers, make sure that you configured auditing as needed. For more information, see:
 
 - AD FS:
 

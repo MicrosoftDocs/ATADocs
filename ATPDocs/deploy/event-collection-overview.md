@@ -1,6 +1,6 @@
 ---
 title: Event collection overview | Microsoft Defender for Identity
-description: Learn about required event collection for Microsoft Defender for Identity sensors on domain controllers, AD FS, and AD CS.
+description: Learn about required event collection for Microsoft Defender for Identity sensors on AD FS servers, AD CS servers, Microsoft Entra Connect servers, and domain controllers.
 ms.date: 08/10/2023
 ms.topic: conceptual
 ---
@@ -9,15 +9,15 @@ ms.topic: conceptual
 
 A Microsoft Defender for Identity sensor is configured to automatically collect syslog events. For Windows events, Defender for Identity detection relies on specific event logs. The sensor parses these event logs from your domain controllers.
 
-## Event collection for domain controllers, AD FS servers, and AD CS servers
+## Event collection for AD FS servers, AD CS servers, Microsoft Entra Connect servers, and domain controllers
 
-For the correct events to be audited and included in the Windows event log, your domain controllers, Active Directory Federation Services (AD FS) servers, or Active Directory Certificate Services (AD CS) servers require accurate Advanced Audit Policy settings.
+For the correct events to be audited and included in the Windows event log, your Active Directory Federation Services (AD FS) servers, Active Directory Certificate Services (AD CS) servers, Microsoft Entra Connect servers, or domain controllers require accurate Advanced Audit Policy settings.
 
 For more information, see [Configure audit policies for Windows event logs](../configure-windows-event-collection.md).
 
 ## Reference of required events
 
-This section lists the Windows events that the Defender for Identity sensor requires when it's installed on AD FS servers, AD CS servers, or domain controllers.
+This section lists the Windows events that the Defender for Identity sensor requires when it's installed on AD FS servers, AD CS servers, Microsoft Entra Connect servers, or domain controllers.
 
 ### Required AD FS events
 
