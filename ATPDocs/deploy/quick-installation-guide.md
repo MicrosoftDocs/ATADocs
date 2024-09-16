@@ -78,7 +78,10 @@ This procedure describes how to install the Defender for Identity sensor on a Wi
 
 **To download and install the sensor**:
 
-1. Download the Defender for Identity sensor from the [Microsoft Defender portal](https://security.microsoft.com). Select **Settings** -> **Identities** -> **Sensors** -> **Add sensor** and copy the **Access key** value, which you'll need for the installation.
+1. Download the Defender for Identity sensor from the [Microsoft Defender portal](https://security.microsoft.com).
+1. Browse to **System** > **Settings** > **Identities** > **Sensors** > **Add sensor**
+1. Select **Download installer** and save the file in a location you can access from your domain controller.
+1. Copy the **Access key** value, which you'll need for the installation.
 
     > [!TIP]
     > You only need to download the installer once, as it can be used for every server in the tenant. Make sure that no pop-up blocker is blocking the download.
