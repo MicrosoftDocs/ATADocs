@@ -28,7 +28,7 @@ The following steps describe how to uninstall a sensor from a domain controller.
 
 This scenario can occur when a domain controller was deleted without first uninstalling the sensor, and the sensor still appears in the Microsoft Defender portal.
 
-1. In [Microsoft Defender XDR](https://security.microsoft.com), go to **Settings** and then **Identities**. Select the **Sensors** tab, which displays all your Defender for Identity sensors.
+1. In [Microsoft Defender XDR](https://security.microsoft.com), go to **Settings** and then **Identities**. Select **Sensors** on the left to display all your Defender for Identity sensors.
 1. Locate the orphaned sensor and select **Delete** (trash can icon).
 
     ![Delete orphaned Defender for Identity sensor from sensors page](media/delete-orphaned-sensor.png)
@@ -37,7 +37,7 @@ This scenario can occur when a domain controller was deleted without first unins
 
 This scenario may occur after an in-place sensor upgrade, and the sensor appears twice in the Microsoft Defender portal.
 
-1. In [Microsoft Defender XDR](https://security.microsoft.com), go to **Settings** and then **Identities**. Select the **Sensors** tab, which displays all your Defender for Identity sensors.
+1. In [Microsoft Defender XDR](https://security.microsoft.com), go to **Settings** and then **Identities**. Select **Sensors** on the left to display all your Defender for Identity sensors.
 1. Locate the duplicate sensor. It will be the one whose status is set to **Unknown**. Then, at the end of the row, select **Delete** (trash can icon).
 
 ## Uninstall the Defender for Identity sensor silently
