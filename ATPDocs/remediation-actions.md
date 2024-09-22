@@ -39,7 +39,7 @@ The following Defender for Identity actions can be performed directly on your on
 
 - **Reset user password** – This will prompt the user to change their password on the next logon, ensuring that this account can't be used for further impersonation attempts.
 
-Depending on your Microsoft Entra ID roles, you may see additional Microsoft Entra ID action, such as requiring users to sign in again and confirming a users as compromised. For more information, see [Remediate risks and unblock users](/entra/id-protection/howto-identity-protection-remediate-unblock).
+Depending on your Microsoft Entra ID roles, you might see additional Microsoft Entra ID actions, such as requiring users to sign in again and confirming a user as compromised. For more information, see [Remediate risks and unblock users](/entra/id-protection/howto-identity-protection-remediate-unblock).
 
 
 ## Related videos
