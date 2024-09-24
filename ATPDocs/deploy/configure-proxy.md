@@ -131,7 +131,7 @@ To configure your proxy, copy your proxy configuration in user context to the **
 
 For more information, see:
 
-- [Run a silent installation with a proxy configuration](install-sensor.md#run-a-silent-installation-with-a-proxy-configuration)
+- [Run a silent installation with a proxy configuration](install-sensor.md#command-for-running-a-silent-installation-with-a-proxy-configuration)
 - [Test Microsoft Defender for Identity connectivity](test-connectivity.md)
 
 ## Next step
