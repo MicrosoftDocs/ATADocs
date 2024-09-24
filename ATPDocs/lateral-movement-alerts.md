@@ -42,7 +42,7 @@ None
 
 **Suggested steps for prevention**:
 
-1. Due to the risk of the domain controller being compromised, install the security updates for [CVE-2021-3452](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-34527) on Windows domain controllers, before installing on member servers and workstations.
+1. Due to the risk of the domain controller being compromised, install the security updates for [CVE-2021-34527](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-34527) on Windows domain controllers, before installing on member servers and workstations.
 1. You can use the Defender for Identity built-in security assessment that tracks the availability of Print spooler services on domain controllers. [Learn more](/defender-for-identity/security-assessment-print-spooler).
 
 ## Remote code execution attempt over DNS (external ID 2036)
