@@ -9,6 +9,9 @@ ms.topic: conceptual
 
 Defender for Identity can forward security alert and health alert events to your SIEM. Alerts and events are in the CEF format. This reference article provides samples of the logs sent to your SIEM.
 
+> [!NOTE]
+> We recommend using the streaming API or REST APIs to [Integrate your SIEM tools with Microsoft Defender XDR](/defender-xdr/configure-siem-defender). This approach enables you to forward all events and alerts from all Defender XDR products, rather than just the Defender for Identity events and alerts.
+
 ## Sample Defender for Identity security alerts in CEF format
 
 The following fields and their values are forwarded to your SIEM:
@@ -36,8 +39,6 @@ The cs2 field identifies if the alert is new or updated.
 The cs3 field identifies the fully qualified domain name of the source computer name.
 
 > [!NOTE]
-> We recommend you use the streaming API or the rest APIs to [Integrate your SIEM tools with Microsoft Defender XDR](/defender-xdr/configure-siem-defender) and forward all events and alerts from all Defender XDR products instead of the Defender for Identity SIEM logs.
-> 
 > If you plan to create automation or scripts for Defender for Identity SIEM logs, we recommend using the **externalId** field to identify the alert type instead of using the alert name for this purpose. Alert names may occasionally be modified, while the **externalId** of each alert is permanent. For a list of external IDs, see [Security alert name mapping and unique external IDs](alerts-overview.md#security-alert-name-mapping-and-unique-external-ids).
 
 ## Sample logs
