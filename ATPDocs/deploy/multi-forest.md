@@ -33,7 +33,7 @@ To detect cross-forest activities, Defender for Identity sensors query domain co
 
   - Additional credentials are required for each forest with non-Kerberos trust or no trust.
 
-  - There's a default limit of 30 credentials per Defender for Identity workspace. [Contact support](support.md) if you need to add more than 30 credentials.
+  - There's a default limit of 30 credentials per Defender for Identity workspace. [Contact support](../support.md) if you need to add more than 30 credentials.
 
 For more information, see [Microsoft Defender for Identity Directory Service account recommendations](directory-service-accounts.md).
 
