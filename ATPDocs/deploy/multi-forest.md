@@ -27,15 +27,13 @@ To detect cross-forest activities, Defender for Identity sensors query domain co
 
 - Defender for Identity sensors can be installed on domain controllers in all forests, even forests with no trust.
 
-- [Add additional credentials](create-directory-service-account-gmsa.md) on the **Directory Service accounts** page to support any untrusted forests in your environment.
+- [Add additional credentials](create-directory-service-account-gmsa.md#configure-a-directory-service-account-in-microsoft-defender-xdr) on the **Directory services accounts** page to support any untrusted forests in your environment.
 
   - Only one credential is required to support all forests with a two-way trust.
 
-  - Additional credentials are only required for each forest with non-Kerberos trust or no trust.
+  - Additional credentials are required for each forest with non-Kerberos trust or no trust.
 
-  - There's a default limit of 30 untrusted forests per Defender for Identity workspace. Contact support if your organization has more than 30 forests.
-
-  - Interactive sign-ins performed by users in one forest to access resources in another forest aren't listed by Defender for Identity.
+  - There's a default limit of 30 credentials per Defender for Identity workspace. [Contact support](support.md) if you need to add more than 30 credentials.
 
 For more information, see [Microsoft Defender for Identity Directory Service account recommendations](directory-service-accounts.md).
 
