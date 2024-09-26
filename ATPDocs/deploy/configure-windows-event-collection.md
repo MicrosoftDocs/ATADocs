@@ -81,7 +81,7 @@ To configure your Advanced Audit Policy settings:
         | --- |---|---|
         | **Account Logon** | **Audit Credential Validation** | 4776 |
         | **Account Management** | **Audit Computer Account Management**<sup>[*](#failure)</sup> | 4741, 4743 |
-        | **Account Management** | **Audit Distribution Group Management** | 4753, 4763 |
+        | **Account Management** | **Audit Distribution Group Management**<sup>[*](#failure)</sup> | 4753, 4763 |
         | **Account Management** | **Audit Security Group Management**<sup>[*](#failure)</sup> | 4728, 4729, 4730, 4732, 4733, 4756, 4757, 4758 |
         | **Account Management** | **Audit User Account Management** | 4726 |
         | **DS Access** | **Audit Directory Service Changes** | 5136  |
