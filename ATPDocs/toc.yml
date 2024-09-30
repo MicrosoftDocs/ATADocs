@@ -200,9 +200,6 @@ items:
       href: security-assessment-prevent-users-request-certificate.md
     - name: Remove local admins on identity assets
       href: security-assessment-remove-local-admins.md      
-    - name: Remove Resource Based Constrained Delegation for Microsoft Entra seamless SSO account
-      href: remove-rbcd-microsoft-entra-seamless-single-sign-on-account.md
-      displayName: Microsoft Entra connect
     - name: Riskiest lateral movement paths
       href: security-assessment-riskiest-lmp.md
     - name: Unmonitored domain controllers
