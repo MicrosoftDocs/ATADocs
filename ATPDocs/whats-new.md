@@ -10,8 +10,6 @@ ms.topic: overview
 
 This article is updated frequently to let you know what's new in the latest releases of Microsoft Defender for Identity.
 
-[!INCLUDE [automatic-redirect](../includes/automatic-redirect.md)]
-
 ## What's new scope and references
 
 Defender for Identity releases are deployed gradually across customer tenants. If there's a feature documented here that you don't see yet in your tenant, check back later for the update.
