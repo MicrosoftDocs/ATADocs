@@ -1,7 +1,7 @@
 ---
 title: Microsoft Defender for Identity health issues
 description: This article describes all the health issues that can occur for each component, listing the cause and the steps needed to resolve the problem
-ms.date: 02/11/2024
+ms.date: 07/09/2024
 ms.topic: how-to
 ---
 
@@ -139,7 +139,7 @@ Sensor-specific health issues are displayed in the **Sensor health issues** tab 
 
 |Alert|Description|Resolution|Severity|Displayed in|
 |----|----|----|----|----|
-|The Defender for Identity sensor is using WinPcap drivers instead of Npcap drivers.|All customers should be using Npcap drivers instead of the WinPcap drivers. Starting with Defender for Identity version 2.184, the installation package installs Npcap 1.0 OEM.|Install Npcap according to the guidance as described in: <https://aka.ms/mdi/npcap>|Low|Sensors health issues tab|
+|The Defender for Identity sensor is using WinPcap drivers instead of Npcap drivers.|All customers should be using Npcap drivers instead of the WinPcap drivers. Starting with Defender for Identity version 2.184, the installation package installs Npcap 1.0 OEM.|Install Npcap according to the guidance as described in: <https://aka.ms/mdi/npcap>|High|Sensors health issues tab|
 |The Defender for Identity sensor is running an Npcap version older than the minimum required version.|The minimum Npcap version supported is 1.0. Starting with Defender for Identity version 2.184, the installation package installs Npcap 1.0 OEM.|Upgrade Npcap according to the guidance as described in: <https://aka.ms/mdi/npcap>|Medium|Sensors health issues tab|
 |The Defender for Identity sensor is running an Npcap component that is not configured as required.|The Npcap installation is missing the required configuration options.|Install Npcap according to the guidance as described in: <https://aka.ms/mdi/npcap>|High|Sensors health issues tab|
 
@@ -147,13 +147,13 @@ Sensor-specific health issues are displayed in the **Sensor health issues** tab 
 
 |Alert|Description|Resolution|Severity|Displayed in|
 |----|----|----|----|----|
-|NTLM Auditing isn't enabled.|NTLM Auditing (for event ID 8004) is not enabled on the server. (This configuration is validated once a week, per sensor).|Enable NTLM Auditing events according to the guidance as described at the [Event ID 8004](configure-windows-event-collection.md#configure-ntlm-auditing) section, in the [Configure Windows Event collection](configure-windows-event-collection.md) page.|Medium|Sensors health issues tab|
+|NTLM Auditing isn't enabled.|NTLM Auditing (for event ID 8004) is not enabled on the server. (This configuration is validated once a day, per sensor).|Enable NTLM Auditing events according to the guidance as described at the [Event ID 8004](configure-windows-event-collection.md#configure-ntlm-auditing) section, in the [Configure Windows Event collection](configure-windows-event-collection.md) page.|Medium|Sensors health issues tab|
 
 ### Directory Services Advanced Auditing is not enabled as required
 
 |Alert|Description|Resolution|Severity|Displayed in|
 |----|----|----|----|----|
-|Directory Services Advanced Auditing is not enabled as required. (This configuration is validated once a day, per domain).|The Directory Services Advanced Auditing configuration doesn't include all the categories and subcategories as required.|Enable the Directory Services Advanced Auditing events. For more information, see [Configure audit policies for Windows event logs](configure-windows-event-collection.md).|Medium|Global health issues tab|
+|Directory Services Advanced Auditing is not enabled as required. (This configuration is validated once a day, per sensor).|The Directory Services Advanced Auditing configuration doesn't include all the categories and subcategories as required.|Enable the Directory Services Advanced Auditing events. For more information, see [Configure audit policies for Windows event logs](configure-windows-event-collection.md).|Medium|Sensors health issues tab|
 
 ### Directory Services Object Auditing is not enabled as required
 
@@ -190,6 +190,12 @@ Sensor-specific health issues are displayed in the **Sensor health issues** tab 
 |Alert|Description|Resolution|Severity|Displayed in|
 |----|----|----|----|----|
 |Radius accounting (VPN integration) data ingestion failures.|The listed Defender for Identity sensors have radius accounting (VPN integration) data ingestion failures.|Validate that the shared secret in the Defender for Identity configuration settings matches your VPN server, according to the guidance described [Configure VPN in Defender for Identity](vpn-integration.md#configure-vpn-in-defender-for-identity) section, in the [Defender for Identity VPN integration](vpn-integration.md) page.|Low|Health issues page|
+
+### Sensor failed to retrieve Entra Connect service configuration
+
+| Alert|| Description  ||Resolution|Severity|Displayed in|
+| -------- | -------- | -------- | -------- | -------- | -------- | -------- |
+|Failed to retrieve Entra Connect service configuration||The sensor is unable to retrieve the configuration from the Entra Connect service (also known as Microsoft Azure AD sync).  ||Ensure that the Entra connect service **(Microsoft Azure AD Sync)** is running and validate that the service account or computer account have access to the SQL database.                                                                         If there's an issue, follow the troubleshooting guidance at [SQL connectivity issues with Microsoft Entra Connect](/entra/identity/hybrid/connect/tshoot-connect-tshoot-sql-connectivity). |Medium|Sensors health issues tab|
 
 ## Next steps
 

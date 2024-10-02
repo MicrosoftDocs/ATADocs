@@ -1,13 +1,69 @@
 ---
 title: Troubleshooting known issues
 description: Describes how you can troubleshoot issues in Microsoft Defender for Identity.
-ms.date: 03/20/2023
+ms.date: 09/02/2024
 ms.topic: troubleshooting
 ---
 
 # Troubleshooting Microsoft Defender for Identity known issues
 
 This article describes how to troubleshoot known issues in Microsoft Defender for Identity. 
+
+## Sensor service fails to start
+
+**Sensor log entries:**
+
+`Warn DirectoryServicesClient CreateLdapConnectionAsync failed to retrieve group managed service account password. [DomainControllerDnsName=DC1.CONTOSO.LOCAL Domain=contoso.local UserName=mdiSvc01]`
+
+### Cause 1
+
+The domain controller hasn't been given rights to access the password of the gMSA account.
+
+**Resolution 1:**
+
+Verify that the domain controller has been given rights to access the password. You should have a Security Group in Active Directory that contains the domain controller(s), Entra Connect, AD FS / AD CS server(s) and standalone sensors computer accounts included. If this doesn't exist, we recommend that you create one.
+
+You can use the following command to check if a computer account or security group has been added to the parameter. Replace *mdiSvc01* with the name you created.
+
+```powershell
+Get-ADServiceAccount mdiSvc01 -Properties PrincipalsAllowedToRetrieveManagedPassword
+```
+
+The results should look like this:
+
+![Powershell results.](media/troubleshooting-known-issues/gmsa-retrieve-password-results.png)
+
+In this example, we can see that a group named *mdiSvc01Group* has been added. If the domain controller or the security group hasn't been added, you can use the following commands to add it. Replace *mdiSvc01* with the name of gMSA, and replace *DC1* with the name of the domain controller, or *mdiSvc01Group* with the name of the security group.
+
+```powershell
+# To set the specific domain controller only:
+$specificDC = Get-ADComputer -Identity DC1
+Set-ADServiceAccount mdiSvc01 -PrincipalsAllowedToRetrieveManagedPassword $specificDC
+
+
+# To set a security group that contains the relevant computer accounts:
+$group = Get-ADGroup -Identity mdiSvc01Group
+Set-ADServiceAccount mdiSvc01 -PrincipalsAllowedToRetrieveManagedPassword $group
+```
+
+If the domain controller or security group is already added, but you're still seeing the error, you can try the following steps:
+
+- Reboot the server to sync the recent changes
+- Purge the Kerberos ticket, forcing the server to request a new Kerberos ticket. From an administrator command prompt, run the following command `klist -li 0x3e7 purge`
+ 
+### Cause 2
+
+Due to a known scenario related to Secure Time Seeding, the gMSA attribute PasswordLastSet can be set to a future date, causing the sensor to be unable to start.
+
+The following command can be used to confirm if the gMSA account falls in the scenario, when the PasswordLastSet and LastLogonDate values show a future date:
+
+```powershell
+Get-ADServiceAccount mdiSvc01 -Properties PasswordLastSet, LastLogonDate
+```
+
+  **Resolution 2:**
+
+As an interim solution, a new gMSA can be created which will have correct date for the attribute. It’s advisable to open a support request with directory services to identify the root cause and explore options for a comprehensive resolution. 
 
 ## Sensor failure communication error
 
@@ -243,54 +299,7 @@ Do one of the following to resolve this issue:
     `klist -li 0x3e7 purge`
 
 - Assign the permission to retrieve the gMSA's password to a group the domain controller is already a member of, such as the Domain Controllers group.
-
-## Sensor service fails to start
-
-**Sensor log entries:**
-
-`Warn DirectoryServicesClient CreateLdapConnectionAsync failed to retrieve group managed service account password. [DomainControllerDnsName=DC1.CONTOSO.LOCAL Domain=contoso.local UserName=AATP_gMSA]`
-
-**Cause:**
-
-The domain controller hasn't been given rights to access the password of the gMSA account.
-
-**Resolution:**
-
-Verify that the domain controller has been given rights to access the password. You should have a Security Group in Active Directory that contains the domain controller(s), AD FS / AD CS server(s) and standalone sensors computer accounts included. If this doesn't exist, we recommend that you create one.
-
-You can use the following command to check if a computer account or security group has been added to the parameter. Replace *mdiSvc01* with the name you created.
-
-```powershell
-Get-ADServiceAccount mdiSvc01 -Properties PrincipalsAllowedToRetrieveManagedPassword
-```
-
-The results should look like this:
-
-![Powershell results.](media/troubleshooting-known-issues/gmsa-retrieve-password-results.png)
-
-In this example, we can see that a group named *mdiSvc01Group* has been added. If the domain controller or the security group hasn't been added, you can use the following commands to add it. Replace *mdiSvc01* with the name of gMSA, and replace *DC1* with the name of the domain controller, or *mdiSvc01Group* with the name of the security group.
-
-```powershell
-# To set the specific domain controller only:
-$specificDC = Get-ADComputer -Identity DC1
-Set-ADServiceAccount mdiSvc01 -PrincipalsAllowedToRetrieveManagedPassword $specificDC
-
-
-# To set a security group that contains the relevant computer accounts:
-$group = Get-ADGroup -Identity mdiSvc01Group
-Set-ADServiceAccount mdiSvc01 -PrincipalsAllowedToRetrieveManagedPassword $group
-```
-
-If the domain controller or security group is already added, but you're still seeing the error, you can try the following steps:
-
-- **Option 1**: Reboot the server to sync the recent changes
-- **Option 2**:
-    1. Set the **AATPSensor** and **AATPSensorUpdater** services to Disabled
-    1. Stop the **AATPSensor** and **AATPSensorUpdater** services
-    1. Cache service account to server using the command: `Install-ADServiceAccount gMSA_AccountName`
-    1. Set the **AATPSensor** and **AATPSensorUpdater** services to Automatic
-    1. Start the **AATPSensorUpdater** service
-
+    
 ## Access to the registry key 'Global' is denied
 
 The sensor service fails to start, and the sensor log contains an entry similar to:
@@ -434,7 +443,11 @@ Ensure that the sensor can browse to \*.atp.azure.com directly or through the co
 
 `"Azure ATP sensor Setup.exe" [ProxyUrl="http://proxy.internal.com"] [ProxyUserName="domain\proxyuser"] [ProxyUserPassword="ProxyPassword"]`
 
-For more information, see [Run a silent installation with a proxy configuration](install-sensor.md#run-a-silent-installation-with-a-proxy-configuration).
+For more information, see [Run a silent installation with a proxy configuration](install-sensor.md#run-a-silent-installation-with-a-proxy-configuration) and [Install the Microsoft Defender for Identity sensor](deploy/install-sensor.md).
+
+> [!IMPORTANT]
+> Microsoft recommends that you use the most secure authentication flow available. The authentication flow described in this procedure requires a very high degree of trust in the application, and carries risks that are not present in other flows. You should only use this flow when other more secure flows, such as managed identities, aren't viable.
+>
 
 ## Sensor service could not run and remains in Starting state
 

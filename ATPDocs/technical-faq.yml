@@ -2,7 +2,7 @@
 metadata:
   title: Microsoft Defender for Identity frequently asked questions
   description: Provides a list of frequently asked questions about Microsoft Defender for Identity and the associated answers
-  ms.date: 02/21/2024
+  ms.date: 06/10/2024
   ms.topic: conceptual
 
 title: Microsoft Defender for Identity frequently asked questions
@@ -265,6 +265,28 @@ sections:
         answer: |
           Defender for Identity captures activities over many different protocols. In some cases, Defender for Identity doesn't receive the data of the source user in the traffic. Defender for Identity attempts to correlate the session of the user to the activity, and when the attempt is successful, the source user of the activity is displayed. When user correlation attempts fail, only the source computer is displayed.
 
+  - name: Personal data management
+    questions:
+      - question: Can personal user data be updated in Defender for Identity?
+        answer: |
+          Personal user data in Defender for Identity is derived from the user's object in the organization's Active Directory, and can't be updated directly in Defender for Identity.
+
+      - question: How can I export personal data from Defender for Identity?
+        answer: |
+          You can export personal data from Defender for Identity using the same method as exporting security alert information. For more information, see [Review security alerts](manage-security-alerts.md#review-security-alerts).
+
+      - question: How can I locate personal data stored in Defender for Identity?
+        answer: |
+          Use the [Microsoft Defender portal](https://security.microsoft.com) search bar to search for identifiable personal data, such as a specific user or computer. For more information, see [Investigate assets](investigate-assets.md).
+
+      - question: What sort of auditing does Defender for Identity run on personal data?
+        answer: |
+          Defender for Identity implements the audit of personal data changes, including the deleting and exporting of personal data records. Audit trail retention time is 90 days. Auditing in Defender for Identity is a back-end feature and not accessible to customers.
+
+      - question: What happens in Defender for Identity when a user is deleted from the organization's Active Directory?
+        answer: |
+          After a user is deleted from the organization's Active Directory, Defender for Identity automatically deletes the user profile and any related network activity in alignment with Defender for Identity's [general data retention policy](privacy-compliance.md#data-retention), unless the data is part of an active incident. We recommend adding **Read-only** permissions on the **Deleted Objects** container. For more information, see [Grant required DSA permissions](directory-service-accounts.md#grant-required-dsa-permissions).
+
   - name: Troubleshooting
     questions:
       - question: What should I do if the Defender for Identity sensor or standalone sensor doesn't start?
@@ -279,3 +301,4 @@ additionalContent: |
   - [Configuring Windows event forwarding](deploy/configure-event-forwarding.md)
   - [Troubleshooting](troubleshooting-known-issues.md)
   - [Check out the Defender for Identity forum!](<https://aka.ms/MDIcommunity>)
+

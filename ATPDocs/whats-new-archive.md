@@ -54,9 +54,7 @@ Defender for Identity's identity security posture assessments proactively detect
 
 The following new security posture assessments are now available in Microsoft Secure Score:
 
-- [Do not expire passwords](security-assessment-do-not-expire-passwords.md)
 - [Remove access rights on suspicious accounts with the Admin SDHolder permission](security-assessment-remove-suspicious-access-rights.md)
-- [Manage accounts with passwords more than 180 days old](security-assessment-old-passwords.md)
 - [Remove nonadmin accounts with DCSync permissions](security-assessment-non-admin-accounts-dcsync.md)
 - [Remove local admins on identity assets](security-assessment-remove-local-admins.md)
 - [Start your Defender for Identity deployment](security-assessment-deploy-defender-for-identity.md)

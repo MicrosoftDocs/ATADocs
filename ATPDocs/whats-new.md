@@ -1,7 +1,7 @@
 ---
 title: What's new | Microsoft Defender for Identity
 description: This article is updated frequently to let you know what's new in the latest release of Microsoft Defender for Identity.
-ms.date: 04/09/2024
+ms.date: 08/29/2024
 ms.topic: overview
 #CustomerIntent: As a Defender for Identity customer, I want to know what's new in the latest release of Defender for Identity, so that I can take advantage of new features and functionality. 
 ---
@@ -9,12 +9,6 @@ ms.topic: overview
 # What's new in Microsoft Defender for Identity
 
 This article is updated frequently to let you know what's new in the latest releases of Microsoft Defender for Identity.
-
-[!INCLUDE [automatic-redirect](../includes/automatic-redirect.md)]
-
-## Get notified about updates
-
-Get notified when this page is updated by copying and pasting the following URL into your feed reader: `https://aka.ms/mdi/rss`
 
 ## What's new scope and references
 
@@ -27,6 +21,97 @@ For more information, see also:
 - [What's new in Microsoft Defender for Cloud Apps](/cloud-app-security/release-notes)
 
 For updates about versions and features released six months ago or earlier, see the [What's new archive for Microsoft Defender for Identity](whats-new-archive.md).
+
+## August 2024
+
+#### New Entra Connect sensor:
+
+As part of our ongoing effort to enhance Microsoft Defender for Identity coverage in hybrid identity environments, we have introduced a new sensor for Entra Connect servers. Additionally, we've released 3 new hybrid security detections and 4 new identity posture recommendations specifically for Entra Connect, helping customers stay protected and mitigate potential risks.
+
+**New Entra Connect Identity posture recommendations:**
+
+* **Rotate password for Entra Connect connector account**
+   * A compromised Entra Connect connector account (AD DS connector account, commonly shown as MSOL_XXXXXXXX) can grant access to high-privilege functions like replication and password resets, allowing attackers to modify synchronization settings and compromise security in both cloud and on-premises environments as well as offering several paths for compromising the entire domain. In this assessment we recommend customers change the password of MSOL accounts with the password last set over 90 days ago. For more information click [here](rotate-password-microsoft-entra-connect.md).
+* **Remove unnecessary replication permissions for Entra Connect Account**
+   * By default, the Entra Connect connector account has extensive permissions to ensure proper synchronization (even if they are not actually required). If Password Hash Sync is not configured, it’s important to remove unnecessary permissions to reduce the potential attack surface. For more information click [here](remove-replication-permissions-microsoft-entra-connect.md)
+* **Change password for Entra seamless SSO account configuration**
+   * This report lists all [Entra seamless SSO](/entra/identity/hybrid/connect/how-to-connect-sso) computer accounts with password last set over 90 days ago. The password for the Azure SSO computer account is not automatically changed every 30 days. If an attacker compromises this account, they can generate service tickets for the AZUREADSSOACC account on behalf of any user and impersonate any user in the Entra tenant that is synchronized from Active Directory. An attacker can use this to move laterally from Active Directory into Entra ID. For more information click [here](change-password-microsoft-entra-seamless-single-sign-on.md).    
+
+**New Entra Connect detections:**
+
+* **Suspicious Interactive Logon to the Entra Connect Server**
+   * Direct logins to Entra Connect servers are highly unusual and potentially malicious. Attackers often target these servers to steal credentials for broader network access. Microsoft Defender for Identity can now detect abnormal logins to Entra Connect servers, helping you identify and respond to these potential threats faster. It is specifically applicable when the Entra Connect server is a standalone server and not operating as a Domain Controller.
+* **User Password Reset by Entra Connect Account**
+   *  The Entra Connect connector account often holds high privileges, including the ability to reset user’s passwords. Microsoft Defender for Identity now has visibility into those actions and will detect any usage of those permissions that were identified as malicious and non-legitimate. This alert will be triggered only if the [password writeback feature](/entra/identity/authentication/concept-sspr-writeback) is disabled.
+*  **Suspicious writeback by Entra Connect on a sensitive user**
+   * While Entra Connect already prevents writeback for users in privileged groups, Microsoft Defender for Identity expands this protection by identifying additional types of sensitive accounts. This enhanced detection helps prevent unauthorized password resets on critical accounts, which can be a crucial step in advanced attacks targeting both cloud and on-premises environments.
+
+**Additional improvements and capabilities:**
+
+* New activity of any **failed password reset on a sensitive account** available in the ‘IdentityDirectoryEvents’ table in Advanced Hunting. This can help customers track failed password reset events and create custom detection based on this data.
+* Enhanced accuracy for the **DC sync attack** detection.
+* New [health issue](health-alerts.md#sensor-failed-to-retrieve-entra-connect-service-configuration) for cases where the sensor is unable to retrieve the configuration from the Entra Connect service.
+* Extended monitoring for security alerts, such as PowerShell Remote Execution Detector, by enabling the new sensor on Entra Connect servers.
+
+[Learn more about the new sensor](deploy/active-directory-federation-services.md)
+
+### Updated DefenderForIdentity PowerShell module
+
+The DefenderForIdentity PowerShell module has been updated, incorporating new functionality and addressing several bug fixes. Key improvements include:
+
+- **New `New-MDIDSA` Cmdlet**: Simplifies creation of service accounts, with a default setting for Group Managed Service Accounts (gMSA) and an option to create standard accounts.
+- **Automatic PDCe Detection**: Improves Group Policy Object (GPO) creation reliability by automatically targeting the Primary Domain Controller Emulator (PDCe) for most Active Directory operations.
+- **Manual Domain Controller Targeting**: New Server parameter for `Get/Set/Test-MDIConfiguration` cmdlets, allowing you to specify a domain controller for targeting instead of the PDCe.
+
+For more information, see:
+
+- [DefenderForIdentity PowerShell module (PowerShell Gallery)](https://www.powershellgallery.com/packages/DefenderForIdentity/)
+- [DefenderForIdentity PowerShell reference documentation](/powershell/defenderforidentity/overview-defenderforidentity)
+
+
+## July 2024
+
+6 New detections are new in public preview:
+* **Possible NetSync attack**
+    * NetSync is a module in Mimikatz, a post-exploitation tool, that requests the password hash of a target device's password by pretending to be a domain controller. An attacker might be performing malicious activities inside the network using this feature to gain access to the organization's resources.
+* **Possible takeover of a Microsoft Entra seamless SSO account**
+    * A Microsoft Entra seamless SSO (single sign-on) account object, AZUREADSSOACC, was modified suspiciously. An attacker might be moving laterally from the on-premises environment to the cloud.
+* **Suspicious LDAP query**
+    * A suspicious Lightweight Directory Access Protocol (LDAP) query associated with a known attack tool was detected. An attacker might be performing reconnaissance for later steps.
+* **Suspicious SPN was added to a user**
+    * A suspicious service principal name (SPN) was added to a sensitive user. An attacker might be attempting to gain elevated access for lateral movement within the organization
+* **Suspicious creation of ESXi group**
+    * A suspicious VMWare ESXi group was created in the domain. This might indicate that an attacker is trying to get more permissions for later steps in an attack.
+* **Suspicious ADFS authentication**
+    * A domain-joined account signed in using Active Directory Federation Services (ADFS) from a suspicious IP address. An attacker might have stolen a user's credentials and is using it to move laterally in the organization.
+
+### Defender for Identity release 2.238
+
+This version includes improvements and bug fixes for cloud services and the Defender for Identity sensor.
+
+## June 2024
+
+### Easily Go Hunt For user Information From the ITDR Dashboard
+
+The Shield Widget provides a quick overview of the number of users in hybrid, cloud, and on-premises environments. This feature now includes direct links to the Advanced Hunting platform, offering detailed user information at your fingertips.
+
+### ITDR Deployment Health Widget Now Include Entra Conditional Access and Entra Private Access 
+
+Now you can view the license availability for Entra Workload Conditional Access, Entra User Conditional Access, and Entra Private Access.
+
+### Defender for Identity release 2.237
+
+This version includes improvements and bug fixes for cloud services and the Defender for Identity sensor.
+
+## May 2024
+
+### Defender for Identity release 2.236
+
+This version includes improvements and bug fixes for cloud services and the Defender for Identity sensor.
+
+### Defender for Identity release 2.235
+
+This version includes improvements and bug fixes for cloud services and the Defender for Identity sensor.
 
 ## April 2024
 
@@ -247,7 +332,7 @@ Recommended actions now include the following new security posture assessments, 
 
    - [Edit vulnerable Certificate Authority setting (ESC6)](security-assessment-edit-vulnerable-ca-setting.md)
    - [Edit misconfigured Certificate Authority ACL (ESC7)](security-assessment-edit-misconfigured-ca-acl.md)
-   - [Enforce encryption for RPC certificate enrollment interface (ESC8)](security-assessment-enforce-encryption-rpc.md)
+   - [Enforce encryption for RPC certificate enrollment interface (ESC11)](security-assessment-enforce-encryption-rpc.md)
 
 The new assessments are available in Microsoft Secure Score, surfacing security issues and severe misconfigurations that pose risks to the entire organization, alongside detections. Your score is updated accordingly.
 

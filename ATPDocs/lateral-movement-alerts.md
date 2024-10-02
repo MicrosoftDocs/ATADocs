@@ -42,7 +42,7 @@ None
 
 **Suggested steps for prevention**:
 
-1. Due to the risk of the domain controller being compromised, install the security updates for [CVE-2021-3452](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-34527) on Windows domain controllers, before installing on member servers and workstations.
+1. Due to the risk of the domain controller being compromised, install the security updates for [CVE-2021-34527](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-34527) on Windows domain controllers, before installing on member servers and workstations.
 1. You can use the Defender for Identity built-in security assessment that tracks the availability of Print spooler services on domain controllers. [Learn more](/defender-for-identity/security-assessment-print-spooler).
 
 ## Remote code execution attempt over DNS (external ID 2036)
@@ -111,7 +111,7 @@ None
 |Primary MITRE tactic  | [Lateral Movement (TA0008)](https://attack.mitre.org/tactics/TA0008) |
 |---------|---------|
 |MITRE attack technique  | [Use Alternate Authentication Material (T1550)](https://attack.mitre.org/techniques/T1550/)       |
-|MITRE attack sub-technique | [Pass the Ticket (T1550.003)](https://attack.mitre.org/techniques/T1550/002/)         |
+|MITRE attack sub-technique | [Pass the Ticket (T1550.003)](https://attack.mitre.org/techniques/T1550/003/)         |
 
 ## Suspected NTLM authentication tampering (external ID 2039)
 

@@ -30,7 +30,7 @@ This article describes how to download the Microsoft Defender for Identity senso
 1. In the **Add a new sensor** pane, copy the **Access key** value and save it to a secured location. This access key is a one-time password for use when deploying the sensor, after which communication is performed using certificates for authentication and TLS encryption.
 
     > [!TIP]
-    > Use the **Regenerate key** button if you ever need to regenerate the new access key. It won't affect any previously deployed sensors, because it's only used for initial registration of the sensor.
+    > It is recommended to regenerate the access key using the **Regenerate key** button on a regular basis. It won't affect any previously deployed sensors, because it's only used for initial registration of the sensor.
 
 1. Copy the downloaded installation package to the dedicated server or domain controller where you're installing the Defender for Identity sensor.
 

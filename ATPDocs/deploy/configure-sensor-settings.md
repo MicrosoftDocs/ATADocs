@@ -9,13 +9,6 @@ ms.topic: how-to
 
 In this article, you'll learn how to correctly configure Microsoft Defender for Identity sensor settings to start seeing data. You'll need to do additional configuration and integration to take advantage of Defender for Identity's full capabilities.
 
-
-The following video shows a review of the Defender for Identity sensor settings: 
-
-<br>
-
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWFVEX]
-
 ## View and configure sensor settings
 
 After the Defender for Identity sensor is installed, do the following to view and configure Defender for Identity sensor settings:
@@ -77,7 +70,7 @@ After the Defender for Identity sensor is installed, do the following to view an
 Use the following procedures to validate your Defender for Identity sensor installation.
 
 > [!NOTE]
-> If you're installing on an AD FS or AD CS server, you'll use a different set of validations. For more information, see [Validate successful deployment on AD FS / AD CS servers](active-directory-federation-services.md#validate-successful-deployment-on-ad-fs--ad-cs-servers).
+> If you're installing on an AD FS or AD CS server, you'll use a different set of validations. For more information, see [Validate successful deployment on AD FS / AD CS servers](active-directory-federation-services.md#validate-successful-deployment).
 >
 
 

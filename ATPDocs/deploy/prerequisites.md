@@ -33,21 +33,22 @@ The Defender for Identity sensor must be able to communicate with the Defender f
 
 |Method  |Description  |Considerations |Learn more |
 |---------|---------|---------|---------|
-|**Set up a proxy**     | Customers who have a forward proxy deployed can take advantage of the proxy to provide connectivity to the MDI cloud service.  <br><br> If you choose this option, you'll configure your proxy later in the deployment process. Proxy configurations include allowing traffic to the sensor URL, and configuring Defender for Identity URLs to any explicit allowlists used by your proxy or firewall. |  Allows access to the internet for a single URL  <br><br>SSL inspection isn't supported      |    [Configure endpoint proxy and internet connectivity settings](configure-proxy.md) <br><br>[Run a silent installation with a proxy configuration](install-sensor.md#run-a-silent-installation-with-a-proxy-configuration)   |
-|**ExpressRoute**     | ExpressRoute can be configured to forward MDI sensor traffic over customer’s express route. <br><br> To route network traffic destined to the Defender for Identity cloud servers use ExpressRoute Microsoft peering and add the Microsoft Defender for Identity (12076:5220) service BGP community to your route filter.    |  Requires ExpressRoute      |       [Service to BGP community value](/azure/expressroute/expressroute-routing#service-to-bgp-community-value)  |
-|**Firewall, using the Defender for Identity Azure IP addresses**     | Customers who don’t have a proxy or ExpressRoute can configure their firewall with the IP addresses assigned to the MDI cloud service. This requires that the customer monitor the Azure IP address list for any changes in the IP addresses used by the MDI cloud service.  <br><br> If you chose this option, we recommend that you download the [Azure IP Ranges and Service Tags – Public Cloud](https://www.microsoft.com/download/details.aspx?id=56519) file and use the **AzureAdvancedThreatProtection** service tag to add the relevant IP addresses.      |  Customer must monitor Azure IP assignments       |   [Virtual network service tags](/azure/virtual-network/service-tags-overview)      |
+|**Set up a proxy**     | Customers who have a forward proxy deployed can take advantage of the proxy to provide connectivity to the MDI cloud service.  <br><br> If you choose this option, you'll configure your proxy later in the deployment process. Proxy configurations include allowing traffic to the sensor URL, and configuring Defender for Identity URLs to any explicit allowlists used by your proxy or firewall. |  Allows access to the internet for a single URL  <br><br>SSL inspection isn't supported      |    [Configure endpoint proxy and internet connectivity settings](configure-proxy.md) <br><br>[Run a silent installation with a proxy configuration](install-sensor.md#command-for-running-a-silent-installation-with-a-proxy-configuration)   |
+|**ExpressRoute**     | ExpressRoute can be configured to forward MDI sensor traffic over customer's express route. <br><br> To route network traffic destined to the Defender for Identity cloud servers use ExpressRoute Microsoft peering and add the Microsoft Defender for Identity (12076:5220) service BGP community to your route filter.    |  Requires ExpressRoute      |       [Service to BGP community value](/azure/expressroute/expressroute-routing#service-to-bgp-community-value)  |
+|**Firewall, using the Defender for Identity Azure IP addresses**     | Customers who don't have a proxy or ExpressRoute can configure their firewall with the IP addresses assigned to the MDI cloud service. This requires that the customer monitor the Azure IP address list for any changes in the IP addresses used by the MDI cloud service.  <br><br> If you chose this option, we recommend that you download the [Azure IP Ranges and Service Tags – Public Cloud](https://www.microsoft.com/download/details.aspx?id=56519) file and use the **AzureAdvancedThreatProtection** service tag to add the relevant IP addresses.      |  Customer must monitor Azure IP assignments       |   [Virtual network service tags](/azure/virtual-network/service-tags-overview)      |
 
 For more information, see [Microsoft Defender for Identity architecture](../architecture.md).
 
 
 ## Sensor requirements and recommendations
 
-The following table summarizes requirements and recommendations for the domain controller, AD FS, or AD CS server where you'll install the Defender for Identity sensor.
+The following table summarizes requirements and recommendations for the domain controller, AD FS, AD CS, Entra Connect server where you'll install the Defender for Identity sensor.
 
 | Prerequisite / Recommendation |Description  |
 |---------|---------|
 |**Specifications**     |  Make sure to install Defender for Identity on Windows version 2016 or higher, on a domain controller server with a minimum of:<br><br>- 2 cores<br>- 6 GB of RAM<br>- 6 GB of disk space required, 10 GB recommended, including space for Defender for Identity binaries and logs <br><br>Defender for Identity supports read-only domain controllers (RODC).     |
 |**Performance**   | For optimal performance, set the **Power Option** of the machine running the Defender for Identity sensor to **High Performance**.        |
+|**Network interface configuration** | If you are using VMware virtual machines, make sure the virtual machine's NIC configuration has Large Send Offload (LSO) disabled. See [VMware virtual machine sensor issue](../troubleshooting-known-issues.md#vmware-virtual-machine-sensor-issue) for more details.|
 |**Maintenance window**     |   We recommend scheduling a maintenance window for your domain controllers, as a restart might be required if the installation runs and a restart is already pending, or if .NET Framework needs to be installed. <br><br>If .NET Framework version 4.7 or later isn't already found on the system, .NET Framework version 4.7 is installed, and may require a restart.      |
 
 ### Minimum operating system requirements
@@ -116,7 +117,7 @@ The link to the *Test-MdiReadiness.ps1* script is also available from Microsoft 
 
 ## Related content
 
-This article lists prerequisites required for a basic installation. Additional prerequisites are required when installing on an AD FS / AD CS server, to support multiple Active Directory forests, or when you're installing a standalone Defender for Identity sensor.
+This article lists prerequisites required for a basic installation. Additional prerequisites are required when installing on an AD FS / AD CS server or Entra Connect, to support multiple Active Directory forests, or when you're installing a standalone Defender for Identity sensor.
 
 For more information, see:
 

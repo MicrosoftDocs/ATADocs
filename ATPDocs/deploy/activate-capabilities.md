@@ -1,7 +1,7 @@
 ---
 title: Activate Microsoft Defender for Identity capabilities directly on a domain controller 
 description: Learn about the Microsoft Defender for Identity capabilities on domain controllers and how to activate them.
-ms.date: 04/10/2024
+ms.date: 08/13/2024
 ms.topic: how-to
 ---
 
@@ -153,8 +153,11 @@ For more information, see [Advanced hunting in the Microsoft Defender portal](/m
 Defender for Identity capabilities on domain controllers support the following ISPM assessments:
 
 - [**Install Defender for Identity Sensor on all Domain Controllers**](../security-assessment-unmonitored-domain-controller.md)
-- **Set a honeytoken account**
+- [**Microsoft LAPS usage**](../security-assessment-laps.md)
 - [**Resolve unsecure domain configurations**](../security-assessment-unsecure-domain-configurations.md)
+- **Set a honeytoken account**
+- [**Unsecure account attributes**](../security-assessment-unsecure-account-attributes.md)
+- [**Unsecure SID History attributes**](../security-assessment-unsecure-sid-history-attribute.md)
 
 We recommend simulating risky behavior in a test environment to trigger supported assessments and verify that they appear as expected. For example:
 
@@ -188,23 +191,29 @@ The following alerts are supported by Defender for Identity capabilities on doma
 
 :::row:::
    :::column span="":::
-    - [Honeytoken user attributes modified](../persistence-privilege-escalation-alerts.md#honeytoken-user-attributes-modified-external-id-2427)
-    - [Security principal reconnaissance (LDAP)](../credential-access-alerts.md#security-principal-reconnaissance-ldap-external-id-2038)
-    - [Honeytoken was queried via LDAP](../reconnaissance-discovery-alerts.md#honeytoken-was-queried-via-ldap-external-id-2429)
+    - [Account enumeration reconnaissance](../reconnaissance-discovery-alerts.md#account-enumeration-reconnaissance-external-id-2003)
     - [Active Directory attributes Reconnaissance using LDAP](../reconnaissance-discovery-alerts.md#active-directory-attributes-reconnaissance-ldap-external-id-2210)
+    - [Exchange Server Remote Code Execution (CVE-2021-26855)](../lateral-movement-alerts.md#exchange-server-remote-code-execution-cve-2021-26855-external-id-2414)
+    - [Honeytoken user attributes modified](../persistence-privilege-escalation-alerts.md#honeytoken-user-attributes-modified-external-id-2427)
+    - [Honeytoken was queried via LDAP](../reconnaissance-discovery-alerts.md#honeytoken-was-queried-via-ldap-external-id-2429)
+    - [Honeytoken authentication activity](../credential-access-alerts.md#honeytoken-authentication-activity-external-id-2014)
+    - [Honeytoken group membership changed](../persistence-privilege-escalation-alerts.md#honeytoken-group-membership-changed-external-id-2428) 
     - [Remote code execution attempt](../other-alerts.md#remote-code-execution-attempt-external-id-2019)
-    - [Suspicious modification of the Resource Based Constrained Delegation attribute by a machine account](../persistence-privilege-escalation-alerts.md#suspicious-modification-of-the-resource-based-constrained-delegation-attribute-by-a-machine-account--external-id-2423)
-    - [Suspicious additions to sensitive groups](../persistence-privilege-escalation-alerts.md#suspicious-additions-to-sensitive-groups-external-id-2024)
+    - [Security principal reconnaissance (LDAP)](../credential-access-alerts.md#security-principal-reconnaissance-ldap-external-id-2038)
     - [Suspicious service creation](../other-alerts.md#suspicious-service-creation-external-id-2026)
+    - [Suspected NTLM relay attack (Exchange account)](../lateral-movement-alerts.md#suspected-ntlm-relay-attack-exchange-account-external-id-2037)
    :::column-end:::
    :::column span="":::
-    - [Honeytoken group membership changed](../persistence-privilege-escalation-alerts.md#honeytoken-group-membership-changed-external-id-2428) 
-    - [Suspected DFSCoerce attack using Distributed File System Protocol](../credential-access-alerts.md#suspected-dfscoerce-attack-using-distributed-file-system-protocol-external-id-2426) 
+    - [Suspicious modification of the Resource Based Constrained Delegation attribute by a machine account](../persistence-privilege-escalation-alerts.md#suspicious-modification-of-the-resource-based-constrained-delegation-attribute-by-a-machine-account--external-id-2423)
+    - [Suspicious additions to sensitive groups](../persistence-privilege-escalation-alerts.md#suspicious-additions-to-sensitive-groups-external-id-2024)
     - [Suspicious modification of a dNSHostName attribute (CVE-2022-26923)](../persistence-privilege-escalation-alerts.md#suspicious-modification-of-a-dnshostname-attribute-cve-2022-26923--external-id-2421)
-    - [Suspected DCShadow attack (domain controller promotion)](../other-alerts.md#suspected-dcshadow-attack-domain-controller-promotion-external-id-2028)
     - [Suspicious modification of a sAMNameAccount attribute (CVE-2021-42278 and CVE-2021-42287)](../credential-access-alerts.md#suspicious-modification-of-a-samnameaccount-attribute-cve-2021-42278-and-cve-2021-42287-exploitation-external-id-2419)
+    - [Suspected DCShadow attack (domain controller promotion)](../other-alerts.md#suspected-dcshadow-attack-domain-controller-promotion-external-id-2028)
+    - [Suspected DFSCoerce attack using Distributed File System Protocol](../credential-access-alerts.md#suspected-dfscoerce-attack-using-distributed-file-system-protocol-external-id-2426) 
     - [Suspected DCShadow attack (domain controller replication request)](../other-alerts.md#suspected-dcshadow-attack-domain-controller-replication-request-external-id-2029)
     - [Suspected account takeover using shadow credentials](../credential-access-alerts.md#suspected-account-takeover-using-shadow-credentials-external-id-2431)
+    - [Suspected SID-History injection](../persistence-privilege-escalation-alerts.md#suspected-sid-history-injection-external-id-1106)
+    - [Suspected AD FS DKM key read](../credential-access-alerts.md#suspected-ad-fs-dkm-key-read-external-id-2413)
    :::column-end:::
 :::row-end:::
 
@@ -230,6 +239,10 @@ Test remediation actions on a test user. For example:
     - **Force password reset**
 
 1. Check Active Directory for the expected activity.
+
+> [!NOTE]
+> The current version does not collect the User Account Control (UAC) flags correctly. So disabled users, would still appear as Enabled in the portal.
+
 
 For more information, see [Remediation actions in Microsoft Defender for Identity](../remediation-actions.md).
 

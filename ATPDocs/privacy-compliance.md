@@ -1,25 +1,51 @@
 ---
-title: Data security and privacy policy
-description: Provides links to information about how to delete private information and personal data from Microsoft Defender for Identity.
-ms.date: 01/29/2023
+title: Microsoft Defender for Identity – privacy
+description: Learn how Microsoft Defender for Identity collects data in a manner that protects personal privacy.
+ms.date: 06/06/2024
 ms.topic: conceptual
+#customerIntent: To learn how Microsoft Defender for Identity collects data in a manner that protects personal privacy.
 ---
 
-# Microsoft Defender for Identity data security and privacy
+# Privacy with Microsoft Defender for Identity
 
-[!INCLUDE [Handle personal data](../includes/gdpr-intro-sentence.md)]
+This article describes how Microsoft Defender for Identity collects data in a manner that protects personal privacy.
 
-## Search for and identify personal data
+[!INCLUDE [gdpr-hybrid-note](../includes/gdpr-hybrid-note.md)]
 
-In Defender for Identity, you can view identifiable personal data from the [Microsoft Defender portal](https://security.microsoft.com) using the search bar.
+## What data is collected?
 
-Search for a specific user or computer, and select the entity to bring you to the user or computer [profile page](/defender-for-identity/investigate-assets). The profile provides you with comprehensive details about the entity from Active Directory, including network activity related to that entity and its history.
+Microsoft Defender for Identity monitors information generated from your organization's Active Directory, network activities, and event activities to detect suspicious activity. The monitored activity information enables Defender for Identity to help you determine the validity of each potential threat and correctly triage and respond.
 
-Defender for Identity personal data is gathered from Active Directory through the Defender for Identity sensor and stored in a backend database.
+For more information see: [Microsoft Defender for Identity monitored activities](monitored-activities.md).
+
+## Data location
+
+Defender for Identity operates in the Microsoft Azure data centers in the following locations:
+
+- European Union
+- United Kingdom
+- United States
+- Australia
+- Switzerland
+- Singapore
+
+- India
+
+Customer data collected by the service might be stored as follows:
+
+- Your workspace is automatically created in data center that's geographically closest to your Microsoft Entra ID. Once created, Defender for Identity workspaces can't be moved to another data center. Your workspace's data center is listed in the Microsoft Defender portal, under **Settings** > **Identity** > **About** > **Geolocation**.
+
+- A geographic location as defined by the data storage rules of an online service, if the online service is used by Defender for Identity to process such data.
+
+## Data retention
+
+Data from Microsoft Defender for Identity is retained for 180 days, visible across the portal.  
+
+Your data is kept and is available to you while the license is under grace period or suspended mode. At the end of this period, that data will be erased from Microsoft's systems to make it unrecoverable, no later than 180 days from contract termination or expiration. 
 
 ## Data sharing
 
-Defender for Identity shares data, including customer data, among the following Microsoft products also licensed by the customer:
+Defender for Identity shares data, including customer data, among any of the following Microsoft products that are also licensed by the customer:
 
 - Microsoft Defender XDR
 - Microsoft Defender for Cloud Apps
@@ -28,31 +54,9 @@ Defender for Identity shares data, including customer data, among the following 
 - Microsoft Sentinel
 - Microsoft Security Exposure Management (public preview)
 
-## Update personal data
+## Related content
 
-Defender for Identity's personal user data is derived from the user's object in the Active Directory of the organization. Therefore, changes made to the user profile in the organization AD are reflected in Defender for Identity.
+For more information, see:
 
-## Delete personal data
-
-- After a user is deleted from the organization's Active Directory, Defender for Identity automatically deletes the user profile and any related network activity within a year. 
-
-- **Read-only** permissions on the **Deleted Objects** container are recommended. To learn more about how the **Deleted Objects** container permission is used by the Defender for Identity service, see the Deleted Objects container recommendation in [Grant required DSA permissions](directory-service-accounts.md#grant-required-dsa-permissions).
-
-## Export personal data
-
-In Defender for Identity you have the ability to [export](/defender-for-identity/manage-security-alerts#review-suspicious-activities-on-the-attack-time-line) security alert information to Excel. This function also exports the personal data.
-
-## Audit personal data
-
-Defender for Identity implements the audit of personal data changes, including the deleting and exporting of personal data records. Audit trail retention time is 90 days. Auditing in Defender for Identity is a back-end feature and not accessible to customers.
-
-## Additional resources
-
-- For information about Defender for Identity trust and compliance, see the [Service Trust portal](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted) and the [Microsoft 365 Enterprise GDPR Compliance site](/microsoft-365/compliance/gdpr?view=o365-worldwide&preserve-view=true).
-
-> [!IMPORTANT]
-> Currently, Defender for Identity data centers are deployed in Europe, UK, North America/Central America/Caribbean, Australia East and Asia. Your workspace is created automatically in the data center that is geographically closest to your Microsoft Entra ID. Once created, Defender for Identity workspaces aren't movable.
-
-## Next steps
-
-- More information about privacy can be found in the [Defender for Identity FAQ](/defender-for-identity/technical-faq#licensing-and-privacy)
+- The [Microsoft Service Trust portal](https://www.microsoft.com/en-us/trust-center/product-overview)
+- [Licensing and privacy FAQ](technical-faq.yml#licensing-and-privacy)
