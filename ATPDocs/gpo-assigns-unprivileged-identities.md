@@ -12,7 +12,7 @@ ms.topic: article
 ms.date:     10/05/2024
 ---
 
-# Security Assessment: GPO assigns unprivileged identities to local groups with elevated privileges
+# Security assessment: GPO assigns unprivileged identities to local groups with elevated privileges
 
 This recommendation lists non-privileged users who are granted elevated permissions through GPO.
 
@@ -23,7 +23,7 @@ Attackers may attempt to obtain information on Group Policy settings to uncover 
 
 A user, service or application that relies on these local permissions may stop functioning. 
 
-### Remediation steps: 
+### Remediation steps 
 
 Carefully review each assigned group membership, identify any dangerous group membership granted, and modify the GPO to remove any unnecessary or excessive user rights.  
 
