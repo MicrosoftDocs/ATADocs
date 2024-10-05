@@ -156,6 +156,8 @@ items:
       href: remediation-actions.md
   - name: Security posture
     items:
+    - name: Reversible passwords found in GPOs
+      href: reversible-passwords-group-policy.md
     - name: Overview
       href: security-assessment.md
       displayName: security posture, security assessment
