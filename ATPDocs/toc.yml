@@ -156,6 +156,8 @@ items:
       href: remediation-actions.md
   - name: Security posture
     items:
+    - name: Change password of built-in domain Administrator account
+      href: change-password-domain-administrator-account.md
     - name: Overview
       href: security-assessment.md
       displayName: security posture, security assessment
