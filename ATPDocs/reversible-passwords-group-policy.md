@@ -28,7 +28,8 @@ In order to remove the preferences that contain passwords data, use Group Policy
 1. In GPMC, open the Group Policy reported in the Exposed entities tab.  
 
 1. Navigate to the preference configuration that contains password data and delete the object. Click **Apply** and **OK** to save your changes.    
-For example:  
+For example:    
+![Delete object.](media/reversible-passwords-group-policy/image-(1).png)
 
 
 1. Wait a Group Policy refresh cycle to allow changes to propagate to clients (usually up to 120 minutes) .
