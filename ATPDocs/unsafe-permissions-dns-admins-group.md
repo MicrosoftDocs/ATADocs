@@ -12,7 +12,7 @@ ms.topic: article
 ms.date:     10/05/2024
 ---
 
-# Security Assessment: Unsafe permissions on the DnsAdmins group
+# Security assessment: Unsafe permissions on the DnsAdmins group
 
 This recommendation lists any member of the DNS Admins group that is not a privileged user. Privileged accounts are accounts that are being members of a privileged group such as Domain admins, Schema admins, Read only domain controllers and so on. 
 
@@ -28,7 +28,7 @@ The DnsAdmins group can be delegated to non-AD administrators, like those managi
 1. Take appropriate action on those accounts by removing the accounts from the DnsAdmins group. If some accounts require these permissions, grant them only the specific access needed.  
   
 For example:  
-![Unprivileged account.](media/unsafe-permissions-dns-admins-group/image.png)
+![Screenshot of Unprivileged account.](media/unsafe-permissions-dns-admins-group/image.png)
 
 ### Next steps
 
