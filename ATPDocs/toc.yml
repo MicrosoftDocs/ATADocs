@@ -156,6 +156,9 @@ items:
       href: remediation-actions.md
   - name: Security posture
     items:
+    - name: "Security Assessment: Change Domain Controller computer account old
+        password "
+      href: domain-controller-account-password-change.md
     - name: Overview
       href: security-assessment.md
       displayName: security posture, security assessment
