@@ -156,6 +156,8 @@ items:
       href: remediation-actions.md
   - name: Security posture
     items:
+    - name: GPO assigns unprivileged identities to local groups with elevated privileges
+      href: gpo-assigns-unprivileged-identities.md
     - name: Overview
       href: security-assessment.md
       displayName: security posture, security assessment
