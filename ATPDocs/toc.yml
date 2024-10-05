@@ -156,6 +156,8 @@ items:
       href: remediation-actions.md
   - name: Security posture
     items:
+    - name: Accounts with non-default Primary Group ID
+      href: accounts-with-non-default-pgid.md
     - name: Overview
       href: security-assessment.md
       displayName: security posture, security assessment
