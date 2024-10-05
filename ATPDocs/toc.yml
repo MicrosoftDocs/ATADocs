@@ -156,6 +156,8 @@ items:
       href: remediation-actions.md
   - name: Security posture
     items:
+    - name: Unsafe permissions on the DnsAdmins group
+      href: unsafe-permissions-dns-admins-group.md
     - name: Overview
       href: security-assessment.md
       displayName: security posture, security assessment
