@@ -156,6 +156,8 @@ items:
       href: remediation-actions.md
   - name: Security posture
     items:
+    - name: Built-in Active Directory Guest account is enabled
+      href: built-in-active-directory-guest-account-is-enabled.md
     - name: Overview
       href: security-assessment.md
       displayName: security posture, security assessment
