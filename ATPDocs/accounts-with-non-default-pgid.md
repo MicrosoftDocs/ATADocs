@@ -37,6 +37,8 @@ The primaryGroupId attribute of a user or computer account grants implicit mem
 For example: 
 
 
+![PrimaryGroupID.](media/accounts-with-non-default-pgid/picture1111.png)
+
 ### Next steps
 
 [Learn more about Microsoft Secure Score](/microsoft-365/security/defender/microsoft-secure-score)
