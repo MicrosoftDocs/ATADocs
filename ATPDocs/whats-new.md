@@ -22,6 +22,35 @@ For more information, see also:
 
 For updates about versions and features released six months ago or earlier, see the [What's new archive for Microsoft Defender for Identity](whats-new-archive.md).
 
+## October 2024
+
+### MDI is expanding coverage with new 10 Identity posture recommendations
+
+The new Identity security posture assessments (ISPM's) can help customers monitor misconfiguration by watching for weak spots and reduce the risk of potential attack on on-premises infrastructure.   
+These new identity recommendations, as part of Microsoft Secure Score, are new security posture reports related to Active Directory infrastructure and Group policy Objects:
+
+- Accounts with non-default Primary Group ID
+
+- Change Domain Controller computer account old password
+
+- GPO assigns unprivileged identities to local groups with elevated privileges
+
+- GPO can be modified by unprivileged accounts
+
+- Reversible passwords found in GPOs
+
+- Built-in Active Directory Guest account is enabled
+
+- Unsafe permissions on the DnsAdmins group
+
+- Ensure that all privileged accounts have the configuration flag "this account is sensitive and cannot be delegated”
+
+- Change password of krbtgt account
+
+- Change password of built-in domain Administrator account
+
+Additionally, we updated the existing recommendation of "Modify unsecure Kerberos delegations to prevent impersonation" to include indication of Kerberos Constrained Delegation with Protocol Transition to a privileged service. 
+
 ## August 2024
 
 #### New Entra Connect sensor:
