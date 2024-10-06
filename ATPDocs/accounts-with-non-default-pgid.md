@@ -16,15 +16,15 @@ ms.date:     10/05/2024
 
 This recommendation lists all computers and users accounts whose primaryGroupId (PGID) attribute is not the default for domain users and computers in Active Directory. 
 
-### Organization risk
+## Organization risk
 
 The primaryGroupId attribute of a user or computer account grants implicit membership to a group. Membership through this attribute does not appear in the list of group members in some interfaces. This attribute may be used as an attempt to hide group membership. It might be a stealthy way for an attacker to escalate privileges without triggering normal auditing for group membership changes. 
 
-### Remediation steps 
+## Remediation steps 
 
 1. Review the list of exposed entities to discover which of your accounts have a suspicious primaryGroupId.  
 
-1. Take appropriate action on those accounts by resetting their attribute to their default values or adding the member to the relevant group:  
+2. Take appropriate action on those accounts by resetting their attribute to their default values or adding the member to the relevant group:  
 
 - User accounts: 513 (Domain Users) or 514 (Domain Guests);  
 
@@ -39,7 +39,7 @@ For example:
 
 ![PrimaryGroupID.](media/accounts-with-non-default-pgid/picture1111.png)
 
-### Next steps
+## Next steps
 
 [Learn more about Microsoft Secure Score](/microsoft-365/security/defender/microsoft-secure-score)
 
