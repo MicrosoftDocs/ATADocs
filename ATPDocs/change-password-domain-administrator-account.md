@@ -16,13 +16,13 @@ ms.date:     10/05/2024
 
 This recommendation lists any built-in domain Administrator accounts within your environment with password last set over 180 days ago. 
 
-### Organization risk
+## Organization risk
 
 The built-in domain Administrator account is a default, highly privileged AD account with full control over the domain. It cannot be deleted, has unrestricted access, and is critical for managing the domain's resources.
 
 Regularly updating the built-in Administrator account's password is essential due to its high privileges, which make it a prime target for attackers. If compromised, it can grant unauthorized control over the domain. Since this account is often unused and its password may not be updated frequently, regular changes reduce exposure and enhance security. 
 
-### Remediation steps 
+## Remediation steps 
 
 1. Review the list of exposed entities to discover which of your built-in domain Administrator accounts have an old password.  
 
@@ -32,7 +32,7 @@ For example:
 
 ![Screenshot 2024-10-05 192344](media/change-password-domain-administrator-account/screenshot-2024-10-05-192344.png)
 
-### Next steps
+## Next steps
 
 - [Learn more about Microsoft Secure Score](/microsoft-365/security/defender/microsoft-secure-score)
 
