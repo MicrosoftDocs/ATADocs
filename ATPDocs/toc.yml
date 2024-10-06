@@ -159,9 +159,13 @@ items:
     - name: "Security Assessment: Change Domain Controller computer account old
         password "
       href: domain-controller-account-password-change.md
+    - name: GPO assigns unprivileged identities to local groups with elevated privileges
+      href: gpo-assigns-unprivileged-identities.md
     - name: Overview
       href: security-assessment.md
       displayName: security posture, security assessment
+    - name: Unsafe permissions on the DnsAdmins group
+      href: unsafe-permissions-dns-admins-group.md
     - name: Change password for Microsoft Entra seamless SSO account
       href: change-password-microsoft-entra-seamless-single-sign-on.md
       displayName: Microsoft Entra connect
