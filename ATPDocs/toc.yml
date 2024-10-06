@@ -156,11 +156,15 @@ items:
       href: remediation-actions.md
   - name: Security posture
     items:
+    - name: GPO assigns unprivileged identities to local groups with elevated privileges
+      href: gpo-assigns-unprivileged-identities.md
     - name: Overview
       href: security-assessment.md
       displayName: security posture, security assessment
     - name: Reversible passwords found in GPOs
       href: reversible-passwords-group-policy.md
+    - name: Unsafe permissions on the DnsAdmins group
+      href: unsafe-permissions-dns-admins-group.md
     - name: Change password for Microsoft Entra seamless SSO account
       href: change-password-microsoft-entra-seamless-single-sign-on.md
       displayName: Microsoft Entra connect
