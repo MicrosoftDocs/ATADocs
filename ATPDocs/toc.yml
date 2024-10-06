@@ -161,8 +161,10 @@ items:
     - name: Overview
       href: security-assessment.md
       displayName: security posture, security assessment
-    - name: "GPO can be modified by unprivileged accounts "
+    - name: GPO can be modified by unprivileged accounts
       href: modified-unprivileged-accounts-gpo.md
+    - name: Change password for krbtgt account
+      href: change-password-krbtgt-account.md
     - name: Unsafe permissions on the DnsAdmins group
       href: unsafe-permissions-dns-admins-group.md
     - name: Change password for Microsoft Entra seamless SSO account
