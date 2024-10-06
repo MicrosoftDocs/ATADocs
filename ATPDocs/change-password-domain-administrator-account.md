@@ -30,7 +30,7 @@ Regularly updating the built-in Administrator account's password is essential du
 
 For example:
 
-![Screenshot 2024-10-05 192344](media/change-password-domain-administrator-account/screenshot-2024-10-05-192344.png)
+![Screenshot showing the report on the portal.](media/change-password-domain-administrator-account/screenshot-2024-10-05-192344.png)
 
 ## Next steps
 
