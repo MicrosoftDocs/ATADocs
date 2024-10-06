@@ -14,6 +14,7 @@ ms.date:     10/05/2024
 
 # Security Assessment: Accounts with non-default Primary Group ID
 
+  
 This recommendation lists all computers and users accounts whose primaryGroupId (PGID) attribute is not the default for domain users and computers in Active Directory. 
 
 ## Organization risk
