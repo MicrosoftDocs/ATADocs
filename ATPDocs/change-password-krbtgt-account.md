@@ -16,12 +16,12 @@ ms.date:     10/06/2024
 
 This recommendation lists any krbtgt account within your environment with password last set over 180 days ago.
 
-### Organization risk
+## Organization risk
 
 The krbtgt account in Active Directory is a built-in account used by the Kerberos authentication service. It encrypts and signs all Kerberos tickets, enabling secure authentication within the domain. The account cannot be deleted, and securing it is crucial, as compromise could allow attackers to forge authentication tickets.  
 If the KRBTGT account's password is compromised, an attacker can use its hash to generate valid Kerberos authentication tickets, allowing them to perform Golden Ticket attacks and gain access to any resource in the AD domain. Since Kerberos relies on the KRBTGT password to sign all tickets, closely monitoring and regularly changing this password is essential to mitigating the risk of such attacks.
 
-### Remediation steps
+## Remediation steps
 
 1. Review the list of exposed entities to discover which of your krbtgt accounts have an old password. 
 
