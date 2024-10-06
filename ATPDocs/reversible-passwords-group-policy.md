@@ -4,7 +4,7 @@
 # For valid values of ms.service, ms.prod, and ms.topic, see https://review.learn.microsoft.com/en-us/help/platform/metadata-taxonomies?branch=main
 
 title: 'Security Assessment: Reversible passwords found in GPOs'
-description: 'This recommendation lists any Group policy objects in your environment that contains password data. '
+description: 'This recommendation lists any Group policy objects in your environment that contains password data.'
 author:      LiorShapiraa # GitHub alias
 ms.author: liorshapira
 ms.service: microsoft-defender-for-identity
