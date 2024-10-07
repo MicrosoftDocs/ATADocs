@@ -26,9 +26,9 @@ If the sensitive flag is disabled, attackers could exploit Kerberos delegation t
 
 1. Take appropriate action on those accounts by setting the account's control flags to "this account is sensitive and cannot be delegated". Under the Account tab, select use the check box to this flag in the Account Options section. This will prevent users from gaining access to the account and manipulating system settings.  
 
-### ![Posture report.](media/ensure-privileged-accounts-with-sensitive-flag/picture666.png)
+![Screenshot showing posture report.](media/ensure-privileged-accounts-with-sensitive-flag/posture-report.png)
 
-![Screenshot showing admin in AD.](media/ensure-privileged-accounts-with-sensitive-flag/picture777.png)
+![Screenshot showing admin in AD.](media/ensure-privileged-accounts-with-sensitive-flag/administrator-properties.png)
 
 ## Next steps
 
