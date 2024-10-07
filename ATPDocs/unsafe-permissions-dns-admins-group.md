@@ -3,7 +3,7 @@
 # For more information, see https://review.learn.microsoft.com/en-us/help/platform/learn-editor-add-metadata?branch=main
 # For valid values of ms.service, ms.prod, and ms.topic, see https://review.learn.microsoft.com/en-us/help/platform/metadata-taxonomies?branch=main
 
-title: 'Security Assessment: Reversible passwords found in GPOs'
+title: 'Security assessment: Unsafe permissions on the DnsAdmins group'
 description: 'This recommendation lists any Group policy objects in your environment that contains password data. '
 author:      LiorShapiraa # GitHub alias
 ms.author: liorshapira
