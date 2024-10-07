@@ -156,6 +156,8 @@ items:
       href: remediation-actions.md
   - name: Security posture
     items:
+    - name: Built-in Active Directory Guest account is enabled
+      href: built-in-active-directory-guest-account-is-enabled.md
     - name: Ensure that all privileged accounts have the configuration flag "this
         account is sensitive and cannot be delegated"
       href: ensure-privileged-accounts-with-sensitive-flag.md
