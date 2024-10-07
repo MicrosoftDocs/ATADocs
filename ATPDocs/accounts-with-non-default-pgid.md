@@ -38,7 +38,7 @@ The primaryGroupId attribute of a user or computer account grants implicit mem
 For example: 
 
 
-![Screenshot of PrimaryGroupID.](media/accounts-with-non-default-pgid/picture1111.png)
+![Screenshot of PrimaryGroupID.](media/accounts-with-non-default-pgid/screenshot-of-pgid.png)
 
 ## Next steps
 
