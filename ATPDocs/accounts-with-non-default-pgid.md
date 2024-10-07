@@ -25,22 +25,22 @@ The primaryGroupId attribute of a user or computer account grants implicit mem
 
 1. Review the list of exposed entities to discover which of your accounts have a suspicious primaryGroupId.  
 
-2. Take appropriate action on those accounts by resetting their attribute to their default values or adding the member to the relevant group:  
+1. Take appropriate action on those accounts by resetting their attribute to their default values or adding the member to the relevant group:  
 
-- User accounts: 513 (Domain Users) or 514 (Domain Guests);  
-
-- Computer accounts: 515 (Domain Computers);  
-
-- Domain controller accounts: 516 (Domain Controllers);  
-
-- Read-only domain controller (RODC) accounts: 521 (Read-only Domain Controllers).
-
+  - User accounts: 513 (Domain Users) or 514 (Domain Guests);  
+    
+  - Computer accounts: 515 (Domain Computers);  
+  
+  - Domain controller accounts: 516 (Domain Controllers);  
+  
+  - Read-only domain controller (RODC) accounts: 521 (Read-only Domain Controllers).
+  
 For example: 
 
 
-![PrimaryGroupID.](media/accounts-with-non-default-pgid/picture1111.png)
+![Screenshot of PrimaryGroupID.](media/accounts-with-non-default-pgid/picture1111.png)
 
 ## Next steps
 
-[Learn more about Microsoft Secure Score](/microsoft-365/security/defender/microsoft-secure-score)
+- [Learn more about Microsoft Secure Score](/microsoft-365/security/defender/microsoft-secure-score)
 
