@@ -29,25 +29,25 @@ For updates about versions and features released six months ago or earlier, see 
 The new Identity security posture assessments (ISPM's) can help customers monitor misconfiguration by watching for weak spots and reduce the risk of potential attack on on-premises infrastructure.   
 These new identity recommendations, as part of Microsoft Secure Score, are new security posture reports related to Active Directory infrastructure and Group policy Objects:
 
-- Accounts with non-default Primary Group ID
+- [Accounts with non-default Primary Group ID](/defender-for-identity/accounts-with-non-default-pgid)
 
-- Change Domain Controller computer account old password
+- [Change Domain Controller computer account old password](/defender-for-identity/domain-controller-account-password-change)
 
-- GPO assigns unprivileged identities to local groups with elevated privileges
+- [GPO assigns unprivileged identities to local groups with elevated privileges](/defender-for-identity/gpo-assigns-unprivileged-identities)
 
-- GPO can be modified by unprivileged accounts
+- [GPO can be modified by unprivileged accounts](/defender-for-identity/modified-unprivileged-accounts-gpo)
 
-- Reversible passwords found in GPOs
+- [Reversible passwords found in GPOs](/defender-for-identity/reversible-passwords-group-policy)
 
-- Built-in Active Directory Guest account is enabled
+- [Built-in Active Directory Guest account is enabled](/defender-for-identity/built-in-active-directory-guest-account-is-enabled)
 
-- Unsafe permissions on the DnsAdmins group
+- [Unsafe permissions on the DnsAdmins group](/defender-for-identity/unsafe-permissions-dns-admins-group)
 
-- Ensure that all privileged accounts have the configuration flag "this account is sensitive and cannot be delegated”
+- [Ensure that all privileged accounts have the configuration flag "this account is sensitive and cannot be delegated”](/defender-for-identity/ensure-privileged-accounts-with-sensitive-flag)
 
-- Change password of krbtgt account
+- [Change password of krbtgt account](/defender-for-identity/change-password-krbtgt-account)
 
-- Change password of built-in domain Administrator account
+- [Change password of built-in domain Administrator account](/defender-for-identity/change-password-domain-administrator-account)
 
 Additionally, we updated the existing recommendation of "Modify unsecure Kerberos delegations to prevent impersonation" to include indication of Kerberos Constrained Delegation with Protocol Transition to a privileged service. 
 
