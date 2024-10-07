@@ -164,7 +164,7 @@ items:
         account is sensitive and cannot be delegated"
       href: ensure-privileged-accounts-with-sensitive-flag.md
     - name: Security Assessment: Change Domain Controller computer account old
-        password"
+        password
       href: domain-controller-account-password-change.md
     - name: Change password of built-in domain Administrator account
       href: change-password-domain-administrator-account.md
