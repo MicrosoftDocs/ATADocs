@@ -156,6 +156,9 @@ items:
       href: remediation-actions.md
   - name: Security posture
     items:
+    - name: "Security Assessment: Change Domain Controller computer account old
+        password "
+      href: domain-controller-account-password-change.md
     - name: Change password of built-in domain Administrator account
       href: change-password-domain-administrator-account.md
     - name: GPO assigns unprivileged identities to local groups with elevated privileges
