@@ -156,13 +156,14 @@ items:
       href: remediation-actions.md
   - name: Security posture
     items:
+    - name: Accounts with non-default Primary Group ID
+      href: accounts-with-non-default-pgid.md
     - name: Built-in Active Directory Guest account is enabled
       href: built-in-active-directory-guest-account-is-enabled.md
     - name: Ensure that all privileged accounts have the configuration flag "this
         account is sensitive and cannot be delegated"
       href: ensure-privileged-accounts-with-sensitive-flag.md
-    - name: "Security Assessment: Change Domain Controller computer account old
-        password "
+    - name: Change Domain Controller computer account old password
       href: domain-controller-account-password-change.md
     - name: Change password of built-in domain Administrator account
       href: change-password-domain-administrator-account.md
