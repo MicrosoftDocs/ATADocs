@@ -30,8 +30,8 @@ Domain Controllers with old passwords are at heightened risk of compromise and c
    - HKLM\System\CurrentControlSet\Services\Netlogon\Parameters\MaximumPasswordAge is set to 30. 
       
 1. Reset Incorrect Values:   
-  - Reset any incorrect values to their default settings.   
-  - Check Group Policy Objects (GPOs) to ensure they do not override these settings. 
+     - Reset any incorrect values to their default settings.   
+     - Check Group Policy Objects (GPOs) to ensure they do not override these settings. 
   
 1. If these values are correct, check if the NETLOGON service is started with sc.exe query netlogon. 
 
@@ -39,7 +39,7 @@ Domain Controllers with old passwords are at heightened risk of compromise and c
 
 > [!TIP]
 > For more information about commuter account’s password process check this blog post about [Machine accounts password process](https://techcommunity.microsoft.com/t5/ask-the-directory-services-team/machine-account-password-process/ba-p/396026). 
-### Next steps
+## Next steps
 
 [Learn more about Microsoft Secure Score](/microsoft-365/security/defender/microsoft-secure-score)
 
