@@ -35,10 +35,6 @@ The primaryGroupId attribute of a user or computer account grants implicit mem
   
   - Read-only domain controller (RODC) accounts: 521 (Read-only Domain Controllers).
   
-For example: 
-
-
-![Screenshot of PrimaryGroupID.](media/accounts-with-non-default-pgid/screenshot-of-pgid.png)
 
 ## Next steps
 
