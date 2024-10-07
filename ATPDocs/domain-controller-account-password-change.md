@@ -16,12 +16,12 @@ ms.date:     10/05/2024
 
 This recommendation lists all domain controller’s computer accounts with password last set over 45 days ago.
 
-### Organization risk
+## Organization risk
 
 A Domain Controller (DC) is a server in an Active Directory (AD) environment that manages user authentication and authorization, enforces security policies, and stores the AD database. It handles logins, verifies permissions, and ensures secure access to network resources. Multiple DCs provide redundancy for high availability.  
 Domain Controllers with old passwords are at heightened risk of compromise and could be more easily taken over. Attackers can exploit outdated passwords, gaining prolonged access to critical resources and weakening network security. It could indicate a Domain controller that is no longer functioning in the domain.
 
-### Remediation steps
+## Remediation steps
 
 1. Verify Registry Values: 
 
