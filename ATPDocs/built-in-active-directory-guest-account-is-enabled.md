@@ -17,11 +17,11 @@ ms.date:     10/05/2024
 This recommendation indicates whether an AD Guest account is enabled in your environment.   
 The goal is to **ensure** that the Guest account of the domain is **not enabled**. 
 
-### Organization risk
+## Organization risk
 
 The on-premises Guest account is a built-in, non-nominative account that allows anonymous access to Active Directory. Enabling this account permits access to the domain without requiring a password, potentially posing a security threat.
 
-### Remediation steps
+## Remediation steps
 
 1. Review the list of exposed entities to discover if there is a Guest account which is enabled.  
 
@@ -29,10 +29,11 @@ The on-premises Guest account is a built-in, non-nominative account that allows 
 
 For example:
 
-### ![Guest account in AD.](media/built-in-active-directory-guest-account-is-enabled/picture4444.png)
+![Screenshot showing guest account in AD.](media/built-in-active-directory-guest-account-is-enabled/guest-account.png)
 
-![Security report.](media/built-in-active-directory-guest-account-is-enabled/picture555.png)
-Next steps
+![Screenshot showing security report.](media/built-in-active-directory-guest-account-is-enabled/security-report.png)
+
+## Next steps
 
 [Learn more about Microsoft Secure Score](/microsoft-365/security/defender/microsoft-secure-score)
 
