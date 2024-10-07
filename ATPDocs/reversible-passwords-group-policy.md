@@ -16,12 +16,12 @@ ms.date:     10/05/2024
 
 This posture recommendation lists any Group policy objects in your environment that contains password data. 
 
-### Why might Group policies objects that contain password data be a risk?
+## Why might Group policies objects that contain password data be a risk?
 
 Group Policy Preferences (GPP) previously allowed administrators to include embedded credentials in domain policies. However, this feature was removed with the release of MS14-025 due to security concerns regarding the insecure storage of passwords. But files containing these credentials could still be present in the SYSVOL folder, which means that any domain user can access the files and decrypt the password using the publicly available AES key.   
 To prevent potential exploitation by adversaries, it is recommended to remove any existing preferences that contain embedded credentials.
 
-### Remediation Steps
+## Remediation steps
 
 In order to remove the preferences that contain passwords data, use Group Policy Management Console (GPMC) on a domain controller or from a client that has Remote Server Administration Tools (RSAT) installed. You can remove any preference following these steps: 
 
@@ -38,7 +38,7 @@ For example:
 
 1. Repeat steps 1 through 5 as needed to clean your whole environment.  
 
-### Next steps
+## Next steps
 
 - [Learn more about Microsoft Secure Score](/microsoft-365/security/defender/microsoft-secure-score)
 
