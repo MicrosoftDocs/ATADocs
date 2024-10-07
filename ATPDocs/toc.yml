@@ -163,6 +163,8 @@ items:
       displayName: security posture, security assessment
     - name: Reversible passwords found in GPOs
       href: reversible-passwords-group-policy.md
+    - name: GPO can be modified by unprivileged accounts
+      href: modified-unprivileged-accounts-gpo.md
     - name: Change password for krbtgt account
       href: change-password-krbtgt-account.md
     - name: Unsafe permissions on the DnsAdmins group
