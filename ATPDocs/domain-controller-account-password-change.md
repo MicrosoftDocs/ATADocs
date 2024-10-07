@@ -26,13 +26,13 @@ Domain Controllers with old passwords are at heightened risk of compromise and c
 1. Verify Registry Values: 
 
    - HKLM\System\CurrentControlSet\Services\Netlogon\Parameters\DisablePasswordChange is set to 0 or is nonexistent. 
-   
+      
    - HKLM\System\CurrentControlSet\Services\Netlogon\Parameters\MaximumPasswordAge is set to 30. 
-   
+      
 1. Reset Incorrect Values:   
-- Reset any incorrect values to their default settings.   
-- Check Group Policy Objects (GPOs) to ensure they do not override these settings. 
-
+  - Reset any incorrect values to their default settings.   
+  - Check Group Policy Objects (GPOs) to ensure they do not override these settings. 
+  
 1. If these values are correct, check if the NETLOGON service is started with sc.exe query netlogon. 
 
 1. Validate Password Synchronization by Running nltest /SC_VERIFY: (with DomainName being the domain NetBIOS name) can check the synchronization status and should display0 0x0 NERR_Success for both verifications.
