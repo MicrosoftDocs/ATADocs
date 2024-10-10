@@ -84,7 +84,7 @@ To configure your Advanced Audit Policy settings:
         | **Account Management** | **Audit Distribution Group Management**<sup>[*](#failure)</sup> | 4753, 4763 |
         | **Account Management** | **Audit Security Group Management**<sup>[*](#failure)</sup> | 4728, 4729, 4730, 4732, 4733, 4756, 4757, 4758 |
         | **Account Management** | **Audit User Account Management** | 4726 |
-        | **DS Access** | **Audit Directory Service Changes** | 5136  |
+        | **DS Access** | **Audit Directory Service Changes**<sup>[*](#failure)</sup> | 5136  |
         | **System** | **Audit Security System Extension**<sup>[*](#failure)</sup> | 7045 |
         | **DS Access** | **Audit Directory Service Access** | 4662 - For this event, you must also [configure domain object auditing](#configure-domain-object-auditing).  |
 
