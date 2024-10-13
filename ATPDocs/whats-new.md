@@ -24,7 +24,7 @@ For updates about versions and features released six months ago or earlier, see 
 
 ## October 2024
 
-### MDI is expanding coverage with new 10 Identity posture recommendations
+### MDI is expanding coverage with new 10 Identity posture recommendations (preview)
 
 The new Identity security posture assessments (ISPMs) can help customers monitor misconfiguration by watching for weak spots and reduce the risk of potential attack on on-premises infrastructure.   
 These new identity recommendations, as part of Microsoft Secure Score, are new security posture reports related to Active Directory infrastructure and Group policy Objects:
