@@ -14,7 +14,7 @@ ms.date:     10/05/2024
 
 # Security Assessment: Ensure that all privileged accounts have the configuration flag "this account is sensitive and cannot be delegated"
 
-This recommendation lists all privileged accounts that lack the "account is sensitive and cannot be delegated" flag. Privileged accounts are accounts that are being members of a privileged group such as Domain admins, Schema admins, Read only domain controllers and so on. 
+This recommendation lists all privileged accounts that lack the "account is sensitive and cannot be delegated" flag. Privileged accounts are accounts that are being members of a privileged group such as Domain admins, Schema admins, writable domain controllers, Read only domain controllers and so on. 
 
 ## Organization risk
 
@@ -29,6 +29,11 @@ If the sensitive flag is disabled, attackers could exploit Kerberos delegation t
 ![Screenshot showing posture report.](media/ensure-privileged-accounts-with-sensitive-flag/posture-report.png)
 
 ![Screenshot showing admin in AD.](media/ensure-privileged-accounts-with-sensitive-flag/administrator-properties.png)
+
+With Powershell, you can set the flag using one of:
+Set-ADUser -Identity <user> -AccountNotDelegated $true
+Set-ADComputer -Identity <computer> -AccountNotDelegated $true
+Set-ADServiceAccount -Identity <(g|d)MSA> -AccountNotDelegated $true
 
 ## Next steps
 
