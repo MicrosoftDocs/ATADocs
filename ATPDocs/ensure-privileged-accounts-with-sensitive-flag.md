@@ -34,16 +34,16 @@ If the sensitive flag is disabled, attackers could exploit Kerberos delegation t
 - For device accounts:   
 The safest approach is to use a PowerShell script to configure the device to prevent it from being used in any delegation scenario, ensuring that credentials on this machine cannot be forwarded to access other services.
 
-  ```azurepowershell
+    ```azurepowershell
   $name = "ComputerA"
   Get-ADComputer -Identity $name |
   Set-ADAccountControl -AccountNotDelegated:$true
   ```
   
-  Another option is to set the `UserAccountControl` attribute to `NOT_DELEGATED = 0x100000` under the Attribute Editor tab for the exposed device.   
-  For example:  
-  ![Screenshot of device profile.](media/ensure-privileged-accounts-with-sensitive-flag/image1.png)
-  
+    Another option is to set the `UserAccountControl` attribute to `NOT_DELEGATED = 0x100000` under the Attribute Editor tab for the exposed device.   
+    For example:  
+    ![Screenshot of device profile.](media/ensure-privileged-accounts-with-sensitive-flag/image1.png)
+
 It’s important to verify that the exposed computer does not require any delegation capabilities before changing the configuration.
 
 ## Next steps
