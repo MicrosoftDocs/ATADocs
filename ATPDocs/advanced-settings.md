@@ -64,7 +64,7 @@ The following table describes the types of detections that support adjustments f
 
 Cells marked with N/A indicate that the threshold level is not supported for the detection
 
-| Detection | Medium | High |
+| Detection | Medium | Low |
 | --- | --- | --- |
 | **[Security principal reconnaissance (LDAP)](credential-access-alerts.md#security-principal-reconnaissance-ldap-external-id-2038)** | When set to **Medium**, this detection triggers alerts immediately, without waiting for a learning period, and also disables any filtering for popular queries in the environment.| When set to **Low**, all support for the **Medium** threshold applies, plus a lower threshold for queries, single scope enumeration, and more. |
 | **[Suspicious additions to sensitive groups](persistence-privilege-escalation-alerts.md#suspicious-additions-to-sensitive-groups-external-id-2024)** |N/A | When set to **Low**, this detection avoids the sliding window and ignores any previous learnings. |
