@@ -265,6 +265,10 @@ sections:
         answer: |
           Defender for Identity captures activities over many different protocols. In some cases, Defender for Identity doesn't receive the data of the source user in the traffic. Defender for Identity attempts to correlate the session of the user to the activity, and when the attempt is successful, the source user of the activity is displayed. When user correlation attempts fail, only the source computer is displayed.
 
+      - question: Why do I see DNS queries to aatp.dns.detection.local?
+        answer: |
+          Defender for Identity sensor might trigger a DNS call to "aatp.dns.detection.local" in response to certain incoming DNS activities to the MDI monitored machine.
+
   - name: Personal data management
     questions:
       - question: Can personal user data be updated in Defender for Identity?
