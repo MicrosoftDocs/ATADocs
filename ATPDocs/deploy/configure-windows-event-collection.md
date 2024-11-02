@@ -266,6 +266,14 @@ To configure auditing on Active Directory Federation Services (AD FS):
 
 1. Select **OK**.
 
+### Configure Verbose logging for AD FS events
+
+Sensors running on AD FS servers must have the auditing level set to **Verbose** for relevant events. For example, use the following command to configure the auditing level to **Verbose**:
+
+```powershell
+Set-AdfsProperties -AuditLevel Verbose
+```
+
 ## Configure auditing on AD CS
 
 If you're working with a dedicated server that has Active Directory Certificate Services (AD CS) configured, configure auditing as follows to view dedicated alerts and Secure Score reports:
