@@ -113,7 +113,7 @@ $SQLConnection.Close()
 > This section is applicable only if the Entra Connect database is hosted on an external SQL server instance.
 >
 
-Sensors running on Microsoft Entra Connect servers need to have access to the ADSync database, and have execute permissions for the relevant stored procedures. If you have more than one Entra Connect server, make sure to run this across all of them. 
+Sensors running on Microsoft Entra Connect servers need to have access to the ADSync database, and have execute permissions for the relevant stored procedures. If you have more than one Microsoft Entra Connect server, make sure to run this across all of them. 
 
 To grant the sensor permissions to the Microsoft Entra Connect ADSync database by using PowerShell:
 
