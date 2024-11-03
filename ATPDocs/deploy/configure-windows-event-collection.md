@@ -50,7 +50,7 @@ Update your Advanced Audit Policy settings and extra configurations for specific
 - [NTLM auditing](#configure-ntlm-auditing)
 - [Domain object auditing](#configure-domain-object-auditing)
 
-More information about Advanced Security Audit can be found here [Advanced security auditing FAQ](/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/advanced-security-auditing-faq?branch=main/)
+For more information, see [Advanced security auditing FAQ](/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/advanced-security-auditing-faq).
 
 Use the following procedures to configure auditing on the domain controllers that you're using with Defender for Identity.
 
