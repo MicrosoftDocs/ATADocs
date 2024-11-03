@@ -79,7 +79,7 @@ As part of our ongoing effort to enhance Microsoft Defender for Identity coverag
 
 * New activity of any **failed password reset on a sensitive account** available in the ‘IdentityDirectoryEvents’ table in Advanced Hunting. This can help customers track failed password reset events and create custom detection based on this data.
 * Enhanced accuracy for the **DC sync attack** detection.
-* New [health issue](health-alerts.md#sensor-failed-to-retrieve-entra-connect-service-configuration) for cases where the sensor is unable to retrieve the configuration from the Microsoft Entra Connect service.
+* New [health issue](health-alerts.md#sensor-failed-to-retrieve-microsoft-entra-connect-service-configuration) for cases where the sensor is unable to retrieve the configuration from the Microsoft Entra Connect service.
 * Extended monitoring for security alerts, such as PowerShell Remote Execution Detector, by enabling the new sensor on Microsoft Entra Connect servers.
 
 [Learn more about the new sensor](deploy/active-directory-federation-services.md)
