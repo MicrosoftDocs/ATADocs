@@ -11,9 +11,7 @@ This article describes how to download the Microsoft Defender for Identity senso
 
 ## Add a sensor and download sensor software
 
-1. In [Microsoft Defender XDR](https://security.microsoft.com), go to **Settings** > **Identities**. For example:
-
-    ![Screenshot of the Settings page.](../media/settings-identities.png)
+1. In [Microsoft Defender XDR](https://security.microsoft.com), go to **System > Settings** > **Identities**.
 
 1. Select the **Sensors** tab, which displays all of your Defender for Identity sensors. For example:
 
