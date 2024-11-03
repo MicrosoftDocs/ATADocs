@@ -55,7 +55,7 @@ Additionally, we updated the existing recommendation of "Modify unsecure Kerbero
 
 #### New Microsoft Entra Connect sensor:
 
-As part of our ongoing effort to enhance Microsoft Defender for Identity coverage in hybrid identity environments, we have introduced a new sensor for Microsoft Entra Connect servers. Additionally, we've released 3 new hybrid security detections and 4 new identity posture recommendations specifically for Microsoft Entra Connect, helping customers stay protected and mitigate potential risks.
+As part of our ongoing effort to enhance Microsoft Defender for Identity coverage in hybrid identity environments, we have introduced a new sensor for Microsoft Entra Connect servers. Additionally, we've released new hybrid security detections and new identity posture recommendations specifically for Microsoft Entra Connect, helping customers stay protected and mitigate potential risks.
 
 **New Microsoft Entra Connect Identity posture recommendations:**
 
