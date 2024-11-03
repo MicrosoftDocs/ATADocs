@@ -40,6 +40,14 @@ In such scenarios, do one of the following:
 
 This section describes how to create a specific group that can retrieve the account's password, create a gMSA account, and then test that the account is ready to use.
 
+>[!NOTE]
+> If you have never used gMSA accounts before, you might need to generate a new root key for the Microsoft Group Key Distribution Service (KdsSvc) within Active Directory. This step is required only once per forest.
+>
+> To generate a new root key for immediate use, run the following command:
+> ```powershell
+> Add-KdsRootKey -EffectiveImmediately
+> ```
+
 Update the following code with variable values for your environment. Then, run the PowerShell commands as an administrator:
 
 ```powershell
