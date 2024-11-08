@@ -133,7 +133,6 @@ USE [master];
 CREATE LOGIN [{0}\{1}$] FROM WINDOWS WITH DEFAULT_DATABASE=[master];
 USE [{2}];
 CREATE USER [{0}\{1}$] FOR LOGIN [{0}\{1}$];
-ALTER ROLE [db_datareader] ADD MEMBER [{0}\{1}$];
 GRANT CONNECT TO [{0}\{1}$];
 GRANT SELECT TO [{0}\{1}$];
 GRANT EXECUTE ON OBJECT::{2}.dbo.mms_get_globalsettings TO [{0}\{1}$];
