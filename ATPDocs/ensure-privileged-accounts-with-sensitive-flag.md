@@ -14,7 +14,7 @@ ms.date:     10/05/2024
 
 # Security Assessment: Ensure that all privileged accounts have the configuration flag "this account is sensitive and cannot be delegated"
 
-This recommendation lists all privileged accounts that lack the "account is sensitive and cannot be delegated" flag. Privileged accounts are accounts that are being members of a privileged group such as Domain admins, Schema admins, Read only domain controllers and so on. 
+This recommendation lists all privileged accounts that lack the "account is sensitive and cannot be delegated" flag. Privileged accounts are accounts that are being members of a privileged group such as Domain admins, Schema admins, writable domain controllers, Read only domain controllers and so on. 
 
 ## Organization risk
 
@@ -43,6 +43,11 @@ The safest approach is to use a PowerShell script to configure the device to pre
     ![Screenshot of device profile.](media/ensure-privileged-accounts-with-sensitive-flag/device-profile.png)
   
 It’s important to verify that the exposed computer does not require any delegation capabilities before changing the configuration.
+
+With Powershell, you can set the flag using one of:
+Set-ADUser -Identity <user> -AccountNotDelegated $true
+Set-ADComputer -Identity <computer> -AccountNotDelegated $true
+Set-ADServiceAccount -Identity <(g|d)MSA> -AccountNotDelegated $true
 
 ## Next steps
 
