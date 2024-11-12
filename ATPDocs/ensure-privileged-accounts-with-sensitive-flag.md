@@ -3,7 +3,7 @@
 # For more information, see https://review.learn.microsoft.com/en-us/help/platform/learn-editor-add-metadata?branch=main
 # For valid values of ms.service, ms.prod, and ms.topic, see https://review.learn.microsoft.com/en-us/help/platform/metadata-taxonomies?branch=main
 
-title: 'Security Assessment: Ensure that all privileged accounts have the configuration flag "this account is sensitive and cannot be delegated"'
+title: 'Security Assessment: Ensure privileged accounts are not delegated'
 description: This recommendation lists all privileged accounts that lack the "account is sensitive and cannot be delegated" flag.
 author:      LiorShapiraa # GitHub alias
 ms.author: liorshapira
