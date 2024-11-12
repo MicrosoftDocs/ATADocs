@@ -12,13 +12,14 @@ ms.topic: article
 ms.date:     10/05/2024
 ---
 
-# Security Assessment: Ensure that all privileged accounts have the configuration flag "this account is sensitive and cannot be delegated"
+# Security Assessment: Ensure privileged accounts are not delegated
 
-This recommendation lists all privileged accounts that lack the "account is sensitive and cannot be delegated" flag. Privileged accounts are accounts that are being members of a privileged group such as Domain admins, Schema admins, Read only domain controllers and so on. 
+This recommendation lists all privileged accounts that do not have the "not delegated" setting enabled, highlighting those potentially exposed to delegation-related risks. Privileged accounts are accounts that are being members of a privileged group such as Domain admins, Schema admins, and so on. 
 
 ## Organization risk
 
-If the sensitive flag is disabled, attackers could exploit Kerberos delegation to misuse privileged account credentials, leading to unauthorized access, lateral movement, and potential network-wide security breaches.   Setting the sensitive flag on privileged accounts will prevent users from gaining access to the account and manipulating system settings. 
+If the sensitive flag is disabled, attackers could exploit Kerberos delegation to misuse privileged account credentials, leading to unauthorized access, lateral movement, and potential network-wide security breaches. Setting the sensitive flag on privileged user accounts will prevent users from gaining access to the account and manipulating system settings.   
+For device accounts, setting them to "not delegated" is important to prevent it from being used in any delegation scenario, ensuring that credentials on this machine cannot be forwarded to access other services.
 
 ## Remediation steps
 
@@ -32,14 +33,14 @@ If the sensitive flag is disabled, attackers could exploit Kerberos delegation t
 - For device accounts:  
 The safest approach is to use a PowerShell script to configure the device to prevent it from being used in any delegation scenario, ensuring that credentials on this machine cannot be forwarded to access other services.
 
-    ```azurepowershell
+      ```azurepowershell
   $name = "ComputerA"
   Get-ADComputer -Identity $name |
   Set-ADAccountControl -AccountNotDelegated:$true
     ```
     
-    Another option is to set the `UserAccountControl` attribute to `NOT_DELEGATED = 0x100000` under the Attribute Editor tab for the exposed device.   
-    For example:  
+      Another option is to set the `UserAccountControl` attribute to `NOT_DELEGATED = 0x100000` under the Attribute Editor tab for the exposed device.   
+      For example:  
     ![Screenshot of device profile.](media/ensure-privileged-accounts-with-sensitive-flag/device-profile.png)
   
 It’s important to verify that the exposed computer does not require any delegation capabilities before changing the configuration.
