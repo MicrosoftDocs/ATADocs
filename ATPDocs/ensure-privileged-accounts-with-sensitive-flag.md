@@ -18,7 +18,7 @@ This recommendation lists all privileged accounts that don't have the "not deleg
 
 ## Organization risk
 
-If the sensitive flag is disabled, attackers could exploit Kerberos delegation to misuse privileged account credentials, leading to unauthorized access, lateral movement, and potential network-wide security breaches. Setting the sensitive flag on privileged user accounts will prevent users from gaining access to the account and manipulating system settings.   
+If the sensitive flag is disabled, attackers could exploit Kerberos delegation to misuse privileged account credentials, leading to unauthorized access, lateral movement, and potential network-wide security breaches. Setting the sensitive flag on privileged user accounts prevent users from gaining access to the account and manipulating system settings.   
 For device accounts, setting them to "not delegated" is important to prevent it from being used in any delegation scenario, ensuring that credentials on this machine cannot be forwarded to access other services.
 
 ## Remediation steps
@@ -27,7 +27,7 @@ For device accounts, setting them to "not delegated" is important to prevent it 
 
 1. Take appropriate action on those accounts:
 
-- For user accounts: by setting the account's control flags to "this account is sensitive and cannot be delegated." Under the Account tab, select the check box to this flag in the Account Options section. This will prevent users from gaining access to the account and manipulating system settings.    
+- For user accounts: by setting the account's control flags to "this account is sensitive and cannot be delegated." Under the Account tab, select the check box to this flag in the Account Options section. This prevents users from gaining access to the account and manipulating system settings.    
 ![Screenshot of user profile.](media/ensure-privileged-accounts-with-sensitive-flag/administrator-properties.png)
 
 - For device accounts:  
