@@ -14,7 +14,7 @@ ms.date:     10/05/2024
 
 # Security Assessment: Ensure privileged accounts are not delegated
 
-This recommendation lists all privileged accounts that do not have the "not delegated" setting enabled, highlighting those potentially exposed to delegation-related risks. Privileged accounts are accounts that are being members of a privileged group such as Domain admins, Schema admins, and so on. 
+This recommendation lists all privileged accounts that don't have the "not delegated" setting enabled, highlighting those potentially exposed to delegation-related risks. Privileged accounts are accounts that are being members of a privileged group such as Domain admins, Schema admins, and so on. 
 
 ## Organization risk
 
@@ -23,11 +23,11 @@ For device accounts, setting them to "not delegated" is important to prevent it 
 
 ## Remediation steps
 
-1. Review the list of exposed entities to discover which of your privileged accounts don’t have the configuration flag "this account is sensitive and cannot be delegated". 
+1. Review the list of exposed entities to discover which of your privileged accounts don’t have the configuration flag "this account is sensitive and cannot be delegated."
 
 1. Take appropriate action on those accounts:
 
-- For user accounts: by setting the account's control flags to "this account is sensitive and cannot be delegated". Under the Account tab, select the check box to this flag in the Account Options section. This will prevent users from gaining access to the account and manipulating system settings.    
+- For user accounts: by setting the account's control flags to "this account is sensitive and cannot be delegated." Under the Account tab, select the check box to this flag in the Account Options section. This will prevent users from gaining access to the account and manipulating system settings.    
 ![Screenshot of user profile.](media/ensure-privileged-accounts-with-sensitive-flag/administrator-properties.png)
 
 - For device accounts:  
