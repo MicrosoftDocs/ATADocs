@@ -19,7 +19,7 @@ This recommendation lists all privileged accounts that don't have the "not deleg
 ## Organization risk
 
 If the sensitive flag is disabled, attackers could exploit Kerberos delegation to misuse privileged account credentials, leading to unauthorized access, lateral movement, and potential network-wide security breaches. Setting the sensitive flag on privileged user accounts prevent users from gaining access to the account and manipulating system settings.   
-For device accounts, setting them to "not delegated" is important to prevent it from being used in any delegation scenario, ensuring that credentials on this machine cannot be forwarded to access other services.
+For device accounts, setting them to "not delegated" is important to prevent it from being used in any delegation scenario, ensuring that credentials on this machine can't be forwarded to access other services.
 
 ## Remediation steps
 
@@ -31,7 +31,7 @@ For device accounts, setting them to "not delegated" is important to prevent it 
 ![Screenshot of user profile.](media/ensure-privileged-accounts-with-sensitive-flag/administrator-properties.png)
 
 - For device accounts:  
-The safest approach is to use a PowerShell script to configure the device to prevent it from being used in any delegation scenario, ensuring that credentials on this machine cannot be forwarded to access other services.
+The safest approach is to use a PowerShell script to configure the device to prevent it from being used in any delegation scenario, ensuring that credentials on this machine can't be forwarded to access other services.
 
   ```
   $name = "ComputerA" 
