@@ -364,7 +364,7 @@ To configure auditing on Microsoft Entra Connect servers:
 
 ## Update legacy configurations
 
-Defender for Identity no longer requires logging 1644 events. If you have this registry setting enabled, you can remove it.
+Defender for Identity no longer requires logging 1644 events. If you have either of the following settings enabled, you can remove them from the registry.
 
 ```reg
 Windows Registry Editor Version 5.00
