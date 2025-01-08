@@ -15,22 +15,6 @@
         "ContextObject": "Toc"
       },
       "version": 0
-    },
-    {
-      "docset_name": "ATPDocs",
-      "build_source_folder": "ATPDocs",
-      "build_output_subfolder": "ATPDocs",
-      "locale": "en-us",
-      "monikers": [],
-      "moniker_ranges": [],
-      "open_to_public_contributors": true,
-      "type_mapping": {
-        "Conceptual": "Content",
-        "ManagedReference": "Content",
-        "RestApi": "Content"
-      },
-      "build_entry_point": "docs",
-      "template_folder": "_themes"
     }
   ],
   "notification_subscribers": [
