@@ -50,6 +50,8 @@ Update your Advanced Audit Policy settings and extra configurations for specific
 - [NTLM auditing](#configure-ntlm-auditing)
 - [Domain object auditing](#configure-domain-object-auditing)
 
+For more information, see [Advanced security auditing FAQ](/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/advanced-security-auditing-faq).
+
 Use the following procedures to configure auditing on the domain controllers that you're using with Defender for Identity.
 
 ### Configure Advanced Audit Policy settings from the UI
@@ -84,7 +86,7 @@ To configure your Advanced Audit Policy settings:
         | **Account Management** | **Audit Distribution Group Management**<sup>[*](#failure)</sup> | 4753, 4763 |
         | **Account Management** | **Audit Security Group Management**<sup>[*](#failure)</sup> | 4728, 4729, 4730, 4732, 4733, 4756, 4757, 4758 |
         | **Account Management** | **Audit User Account Management** | 4726 |
-        | **DS Access** | **Audit Directory Service Changes** | 5136  |
+        | **DS Access** | **Audit Directory Service Changes**<sup>[*](#failure)</sup> | 5136  |
         | **System** | **Audit Security System Extension**<sup>[*](#failure)</sup> | 7045 |
         | **DS Access** | **Audit Directory Service Access** | 4662 - For this event, you must also [configure domain object auditing](#configure-domain-object-auditing).  |
 
@@ -184,7 +186,7 @@ For example, to configure **Outgoing NTLM traffic to remote servers**, under **S
 
 ### Configure domain object auditing
 
-To collect events for object changes, such as event 4662, you must also configure object auditing on the user, group, computer, and other objects. The following procedure describes how to enable auditing in the Active Directory domain.
+To collect events for object changes, such as for event 4662, you must also configure object auditing on the user, group, computer, and other objects. The following procedure describes how to enable auditing in the Active Directory domain.
 
 > [!IMPORTANT]
 > Review and audit your policies (via the [UI](#configure-advanced-audit-policy-settings-from-the-ui) or [PowerShell](#configure-advanced-audit-policy-settings-by-using-powershell)) before you enable event collection, to ensure that the domain controllers are properly configured to record the necessary events. If this auditing is configured properly, it should have a minimal effect on server performance.
@@ -266,6 +268,14 @@ To configure auditing on Active Directory Federation Services (AD FS):
 
 1. Select **OK**.
 
+### Configure Verbose logging for AD FS events
+
+Sensors running on AD FS servers must have the auditing level set to **Verbose** for relevant events. For example, use the following command to configure the auditing level to **Verbose**:
+
+```powershell
+Set-AdfsProperties -AuditLevel Verbose
+```
+
 ## Configure auditing on AD CS
 
 If you're working with a dedicated server that has Active Directory Certificate Services (AD CS) configured, configure auditing as follows to view dedicated alerts and Secure Score reports:
@@ -317,6 +327,9 @@ To configure auditing on Microsoft Entra Connect servers:
 ## Configure auditing on the configuration container
 <a name="enable-auditing-on-an-exchange-object"></a>
 
+>[!NOTE]
+> The configuration container audit is requried only for environments that currently have or previously had Microsoft Exchange, as these environments have an Exchange container located within the domain's Configuration section.
+
 **Related health issue:** [Auditing on the Configuration container is not enabled as required](../health-alerts.md#auditing-on-the-configuration-container-is-not-enabled-as-required)
 
 1. Open the ADSI Edit tool. Select **Start** > **Run**, enter `ADSIEdit.msc`, and then select **OK**.
@@ -351,7 +364,7 @@ To configure auditing on Microsoft Entra Connect servers:
 
 ## Update legacy configurations
 
-Defender for Identity no longer requires logging 1644 events. If you have this registry setting enabled, you can remove it.
+Defender for Identity no longer requires logging 1644 events. If you have either of the following settings enabled, you can remove them from the registry.
 
 ```reg
 Windows Registry Editor Version 5.00

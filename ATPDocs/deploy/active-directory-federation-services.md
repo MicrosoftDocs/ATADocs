@@ -1,7 +1,7 @@
 ---
 title: Configure sensors for AD FS, AD CS, and Microsoft Entra Connect | Microsoft Defender for Identity
 description: Learn how to configure Microsoft Defender for Identity on Active Directory Federation Services (AD FS), Active Directory Certificate Services (AD CS), and Microsoft Entra Connect servers.
-ms.date: 02/21/2024
+ms.date: 11/02/2024
 ms.topic: how-to
 ---
 
@@ -23,19 +23,24 @@ A sensor installed on an AD FS, AD CS, or Microsoft Entra Connect server can't u
 
 In addition, the Defender for Identity sensor for AD CS supports only AD CS servers with Certification Authority Role Service.
 
-## Configure Verbose logging for AD FS events
+## Configure event collection
 
-Sensors running on AD FS servers must have the auditing level set to **Verbose** for relevant events. For example, use the following command to configure the auditing level to **Verbose**:
+If you're working with AD FS, AD CS, or Microsoft Entra Connect servers, make sure that you configured auditing as needed. For more information, see:
 
-```powershell
-Set-AdfsProperties -AuditLevel Verbose
-```
+- AD FS:
 
-For more information, see:
+  - [Required AD FS events](event-collection-overview.md#required-ad-fs-events)
+  - [Configure auditing on AD FS](configure-windows-event-collection.md#configure-auditing-on-ad-fs)
 
-- [Required AD FS events](event-collection-overview.md#required-ad-fs-events)
-- [Configure auditing on AD FS](configure-windows-event-collection.md#configure-auditing-on-ad-fs)
-- [Troubleshoot Active Directory Federation Services with events and logging](/windows-server/identity/ad-fs/troubleshooting/ad-fs-tshoot-logging#event-auditing-information-for-ad-fs-on-windows-server-2016)
+- AD CS:
+
+  - [Required AD CS events](event-collection-overview.md#required-ad-cs-events)
+  - [Configure auditing on AD CS](configure-windows-event-collection.md#configure-auditing-on-ad-cs)
+
+- Microsoft Entra Connect:
+
+  - [Required Microsoft Entra Connect events](event-collection-overview.md#required-microsoft-entra-connect-events)
+  - [Configure auditing on Microsoft Entra Connect](configure-windows-event-collection.md#configure-auditing-on-microsoft-entra-connect)
 
 ## Configure read permissions for the AD FS database
 
@@ -102,24 +107,54 @@ $SqlDataReader = $SQLCommand.ExecuteReader()
 $SQLConnection.Close()
 ```
 
-## Configure event collection
+## Configure permissions for the Microsoft Entra Connect (ADSync) database
 
-If you're working with AD FS, AD CS, or Microsoft Entra Connect servers, make sure that you configured auditing as needed. For more information, see:
+> [!NOTE]
+> This section is applicable only if the Entra Connect database is hosted on an external SQL server instance.
+>
 
-- AD FS:
+Sensors running on Microsoft Entra Connect servers need to have access to the ADSync database, and have execute permissions for the relevant stored procedures. If you have more than one Microsoft Entra Connect server, make sure to run this across all of them. 
 
-  - [Required AD FS events](event-collection-overview.md#required-ad-fs-events)
-  - [Configure auditing on AD FS](configure-windows-event-collection.md#configure-auditing-on-ad-fs)
+To grant the sensor permissions to the Microsoft Entra Connect ADSync database by using PowerShell:
 
-- AD CS:
+```powershell
+$entraConnectServerDomain = $env:USERDOMAIN
+$entraConnectServerComputerAccount = $env:COMPUTERNAME
+$entraConnectDBName = (Get-ItemProperty 'registry::HKLM\SYSTEM\CurrentControlSet\Services\ADSync\Parameters' -Name 'DBName').DBName
+$entraConnectSqlServer = (Get-ItemProperty 'registry::HKLM\SYSTEM\CurrentControlSet\Services\ADSync\Parameters' -Name 'Server').Server
+$entraConnectSqlInstance = (Get-ItemProperty 'registry::HKLM\SYSTEM\CurrentControlSet\Services\ADSync\Parameters' -Name 'SQLInstance').SQLInstance
 
-  - [Required AD CS events](event-collection-overview.md#required-ad-cs-events)
-  - [Configure auditing on AD CS](configure-windows-event-collection.md#configure-auditing-on-ad-cs)
+$ConnectionString = 'server={0}\{1};database={2};trusted_connection=true;' -f $entraConnectSqlServer, $entraConnectSqlInstance, $entraConnectDBName
+$SQLConnection= New-Object System.Data.SQLClient.SQLConnection($ConnectionString)
+$SQLConnection.Open()
+$SQLCommand = $SQLConnection.CreateCommand()
+$SQLCommand.CommandText = @"
+USE [master]; 
+CREATE LOGIN [{0}\{1}$] FROM WINDOWS WITH DEFAULT_DATABASE=[master];
+USE [{2}];
+CREATE USER [{0}\{1}$] FOR LOGIN [{0}\{1}$];
+GRANT CONNECT TO [{0}\{1}$];
+GRANT SELECT TO [{0}\{1}$];
+GRANT EXECUTE ON OBJECT::{2}.dbo.mms_get_globalsettings TO [{0}\{1}$];
+GRANT EXECUTE ON OBJECT::{2}.dbo.mms_get_connectors TO [{0}\{1}$];
+"@ -f $entraConnectServerDomain, $entraConnectServerComputerAccount, $entraConnectDBName
+$SqlDataReader = $SQLCommand.ExecuteReader()
+$SQLConnection.Close()
+```
 
-- Microsoft Entra Connect:
+## Post-installation steps (optional)
 
-  - [Required Microsoft Entra Connect events](event-collection-overview.md#required-microsoft-entra-connect-events)
-  - [Configure auditing on Microsoft Entra Connect](configure-windows-event-collection.md#configure-auditing-on-microsoft-entra-connect)
+During the sensor installation on an AD FS, AD CS, or Microsoft Entra Connect server, the closest domain controller is automatically selected. Use the following steps to check or modify the selected domain controller:
+
+1. In [Microsoft Defender XDR](https://security.microsoft.com), go to **Settings** > **Identities** > **Sensors** to view all of your Defender for Identity sensors.
+
+1. Locate and select the sensor that you installed on the server.
+
+1. On the pane that opens, in the **Domain controller (FQDN)** box, enter the fully qualified domain name (FQDN) of the resolver domain controllers. Select **+ Add** to add the FQDN, and then select **Save**.
+
+   ![Screenshot of selections for configuring an  Active Directory Federation Services sensor resolver in Defender for Identity.](../media/sensor-config-adfs-resolver.png)
+
+Initializing the sensor might take a couple of minutes. When it finishes, the service status of the AD FS, AD CS, or Microsoft Entra Connect sensor changes from **stopped** to **running**.
 
 ## Validate successful deployment
 
@@ -150,20 +185,6 @@ To validate that you successfully deployed a Defender for Identity sensor on an 
      The results pane shows a list of events of failed and successful certificate issuance. Select a specific row to see additional details on the **Inspect record** pane.
 
      :::image type="content" source="../media/adfs-logon-advanced-hunting.png" alt-text="Screenshot of the results of an Active Directory Certificate Services logon advanced hunting query." lightbox="../media/adfs-logon-advanced-hunting.png":::
-
-## Post-installation steps (optional)
-
-During the sensor installation on an AD FS, AD CS, or Microsoft Entra Connect server, the closest domain controller is automatically selected. Use the following steps to check or modify the selected domain controller:
-
-1. In [Microsoft Defender XDR](https://security.microsoft.com), go to **Settings** > **Identities** > **Sensors** to view all of your Defender for Identity sensors.
-
-1. Locate and select the sensor that you installed on the server.
-
-1. On the pane that opens, in the **Domain controller (FQDN)** box, enter the fully qualified domain name (FQDN) of the resolver domain controllers. Select **+ Add** to add the FQDN, and then select **Save**.
-
-   ![Screenshot of selections for configuring an  Active Directory Federation Services sensor resolver in Defender for Identity.](../media/sensor-config-adfs-resolver.png)
-
-Initializing the sensor might take a couple of minutes. When it finishes, the service status of the AD FS, AD CS, or Microsoft Entra Connect sensor changes from **stopped** to **running**.
 
 ## Related content
 

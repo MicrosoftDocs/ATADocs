@@ -24,7 +24,7 @@ Microsoft Entra seamless SSO automatically signs in users when they're using the
 
 1. Review the list of exposed entities to discover which of your Microsoft Entra SSO computer accounts have a password more than 90 days old.
 
-1. Take appropriate action on those accounts by following the steps described in [how to change the AD DS Connector account password](https://aka.ms/MicrosoftEntraIdPasswordChangeSyncService) article. 
+1. Take appropriate action on those accounts by following the steps described in [how to roll over the Entra SSO account password](https://aka.ms/RollOverAzureadssoAccount) article. 
 
 > [!NOTE]
 > While assessments are updated in near real time, scores and statuses are updated every 24 hours. While the list of impacted entities is updated within a few minutes of your implementing the recommendations, the status may still take time until it's marked as __Completed__.

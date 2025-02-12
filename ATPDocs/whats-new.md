@@ -22,36 +22,65 @@ For more information, see also:
 
 For updates about versions and features released six months ago or earlier, see the [What's new archive for Microsoft Defender for Identity](whats-new-archive.md).
 
+## October 2024
+
+### MDI is expanding coverage with new 10 Identity posture recommendations (preview)
+
+The new Identity security posture assessments (ISPMs) can help customers monitor misconfiguration by watching for weak spots and reduce the risk of potential attack on on-premises infrastructure.   
+These new identity recommendations, as part of Microsoft Secure Score, are new security posture reports related to Active Directory infrastructure and Group policy Objects:
+
+- [Accounts with non-default Primary Group ID](/defender-for-identity/accounts-with-non-default-pgid)
+
+- [Change Domain Controller computer account old password](/defender-for-identity/domain-controller-account-password-change)
+
+- [GPO assigns unprivileged identities to local groups with elevated privileges](/defender-for-identity/gpo-assigns-unprivileged-identities)
+
+- [GPO can be modified by unprivileged accounts](/defender-for-identity/modified-unprivileged-accounts-gpo)
+
+- [Reversible passwords found in GPOs](/defender-for-identity/reversible-passwords-group-policy)
+
+- [Built-in Active Directory Guest account is enabled](/defender-for-identity/built-in-active-directory-guest-account-is-enabled)
+
+- [Unsafe permissions on the DnsAdmins group](/defender-for-identity/unsafe-permissions-dns-admins-group)
+
+- [Ensure that all privileged accounts have the configuration flag "this account is sensitive and cannot be delegated”](/defender-for-identity/ensure-privileged-accounts-with-sensitive-flag)
+
+- [Change password of krbtgt account](/defender-for-identity/change-password-krbtgt-account)
+
+- [Change password of built-in domain Administrator account](/defender-for-identity/change-password-domain-administrator-account)
+
+Additionally, we updated the existing recommendation of "Modify unsecure Kerberos delegations to prevent impersonation" to include indication of Kerberos Constrained Delegation with Protocol Transition to a privileged service. 
+
 ## August 2024
 
-#### New Entra Connect sensor:
+#### New Microsoft Entra Connect sensor:
 
-As part of our ongoing effort to enhance Microsoft Defender for Identity coverage in hybrid identity environments, we have introduced a new sensor for Entra Connect servers. Additionally, we've released 3 new hybrid security detections and 4 new identity posture recommendations specifically for Entra Connect, helping customers stay protected and mitigate potential risks.
+As part of our ongoing effort to enhance Microsoft Defender for Identity coverage in hybrid identity environments, we have introduced a new sensor for Microsoft Entra Connect servers. Additionally, we've released new hybrid security detections and new identity posture recommendations specifically for Microsoft Entra Connect, helping customers stay protected and mitigate potential risks.
 
-**New Entra Connect Identity posture recommendations:**
+**New Microsoft Entra Connect Identity posture recommendations:**
 
-* **Rotate password for Entra Connect connector account**
-   * A compromised Entra Connect connector account (AD DS connector account, commonly shown as MSOL_XXXXXXXX) can grant access to high-privilege functions like replication and password resets, allowing attackers to modify synchronization settings and compromise security in both cloud and on-premises environments as well as offering several paths for compromising the entire domain. In this assessment we recommend customers change the password of MSOL accounts with the password last set over 90 days ago. For more information click [here](rotate-password-microsoft-entra-connect.md).
-* **Remove unnecessary replication permissions for Entra Connect Account**
-   * By default, the Entra Connect connector account has extensive permissions to ensure proper synchronization (even if they are not actually required). If Password Hash Sync is not configured, it’s important to remove unnecessary permissions to reduce the potential attack surface. For more information click [here](remove-replication-permissions-microsoft-entra-connect.md)
-* **Change password for Entra seamless SSO account configuration**
-   * This report lists all [Entra seamless SSO](/entra/identity/hybrid/connect/how-to-connect-sso) computer accounts with password last set over 90 days ago. The password for the Azure SSO computer account is not automatically changed every 30 days. If an attacker compromises this account, they can generate service tickets for the AZUREADSSOACC account on behalf of any user and impersonate any user in the Entra tenant that is synchronized from Active Directory. An attacker can use this to move laterally from Active Directory into Entra ID. For more information click [here](change-password-microsoft-entra-seamless-single-sign-on.md).    
+* **Rotate password for Microsoft Entra Connect connector account**
+   * A compromised Microsoft Entra Connect connector account (AD DS connector account, commonly shown as MSOL_XXXXXXXX) can grant access to high-privilege functions like replication and password resets, allowing attackers to modify synchronization settings and compromise security in both cloud and on-premises environments as well as offering several paths for compromising the entire domain. In this assessment we recommend customers change the password of MSOL accounts with the password last set over 90 days ago. For more information click [here](rotate-password-microsoft-entra-connect.md).
+* **Remove unnecessary replication permissions for Microsoft Entra Connect Account**
+   * By default, the Microsoft Entra Connect connector account has extensive permissions to ensure proper synchronization (even if they aren't actually required). If Password Hash Sync isn't configured, it’s important to remove unnecessary permissions to reduce the potential attack surface. For more information click [here](remove-replication-permissions-microsoft-entra-connect.md)
+* **Change password for Microsoft Entra seamless SSO account configuration**
+   * This report lists all [Microsoft Entra seamless SSO](/entra/identity/hybrid/connect/how-to-connect-sso) computer accounts with password last set over 90 days ago. The password for the Azure SSO computer account isn't automatically changed every 30 days. If an attacker compromises this account, they can generate service tickets for the AZUREADSSOACC account on behalf of any user and impersonate any user in the Microsoft Entra tenant that is synchronized from Active Directory. An attacker can use this to move laterally from Active Directory into Microsoft Entra ID. For more information click [here](change-password-microsoft-entra-seamless-single-sign-on.md).    
 
-**New Entra Connect detections:**
+**New Microsoft Entra Connect detections:**
 
-* **Suspicious Interactive Logon to the Entra Connect Server**
-   * Direct logins to Entra Connect servers are highly unusual and potentially malicious. Attackers often target these servers to steal credentials for broader network access. Microsoft Defender for Identity can now detect abnormal logins to Entra Connect servers, helping you identify and respond to these potential threats faster. It is specifically applicable when the Entra Connect server is a standalone server and not operating as a Domain Controller.
-* **User Password Reset by Entra Connect Account**
-   *  The Entra Connect connector account often holds high privileges, including the ability to reset user’s passwords. Microsoft Defender for Identity now has visibility into those actions and will detect any usage of those permissions that were identified as malicious and non-legitimate. This alert will be triggered only if the [password writeback feature](/entra/identity/authentication/concept-sspr-writeback) is disabled.
-*  **Suspicious writeback by Entra Connect on a sensitive user**
-   * While Entra Connect already prevents writeback for users in privileged groups, Microsoft Defender for Identity expands this protection by identifying additional types of sensitive accounts. This enhanced detection helps prevent unauthorized password resets on critical accounts, which can be a crucial step in advanced attacks targeting both cloud and on-premises environments.
+* **Suspicious Interactive Logon to the Microsoft Entra Connect Server**
+   * Direct logins to Microsoft Entra Connect servers are highly unusual and potentially malicious. Attackers often target these servers to steal credentials for broader network access. Microsoft Defender for Identity can now detect abnormal logins to Microsoft Entra Connect servers, helping you identify and respond to these potential threats faster. It's specifically applicable when the Microsoft Entra Connect server is a standalone server and not operating as a Domain Controller.
+* **User Password Reset by Microsoft Entra Connect Account**
+   *  The Microsoft Entra Connect connector account often holds high privileges, including the ability to reset user’s passwords. Microsoft Defender for Identity now has visibility into those actions and will detect any usage of those permissions that were identified as malicious and non-legitimate. This alert will be triggered only if the [password writeback feature](/entra/identity/authentication/concept-sspr-writeback) is disabled.
+*  **Suspicious writeback by Microsoft Entra Connect on a sensitive user**
+   * While Microsoft Entra Connect already prevents writeback for users in privileged groups, Microsoft Defender for Identity expands this protection by identifying additional types of sensitive accounts. This enhanced detection helps prevent unauthorized password resets on critical accounts, which can be a crucial step in advanced attacks targeting both cloud and on-premises environments.
 
 **Additional improvements and capabilities:**
 
 * New activity of any **failed password reset on a sensitive account** available in the ‘IdentityDirectoryEvents’ table in Advanced Hunting. This can help customers track failed password reset events and create custom detection based on this data.
 * Enhanced accuracy for the **DC sync attack** detection.
-* New [health issue](health-alerts.md#sensor-failed-to-retrieve-entra-connect-service-configuration) for cases where the sensor is unable to retrieve the configuration from the Entra Connect service.
-* Extended monitoring for security alerts, such as PowerShell Remote Execution Detector, by enabling the new sensor on Entra Connect servers.
+* New [health issue](health-alerts.md#sensor-failed-to-retrieve-microsoft-entra-connect-service-configuration) for cases where the sensor is unable to retrieve the configuration from the Microsoft Entra Connect service.
+* Extended monitoring for security alerts, such as PowerShell Remote Execution Detector, by enabling the new sensor on Microsoft Entra Connect servers.
 
 [Learn more about the new sensor](deploy/active-directory-federation-services.md)
 
@@ -95,9 +124,9 @@ This version includes improvements and bug fixes for cloud services and the Defe
 
 The Shield Widget provides a quick overview of the number of users in hybrid, cloud, and on-premises environments. This feature now includes direct links to the Advanced Hunting platform, offering detailed user information at your fingertips.
 
-### ITDR Deployment Health Widget Now Include Entra Conditional Access and Entra Private Access 
+### ITDR Deployment Health Widget Now Include Microsoft Entra Conditional Access and Microsoft Entra Private Access 
 
-Now you can view the license availability for Entra Workload Conditional Access, Entra User Conditional Access, and Entra Private Access.
+Now you can view the license availability for Microsoft Entra Workload Conditional Access, Microsoft Entra User Conditional Access, and Microsoft Entra Private Access.
 
 ### Defender for Identity release 2.237
 

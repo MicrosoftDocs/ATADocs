@@ -30,7 +30,7 @@ This section describes how to configure email notifications for Defender for Ide
 Whenever Defender for Identity detects a health issue or security alert, configured recipients receive an email notification with the details, with a link to Microsoft Defender XDR for more details.
 
 > [!NOTE]
-> *Alert notifications* page will be deprecated by November 1, 2024. Please use the '[Email Notifications](https://security.microsoft.com/securitysettings/defender/email_notifications)' page under Defender XDR settings for new and existing notifications rules. [Learn more](https://aka.ms/IncidentsNotificationsDefenderXdr)
+> *Alert notifications* page will be deprecated by January 15, 2025. Please use the '[Email Notifications](https://security.microsoft.com/securitysettings/defender/email_notifications)' page under Defender XDR settings for new and existing notifications rules. [Learn more](https://aka.ms/IncidentsNotificationsDefenderXdr)
 ## Configure Syslog notifications
 
 This section describes how to configure Defender for Identity to send health issues and security events to a Syslog server through a configured sensor. 
